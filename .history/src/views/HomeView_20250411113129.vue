@@ -47,7 +47,7 @@
     <!-- Information Section with Modal Popups -->
     <section class="info-section">
       <div class="container">
-        <h2 id="info-title" class="info-title">START BUILDING YOUR GARDEN FOR BIRDS</h2>
+        <h2 id="info-title" class="info-title">Discover Garden Wisdom</h2>
         <p class="info-subtitle">Click "learn more" on picture to see details.</p>
 
         <!-- Plant Information Card -->

@@ -12,9 +12,7 @@
         <div class="hero-buttons">
           <p class="hero-subtitle"></p>
           <p class="hero-cta">Wanna Start your journey?</p>
-          <a href="#info-title" class="btn hero-cta-btn" @click.prevent="scrollToInfoSection"
-            >Let's build your garden</a
-          >
+          <a href="#info-title" class="btn hero-cta-btn">Let's build your garden</a>
         </div>
       </div>
     </section>
@@ -47,7 +45,7 @@
     <!-- Information Section with Modal Popups -->
     <section class="info-section">
       <div class="container">
-        <h2 id="info-title" class="info-title">START BUILDING YOUR GARDEN FOR BIRDS</h2>
+        <h2 id="info-title" class="info-title">Discover Garden Wisdom</h2>
         <p class="info-subtitle">Click "learn more" on picture to see details.</p>
 
         <!-- Plant Information Card -->
@@ -330,17 +328,10 @@ export default defineComponent({
     closeBirdInfo() {
       this.showBirdInfo = false
     },
-    scrollToInfoSection(event) {
-      event.preventDefault()
-      const element = document.getElementById('info-title')
+    scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId)
       if (element) {
-        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
-        const offsetPosition = elementPosition - 150
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth',
-        })
+        element.scrollIntoView({ behavior: 'smooth' })
       }
     },
   },
@@ -632,7 +623,7 @@ export default defineComponent({
 
 .info-card {
   flex: 0 0 50%;
-  max-width: 500px;
+  max-width: 580px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -648,7 +639,7 @@ export default defineComponent({
 
 .card-image {
   position: relative;
-  height: 500px;
+  height: 580px;
   cursor: pointer;
   overflow: hidden;
 }
@@ -992,7 +983,7 @@ export default defineComponent({
   }
 }
 html {
-  scroll-padding-top: 60px;
+  scroll-padding-top: 10px;
   scroll-behavior: smooth;
 }
 </style>
