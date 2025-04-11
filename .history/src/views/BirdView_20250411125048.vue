@@ -515,7 +515,6 @@ export default {
   align-items: center;
   justify-content: flex-start;
   padding: 0 10%;
-  margin-top: 35px;
 }
 
 .hero-content {

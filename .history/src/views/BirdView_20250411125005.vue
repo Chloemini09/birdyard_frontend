@@ -500,6 +500,7 @@ export default {
 .bird-detection-container {
   font-family: 'Arial', sans-serif;
   color: #333;
+  max-height: 550px;
 }
 
 /* Hero Section Styles */
@@ -515,7 +516,6 @@ export default {
   align-items: center;
   justify-content: flex-start;
   padding: 0 10%;
-  margin-top: 35px;
 }
 
 .hero-content {
