@@ -768,7 +768,7 @@ export default {
   font-size: 1rem;
   color: #1a2d00;
   text-align: center;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .section-title {

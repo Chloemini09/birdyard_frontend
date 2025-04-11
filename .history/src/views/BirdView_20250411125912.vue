@@ -765,10 +765,10 @@ export default {
   padding: 0 20px;
 }
 .state-filter-info {
-  font-size: 1rem;
+  font-size: 2.5rem;
   color: #1a2d00;
   text-align: center;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .section-title {
