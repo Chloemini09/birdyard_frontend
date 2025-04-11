@@ -175,6 +175,9 @@
                   :alt="selectedBird.name"
                   class="bird-modal-image"
                 />
+                <div class="bird-status-badge-large" :class="getStatusClass(selectedBird.status)">
+                  {{ selectedBird.status }}
+                </div>
               </div>
 
               <div class="bird-modal-title-container">
