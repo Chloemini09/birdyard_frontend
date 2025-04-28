@@ -59,48 +59,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Team Section -->
-    <section class="team">
-      <div class="container">
-        <h2>Meet Our Team</h2>
-        <div class="team-members">
-          <div class="team-member">
-            <div class="member-photo"><img src="@/assets/images/Zheng.png" alt="Zheng" /></div>
-            <h3>Zheng Tian</h3>
-            <p>Back-End Developer</p>
-          </div>
-          <div class="team-member">
-            <div class="member-photo"><img src="@/assets/images/Xiaoyue.png" alt="Xiaoyue" /></div>
-            <h3>Xiaoyue Jin</h3>
-            <p>Front-End Developer</p>
-          </div>
-          <div class="team-member">
-            <div class="member-photo"><img src="@/assets/images/Tanran.png" alt="Tanran" /></div>
-            <h3>Tanran Liu</h3>
-            <p>Deployment Specialist</p>
-          </div>
-          <div class="team-member">
-            <div class="member-photo">
-              <img src="@/assets/images/Madhavi.png" alt="Madhavi" />
-            </div>
-            <h3>Madhavi Vishwanatha</h3>
-            <p>Database Developer</p>
-          </div>
-          <div class="team-member">
-            <div class="member-photo"><img src="@/assets/images/champ.png" alt="Champ" /></div>
-            <h3>Natthapong Chantaklad</h3>
-            <p>AI Developer</p>
-          </div>
-          <div class="team-member">
-            <div class="member-photo"><img src="@/assets/images/kunal.png" alt="Kunal" /></div>
-            <h3>Kunal Gupta</h3>
-            <p>Business Analyst</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Call to Action -->
     <section class="cta">
       <div class="container">
