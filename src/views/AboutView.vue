@@ -4,7 +4,7 @@
     <section class="hero">
       <div class="container">
         <h1>About Bird-Yard</h1>
-        <p class="subtitle">Creating bird-friendly backyards since 2015</p>
+        <p class="subtitle">Creating bird-friendly backyards since 2025</p>
       </div>
     </section>
 
@@ -88,7 +88,9 @@ export default {
   color: white;
   padding: 80px 0;
   text-align: center;
-  background-image: url('@/assets/images/aboutbanner.png');
+  background-image:
+    linear-gradient(rgba(0, 50, 0, 0.3), rgba(0, 50, 0, 0.6)),
+    url('@/assets/images/aboutbanner.png');
   background-size: 100% auto;
   min-height: 400px;
   background-position: center 15%;
@@ -207,7 +209,9 @@ export default {
   overflow: hidden;
   margin-bottom: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .team-member:hover .member-photo {
