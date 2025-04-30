@@ -6,6 +6,9 @@ import PlantadviceView from '@/views/PlantadviceView.vue'
 import BirdView from '@/views/BirdView.vue'
 import PlantDetailView from '@/views/PlantDetailView.vue'
 import WelcomeView from '@/views/WelcomeView.vue'
+import PlannerView from '@/views/PlannerView.vue'
+import GardenGuideView from '@/views/GardenGuideView.vue'
+import NestingGuideView from '@/views/NestingGuideView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -53,6 +56,24 @@ const router = createRouter({
       props: true,
       meta: { requiresAuth: true },
     },
+    {
+      path: '/planner',
+      name: 'planner',
+      component: PlannerView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/gardenguide',
+      name: 'gardenguide',
+      component: GardenGuideView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/nestingguide',
+      name: 'nestingguide',
+      component: NestingGuideView,
+      meta: { requiresAuth: true },
+    }
   ],
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 }
