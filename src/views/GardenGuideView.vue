@@ -83,11 +83,6 @@
       </div>
     </div>
   </div>
-
-  <section class="cta-section">
-      <p class="cta-section-info">Is there any birds in your garden?</p>
-      <router-link to="/bird" class="btn btn-large">Birds Detection</router-link>
-  </section>
 </template>
 
 <script setup>
@@ -430,34 +425,6 @@ watch(
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-}
-.cta-section {
-  padding: 40px 0;
-  text-align: center;
-  background-color: #f9f7f0;
-  }
-.cta-section-info {
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-.btn-large {
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: rgba(194, 229, 156, 0.9);
-  color: #0a3200;
-  border: 2px solid #c2e59c;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 /* === Responsive === */
 @media (max-width: 768px) {
