@@ -92,7 +92,7 @@
           <!-- Step 2: Birds Information Card -->
           <div class="step-number-indicator">STEP 2</div>
           <div class="info-card">
-            <router-link to="/nesting" class="card-image">
+            <router-link to="/gardenguide" class="card-image">
               <img src="@/assets/images/attracting-birds.jpg" alt="Attracting birds" />
               <div class="card-overlay">
                 <h3>Attracting Birds with Plants</h3>

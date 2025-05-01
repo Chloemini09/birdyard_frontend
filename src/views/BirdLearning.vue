@@ -31,7 +31,7 @@
                                 The Australian birds most at risk of extinction </h1>
                             <h3>Abstract</h3>
                             <p>
-                                (correct)This research report, supported by Australia’s National Environmental Science
+                                (correct)This research report, supported by Australia's National Environmental Science
                                 Program, brings together insights from bird conservation experts and provides the first
                                 assessment of the Australian bird species most likely to become extinct in the next 20
                                 years. The report warns that without more effective management efforts, up to 10
@@ -273,7 +273,7 @@ export default {
 /* Banner styles */
 .banner {
     background-image:
-        linear-gradient(rgba(0, 50, 0, 0.8), rgba(0, 50, 0, 0.6)), url('@/assets/images/garden.jpeg');
+        linear-gradient(rgba(0, 50, 0, 0.8), rgba(0, 50, 0, 0.6)), url('@/assets/images/darkgarden.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
