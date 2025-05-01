@@ -6,6 +6,13 @@ import PlantadviceView from '@/views/PlantadviceView.vue'
 import BirdView from '@/views/BirdView.vue'
 import PlantDetailView from '@/views/PlantDetailView.vue'
 import WelcomeView from '@/views/WelcomeView.vue'
+import LayoutView from '@/views/LayoutView.vue'
+import GardenGuideView from '@/views/GardenGuideView.vue'
+import NestingGuideView from '@/views/NestingGuideView.vue'
+import LearningHub from '@/views/LearningHub.vue'
+import GardenLearning from '@/views/GardenLearning.vue'
+import QuizView from '@/views/QuizView.vue'
+import BirdLearning from '@/views/BirdLearning.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,10 +54,52 @@ const router = createRouter({
       meta: { requiresAuth: true },
     },
     {
+      path: '/layout',
+      name: 'Layout',
+      component: LayoutView,
+      meta: { requiresAuth: true },
+    },
+    {
       path: '/plant/:plantName',
       name: 'PlantDetail',
       component: PlantDetailView,
       props: true,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/gardenguide',
+      name: 'Gardenguie',
+      component: GardenGuideView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/nesting',
+      name: 'nesting',
+      component: NestingGuideView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/learninghub',
+      name: 'learninghub',
+      component: LearningHub,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/birdlearning',
+      name: 'Birdlearning',
+      component: BirdLearning,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/gardenlearning',
+      name: 'gardenlearning',
+      component: GardenLearning,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/quiz',
+      name: 'quiz',
+      component: QuizView,
       meta: { requiresAuth: true },
     },
   ],

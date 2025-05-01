@@ -1,0 +1,309 @@
+{
+  "Victoria": [
+    {
+      "name": "Berry Bird Bonanza",
+      "slug": "berry-bird-bonanza",
+      "summary": "Cultivate a native fruit stand in your garden. Planting species like Lilly Pillies and Native Figs offers delicious, natural berries and fruits, inviting birds such as Silvereyes, Figbirds, and Currawongs to feast.",
+      "concept": "Grow native plants that provide edible berries, fruits, or seeds for birds.",
+      "how_to_build": [
+        "Select Plants: Choose native fruiting species like Lilly Pillies (Syzygium), Dianella (Flax Lilies), Native Figs (Ficus), Saltbush (Atriplex/Rhagodia), Native Raspberries (Rubus). Check fruiting times.",
+        "Consider Size: Ensure plants fit your space when mature.",
+        "Location: Plant where fruit drop is acceptable. Good sun needed for fruiting.",
+        "Soil: Add compost if needed for specific plants.",
+        "Natural Food: Allow some fruit to ripen and fall. Avoid harmful netting."
+      ],
+      "birds_attracted": [
+        {
+          "name": "Lord Howe Silvereye",
+          "image": "Lord_Howe_Silvereye.jpg"
+        },
+        {
+          "name": "Green Figbird samcem",
+          "image": "Green_Figbird_samcem.jpeg"
+        },
+        {
+          "name": "Painted Honeyeater",
+          "image": "Painted Honeyeater.jpg"
+        }
+      ],
+      "layout_images": [
+        "Berry image_fx (24).jpg",
+        "Berry image_fx (25).jpg",
+        "Berry image_fx (26).jpg",
+        "Berry image_fx (27).jpg"
+      ],
+      "path": "Berry Bird Bonanza"
+    },
+    {
+      "name": "Meadow Melody Patch",
+      "slug": "meadow-melody-patch",
+      "summary": "Establish a sunny, open meadow filled with native grasses and wildflowers. This simple, natural space is perfect for attracting ground-feeding birds like Magpies, Pigeons, Finches, and Pipits.",
+      "concept": "Create an open area dominated by native grasses and wildflowers for ground-feeding birds.",
+      "how_to_build": [
+        "Location: Choose a sunny, open spot. Remove lawn/weeds.",
+        "Plant Grasses: Use native clumping grasses (Kangaroo Grass, Wallaby Grasses, Poa, Lomandra). Plant in drifts.",
+        "Add Wildflowers: Intersperse native daisies, everlastings, etc.",
+        "Leave Standing: Let grasses/flowers seed naturally and stand through winter.",
+        "Keep Open: Avoid cluttering with too many shrubs or trees. A single rock or log is okay."
+      ],
+      "birds_attracted": [
+        {
+          "name": "Plains-wanderer",
+          "image": "Plains-wanderer.jpeg"
+        },
+        {
+          "name": "Australian Magpie",
+          "image": "Cracticus_tibicen_hypoleuca_male_domain.jpg"
+        },
+        {
+          "name": "Australian Finch",
+          "image": "Australian-Finch-Bicheno.jpg"
+        }
+      ],
+      "layout_images": [
+        "image_fx (19).jpg",
+        "The Meadow & Grassland Gardenv1.jpg"
+      ],
+      "path": "Meadow Melody Patch"
+    },
+    {
+      "name": "Parrot Playland Aviary",
+      "slug": "parrot-playland-aviary",
+      "summary": "Attract with Caution! Design a robust space specifically for wild cockatoos and parrots using sturdy native food trees and strong perches.",
+      "concept": "Attract wild cockatoos by providing food sources and sturdy structures they favour.",
+      "how_to_build": [
+        "Plant Food Trees: Establish sturdy natives with large seeds/nuts/cones (Banksias, Allocasuarinas, specific Eucalypts, Hakeas).",
+        "Provide Strong Perches: Use large, mature tree limbs or safe, sturdy dead trees.",
+        "Install Robust Water Source: Use a large, heavy bird bath or ground-level dish. Keep clean.",
+        "Maintain Open Space: Ensure clear flight paths near favoured spots.",
+        "Durable Landscape: Use tough materials; expect chewing. Protect vulnerable items.",
+        "Avoid Regular Feeding: Supplementary feeding is discouraged. Focus on natural food plants and water."
+      ],
+      "birds_attracted": [
+        {
+          "name": "Sulphur-crested Cockatoo",
+          "image": "cockatoo.81ff5dc.jpg"
+        },
+        {
+          "name": "Swift Parrot",
+          "image": "swift_parrot.jpg"
+        },
+        {
+          "name": "Galah",
+          "image": "galah-fact-sheet-2.jpg"
+        }
+      ],
+      "layout_images": [
+        "image_fx (21).jpg",
+        "image_fx (22).jpg",
+        "image_fx (20).jpg",
+        "The Parrot Paradise Aviary Gardenv1.jpg"
+      ],
+      "path": "Parrot Playland Aviary"
+    }
+  ],
+  "Queensland": [
+    {
+      "name": "The Aqua Oasis",
+      "slug": "the-aqua-oasis",
+      "summary": "Make clean, reliable water the star attraction. A well-placed, safe bird bath is irresistible, drawing in nearly all local bird species.",
+      "concept": "Make a clean, safe, and reliable water source the main attraction.",
+      "how_to_build": [
+        "Choose Bath: Shallow (max 5-7cm), sloping sides, rough texture. Stable base.",
+        "Position Safely: Place with open views nearby, but escape cover (shrubs) 1-2 metres away.",
+        "Add Landing Spots: Place a rock in the water for smaller birds.",
+        "Consider Motion: Drippers or fountains attract attention (optional).",
+        "Clean Regularly: Essential! Change water daily/every other day. Scrub bath frequently."
+      ],
+      "birds_attracted": [
+        {
+          "name": "Australasian Bittern",
+          "image": "Australasian Bittern.jpg"
+        },
+        {
+          "name": "Australian Painted Snipe",
+          "image": "Australian Painted-Snipe.jpg"
+        },
+        {
+          "name": "Pilotbird",
+          "image": "pilotbird.jpeg"
+        }
+      ],
+      "layout_images": [
+        "image_fx (28).jpg",
+        "image_fx (29).jpg",
+        "image_fx (30).jpg",
+        "The Water Oasis Garden(4).jpg"
+      ],
+      "path": "The Aqua Oasis"
+    },
+    {
+      "name": "Woodland Edge Wonder",
+      "slug": "woodland-edge-wonder",
+      "summary": "Mimic the rich, layered structure of a woodland edge. Designing with groundcovers, shrubs, and small trees provides diverse foraging opportunities for Robins, Whistlers, and Scrubwrens.",
+      "concept": "Mimic a woodland edge with multiple vertical layers (groundcover to small trees).",
+      "how_to_build": [
+        "Plan Layers: Design from back (tallest) to front (shortest): small trees -> tall shrubs -> smaller shrubs -> groundcovers/grasses.",
+        "Connect Layers: Overlap planting zones slightly for easy movement.",
+        "Light: Match plants to available sun/shade.",
+        "Ground Habitat: Include logs, rocks, and leaf litter within the layers."
+      ],
+      "birds_attracted": [
+        {
+          "name": "Eastern Yellow Robin",
+          "image": "Robin.jpg"
+        },
+        {
+          "name": "White-throated Needletail",
+          "image": "450px-White-throated_NeedletailM%26Ca.webp"
+        },
+        {
+          "name": "Southern Whiteface",
+          "image": "Southern Whiteface.jpg"
+        }
+      ],
+      "layout_images": [
+        "image_fx (7).jpg",
+        "The Layered Woodland Edge Garden (4).jpg",
+        "image_fx (6).jpg",
+        "image_fx (12).jpg"
+      ],
+      "path": "Woodland Edge Wonder"
+    },
+    {
+      "name": "Seed & Safety Sanctuary",
+      "slug": "seed-and-safety-sanctuary",
+      "summary": "Offer a safe haven combining food and protection. Native grasses and wattles provide nutritious seeds, while dense thickets offer crucial shelter.",
+      "concept": "Offer seeds from native grasses and shrubs, plus dense, protective thickets for safety.",
+      "how_to_build": [
+        "Plant Grasses: Use clumps of native grasses like Kangaroo Grass, Wallaby Grasses, Tussock Grasses.",
+        "Add Seed Shrubs: Include Wattles (Acacia), Hop Bush (Dodonaea).",
+        "Create Thickets: Plant groups of dense/prickly shrubs like Bursaria, Hakea, Kunzea.",
+        "Position Shelter: Place thickets near bird baths or open areas for quick escape.",
+        "Leave Seeds: Do not cut off seed heads from grasses or shrubs prematurely."
+      ],
+      "birds_attracted": [
+        {
+          "name": "Superb Fairy-wren",
+          "image": "blue-wren.jpg"
+        },
+        {
+          "name": "Diamond Firetail / Finch",
+          "image": "Australian-Finch-Bicheno.jpg"
+        },
+        {
+          "name": "Crested Pigeon",
+          "image": "crested_pigeon.jpg"
+        }
+      ],
+      "layout_images": [
+        "image_fx (31).jpg",
+        "image_fx (32).jpg"
+      ],
+      "path": "Seed and Safety Sanctuary"
+    }
+  ],
+  "South Australia": [
+    {
+      "name": "Winter Welcome Garden",
+      "slug": "winter-welcome-garden",
+      "summary": "Create a vital refuge for birds during the colder months. Offer essential evergreen shelter, late-season food, and a reliable water supply.",
+      "concept": "Provide vital food, water, and shelter during the harshest time of year (cold winter).",
+      "how_to_build": [
+        "Evergreen Shelter: Plant dense native shrubs for protection.",
+        "Persistent Food: Include plants holding seeds late or berries.",
+        "Reliable Water: Ensure a bird bath is always available.",
+        "Natural Cover: Leave leaf litter; don't prune heavily.",
+        "Supplement Food: Use quality seed/nectar only if needed. Clean feeders."
+      ],
+      "birds_attracted": [
+        {
+          "name": "Lord Howe Silvereye",
+          "image": "Lord_Howe_Silvereye.jpg"
+        },
+        {
+          "name": "Magpie-larks",
+          "image": "magpie-larks.jpeg"
+        },
+        {
+          "name": "Australian Finch",
+          "image": "Australian-Finch-Bicheno.jpg"
+        }
+      ],
+      "layout_images": [
+        "image_fx (18).jpg",
+        "The Winter Refuge Gardenv1.jpg"
+      ],
+      "path": "Winter Welcome Garden"
+    },
+    {
+      "name": "Nectar Nook",
+      "slug": "nectar-nook",
+      "summary": "Design a vibrant floral caf\u00e9 for birds! Focus on nectar-rich flowers to attract honeyeaters and lorikeets with a sweet energy boost.",
+      "concept": "Focus on native plants producing lots of nectar to attract honeyeaters and lorikeets.",
+      "how_to_build": [
+        "Select Plants: Choose high-nectar natives like Grevilleas, Banksias, Callistemons, Eremophilas, Correas, Kangaroo Paws, and flowering Eucalypts.",
+        "Sunlight: Plant in sunny positions.",
+        "Group Flowers: Plant multiples together.",
+        "Add Perches: Include shrubs or branches near flowers.",
+        "Water Source: Provide a clean bird bath."
+      ],
+      "birds_attracted": [
+        {
+          "name": "Red Wattlebird",
+          "image": "red_wattlebird.jpg"
+        },
+        {
+          "name": "Lorikeets",
+          "image": "Lorikeets.jpg"
+        },
+        {
+          "name": "Painted Honeyeater",
+          "image": "Painted Honeyeater.jpg"
+        }
+      ],
+      "layout_images": [
+        "The Hummingbird & Pollinator Garden v1.jpg",
+        "image_fx (15).jpg",
+        "image_fx (16).jpg",
+        "image_fx (17).jpg"
+      ],
+      "path": "Nectar Nook"
+    },
+    {
+      "name": "Homegrown Habitat Haven",
+      "slug": "homegrown-habitat-haven",
+      "summary": "Create an authentic slice of local bushland using native plants. You'll provide the most natural food, shelter, and nesting sites.",
+      "concept": "Recreate local bushland using plants native specifically to your area.",
+      "how_to_build": [
+        "Research: Identify plants native to your suburb or region.",
+        "Layer: Plan for groundcovers, shrubs, and small trees.",
+        "Soil: Minimal improvement needed; focus on good drainage.",
+        "Planting: Group plants with similar needs.",
+        "Mulch: Use 5-7cm of natural mulch.",
+        "Water: Add a bird bath near cover.",
+        "Maintain Lightly: Water until established. No pesticides!"
+      ],
+      "birds_attracted": [
+        {
+          "name": "Lord Howe Silvereye",
+          "image": "Lord_Howe_Silvereye.jpg"
+        },
+        {
+          "name": "Green Figbird samcem",
+          "image": "Green_Figbird_samcem.jpeg"
+        },
+        {
+          "name": "Painted Honeyeater",
+          "image": "Painted Honeyeater.jpg"
+        }
+      ],
+      "layout_images": [
+        "Native Habitat Garden 1.jpg",
+        "Native Habitat Garden 1 (14).jpg",
+        "image_fx (13).jpg"
+      ],
+      "path": "Homegrown Habitat Haven"
+    }
+  ]
+}

@@ -44,129 +44,76 @@
       </div>
     </section>
 
-    <!-- Information Section with Modal Popups -->
+    <!-- Information Section (Vertical layout) -->
     <section class="info-section">
       <div class="container">
         <h2 id="info-title" class="info-title">START BUILDING YOUR GARDEN FOR BIRDS</h2>
-        <p class="info-subtitle">Click "learn more" on picture to see details.</p>
+        <p class="info-subtitle">Follow these steps to create your perfect bird garden</p>
 
-        <!-- Plant Information Card -->
-        <div class="info-card-container">
+        <div class="vertical-card-container">
+          <!-- Step 1: Plant Information Card -->
+          <div class="step-number-indicator">STEP 1</div>
           <div class="info-card">
-            <div class="card-image" @click="showPlantInfo = !showPlantInfo">
+            <router-link to="/plantadvice" class="card-image">
               <img src="@/assets/images/plant-importance.jpg" alt="Plant importance" />
               <div class="card-overlay">
                 <h3>Plants: The Garden Foundation</h3>
-                <span class="learn-more">Learn More</span>
+                <p class="overlay-description">
+                  Native plants form the backbone of your bird garden, providing food, shelter, and
+                  nesting materials.
+                </p>
+                <div class="btn-container">
+                  <span class="find-plants-btn">Find Nice Plants for your Garden</span>
+                </div>
               </div>
-            </div>
+              <div class="hover-overlay"></div>
+            </router-link>
           </div>
 
-          <transition name="fade">
-            <div class="info-panel" v-if="showPlantInfo">
-              <button class="info-panel-close" @click="closePlantInfo">&times;</button>
-              <h3>Building a Thriving Ecosystem</h3>
-              <p>Plants are the foundation of every healthy garden ecosystem. They provide:</p>
-              <ul>
-                <li>
-                  <strong>Oxygen production:</strong> Plants release oxygen and absorb carbon
-                  dioxide, improving air quality.
-                </li>
-                <li>
-                  <strong>Soil health:</strong> Root systems prevent erosion and add organic matter
-                  to soil.
-                </li>
-                <li>
-                  <strong>Water filtration:</strong> Plants help filter rainwater, reducing runoff
-                  and pollution.
-                </li>
-                <li>
-                  <strong>Biodiversity:</strong> Native plants support local insects, which are
-                  essential food for birds.
-                </li>
-                <li>
-                  <strong>Climate regulation:</strong> Gardens help cool urban areas and reduce the
-                  heat island effect.
-                </li>
-              </ul>
+          <!-- Arrow indicator -->
+          <div class="step-arrow">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 5V19M12 19L19 12M12 19L5 12"
+                stroke="#0a3200"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
 
-              <h3>Choosing the Right Plants</h3>
-              <p>
-                Native plants are always the best choice for a bird-friendly garden. They've evolved
-                alongside local wildlife for thousands of years, providing the perfect food sources,
-                shelter, and nesting materials.
-              </p>
-
-              <router-link to="/plantadvice" class="info-link"
-                >Get Plant Recommendations →</router-link
-              >
-            </div>
-          </transition>
-        </div>
-
-        <!-- Birds Information Card -->
-        <div class="info-card-container birds-container">
+          <!-- Step 2: Birds Information Card -->
+          <div class="step-number-indicator">STEP 2</div>
           <div class="info-card">
-            <div class="card-image" @click="showBirdInfo = !showBirdInfo">
+            <router-link to="/nesting" class="card-image">
               <img src="@/assets/images/attracting-birds.jpg" alt="Attracting birds" />
               <div class="card-overlay">
                 <h3>Attracting Birds with Plants</h3>
-                <span class="learn-more">Learn More</span>
+                <p class="overlay-description">
+                  The right plant choices create a welcoming habitat for local birds while
+                  supporting biodiversity.
+                </p>
+                <div class="btn-container">
+                  <span class="find-plants-btn">Attract birds for your Garden</span>
+                </div>
               </div>
-            </div>
+              <div class="hover-overlay"></div>
+            </router-link>
           </div>
-
-          <transition name="fade">
-            <div class="info-panel" v-if="showBirdInfo">
-              <button class="info-panel-close" @click="closeBirdInfo">&times;</button>
-              <h3>Creating a Bird Haven</h3>
-              <p>
-                Birds need four essential things from your garden: food, water, shelter, and nesting
-                sites. The right plants can provide most of these needs!
-              </p>
-
-              <h3>Food Sources</h3>
-              <ul>
-                <li>
-                  <strong>Berry-producing shrubs:</strong> Elderberry, serviceberry, and dogwood
-                  provide seasonal fruits.
-                </li>
-                <li>
-                  <strong>Seed-bearing flowers:</strong> Coneflowers, sunflowers, and black-eyed
-                  Susans offer winter food.
-                </li>
-                <li>
-                  <strong>Host plants for insects:</strong> Oak, willow, and native perennials
-                  support caterpillars and bugs that birds feed to their young.
-                </li>
-              </ul>
-
-              <h3>Shelter & Nesting</h3>
-              <ul>
-                <li>
-                  <strong>Evergreen trees and shrubs:</strong> Provide year-round protection from
-                  predators and weather.
-                </li>
-                <li>
-                  <strong>Dense thickets:</strong> Create safe spaces for small birds to hide and
-                  nest.
-                </li>
-                <li>
-                  <strong>Varying heights:</strong> Different bird species prefer nesting at
-                  different levels.
-                </li>
-              </ul>
-
-              <router-link to="/bird" class="info-link">Explore Bird Species →</router-link>
-            </div>
-          </transition>
         </div>
       </div>
     </section>
     <section class="process-section">
       <div class="process-header">
         <h2 class="process-title">Simple and Effective Journey</h2>
-        <a href="/how-it-works" class="process-link">How It Works</a>
+        <a href="/learninghub" class="process-link">How It Works</a>
       </div>
 
       <div class="process-steps">
@@ -317,19 +264,7 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'HomePage',
-  data() {
-    return {
-      showPlantInfo: false,
-      showBirdInfo: false,
-    }
-  },
   methods: {
-    closePlantInfo() {
-      this.showPlantInfo = false
-    },
-    closeBirdInfo() {
-      this.showBirdInfo = false
-    },
     scrollToInfoSection(event) {
       event.preventDefault()
       const element = document.getElementById('info-title')
@@ -395,7 +330,7 @@ export default defineComponent({
 
 .btn-secondary {
   background-color: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  color: #0a3200;
   border: 2px solid rgba(255, 255, 255, 0.6);
   margin-left: 15px;
 }
@@ -498,7 +433,7 @@ export default defineComponent({
 
 .stat-label {
   font-size: 1.25rem;
-  color: #2c5530;
+  color: #5da56d;
   font-weight: 500;
 }
 
@@ -600,7 +535,7 @@ export default defineComponent({
   line-height: 1.6;
 }
 
-/* Info Section Styles - IMPROVED VERSION */
+/* Info Section Styles - MODIFIED VERSION */
 .info-section {
   padding: 50px 0;
   background-color: #f9f9f9;
@@ -632,7 +567,7 @@ export default defineComponent({
 
 .info-card {
   flex: 0 0 50%;
-  max-width: 500px;
+  max-width: 800px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -651,6 +586,7 @@ export default defineComponent({
   height: 500px;
   cursor: pointer;
   overflow: hidden;
+  display: block; /* Added to make the router-link take full height */
 }
 
 .card-image img {
@@ -658,6 +594,119 @@ export default defineComponent({
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
+}
+
+/* Hover overlay for enhanced visual effect */
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 50, 0, 0);
+  transition: background-color 0.4s ease;
+  z-index: 1;
+}
+
+.card-image:hover .hover-overlay {
+  background-color: rgba(10, 50, 0, 0.4);
+}
+
+.info-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+/* Info Section Styles - VERTICAL LAYOUT */
+.info-section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.info-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0a3200;
+}
+
+.info-subtitle {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0a3200;
+}
+
+.vertical-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px; /* Larger cards */
+  margin: 0 auto;
+}
+
+.step-number-indicator {
+  background-color: #0a3200;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.info-card {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.step-arrow {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+.card-image {
+  position: relative;
+  height: 500px;
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Hover overlay for enhanced visual effect */
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 50, 0, 0);
+  transition: background-color 0.4s ease;
+  z-index: 1;
+}
+
+.card-image:hover .hover-overlay {
+  background-color: rgba(10, 50, 0, 0.4);
 }
 
 .info-card:hover .card-image img {
@@ -669,153 +718,100 @@ export default defineComponent({
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(10, 50, 0, 0.8));
-  padding: 25px;
+  background: linear-gradient(transparent 40%, rgba(10, 50, 0, 0.8));
+  padding: 40px; /* More padding */
   color: white;
-  transition: background 0.3s ease;
+  transition: all 0.4s ease;
+  z-index: 2;
+  transform: translateY(0);
 }
 
 .card-overlay h3 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-size: 1.8rem; /* Larger title */
   font-weight: 600;
+  transition: transform 0.4s ease;
 }
 
-.learn-more {
+.overlay-description {
+  margin-bottom: 25px;
+  font-size: 1.2rem; /* Larger text */
+  line-height: 1.6;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease;
+  max-width: 90%;
+}
+
+/* Container for centering the button */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* New style for find plants button */
+.find-plants-btn {
   display: inline-flex;
   align-items: center;
-  font-weight: 700;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 20px;
-  padding: 6px 14px;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.learn-more::after {
-  content: '+';
-  display: inline-block;
-  margin-left: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
-
-.card-image:hover .learn-more {
-  background-color: white;
-  color: #0a3200;
-}
-
-.card-image:hover .learn-more::after {
-  transform: translateX(3px);
-}
-
-.card-image:hover .card-overlay {
-  background: linear-gradient(transparent, rgba(10, 50, 0, 0.9));
-}
-
-.card-image:hover .learn-more {
-  transform: translateX(5px);
-}
-
-.card-image:hover .learn-more::after {
-  transform: rotate(90deg);
-}
-
-/* Info Panel Styles */
-.info-panel {
-  flex: 1;
-  background-color: #f0f0f0;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  position: relative;
-  border-left: 4px solid #c2e59c;
-}
-
-.info-panel-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 32px;
-  height: 32px;
-  background: rgba(10, 50, 0, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: none;
+  font-weight: 700;
   color: #0a3200;
-  font-size: 22px;
-}
-
-.info-panel-close:hover {
-  background: rgba(10, 50, 0, 0.2);
-  transform: rotate(90deg);
-}
-
-.info-panel h3 {
-  color: #0a3200;
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 1.4rem;
-}
-
-.info-panel h3:not(:first-child) {
-  margin-top: 25px;
-}
-
-.info-panel p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-.info-panel ul {
-  margin-bottom: 20px;
-  padding-left: 20px;
-}
-
-.info-panel li {
-  margin-bottom: 12px;
-  line-height: 1.6;
-}
-
-.info-link {
-  display: inline-block;
-  margin-top: 15px;
-  color: #0a3200;
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 2px solid #c2e59c;
-  padding-bottom: 2px;
-  transition: all 0.3s ease;
-}
-
-.info-link:hover {
-  color: #4a7d32;
-  transform: translateX(5px);
-}
-
-/* Transition Animation */
-.fade-enter-active,
-.fade-leave-active {
+  background-color: rgba(194, 229, 156, 0.95);
+  border-radius: 30px;
+  padding: 15px 30px; /* Larger padding */
+  font-size: 1.5rem; /* Larger font */
   transition: all 0.4s ease;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(50px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  text-align: center;
 }
 
-.fade-enter-from {
-  opacity: 0;
-  transform: translateY(10px);
+/* Hover effects for overlay content */
+.card-image:hover .card-overlay {
+  background: linear-gradient(transparent 30%, rgba(10, 50, 0, 0.95));
 }
 
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
+.card-image:hover .find-plants-btn {
+  opacity: 1;
+  transform: translateY(0);
 }
+
+.find-plants-btn:hover {
+  background-color: white !important;
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .vertical-card-container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-image {
+    height: 400px;
+  }
+
+  .card-overlay h3 {
+    font-size: 1.6rem;
+  }
+
+  .overlay-description {
+    font-size: 1.1rem;
+  }
+
+  .find-plants-btn {
+    font-size: 1.3rem;
+    padding: 12px 25px;
+  }
+}
+
 .process-section {
   background-color: #0a2601;
   color: #f5f5dc;
@@ -944,12 +940,6 @@ export default defineComponent({
     width: 100%;
     max-width: 500px;
   }
-
-  .info-panel {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 20px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -985,12 +975,8 @@ export default defineComponent({
   .card-image {
     height: 350px;
   }
-
-  .info-panel {
-    width: 90%;
-    padding: 25px 20px;
-  }
 }
+
 html {
   scroll-padding-top: 60px;
   scroll-behavior: smooth;

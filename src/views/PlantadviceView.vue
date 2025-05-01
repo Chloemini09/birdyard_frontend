@@ -138,7 +138,7 @@ fetchRecommendedPlants(); });
     </div>
     <section class="cta-section">
       <p class="cta-section-info">Is there any birds in your garden?</p>
-      <router-link to="/bird" class="btn btn-large">Know more about Birds!</router-link>
+      <router-link to="/layout" class="btn btn-large">Let's design your garden!</router-link>
     </section>
   </div>
 </template>
