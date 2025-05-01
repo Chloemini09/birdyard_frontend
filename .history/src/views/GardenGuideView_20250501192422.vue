@@ -24,25 +24,26 @@
             </select>
           </div>
           <div class="tips-list">
-            <div v-for="(tip, index) in tips" :key="index" class="tip-item">• {{ tip }}</div>
+            <div v-for="(tip, index) in tips" :key="index" class="tip-item">
+              • {{ tip }}
+            </div>
           </div>
         </div>
         <div class="seasonal-right">
-          <img src="/images/Nesting/seasonaltips.png" alt="Bird Seasonal Tip Image" />
+          <img src="/src/assets/images/seasonaltips.png" alt="Bird Seasonal Tip Image" />
         </div>
       </div>
 
       <!-- US3.1 – Nesting Guide -->
       <div class="guide-card layout-left">
-        <img src="/images/Nesting/diy.jpg" alt="Nesting Guide" />
+        <img src="/src/assets/images/diy.jpg" alt="Nesting Guide" />
         <div class="card-content">
           <h3>Bird Nesting & Shelter Guide</h3>
           <p>
-            Learn how to provide safe nesting areas, build DIY shelters, and support native species
-            throughout the year.
+            Learn how to provide safe nesting areas, build DIY shelters, and support native species throughout the year.
           </p>
           <router-link
-            to="/nesting"
+            to="/nestingguide"
             class="troubleshoot-btn nesting-btn"
             title="Click to view the Bird Nesting & Shelter Guide"
           >
@@ -53,20 +54,20 @@
 
       <!-- US3.3 – Garden Health Troubleshooter (merged into one card) -->
       <div class="guide-card layout-left clickable">
-        <img src="/images/Nesting/woodland.jpg" alt="Garden Troubleshooting" />
+        <img src="/src/assets/images/woodland.jpg" alt="Garden Troubleshooting" />
         <div class="card-content">
           <h3>Garden Trouble Shooting</h3>
           <p>Click a topic below to view detailed advice:</p>
           <div class="troubleshoot-buttons">
-            <button
-              v-for="(tipsArray, issue) in troubleTips"
-              :key="issue"
-              class="troubleshoot-btn"
-              @click="openModal(issue)"
-              :title="'Click to see tips for ' + issue"
-            >
-              🔧 {{ issue }}
-            </button>
+          <button
+            v-for="(tipsArray, issue) in troubleTips"
+            :key="issue"
+            class="troubleshoot-btn"
+            @click="openModal(issue)"
+            :title="'Click to see tips for ' + issue"
+          >
+            🔧 {{ issue }}
+          </button>
           </div>
         </div>
       </div>
@@ -78,7 +79,7 @@
         <button class="close-btn" @click="showModal = false">×</button>
         <h3>{{ selectedIssue }}</h3>
         <ul>
-          <li v-for="(tip, i) in troubleTips[selectedIssue]" :key="i">{{ tip }}</li>
+          <li v-for="(tip, i) in troubleTips[selectedIssue]" :key="i"> {{ tip }}</li>
         </ul>
       </div>
     </div>
@@ -96,35 +97,35 @@ const selectedIssue = ref('')
 const troubleTips = {
   'Drought Stress': [
     '💧 Water early in the morning or late evening to minimize water loss due to evaporation. Morning watering is ideal as it allows moisture to reach the roots before the heat of the day. For deep-rooted plants, consider slow-drip irrigation to ensure penetration beyond surface level, which helps build drought resilience over time.',
-
+    
     '🌿 Apply a 5–10 cm layer of organic mulch such as sugarcane, straw, pine bark, or composted leaf litter. Mulch acts as an insulating blanket, keeping soil temperature stable and reducing evaporation. It also suppresses weeds that compete for limited moisture and breaks down over time to enrich the soil.',
-
+    
     '🌵 Choose and group plants according to their drought tolerance. Native plants like grevillea, banksia, and saltbush are adapted to local dry conditions and often require less care once established. Avoid placing thirsty plants like ferns or hydrangeas in exposed areas—use zoning principles to match water needs by location.',
   ],
 
   'Insect Infestations': [
     '🐞 Attract natural predators such as ladybugs, hoverflies, and praying mantises by planting companion plants like dill, marigold, alyssum, or yarrow. These “insectary” species offer nectar and shelter for beneficial insects. Avoid broad-spectrum pesticides which kill both pests and helpful organisms, disrupting the ecosystem balance.',
-
+    
     '🌱 Neem oil, made from the neem tree, is an effective organic pesticide with systemic and contact properties. Mix according to label (typically 5–10 ml per litre), apply in the early evening to avoid burning leaves, and repeat every 5–7 days. It interrupts pest breeding cycles and deters feeding, while remaining safe for bees if applied properly.',
-
+    
     '✂️ Regular inspection and manual removal are vital. Check the undersides of leaves where pests often hide. Prune affected foliage using clean, sterilized shears to avoid spreading disease. For severe infestations, isolate the plant from others until the problem is under control.',
   ],
 
-  Overwatering: [
+  'Overwatering': [
     '🧪 Test your soil by feeling or using a moisture meter. Soil that stays wet for more than 2 days may be retaining too much water. Over time, this creates anaerobic conditions, promoting root rot and fungal diseases. Use raised planters or mix sand and perlite into your garden beds to increase drainage and oxygen flow.',
-
+    
     '📉 Adjust watering frequency based on season, plant type, and recent rainfall. For example, succulents may need water only every 2–3 weeks, while vegetables may need it more often during fruiting. Install drip systems with moisture sensors or use self-watering pots with overflow holes to reduce the chance of saturation.',
-
+    
     '🌾 Ensure containers have sufficient and unobstructed drainage holes. Elevate pots on risers or bricks to prevent water from pooling underneath. For garden beds in heavy clay soil, build raised beds with layers of gravel, compost, and loamy topsoil to maintain proper air and water balance for root health.',
   ],
 
   'Poor Soil Conditions': [
     '🪱 Improve soil structure and fertility by mixing in composted kitchen scraps, worm castings, and decomposed manure. These organic materials increase microbial activity, water-holding capacity, and long-term nutrient availability, especially in sandy or depleted soils. Apply at the beginning and end of growing seasons for best results.',
-
+    
     '📊 Conduct a full soil test that includes pH, macronutrients (NPK), and micronutrients like magnesium or boron. Use testing results to guide amendments—for example, acidic soil (pH < 6) can be corrected with dolomite lime, while alkaline soil (pH > 7.5) may benefit from sulfur or peat moss to support plant uptake of iron and manganese.',
-
+    
     '🌿 Use raised garden beds, no-dig beds, or lasagna-style layering techniques for long-term soil building. Raised beds provide control over composition, reduce compaction from foot traffic, and allow better drainage. You can also practice crop rotation and green manure cover cropping to naturally replenish nutrients and break pest cycles.',
-  ],
+  ]
 }
 
 function openModal(issue) {
@@ -165,14 +166,11 @@ const tipsData = {
   ],
 }
 
-watch(
-  selectedSeason,
-  () => {
-    tips.value = tipsData[selectedSeason.value] || []
-  },
-  { immediate: true },
-)
+watch(selectedSeason, () => {
+  tips.value = tipsData[selectedSeason.value] || []
+}, { immediate: true })
 </script>
+
 
 <style scoped>
 .page-wrapper {
@@ -226,9 +224,7 @@ watch(
   width: 85%;
   max-width: 1200px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .seasonal-section:hover {
@@ -309,9 +305,7 @@ watch(
   padding: 25px;
   gap: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .guide-card:hover {
@@ -396,12 +390,12 @@ watch(
   background-color: #ffffff;
   padding: 30px;
   border-radius: 12px;
-  max-width: 650px;
+  max-width: 650px; 
   width: 95%;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   position: relative;
-  font-size: 1.05rem;
-  line-height: 1.9;
+  font-size: 1.05rem; 
+  line-height: 1.9;   
 }
 .modal h3 {
   margin-bottom: 15px;
@@ -415,7 +409,7 @@ watch(
 }
 
 .modal ul li {
-  margin-bottom: 14px;
+  margin-bottom: 14px; 
 }
 .close-btn {
   position: absolute;

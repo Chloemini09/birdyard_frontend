@@ -28,17 +28,14 @@
 
   <section class="bird-gallery">
     <h2>Explore Common Backyard Birds</h2>
-    <p>
-      Get to know the species you're helping! These birds are frequently found nesting in Australian
-      gardens.
-    </p>
-    <div class="bird-grid">
-      <div class="bird-card" v-for="(bird, i) in galleryBirds" :key="i">
-        <img :src="bird.img" :alt="bird.name" />
-        <h3>{{ bird.name }}</h3>
-        <p>{{ bird.desc }}</p>
+    <p>Get to know the species you're helping! These birds are frequently found nesting in Australian gardens.</p>
+      <div class="bird-grid">
+        <div class="bird-card" v-for="(bird, i) in galleryBirds" :key="i">
+          <img :src="bird.img" :alt="bird.name" />
+          <h3>{{ bird.name }}</h3>
+          <p>{{ bird.desc }}</p>
+        </div>
       </div>
-    </div>
   </section>
 </template>
 
@@ -47,7 +44,12 @@ import { ref } from 'vue'
 
 const selectedBird = ref('Small Garden Birds')
 
-const birdTypes = ['Small Garden Birds', 'Parrots & Lorikeets', 'Hollow Nesters', 'Ground Nesters']
+const birdTypes = [
+  'Small Garden Birds',
+  'Parrots & Lorikeets',
+  'Hollow Nesters',
+  'Ground Nesters'
+]
 
 const birdTips = {
   'Small Garden Birds': [
@@ -55,59 +57,59 @@ const birdTips = {
     'Install birdhouses at least 2 meters off the ground to prevent disturbance from pets and predators.',
     'Avoid direct sun and face the entrance away from prevailing winds (e.g., southeast in Australia) to maintain a stable internal temperature.',
     'Add soft bedding like untreated straw or dry grass inside the shelter to encourage nesting behavior.',
-    'Position birdhouses near native shrubs to provide a natural food source and quick cover from threats.',
+    'Position birdhouses near native shrubs to provide a natural food source and quick cover from threats.'
   ],
   'Parrots & Lorikeets': [
     'Provide larger nest boxes (30–40 cm tall) with reinforced lids, as parrots may chew soft timber.',
     'Mount nest boxes in tall trees 3–5 meters high with firm anchoring to avoid swaying in wind.',
     'Line the box with wood shavings and ensure nearby food like nectar-producing plants is abundant.',
     'Offer shallow water dishes or misting spots during summer to meet hydration needs.',
-    'Avoid overcrowding multiple nest boxes in one tree to reduce territorial aggression.',
+    'Avoid overcrowding multiple nest boxes in one tree to reduce territorial aggression.'
   ],
   'Hollow Nesters': [
     'Install artificial hollows made of hardwood or PVC pipe lined with sawdust to mimic natural tree hollows.',
     'Avoid trimming large, mature trees with existing hollows—they are critical for nesting owls, rosellas, and possums.',
     'Keep these hollows shaded throughout the day, ideally on the southern or eastern sides.',
     'Place hollows away from high foot traffic or playgrounds to prevent disturbance.',
-    'Ensure the hollow has a small drainage hole and is cleaned once a year post-breeding season.',
+    'Ensure the hollow has a small drainage hole and is cleaned once a year post-breeding season.'
   ],
   'Ground Nesters': [
     'Leave undisturbed ground zones with mulch, leaf litter, or native grasses for birds like lapwings or quail.',
     'Avoid mowing open areas during spring/summer breeding months; flag known nesting zones.',
     'Create perimeter cover using lomandra, tea trees, or hakea shrubs to offer camouflage from predators.',
     'Place shallow dishes of clean water near ground-level nesting zones with pebbles inside for safe perching.',
-    'Educate family or community members to avoid stepping on or disturbing camouflaged nests.',
-  ],
+    'Educate family or community members to avoid stepping on or disturbing camouflaged nests.'
+  ]
 }
 
 const getTipsForBird = (bird) => birdTips[bird] || []
 
 const getImageForBird = (bird) => {
   const map = {
-    'Small Garden Birds': '/images/Nesting/SmallGardenBirdswebp.webp',
-    'Parrots & Lorikeets': '/images/Nesting/Parrots&Lorikeets.webp',
-    'Hollow Nesters': '/images/Nesting/HollowNesters.jpg',
-    'Ground Nesters': '/images/Nesting/GroundNesters.jpg',
+    'Small Garden Birds': '/src/assets/images/SmallGardenBirdswebp.webp',
+    'Parrots & Lorikeets': '/src/assets/images/Parrots&Lorikeets.webp',
+    'Hollow Nesters': '/src/assets/images/HollowNesters.jpg',
+    'Ground Nesters': '/src/assets/images/GroundNesters.jpg'
   }
-  return map[bird] || '/images/Nesting/woodland.jpg'
+  return map[bird] || '/src/assets/images/woodland.jpg'
 }
 
 const galleryBirds = [
   {
     name: 'Superb Fairywren',
-    img: '/images/Nesting/SuperbFairywren.jpg',
-    desc: 'A small, active bird often seen flitting through shrubs. Prefers low, dense vegetation for nesting.',
+    img: '/src/assets/images/SuperbFairywren.jpg',
+    desc: 'A small, active bird often seen flitting through shrubs. Prefers low, dense vegetation for nesting.'
   },
   {
     name: 'Rainbow Lorikeet',
-    img: '/images/Nesting/RainbowLorikeet.jpg',
-    desc: 'Colourful and loud, these nectar-loving birds nest in tree hollows and feed on flowering gums.',
+    img: '/src/assets/images/RainbowLorikeet.jpg',
+    desc: 'Colourful and loud, these nectar-loving birds nest in tree hollows and feed on flowering gums.'
   },
   {
     name: 'Eastern Rosella',
-    img: '/images/Nesting/EasternRosella.jpg',
-    desc: 'Brightly feathered ground-forager. Uses large tree hollows or elevated nest boxes.',
-  },
+    img: '/src/assets/images/EasternRosella.jpg',
+    desc: 'Brightly feathered ground-forager. Uses large tree hollows or elevated nest boxes.'
+  }
 ]
 </script>
 
@@ -207,13 +209,13 @@ const galleryBirds = [
 
 .bird-grid {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  gap: 16px;
+  flex-wrap: nowrap;      
+  justify-content: space-between; 
+  gap: 16px;          
   margin-top: 30px;
 }
 .bird-card {
-  flex: 0 0 300px;
+  flex: 0 0 300px;       
   background-color: #ffffff;
   border-radius: 12px;
   padding: 20px;
@@ -226,4 +228,5 @@ const galleryBirds = [
   border-radius: 8px;
   margin-bottom: 12px;
 }
+
 </style>

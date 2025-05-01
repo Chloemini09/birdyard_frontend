@@ -18,7 +18,7 @@
           <img
             v-for="(img, idx) in garden.layout_images"
             :key="idx"
-            :src="`/images/layout/${garden.path}/${img}`"
+            :src="`/src/assets/images/layout/${garden.path}/${img}`"
             :alt="garden.name + ' image ' + idx"
           />
         </div>
@@ -28,7 +28,7 @@
         <h3>Birds Attracted</h3>
         <div class="bird-list">
           <div v-for="(bird, index) in garden.birds_attracted" :key="index" class="bird-entry">
-            <img :src="`/images/layout/${garden.path}/${bird.image}`" :alt="bird.name" />
+            <img :src="`/src/assets/images/layout/${garden.path}/${bird.image}`" :alt="bird.name" />
             <span>{{ bird.name }}</span>
           </div>
         </div>

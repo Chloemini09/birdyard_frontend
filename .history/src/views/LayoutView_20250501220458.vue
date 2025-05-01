@@ -119,7 +119,8 @@ function setStateFilter(state) {
   height: 40vh;
   min-height: 400px;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/layout/Layout.jpg');
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/images/layout/Layout.jpg');
   background-size: cover;
   background-position: center;
   display: flex;

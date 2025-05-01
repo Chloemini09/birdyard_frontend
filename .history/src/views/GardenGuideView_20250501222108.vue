@@ -28,13 +28,13 @@
           </div>
         </div>
         <div class="seasonal-right">
-          <img src="/images/Nesting/seasonaltips.png" alt="Bird Seasonal Tip Image" />
+          <img src="/images/seasonaltips.png" alt="Bird Seasonal Tip Image" />
         </div>
       </div>
 
       <!-- US3.1 – Nesting Guide -->
       <div class="guide-card layout-left">
-        <img src="/images/Nesting/diy.jpg" alt="Nesting Guide" />
+        <img src="/images/diy.jpg" alt="Nesting Guide" />
         <div class="card-content">
           <h3>Bird Nesting & Shelter Guide</h3>
           <p>
@@ -53,7 +53,7 @@
 
       <!-- US3.3 – Garden Health Troubleshooter (merged into one card) -->
       <div class="guide-card layout-left clickable">
-        <img src="/images/Nesting/woodland.jpg" alt="Garden Troubleshooting" />
+        <img src="/images/woodland.jpg" alt="Garden Troubleshooting" />
         <div class="card-content">
           <h3>Garden Trouble Shooting</h3>
           <p>Click a topic below to view detailed advice:</p>
