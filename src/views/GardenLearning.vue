@@ -3,7 +3,7 @@
         <!-- Header Banner -->
         <div class="banner">
             <h1 class="banner-title">GARDEN-LEARNING HUB</h1>
-            <p class="banner-subtitle">READ ARTICLES AND WATCH VEDIOS</p>
+            <p class="banner-subtitle">READ ARTICLES AND WATCH VIDEOS</p>
             <p class="banner-subtitle">LEARN ABOUT BIRD FRIENDLY GARDEN</p>
             <p class="banner-subtitle">ENJOY YOUR LEARNING JOURNEY!</p>
         </div>
@@ -126,17 +126,17 @@
                 </div>
             </div>
         </section>
-        <!-- Information Section with Modal Popups About Garden Vedio -->
+        <!-- Information Section with Modal Popups About Garden Video -->
         <section class="info-section">
             <div class="container">
-                <h2 id="info-title" class="info-title">GARDEN-LEARNING VEDIO</h2>
+                <h2 id="info-title" class="info-title">GARDEN-LEARNING VIDEO</h2>
                 <p class="info-subtitle">Click "learn more" or picture to see details.</p>
 
-                <!-- vedio 1 -->
+                <!-- video 1 -->
                 <div class="info-card-container">
                     <div class="info-card">
                         <div class="card-image" @click="openExternalLinkV1">
-                            <img src="@/assets/images/garden-vedio1.png" alt="garden vedio 1" />
+                            <img src="@/assets/images/garden-video1.png" alt="garden video 1" />
                             <div class="card-overlay">
                                 <h3>
                                     Attract birds to your garden by feeding responsibly | Beneficial Animals | Gardening
@@ -176,11 +176,11 @@
                     </transition>
                 </div>
 
-                <!-- vedio 2 -->
+                <!-- video 2 -->
                 <div class="info-card-container birds-container">
                     <div class="info-card">
                         <div class="card-image" @click="openExternalLinkV2">
-                            <img src="@/assets/images/garden-vedio2.png" alt="garden vedio 2" />
+                            <img src="@/assets/images/garden-video2.png" alt="garden video 2" />
                             <div class="card-overlay">
                                 <h3>HOW TO ATTRACT & FEED GARDEN BIRDS - Bird feeders, baths, hygiene & creating
                                     wildlife habitats</h3>

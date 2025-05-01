@@ -3,7 +3,7 @@
         <!-- Header Banner -->
         <div class="banner">
             <h1 class="banner-title">BIRD-LEARNING HUB</h1>
-            <p class="banner-subtitle">READ ARTICLES AND WATCH VEDIOS</p>
+            <p class="banner-subtitle">READ ARTICLES AND WATCH VIDEOS</p>
             <p class="banner-subtitle">LEARN ABOUT BIRD CONSERVATION IN AUSTRALIA</p>
             <p class="banner-subtitle">ENJOY YOUR LEARNING JOURNEY!</p>
         </div>
@@ -31,7 +31,7 @@
                                 The Australian birds most at risk of extinction </h1>
                             <h3>Abstract</h3>
                             <p>
-                                (correct)This research report, supported by Australia’s National Environmental Science
+                                (correct)This research report, supported by Australia's National Environmental Science
                                 Program, brings together insights from bird conservation experts and provides the first
                                 assessment of the Australian bird species most likely to become extinct in the next 20
                                 years. The report warns that without more effective management efforts, up to 10
@@ -127,17 +127,17 @@
                 </div>
             </div>
         </section>
-        <!-- Information Section with Modal Popups About Bird Vedio -->
+        <!-- Information Section with Modal Popups About Bird Video -->
         <section class="info-section">
             <div class="container">
-                <h2 id="info-title" class="info-title">BIRD-LEARNING VEDIO</h2>
+                <h2 id="info-title" class="info-title">BIRD-LEARNING VIDEO</h2>
                 <p class="info-subtitle">Click "learn more" or picture to see details.</p>
 
-                <!-- vedio 1 -->
+                <!-- video 1 -->
                 <div class="info-card-container">
                     <div class="info-card">
                         <div class="card-image" @click="openExternalLinkV1">
-                            <img src="@/assets/images/bird-vedio1.png" alt="bird vedio 1" />
+                            <img src="@/assets/images/bird-video1.png" alt="bird video 1" />
                             <div class="card-overlay">
                                 <h3>Australian Small Birds</h3>
                                 <span class="learn-more">Learn More</span>
@@ -172,11 +172,11 @@
                     </transition>
                 </div>
 
-                <!-- vedio 2 -->
+                <!-- video 2 -->
                 <div class="info-card-container birds-container">
                     <div class="info-card">
                         <div class="card-image" @click="openExternalLinkV2">
-                            <img src="@/assets/images/bird-vedio2.png" alt="bird vedio 2" />
+                            <img src="@/assets/images/bird-video2.png" alt="bird video 2" />
                             <div class="card-overlay">
                                 <h3>How Smart Are Australia's Ravens? </h3>
                                 <span class="learn-more">Learn More</span>
