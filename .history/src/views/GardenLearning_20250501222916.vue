@@ -259,7 +259,7 @@ export default {
 /* Banner styles */
 .banner {
   background-image:
-    linear-gradient(rgba(0, 50, 0, 0.8), rgba(0, 50, 0, 0.6)), url('nom/images/garden.jpeg');
+    linear-gradient(rgba(0, 50, 0, 0.8), rgba(0, 50, 0, 0.6)), url('/images/garden.jpeg');
   background-size: cover;
   background-position: center;
   height: 400px;
