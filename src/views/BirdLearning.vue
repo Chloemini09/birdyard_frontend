@@ -267,7 +267,7 @@ export default {
     width: 100%;
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f9f7f0;
 }
 
 /* Banner styles */
@@ -299,7 +299,7 @@ export default {
 /* Info Section Styles */
 .info-section {
     padding: 50px 0;
-    background-color: #f9f9f9;
+    background-color: #f9f7f0;
 }
 
 .info-title {

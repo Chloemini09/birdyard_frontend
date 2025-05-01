@@ -199,6 +199,7 @@ export default {
 
 /* Global styles matching your existing site */
 .eco-learning-container {
+    background-color: #f9f7f0;
     width: 100%;
     min-height: 100vh;
     font-family: Arial, sans-serif;
@@ -369,7 +370,7 @@ export default {
 
 .info-section {
     padding: 50px 0;
-    background-color: #f9f9f9;
+    background-color: #f9f7f0;
 }
 
 .info-title {

@@ -159,7 +159,7 @@ export default {
 
 .quiz-background {
     width: 100%;
-    background: #f0f8f5;
+    background: #f9f7f0;
     min-height: 60vh;
     padding: 5rem;
     display: flex;
