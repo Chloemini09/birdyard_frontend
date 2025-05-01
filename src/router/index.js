@@ -8,7 +8,7 @@ import PlantDetailView from '@/views/PlantDetailView.vue'
 import WelcomeView from '@/views/WelcomeView.vue'
 import LearningHub from '@/views/LearningHub.vue'
 import BirdHub from '@/views/BirdLearning.vue'
-import GardenLeaning from '@/views/GardenLearning.vue'
+import GardenLearning from '@/views/GardenLearning.vue'
 import QuizView from '@/views/QuizView.vue'
 
 const router = createRouter({
@@ -72,7 +72,7 @@ const router = createRouter({
     {
       path: '/gardenlearning',
       name: 'gardenlearning',
-      component: GardenLeaning,
+      component: GardenLearning,
       meta: { requiresAuth: true },
     },
     {
