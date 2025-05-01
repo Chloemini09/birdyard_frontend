@@ -6,6 +6,10 @@ import PlantadviceView from '@/views/PlantadviceView.vue'
 import BirdView from '@/views/BirdView.vue'
 import PlantDetailView from '@/views/PlantDetailView.vue'
 import WelcomeView from '@/views/WelcomeView.vue'
+import LearningHub from '@/views/LearningHub.vue'
+import BirdHub from '@/views/BirdLearning.vue'
+import GardenLeaning from '@/views/GardenLearning.vue'
+import QuizView from '@/views/QuizView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -51,6 +55,30 @@ const router = createRouter({
       name: 'PlantDetail',
       component: PlantDetailView,
       props: true,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/learninghub',
+      name: 'learninghub',
+      component: LearningHub,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/birdhub',
+      name: 'birdhub',
+      component: BirdHub,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/gardenlearning',
+      name: 'gardenlearning',
+      component: GardenLeaning,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/quiz',
+      name: 'quiz',
+      component: QuizView,
       meta: { requiresAuth: true },
     },
   ],
