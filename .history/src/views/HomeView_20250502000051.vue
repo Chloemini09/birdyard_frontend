@@ -176,8 +176,8 @@
       <div class="next-steps">
         <h3 class="next-steps-title">Ready to begin your journey?</h3>
         <div class="next-steps-content">
-          <router-link to="/plantadvice" class="btn btn-large"
-            >Let's Find Plants for your Garden
+          <router-link to="/learninghub" class="btn btn-large"
+            >know more about Australia birds and plants!
           </router-link>
         </div>
       </div>
@@ -204,13 +204,6 @@
         <div class="stat-item">
           <div class="stat-number">89%</div>
           <div class="stat-label">Habitat Growth</div>
-        </div>
-      </div>
-      <div class="next-steps">
-        <div class="next-steps-content">
-          <router-link to="/learninghub" class="btn btn-large"
-            >WE HAVE MORE RESOURCES FOR YOU
-          </router-link>
         </div>
       </div>
     </section>
