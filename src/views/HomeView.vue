@@ -44,72 +44,6 @@
       </div>
     </section>
 
-    <!-- Information Section (Vertical layout) -->
-    <section class="info-section">
-      <div class="container">
-        <h2 id="info-title" class="info-title">START BUILDING YOUR GARDEN FOR BIRDS</h2>
-        <p class="info-subtitle">Follow these steps to create your perfect bird garden</p>
-
-        <div class="vertical-card-container">
-          <!-- Step 1: Plant Information Card -->
-          <div class="step-number-indicator">STEP 1</div>
-          <div class="info-card">
-            <router-link to="/plantadvice" class="card-image">
-              <img src="@/assets/images/plant-importance.jpg" alt="Plant importance" />
-              <div class="card-overlay">
-                <h3>Plants: The Garden Foundation</h3>
-                <p class="overlay-description">
-                  Native plants form the backbone of your bird garden, providing food, shelter, and
-                  nesting materials.
-                </p>
-                <div class="btn-container">
-                  <span class="find-plants-btn">Find Nice Plants for your Garden</span>
-                </div>
-              </div>
-              <div class="hover-overlay"></div>
-            </router-link>
-          </div>
-
-          <!-- Arrow indicator -->
-          <div class="step-arrow">
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 5V19M12 19L19 12M12 19L5 12"
-                stroke="#0a3200"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-
-          <!-- Step 2: Birds Information Card -->
-          <div class="step-number-indicator">STEP 2</div>
-          <div class="info-card">
-            <router-link to="/gardenguide" class="card-image">
-              <img src="@/assets/images/attracting-birds.jpg" alt="Attracting birds" />
-              <div class="card-overlay">
-                <h3>Attracting Birds with Plants</h3>
-                <p class="overlay-description">
-                  The right plant choices create a welcoming habitat for local birds while
-                  supporting biodiversity.
-                </p>
-                <div class="btn-container">
-                  <span class="find-plants-btn">Attract birds for your Garden</span>
-                </div>
-              </div>
-              <div class="hover-overlay"></div>
-            </router-link>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="process-section">
       <div class="process-header">
         <h2 class="process-title">Simple and Effective Journey</h2>
@@ -179,6 +113,73 @@
           <router-link to="/plantadvice" class="btn btn-large"
             >Let's Find Plants for your Garden
           </router-link>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information Section (Vertical layout) -->
+    <section class="info-section">
+      <div class="container">
+        <h2 id="info-title" class="info-title">START BUILDING YOUR GARDEN FOR BIRDS</h2>
+        <p class="info-subtitle">Follow these steps to create your perfect bird garden</p>
+
+        <div class="vertical-card-container">
+          <!-- Step 1: Plant Information Card -->
+          <div class="step-number-indicator">STEP 1</div>
+          <div class="info-card">
+            <router-link to="/plantadvice" class="card-image">
+              <img src="@/assets/images/plant-importance.jpg" alt="Plant importance" />
+              <div class="card-overlay">
+                <h3>Plants: The Garden Foundation</h3>
+                <p class="overlay-description">
+                  Native plants form the backbone of your bird garden, providing food, shelter, and
+                  nesting materials.
+                </p>
+                <div class="btn-container">
+                  <span class="find-plants-btn">Find Nice Plants for your Garden</span>
+                </div>
+              </div>
+              <div class="hover-overlay"></div>
+            </router-link>
+          </div>
+
+          <!-- Arrow indicator -->
+          <div class="step-arrow">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 5V19M12 19L19 12M12 19L5 12"
+                stroke="#0a3200"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+
+          <!-- Step 2: Birds Information Card -->
+          <div class="step-number-indicator">STEP 2</div>
+          <div class="info-card">
+            <router-link to="/gardenguide" class="card-image">
+              <img src="@/assets/images/attracting-birds.jpg" alt="Attracting birds" />
+              <div class="card-overlay">
+                <h3>Attracting Birds with Plants</h3>
+                <p class="overlay-description">
+                  The right plant choices create a welcoming habitat for local birds while
+                  supporting biodiversity.
+                </p>
+                <div class="btn-container">
+                  <span class="find-plants-btn">Attract birds for your Garden</span>
+                </div>
+              </div>
+              <div class="hover-overlay"></div>
+            </router-link>
+          </div>
         </div>
       </div>
     </section>
