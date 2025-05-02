@@ -19,7 +19,7 @@
           <div class="about-text">
             <h2>Welcome to Bird-Yard,<br />Where Birds Feel at Home, Right in Your Backyard.</h2>
             <router-link to="/about" class="about-link">
-              Know more about us
+              About Us
               <span class="arrow">→</span>
             </router-link>
           </div>
@@ -352,7 +352,7 @@ export default defineComponent({
 
 /* Hero Section */
 .hero {
-  height: 500px;
+  height: 1200px;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@/assets/images/homepage.jpeg');
   background-size: cover;
@@ -361,7 +361,7 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 .hero-cta {
   font-size: 1.2rem;
@@ -377,7 +377,7 @@ export default defineComponent({
 .hero-title {
   font-size: 3.5rem;
   color: #ffffff;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   line-height: 1.2;
   font-weight: bold;
 }
