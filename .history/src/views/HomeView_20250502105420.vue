@@ -9,6 +9,13 @@
           Together, we'll transform your garden into a vibrant sanctuary<br />
           where birds thrive and nature flourishes.
         </p>
+        <div class="hero-buttons">
+          <p class="hero-subtitle"></p>
+          <p class="hero-cta">Wanna Start your journey?</p>
+          <a href="#info-title" class="btn hero-cta-btn" @click.prevent="scrollToInfoSection"
+            >Let's build your garden</a
+          >
+        </div>
       </div>
     </section>
 
@@ -19,7 +26,7 @@
           <div class="about-text">
             <h2>Welcome to Bird-Yard,<br />Where Birds Feel at Home, Right in Your Backyard.</h2>
             <router-link to="/about" class="about-link">
-              Know more about us
+              About Us
               <span class="arrow">→</span>
             </router-link>
           </div>
@@ -352,7 +359,7 @@ export default defineComponent({
 
 /* Hero Section */
 .hero {
-  height: 500px;
+  height: 80vh;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@/assets/images/homepage.jpeg');
   background-size: cover;
@@ -361,7 +368,7 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 .hero-cta {
   font-size: 1.2rem;
@@ -377,8 +384,7 @@ export default defineComponent({
 .hero-title {
   font-size: 3.5rem;
   color: #ffffff;
-  margin-bottom: 80px;
-  margin-top: 20%;
+  margin-bottom: 20px;
   line-height: 1.2;
   font-weight: bold;
 }
@@ -815,7 +821,7 @@ export default defineComponent({
 }
 
 .process-section {
-  background-color: #184215;
+  background-color: #0a2601;
   color: #f5f5dc;
   padding: 5rem 2rem;
   max-height: 820px;
@@ -840,7 +846,6 @@ export default defineComponent({
   color: #f5f5dc;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 2rem;
 }
 
 .process-link:hover {

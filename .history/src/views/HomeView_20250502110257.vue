@@ -378,7 +378,6 @@ export default defineComponent({
   font-size: 3.5rem;
   color: #ffffff;
   margin-bottom: 80px;
-  margin-top: 20%;
   line-height: 1.2;
   font-weight: bold;
 }

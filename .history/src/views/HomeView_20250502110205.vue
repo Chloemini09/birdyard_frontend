@@ -19,7 +19,7 @@
           <div class="about-text">
             <h2>Welcome to Bird-Yard,<br />Where Birds Feel at Home, Right in Your Backyard.</h2>
             <router-link to="/about" class="about-link">
-              Know more about us
+              About Us
               <span class="arrow">→</span>
             </router-link>
           </div>
@@ -378,7 +378,6 @@ export default defineComponent({
   font-size: 3.5rem;
   color: #ffffff;
   margin-bottom: 80px;
-  margin-top: 20%;
   line-height: 1.2;
   font-weight: bold;
 }
