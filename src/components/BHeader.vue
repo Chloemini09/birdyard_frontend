@@ -11,12 +11,31 @@
           <span class="logo-text">BirdYard</span>
         </router-link>
       </div>
+
       <nav class="nav-menu">
         <ul>
           <li><router-link to="/home">HOME</router-link></li>
-          <li><router-link to="/contact">CONTACT US</router-link></li>
+          <!-- Bird Menu -->
+          <li class="dropdown">
+            <a href="#">GARDEN</a>
+            <ul class="dropdown-menu">
+              <li><router-link to="/plantadvice">Plants Advice</router-link></li>
+              <li><router-link to="/layout">Garden Layout</router-link></li>
+              <li><router-link to="/gardenguide">Garden Guide</router-link></li>
+            </ul>
+          </li>
+          
+          <li class="dropdown">
+            <a href="#">BIRD</a>
+            <ul class="dropdown-menu">
+              <li><router-link to="/gardenguide">Garden Guide</router-link></li>
+              <li><router-link to="/nesting">Nesting Guide</router-link></li>
+              <li><router-link to="/bird">Bird Detection</router-link></li>
+            </ul>
+          </li>
+          
           <li><router-link to="/learninghub">LEARNING HUB</router-link></li>
-          <li><router-link to="/bird">BIRDS DETECTION</router-link></li>
+          <li><router-link to="/contact">CONTACT US</router-link></li>
         </ul>
       </nav>
     </div>
@@ -92,6 +111,7 @@ export default {
 
 .nav-menu li {
   margin-left: 30px;
+  position: relative; 
 }
 
 .nav-menu a {
@@ -106,26 +126,49 @@ export default {
   color: #c2e59c;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(10, 50, 0, 0.95);
+  padding: 10px 0;
+  min-width: 200px; 
+  border-radius: 5px;
+  z-index: 1001;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 
-  .nav-menu {
-    margin-top: 15px;
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-menu li {
-    margin: 10px 0;
-    margin-left: 0;
-  }
+  display: flex;
+  flex-direction: column;
 }
+
+.dropdown-menu li {
+  margin: 0;
+  white-space: nowrap; 
+}
+
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.dropdown-menu a:hover {
+  background-color: #c2e59c; 
+  color: #0a3200;            
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
 .back-button {
   position: absolute;
   left: 30px;
@@ -148,6 +191,41 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+    margin-left: 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background-color: transparent;
+    padding: 0;
+    min-width: auto;
+    border-radius: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: none;  
+  }
+
+  .dropdown-menu a {
+    padding: 8px 0;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .back-button {
     position: static;
     margin-bottom: 10px;
