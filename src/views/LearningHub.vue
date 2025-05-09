@@ -29,7 +29,7 @@
           </div>
 
           <transition name="fade">
-            <div class="info-panel">
+            <div v-if="true" class="info-panel">
               <p class="info-h-size">Bird Learning Hub - Your Gateway to Australia's Avian World</p>
               <p class="info-p-size">
                 Clicking the image will take you to a dedicated webpage full of informative articles
@@ -55,7 +55,7 @@
           </div>
 
           <transition name="fade">
-            <div class="info-panel">
+            <div v-if="true" class="info-panel">
               <p class="info-h-size">
                 Garden Learning Hub - Learn Why And How to Built Your Bird-friendly Gardens
               </p>
@@ -81,7 +81,7 @@
           </div>
 
           <transition name="fade">
-            <div class="info-panel">
+            <div v-if="true" class="info-panel">
               <p class="info-h-size">
                 Quiz Hub - Learn Why And How to Built Your Bird-friendly Gardens
               </p>
@@ -102,7 +102,7 @@
 <script>
 export default {
   methods: {
-    scrollToInfoSection1(event) {
+    scrollToInfoSection1() {
       const element = document.getElementById('info-title1')
       if (element) {
         const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
@@ -114,7 +114,7 @@ export default {
         })
       }
     },
-    scrollToInfoSection2(event) {
+    scrollToInfoSection2() {
       const element = document.getElementById('info-title2')
       if (element) {
         const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
@@ -126,7 +126,7 @@ export default {
         })
       }
     },
-    scrollToInfoSection3(event) {
+    scrollToInfoSection3() {
       const element = document.getElementById('info-title3')
       if (element) {
         const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
