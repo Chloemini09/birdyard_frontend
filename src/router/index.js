@@ -13,6 +13,7 @@ import LearningHub from '@/views/LearningHub.vue'
 import GardenLearning from '@/views/GardenLearning.vue'
 import QuizView from '@/views/QuizView.vue'
 import BirdLearning from '@/views/BirdLearning.vue'
+import PlantingCalendarView from '@/views/PlantingCalendarView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -70,6 +71,18 @@ const router = createRouter({
       path: '/gardenguide',
       name: 'Gardenguie',
       component: GardenGuideView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/plant/:plantName/calendar',
+      name: 'PlantingCalendar',
+      component: PlantingCalendarView,
+      props: route => ({
+        plantName: route.params.plantName, // From route param
+        userHemisphere: route.query.hemisphere || 'southern', // From query
+        // Map recommendedPlantNames query to a prop
+        recommendedPlantNamesString: route.query.recommendedPlantNames || ''
+      }),
       meta: { requiresAuth: true },
     },
     {

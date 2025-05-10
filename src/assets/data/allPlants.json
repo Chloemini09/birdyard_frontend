@@ -1,190 +1,762 @@
 [
   {
     "plantName": "Lavender",
-    "description": "Lavender is a perfect addition to Victorian spring gardens thanks to its fragrance, drought tolerance, and pollinator-friendly nature. Choose a sunny location with well-draining, slightly alkaline soil (pH 6.5\u20138.0). Heavy clay soils should be amended with sand or gravel to improve drainage. Plant in early to mid-spring once the risk of frost has passed. Space each plant around 30\u201345 cm apart to allow airflow and reduce the chance of fungal issues. Water young plants regularly until established, then reduce watering\u2014lavender thrives on neglect. Avoid high-nitrogen fertilizers; instead, use a slow-release general-purpose type sparingly. Prune after flowering to maintain a compact shape and encourage bushier growth. Lavender not only adds beauty and scent to your garden, but it also deters pests and attracts bees, making it a great companion for vegetables and fruit trees. With minimal care, it will bloom generously throughout spring and summer."
+    "description": "Lavender is a perfect addition to Victorian spring gardens thanks to its fragrance, drought tolerance, and pollinator-friendly nature. Choose a sunny location with well-draining, slightly alkaline soil (pH 6.5–8.0). Heavy clay soils should be amended with sand or gravel to improve drainage. Plant in early to mid-spring once the risk of frost has passed. Space each plant around 30–45 cm apart to allow airflow and reduce the chance of fungal issues. Water young plants regularly until established, then reduce watering—lavender thrives on neglect. Avoid high-nitrogen fertilizers; instead, use a slow-release general-purpose type sparingly. Prune after flowering to maintain a compact shape and encourage bushier growth. Lavender not only adds beauty and scent to your garden, but it also deters pests and attracts bees, making it a great companion for vegetables and fruit trees. With minimal care, it will bloom generously throughout spring and summer.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Autumn"],
+      "specificMonthsToPlant": ["September", "October", "November", "March", "April"],
+      "timelineEvents": [
+        { "name": "Plant seeds/seedlings", "offsetDays": 0, "description": "Plant in well-drained soil, full sun." },
+        { "name": "Germination", "offsetDays": 14, "durationDays": 7, "description": "Expect sprouts in 14-21 days." },
+        { "name": "Seedling Care", "offsetDays": 21, "durationDays": 30, "description": "Water regularly, protect young plants." },
+        { "name": "First Fertilize", "offsetDays": 60, "description": "Lightly fertilize with low-nitrogen fertilizer." },
+        { "name": "Flowering Begins", "offsetDays": 90, "durationDays": 60, "description": "Enjoy the blooms. Attracts bees and birds." },
+        { "name": "Pruning", "offsetDays": 150, "description": "Prune after flowering to maintain shape and encourage bushier growth." }
+      ],
+      "notes": "Lavender thrives on neglect once established. Good air circulation is important. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Rose",
-    "description": "Roses flourish in Victoria's spring and bring elegance, color, and fragrance to any garden. Choose a position with full sun\u2014ideally 6 hours or more of direct sunlight daily\u2014and well-drained, nutrient-rich soil. Before planting, dig compost or aged manure into the soil to support healthy root development. Plant roses at the same depth they were in their nursery pot, and space them 60\u201390 cm apart to promote air circulation and reduce disease. Water deeply once or twice a week, especially during dry spells, keeping water at the base to avoid fungal issues. Apply mulch to conserve moisture and suppress weeds. Feed with a rose-specific fertilizer every 4\u20136 weeks through spring and early summer. Prune in late winter or early spring, removing dead, weak, or crossing branches. With regular care, roses reward you with stunning blooms that make excellent cut flowers and focal points in your garden."
+    "description": "Roses flourish in Victoria's spring and bring elegance, color, and fragrance to any garden. Choose a position with full sun—ideally 6 hours or more of direct sunlight daily—and well-drained, nutrient-rich soil. Before planting, dig compost or aged manure into the soil to support healthy root development. Plant roses at the same depth they were in their nursery pot, and space them 60–90 cm apart to promote air circulation and reduce disease. Water deeply once or twice a week, especially during dry spells, keeping water at the base to avoid fungal issues. Apply mulch to conserve moisture and suppress weeds. Feed with a rose-specific fertilizer every 4–6 weeks through spring and early summer. Prune in late winter or early spring, removing dead, weak, or crossing branches. With regular care, roses reward you with stunning blooms that make excellent cut flowers and focal points in your garden.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Late Winter", "Early Spring"],
+      "specificMonthsToPlant": ["April", "May", "August", "September"],
+      "timelineEvents": [
+        { "name": "Planting (bare-root or potted)", "offsetDays": 0, "description": "Plant in well-drained, sunny spot. Add compost." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly to establish roots." },
+        { "name": "First Fertilize (Spring)", "offsetDays": 90, "description": "Apply rose-specific fertilizer as new growth appears." },
+        { "name": "Regular Fertilizing", "offsetDays": 120, "durationDays": 90, "description": "Feed every 4-6 weeks during active growth." },
+        { "name": "Flowering Period", "offsetDays": 150, "durationDays": 120, "description": "Main bloom period. Deadhead spent flowers." },
+        { "name": "Pruning (Winter)", "offsetDays": 270, "description": "Major prune in late winter before spring growth." }
+      ],
+      "notes": "Roses benefit from good air circulation. Mulch well. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Camellia",
-    "description": "Camellias are prized for their glossy evergreen foliage and striking flowers that bloom in late winter through spring. They thrive in Victoria's temperate climate when planted in filtered light or morning sun, away from harsh afternoon exposure. The soil should be slightly acidic (pH 5.5\u20136.5), rich in organic matter, and well-draining. Plant camellias slightly above soil level to avoid crown rot, and mulch with pine bark or leaf litter to keep roots cool and moist. Water regularly during the growing season, especially in dry weather, but avoid waterlogging. Fertilize after flowering using an acid-loving plant food. Prune lightly after blooming to shape the plant and encourage bushiness. Camellias are perfect for borders, hedges, or as specimen plants in shaded corners of the garden. Their elegant flowers and year-round structure make them a garden favorite throughout Victoria\u2019s cooler months and into spring."
+    "description": "Camellias are prized for their glossy evergreen foliage and striking flowers that bloom in late winter through spring. They thrive in Victoria's temperate climate when planted in filtered light or morning sun, away from harsh afternoon exposure. The soil should be slightly acidic (pH 5.5–6.5), rich in organic matter, and well-draining. Plant camellias slightly above soil level to avoid crown rot, and mulch with pine bark or leaf litter to keep roots cool and moist. Water regularly during the growing season, especially in dry weather, but avoid waterlogging. Fertilize after flowering using an acid-loving plant food. Prune lightly after blooming to shape the plant and encourage bushiness. Camellias are perfect for borders, hedges, or as specimen plants in shaded corners of the garden. Their elegant flowers and year-round structure make them a garden favorite throughout Victoria’s cooler months and into spring.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Winter"],
+      "specificMonthsToPlant": ["April", "May", "June", "July", "August"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in acidic, well-draining soil, filtered sun." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water regularly, especially during dry spells." },
+        { "name": "Flowering Period (Late Winter/Spring)", "offsetDays": 180, "durationDays": 90, "description": "Blooms appear, protect from harsh frost if necessary." },
+        { "name": "Fertilize (After Flowering)", "offsetDays": 270, "description": "Use an acid-loving plant food." },
+        { "name": "Pruning (Lightly After Flowering)", "offsetDays": 280, "description": "Shape the plant and encourage bushiness." }
+      ],
+      "notes": "Camellias prefer acidic soil and protection from hot afternoon sun. Mulch with pine bark. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Grevillea",
-    "description": "Grevilleas are tough, low-maintenance native plants that bloom beautifully in Victoria\u2019s spring gardens. They prefer full sun and free-draining soil\u2014sandy or loamy types are ideal. Avoid planting in rich or wet soil and use a low-phosphorus fertilizer specially designed for Australian natives. Spring is the best time to plant, giving roots time to settle before the dry summer. Once established, grevilleas are drought-tolerant and only need occasional watering. Apply a thick layer of mulch to conserve soil moisture, but keep it away from the stem base. Prune lightly after flowering to maintain a neat shape and stimulate new growth. Grevilleas are loved by nectar-feeding birds, especially honeyeaters, making them excellent for wildlife-friendly gardens. With their spidery or toothbrush-like blooms in vibrant reds, yellows, and pinks, grevilleas provide continuous interest and color with minimal care. Dwarf varieties also suit small gardens or pots."
+    "description": "Grevilleas are tough, low-maintenance native plants that bloom beautifully in Victoria’s spring gardens. They prefer full sun and free-draining soil—sandy or loamy types are ideal. Avoid planting in rich or wet soil and use a low-phosphorus fertilizer specially designed for Australian natives. Spring is the best time to plant, giving roots time to settle before the dry summer. Once established, grevilleas are drought-tolerant and only need occasional watering. Apply a thick layer of mulch to conserve soil moisture, but keep it away from the stem base. Prune lightly after flowering to maintain a neat shape and stimulate new growth. Grevilleas are loved by nectar-feeding birds, especially honeyeaters, making them excellent for wildlife-friendly gardens. With their spidery or toothbrush-like blooms in vibrant reds, yellows, and pinks, grevilleas provide continuous interest and color with minimal care. Dwarf varieties also suit small gardens or pots.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-drained soil. Use native plant mix." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly until established." },
+        { "name": "Flowering Period (Varies by species)", "offsetDays": 90, "durationDays": 180, "description": "Many bloom in spring and autumn, some year-round. Attracts birds." },
+        { "name": "Fertilize (Spring - Low Phosphorus)", "offsetDays": 120, "description": "Use native-specific, low-phosphorus fertilizer if needed." },
+        { "name": "Pruning (Lightly After Main Flowering)", "offsetDays": 270, "description": "Maintain shape and encourage new blooms." }
+      ],
+      "notes": "Grevilleas are generally drought-tolerant once established. Avoid high phosphorus fertilizers. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Tomato",
-    "description": "Tomatoes thrive in Victoria\u2019s warm, sunny summers, making them a staple in backyard veggie patches. Choose a location that receives at least 6\u20138 hours of direct sunlight daily. Plant tomatoes in rich, well-draining soil enriched with compost or aged manure. Space plants 45\u201360 cm apart to allow good air circulation and reduce disease risk. Use stakes or cages to support growth and prevent fruit from touching the ground. Water consistently at the base\u2014early morning is ideal\u2014keeping the soil evenly moist but not soggy. Mulch around plants to conserve moisture and suppress weeds. Feed with a balanced or tomato-specific fertilizer every two to three weeks. Regularly prune side shoots to encourage stronger, upright growth and larger fruit. Watch for pests like aphids or caterpillars and remove them early. With proper care, you can enjoy juicy, homegrown tomatoes all summer long\u2014perfect for salads, sauces, and snacks."
+    "description": "Tomatoes thrive in Victoria’s warm, sunny summers, making them a staple in backyard veggie patches. Choose a location that receives at least 6–8 hours of direct sunlight daily. Plant tomatoes in rich, well-draining soil enriched with compost or aged manure. Space plants 45–60 cm apart to allow good air circulation and reduce disease risk. Use stakes or cages to support growth and prevent fruit from touching the ground. Water consistently at the base—early morning is ideal—keeping the soil evenly moist but not soggy. Mulch around plants to conserve moisture and suppress weeds. Feed with a balanced or tomato-specific fertilizer every two to three weeks. Regularly prune side shoots to encourage stronger, upright growth and larger fruit. Watch for pests like aphids or caterpillars and remove them early. With proper care, you can enjoy juicy, homegrown tomatoes all summer long—perfect for salads, sauces, and snacks.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Early Summer"],
+      "specificMonthsToPlant": ["September", "October", "November", "December"],
+      "timelineEvents": [
+        { "name": "Plant seedlings", "offsetDays": 0, "description": "Plant after last frost, in rich soil, full sun. Stake plants." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 14, "description": "Water consistently." },
+        { "name": "Regular Fertilizing", "offsetDays": 14, "durationDays": 70, "description": "Start regular feeding every 2-3 weeks." },
+        { "name": "Pruning (Side Shoots)", "offsetDays": 30, "durationDays": 60, "description": "Remove suckers for better fruit production (for indeterminate types)." },
+        { "name": "Flowering & Fruit Set", "offsetDays": 45, "durationDays": 30, "description": "Pollination occurs, small fruits appear." },
+        { "name": "Fruit Development", "offsetDays": 60, "durationDays": 40, "description": "Ensure consistent watering and support." },
+        { "name": "Harvest Begins", "offsetDays": 70, "durationDays": 60, "description": "Harvest ripe tomatoes regularly. Typically 70-100 days from planting to first harvest." }
+      ],
+      "notes": "Tomatoes need at least 6-8 hours of sun. Mulch to conserve moisture. Protect from frost. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Agapanthus",
-    "description": "Agapanthus, also known as Lily of the Nile, is a hardy and reliable plant for Victoria\u2019s hot summers. It thrives in full sun to part shade and tolerates drought once established. Plant in well-drained soil, spacing clumps around 30\u201360 cm apart depending on variety. Spring or early summer is the ideal time for planting. Water regularly during establishment, then reduce frequency\u2014overwatering can cause rot. Agapanthus requires minimal maintenance but benefits from occasional feeding with a slow-release fertilizer in spring. Remove spent flower stalks to encourage more blooms and prevent self-seeding. The strappy green leaves remain lush throughout the year, and the striking blue or white flowers bloom in mid-to-late summer. It works well in garden borders, along pathways, or in containers. Agapanthus is also excellent for coastal gardens thanks to its resilience to salty winds and heat. Divide overcrowded clumps every few years to rejuvenate flowering."
+    "description": "Agapanthus, also known as Lily of the Nile, is a hardy and reliable plant for Victoria’s hot summers. It thrives in full sun to part shade and tolerates drought once established. Plant in well-drained soil, spacing clumps around 30–60 cm apart depending on variety. Spring or early summer is the ideal time for planting. Water regularly during establishment, then reduce frequency—overwatering can cause rot. Agapanthus requires minimal maintenance but benefits from occasional feeding with a slow-release fertilizer in spring. Remove spent flower stalks to encourage more blooms and prevent self-seeding. The strappy green leaves remain lush throughout the year, and the striking blue or white flowers bloom in mid-to-late summer. It works well in garden borders, along pathways, or in containers. Agapanthus is also excellent for coastal gardens thanks to its resilience to salty winds and heat. Divide overcrowded clumps every few years to rejuvenate flowering.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Early Summer"],
+      "specificMonthsToPlant": ["September", "October", "November", "December"],
+      "timelineEvents": [
+        { "name": "Planting (Clumps/Rhizomes)", "offsetDays": 0, "description": "Plant in well-drained soil, full sun to part shade." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly until established." },
+        { "name": "Fertilize (Spring)", "offsetDays": 90, "description": "Apply slow-release fertilizer." },
+        { "name": "Flowering Period (Summer)", "offsetDays": 270, "durationDays": 60, "description": "Striking blue or white flowers appear." },
+        { "name": "Deadhead Spent Flowers", "offsetDays": 330, "description": "Remove old flower stalks to encourage more blooms and prevent seeding." },
+        { "name": "Division (Every few years)", "offsetDays": 1095, "description": "Divide overcrowded clumps in autumn or early spring to rejuvenate." }
+      ],
+      "notes": "Drought-tolerant once established. Minimal maintenance. Some varieties can be invasive in certain areas. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Olive Tree",
-    "description": "Olive trees are well-suited to Victoria\u2019s dry, sunny summers, offering both ornamental beauty and edible rewards. Choose a location with full sun and excellent drainage\u2014olives dislike waterlogged roots. Plant in well-drained, sandy or loamy soil, and avoid overly rich soils. Space trees at least 3\u20135 meters apart to allow room for mature growth. Water regularly in the first year, especially during dry spells, then reduce as the tree becomes drought-tolerant. Apply mulch around the base to retain moisture but keep it clear of the trunk. Fertilize in spring with a low-nitrogen fertilizer to support fruiting. Prune lightly in late winter or early spring to shape and remove any dead or crossing branches. Olive trees are slow-growing and can live for decades, making them a lasting feature in your backyard. They can be grown in large pots, too\u2014just ensure good drainage and full sun exposure."
+    "description": "Olive trees are well-suited to Victoria\u2019s dry, sunny summers, offering both ornamental beauty and edible rewards. Choose a location with full sun and excellent drainage\u2014olives dislike waterlogged roots. Plant in well-drained, sandy or loamy soil, and avoid overly rich soils. Space trees at least 3\u20135 meters apart to allow room for mature growth. Water regularly in the first year, especially during dry spells, then reduce as the tree becomes drought-tolerant. Apply mulch around the base to retain moisture but keep it clear of the trunk. Fertilize in spring with a low-nitrogen fertilizer to support fruiting. Prune lightly in late winter or early spring to shape and remove any dead or crossing branches. Olive trees are slow-growing and can live for decades, making them a lasting feature in your backyard. They can be grown in large pots, too\u2014just ensure good drainage and full sun exposure.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring"],
+      "specificMonthsToPlant": ["April", "May", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, excellent drainage. Space 3-5m apart." },
+        { "name": "Establishment (First Year)", "offsetDays": 0, "durationDays": 365, "description": "Water regularly during dry spells." },
+        { "name": "Fertilize (Spring)", "offsetDays": 180, "description": "Apply low-nitrogen fertilizer." },
+        { "name": "Pruning (Late Winter/Early Spring)", "offsetDays": 240, "description": "Lightly prune to shape and remove dead wood." },
+        { "name": "Flowering Period (Late Spring)", "offsetDays": 600, "durationDays": 30, "description": "Small, fragrant flowers appear. Olives are wind-pollinated." },
+        { "name": "Fruit Development", "offsetDays": 630, "durationDays": 150, "description": "Fruit develops over several months." },
+        { "name": "Harvest Period (Autumn/Winter)", "offsetDays": 780, "durationDays": 90, "description": "Harvest olives when they reach desired ripeness." }
+      ],
+      "notes": "Drought-tolerant once established. Requires good drainage. Slow-growing. Assumes Southern Hemisphere seasons. Fruiting may take 3-5 years."
+    }
   },
   {
     "plantName": "Succulents",
-    "description": "Succulents are perfect for low-maintenance summer gardens in Victoria, especially during dry or water-restricted months. They thrive in full sun to partial shade and prefer gritty, free-draining soil\u2014amend clay soils with sand or perlite to improve drainage. Plant in summer when the risk of frost has passed, and choose a mix of rosette-forming, trailing, or upright varieties for visual interest. Succulents store water in their leaves, so avoid overwatering; once every 10\u201314 days is usually enough during summer. Use shallow containers or raised beds for optimal drainage. Fertilize sparingly in spring or early summer using a diluted, low-nitrogen fertilizer. Remove spent leaves and check for pests like mealybugs. Many succulents also produce striking flowers in summer, adding pops of color to your landscape. Whether in pots, rock gardens, or vertical walls, succulents are an excellent choice for vibrant, drought-resilient backyard displays."
+    "description": "Succulents are perfect for low-maintenance summer gardens in Victoria, especially during dry or water-restricted months. They thrive in full sun to partial shade and prefer gritty, free-draining soil\u2014amend clay soils with sand or perlite to improve drainage. Plant in summer when the risk of frost has passed, and choose a mix of rosette-forming, trailing, or upright varieties for visual interest. Succulents store water in their leaves, so avoid overwatering; once every 10\u201314 days is usually enough during summer. Use shallow containers or raised beds for optimal drainage. Fertilize sparingly in spring or early summer using a diluted, low-nitrogen fertilizer. Remove spent leaves and check for pests like mealybugs. Many succulents also produce striking flowers in summer, adding pops of color to your landscape. Whether in pots, rock gardens, or vertical walls, succulents are an excellent choice for vibrant, drought-resilient backyard displays.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Summer"],
+      "specificMonthsToPlant": ["September", "October", "November", "December", "January", "February"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in well-draining gritty soil, full sun to part shade." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 30, "description": "Water sparingly, allow soil to dry out between waterings." },
+        { "name": "Active Growth (Spring/Summer)", "offsetDays": 30, "durationDays": 180, "description": "Water when soil is dry. Protect from extreme heat if needed." },
+        { "name": "Fertilize (Spring - Sparingly)", "offsetDays": 60, "description": "Use diluted, low-nitrogen fertilizer if desired." },
+        { "name": "Flowering Period (Varies, often Summer)", "offsetDays": 90, "durationDays": 60, "description": "Many succulents produce flowers." }
+      ],
+      "notes": "Excellent drainage is crucial. Avoid overwatering. Protect from heavy frost. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Kangaroo Paw",
-    "description": "Kangaroo Paw is an iconic Australian native that adds bold texture and vibrant color to Victorian autumn gardens. Plant in a sunny location with well-drained, sandy or loamy soil. Autumn is a great time to plant as it allows the roots to establish before the dry summer. Choose a low-phosphorus fertilizer suitable for native plants and avoid overwatering\u2014these plants are drought-tolerant once established. Water deeply but infrequently during the first growing season. Remove spent flowers regularly to encourage new blooms and extend flowering into early winter. After flowering, cut old stems back to the base to promote fresh growth. Kangaroo Paw attracts birds and pollinators, making it a wildlife-friendly addition to your garden. Compact varieties suit pots or borders, while taller species make striking focal points. To avoid fungal diseases, ensure good air circulation and do not let water sit on leaves or crowns."
+    "description": "Kangaroo Paw is an iconic Australian native that adds bold texture and vibrant color to Victorian autumn gardens. Plant in a sunny location with well-drained, sandy or loamy soil. Autumn is a great time to plant as it allows the roots to establish before the dry summer. Choose a low-phosphorus fertilizer suitable for native plants and avoid overwatering\u2014these plants are drought-tolerant once established. Water deeply but infrequently during the first growing season. Remove spent flowers regularly to encourage new blooms and extend flowering into early winter. After flowering, cut old stems back to the base to promote fresh growth. Kangaroo Paw attracts birds and pollinators, making it a wildlife-friendly addition to your garden. Compact varieties suit pots or borders, while taller species make striking focal points. To avoid fungal diseases, ensure good air circulation and do not let water sit on leaves or crowns.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-drained soil. Use native plant mix." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly until established." },
+        { "name": "Flowering Period (Mainly Spring/Summer)", "offsetDays": 180, "durationDays": 120, "description": "Iconic paw-shaped flowers appear. Attracts birds." },
+        { "name": "Fertilize (Spring - Low Phosphorus)", "offsetDays": 210, "description": "Apply native-specific, low-phosphorus fertilizer." },
+        { "name": "Pruning (After Flowering)", "offsetDays": 300, "description": "Cut back old flower stems and dead leaves to the base." }
+      ],
+      "notes": "Ensure good air circulation. Drought-tolerant once established. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Climbing Roses",
-    "description": "Climbing Roses bring vertical beauty and long-lasting blooms to backyard fences, walls, or arbors. Autumn is an excellent time to plant them in Victoria, giving roots a head start before winter. Select a sunny location with at least 6 hours of direct light per day. Ensure the soil is well-drained and enriched with compost. When planting, position the graft union just above soil level and secure stems loosely to a trellis or support. Water thoroughly after planting and mulch to retain moisture. Water regularly during dry spells, keeping the base moist but not soggy. Feed in early spring with a balanced rose fertilizer. Prune lightly after flowering to remove dead wood and train new growth horizontally for more blooms. Climbing roses offer a stunning cascade of color and fragrance, rewarding you with dramatic floral displays season after season."
+    "description": "Climbing Roses bring vertical beauty and long-lasting blooms to backyard fences, walls, or arbors. Autumn is an excellent time to plant them in Victoria, giving roots a head start before winter. Select a sunny location with at least 6 hours of direct light per day. Ensure the soil is well-drained and enriched with compost. When planting, position the graft union just above soil level and secure stems loosely to a trellis or support. Water thoroughly after planting and mulch to retain moisture. Water regularly during dry spells, keeping the base moist but not soggy. Feed in early spring with a balanced rose fertilizer. Prune lightly after flowering to remove dead wood and train new growth horizontally for more blooms. Climbing roses offer a stunning cascade of color and fragrance, rewarding you with dramatic floral displays season after season.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Late Winter"],
+      "specificMonthsToPlant": ["April", "May", "August"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in well-drained, sunny spot against support. Add compost." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water regularly. Train new canes onto support." },
+        { "name": "First Fertilize (Spring)", "offsetDays": 120, "description": "Apply rose-specific fertilizer as new growth appears." },
+        { "name": "Regular Fertilizing", "offsetDays": 150, "durationDays": 90, "description": "Feed every 4-6 weeks during active growth." },
+        { "name": "Flowering Period (Spring/Summer)", "offsetDays": 210, "durationDays": 150, "description": "Main bloom period. Deadhead and train." },
+        { "name": "Pruning (Late Summer/Autumn & Winter)", "offsetDays": 360, "description": "Main structural prune in winter. Light prune after flowering." }
+      ],
+      "notes": "Requires sturdy support. Train canes horizontally for more blooms. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Lilly Pilly",
-    "description": "Lilly Pilly is a versatile, fast-growing Australian native ideal for hedges, screens, or ornamental plantings in Victorian gardens. Autumn is an ideal planting season, offering mild weather for root development. Choose a sunny to partly shaded position with well-drained soil. Enrich the soil with compost before planting, and water in well. Young plants require regular watering during their first year, especially in dry conditions. Mulch around the base to conserve moisture and suppress weeds, keeping mulch away from the trunk. Lilly Pilly benefits from light pruning to shape and encourage dense growth\u2014best done after new flushes of growth. It produces small white or cream flowers followed by colorful berries, which attract birds. Use a low-phosphorus native fertilizer in spring and autumn. With glossy leaves, vibrant flushes of red or bronze new foliage, and easy maintenance, Lilly Pilly is an autumn favorite for both formal and informal gardens."
+    "description": "Lilly Pilly is a versatile, fast-growing Australian native ideal for hedges, screens, or ornamental plantings in Victorian gardens. Autumn is an ideal planting season, offering mild weather for root development. Choose a sunny to partly shaded position with well-drained soil. Enrich the soil with compost before planting, and water in well. Young plants require regular watering during their first year, especially in dry conditions. Mulch around the base to conserve moisture and suppress weeds, keeping mulch away from the trunk. Lilly Pilly benefits from light pruning to shape and encourage dense growth\u2014best done after new flushes of growth. It produces small white or cream flowers followed by colorful berries, which attract birds. Use a low-phosphorus native fertilizer in spring and autumn. With glossy leaves, vibrant flushes of red or bronze new foliage, and easy maintenance, Lilly Pilly is an autumn favorite for both formal and informal gardens.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in well-drained soil, sun to part shade. Add compost." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 180, "description": "Water regularly, especially in first year." },
+        { "name": "Fertilize (Spring & Autumn - Low P)", "offsetDays": 90, "description": "Apply native-specific, low-phosphorus fertilizer." },
+        { "name": "Flowering Period (Summer)", "offsetDays": 270, "durationDays": 60, "description": "Small white/cream flowers appear." },
+        { "name": "Fruit Development (Autumn/Winter)", "offsetDays": 330, "durationDays": 90, "description": "Colorful berries develop, attracting birds." },
+        { "name": "Pruning (After new growth flushes)", "offsetDays": 120, "description": "Prune to shape and encourage density. Can be done multiple times." }
+      ],
+      "notes": "Fast-growing, ideal for hedging. Some varieties prone to psyllids. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Bay Tree",
-    "description": "Bay trees are hardy, aromatic evergreens perfect for Victorian backyards, whether grown in the ground or containers. Autumn planting allows roots to establish before summer stress. Choose a sunny or partly shaded location with fertile, well-drained soil. Bay trees tolerate a variety of soil types but dislike soggy conditions\u2014elevate or mound if necessary. Water well after planting and keep the soil consistently moist during the first growing season. Mature trees are drought-tolerant but benefit from occasional deep watering. Prune lightly in late autumn or spring to maintain shape or encourage bushy growth, especially if used as a hedge or topiary. Fertilize once in spring with a balanced organic fertilizer. Bay trees grow slowly but reward gardeners with fragrant leaves used in cooking. They\u2019re highly adaptable, evergreen year-round, and lend a Mediterranean touch to Victorian autumn gardens."
+    "description": "Bay trees are hardy, aromatic evergreens perfect for Victorian backyards, whether grown in the ground or containers. Autumn planting allows roots to establish before summer stress. Choose a sunny or partly shaded location with fertile, well-drained soil. Bay trees tolerate a variety of soil types but dislike soggy conditions\u2014elevate or mound if necessary. Water well after planting and keep the soil consistently moist during the first growing season. Mature trees are drought-tolerant but benefit from occasional deep watering. Prune lightly in late autumn or spring to maintain shape or encourage bushy growth, especially if used as a hedge or topiary. Fertilize once in spring with a balanced organic fertilizer. Bay trees grow slowly but reward gardeners with fragrant leaves used in cooking. They\u2019re highly adaptable, evergreen year-round, and lend a Mediterranean touch to Victorian autumn gardens.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in well-drained soil, sun to part shade." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 365, "description": "Water regularly during the first year." },
+        { "name": "Fertilize (Spring)", "offsetDays": 180, "description": "Apply balanced organic fertilizer." },
+        { "name": "Pruning (Late Autumn or Spring)", "offsetDays": 210, "description": "Prune to shape or maintain size." },
+        { "name": "Harvest Leaves", "offsetDays": 365, "durationDays": 3650, "description": "Harvest leaves as needed year-round once established." }
+      ],
+      "notes": "Slow-growing. Can be grown in pots. Drought-tolerant once established. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Mint",
-    "description": "Mint is a hardy perennial herb that thrives in Victoria\u2019s cool winter climate. It grows best in moist, well-drained soil with plenty of organic matter and partial to full sunlight. Winter is an excellent time to plant mint as it can establish its root system before spring growth kicks in. Mint spreads vigorously, so it\u2019s best planted in containers or confined beds to prevent it from becoming invasive. Keep the soil evenly moist but not waterlogged. Regular harvesting encourages bushier growth\u2014pinch off leaves and stems as needed. Although mint may die back slightly during colder months, it will regrow vigorously in spring. Add a layer of mulch to protect the roots from frost. Mint is perfect for garden borders, kitchen pots, or companion planting, as it repels some common pests. Its refreshing aroma and culinary uses make it a must-have winter herb for backyard gardeners."
+    "description": "Mint is a hardy perennial herb that thrives in Victoria\u2019s cool winter climate. It grows best in moist, well-drained soil with plenty of organic matter and partial to full sunlight. Winter is an excellent time to plant mint as it can establish its root system before spring growth kicks in. Mint spreads vigorously, so it\u2019s best planted in containers or confined beds to prevent it from becoming invasive. Keep the soil evenly moist but not waterlogged. Regular harvesting encourages bushier growth\u2014pinch off leaves and stems as needed. Although mint may die back slightly during colder months, it will regrow vigorously in spring. Add a layer of mulch to protect the roots from frost. Mint is perfect for garden borders, kitchen pots, or companion planting, as it repels some common pests. Its refreshing aroma and culinary uses make it a must-have winter herb for backyard gardeners.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Winter", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "June", "July", "August", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting (Runners/Divisions/Seedlings)", "offsetDays": 0, "description": "Plant in moist, well-drained soil, ideally in a container." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 30, "description": "Keep soil consistently moist." },
+        { "name": "Active Growth", "offsetDays": 30, "durationDays": 200, "description": "Spreads vigorously. Harvest regularly." },
+        { "name": "Harvest Period", "offsetDays": 45, "durationDays": 200, "description": "Pinch off leaves and stems as needed." },
+        { "name": "Dormancy Care (Winter - may die back)", "offsetDays": 150, "description": "Mulch to protect roots. Will regrow in spring." }
+      ],
+      "notes": "Can be invasive, best in containers. Prefers moist soil. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Chives",
-    "description": "Chives are an easy-to-grow, winter-hardy herb perfect for Victoria\u2019s cool-season gardens. Plant them in well-drained soil with good sunlight exposure\u2014at least 4\u20136 hours per day. Winter planting allows roots to settle before the growth surge in spring. Sow seeds directly or plant divisions from mature clumps. Keep soil slightly moist during germination and growth. Chives form clumps of slender, green, onion-flavored leaves and produce purple pom-pom flowers in spring. Trim leaves regularly to encourage new growth and prevent the plant from becoming too woody. They\u2019re great for pots, borders, or herb gardens and are excellent companions for carrots, tomatoes, and lettuce. In cold winters, chives may go dormant, but they reliably regrow in spring. Add a layer of mulch in late autumn for frost protection. Chives are not only edible but also ornamental, and their flowers attract pollinators, making them a great all-round herb for winter gardens."
+    "description": "Chives are an easy-to-grow, winter-hardy herb perfect for Victoria\u2019s cool-season gardens. Plant them in well-drained soil with good sunlight exposure\u2014at least 4\u20136 hours per day. Winter planting allows roots to settle before the growth surge in spring. Sow seeds directly or plant divisions from mature clumps. Keep soil slightly moist during germination and growth. Chives form clumps of slender, green, onion-flavored leaves and produce purple pom-pom flowers in spring. Trim leaves regularly to encourage new growth and prevent the plant from becoming too woody. They\u2019re great for pots, borders, or herb gardens and are excellent companions for carrots, tomatoes, and lettuce. In cold winters, chives may go dormant, but they reliably regrow in spring. Add a layer of mulch in late autumn for frost protection. Chives are not only edible but also ornamental, and their flowers attract pollinators, making them a great all-round herb for winter gardens.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Winter", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "June", "July", "August", "September"],
+      "timelineEvents": [
+        { "name": "Planting (Seeds/Divisions)", "offsetDays": 0, "description": "Plant in well-drained soil, good sunlight." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 45, "description": "Keep soil moist." },
+        { "name": "Active Growth & Harvest", "offsetDays": 45, "durationDays": 200, "description": "Trim leaves regularly to encourage new growth." },
+        { "name": "Flowering Period (Spring)", "offsetDays": 180, "durationDays": 30, "description": "Purple pom-pom flowers appear. Edible too!" },
+        { "name": "Dormancy Care (Winter)", "offsetDays": 150, "description": "May go dormant, mulch for protection. Regrows in spring." }
+      ],
+      "notes": "Easy to grow. Flowers attract pollinators. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Thyme",
-    "description": "Thyme is a resilient, low-growing perennial herb ideal for planting in Victoria during winter. It thrives in full sun and well-drained, slightly alkaline soil. Winter planting gives thyme time to develop a strong root system before spring. Choose a sunny spot and avoid heavy clay\u2014raised beds or sandy soils are ideal. Once established, thyme is drought-tolerant and needs only occasional watering. Avoid overwatering, especially during wet winters, to prevent root rot. Prune lightly after flowering to maintain a compact shape. Thyme is perfect for rock gardens, borders, or even between stepping stones thanks to its creeping habit and fragrant leaves. It\u2019s also an excellent companion plant for vegetables, deterring pests like cabbage moths. Mulch with gravel or light straw to insulate roots during frosty nights. This aromatic herb adds flavor to winter stews and roasts, and its evergreen nature brings life to your winter garden."
+    "description": "Thyme is a resilient, low-growing perennial herb ideal for planting in Victoria during winter. It thrives in full sun and well-drained, slightly alkaline soil. Winter planting gives thyme time to develop a strong root system before spring. Choose a sunny spot and avoid heavy clay\u2014raised beds or sandy soils are ideal. Once established, thyme is drought-tolerant and needs only occasional watering. Avoid overwatering, especially during wet winters, to prevent root rot. Prune lightly after flowering to maintain a compact shape. Thyme is perfect for rock gardens, borders, or even between stepping stones thanks to its creeping habit and fragrant leaves. It\u2019s also an excellent companion plant for vegetables, deterring pests like cabbage moths. Mulch with gravel or light straw to insulate roots during frosty nights. This aromatic herb adds flavor to winter stews and roasts, and its evergreen nature brings life to your winter garden.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Winter", "Spring"],
+      "specificMonthsToPlant": ["April", "May", "June", "July", "August", "September"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-drained soil." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water moderately until established." },
+        { "name": "Active Growth & Harvest", "offsetDays": 60, "durationDays": 250, "description": "Harvest sprigs as needed. Drought-tolerant once established." },
+        { "name": "Flowering Period (Late Spring/Summer)", "offsetDays": 210, "durationDays": 60, "description": "Small flowers appear, attractive to bees." },
+        { "name": "Pruning (After Flowering)", "offsetDays": 270, "description": "Prune lightly to maintain shape." }
+      ],
+      "notes": "Drought-tolerant. Prefers full sun and good drainage. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Native Grasses",
-    "description": "Native grasses are excellent for low-maintenance, drought-tolerant winter planting in Victoria. They thrive in various conditions, including sandy, loamy, or even poor soils, and many tolerate frost well. Autumn through winter is the best time to plant native grasses, giving them a full cool season to establish roots. Choose a sunny or part-shade location and plant in well-drained soil. Water regularly during establishment, then only during prolonged dry periods. Popular varieties for Victorian gardens include Lomandra, Themeda, and Poa species. These grasses provide year-round structure and texture, offering habitat for insects and small birds. Most require little fertiliser\u2014use a native slow-release type in early spring if needed. Trim old foliage in late winter to promote fresh, green regrowth. Native grasses blend beautifully with other native shrubs or flowering perennials and are ideal for naturalistic or wildlife-friendly landscaping. They bring movement, color, and resilience to the winter garden."
+    "description": "Native grasses are excellent for low-maintenance, drought-tolerant winter planting in Victoria. They thrive in various conditions, including sandy, loamy, or even poor soils, and many tolerate frost well. Autumn through winter is the best time to plant native grasses, giving them a full cool season to establish roots. Choose a sunny or part-shade location and plant in well-drained soil. Water regularly during establishment, then only during prolonged dry periods. Popular varieties for Victorian gardens include Lomandra, Themeda, and Poa species. These grasses provide year-round structure and texture, offering habitat for insects and small birds. Most require little fertiliser\u2014use a native slow-release type in early spring if needed. Trim old foliage in late winter to promote fresh, green regrowth. Native grasses blend beautifully with other native shrubs or flowering perennials and are ideal for naturalistic or wildlife-friendly landscaping. They bring movement, color, and resilience to the winter garden.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Winter"],
+      "specificMonthsToPlant": ["March", "April", "May", "June", "July", "August"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in well-drained soil, sun to part shade." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 180, "description": "Water regularly until established, then very drought-tolerant." },
+        { "name": "Active Growth (Spring/Summer)", "offsetDays": 180, "durationDays": 180, "description": "Grasses put on most of their growth." },
+        { "name": "Fertilize (Spring - Low P, if needed)", "offsetDays": 210, "description": "Optional, use native-specific fertilizer." },
+        { "name": "Pruning/Trimming (Late Winter)", "offsetDays": 300, "description": "Trim old or dead foliage to encourage fresh growth." }
+      ],
+      "notes": "Very low maintenance. Provide habitat and texture. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Frangipani",
-    "description": "Frangipani (Plumeria) is a classic tropical tree that thrives in Queensland\u2019s warm spring climate. It loves full sun and requires well-drained, sandy or loamy soil. Spring is the best time to plant, as rising temperatures encourage root growth. Choose a location with good airflow and space for spreading branches. Frangipanis are drought-tolerant once established and prefer minimal watering\u2014let the soil dry out between drinks. They don\u2019t need much fertilising, but a light application of a slow-release fertilizer in spring can boost flowering. Prune lightly to shape in late winter or early spring, but avoid cutting into thick, older wood. Frangipanis produce fragrant blooms in white, pink, yellow, or red from late spring through summer. Ideal for tropical-themed gardens or containers, they\u2019re low-maintenance and pest-resistant. Note: their sap is toxic, so wear gloves when pruning. With their iconic scent and stunning appearance, frangipanis are Queensland garden favourites."
+    "description": "Frangipani (Plumeria) is a classic tropical tree that thrives in Queensland\u2019s warm spring climate. It loves full sun and requires well-drained, sandy or loamy soil. Spring is the best time to plant, as rising temperatures encourage root growth. Choose a location with good airflow and space for spreading branches. Frangipanis are drought-tolerant once established and prefer minimal watering\u2014let the soil dry out between drinks. They don\u2019t need much fertilising, but a light application of a slow-release fertilizer in spring can boost flowering. Prune lightly to shape in late winter or early spring, but avoid cutting into thick, older wood. Frangipanis produce fragrant blooms in white, pink, yellow, or red from late spring through summer. Ideal for tropical-themed gardens or containers, they\u2019re low-maintenance and pest-resistant. Note: their sap is toxic, so wear gloves when pruning. With their iconic scent and stunning appearance, frangipanis are Queensland garden favourites.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring"],
+      "specificMonthsToPlant": ["September", "October", "November"],
+      "timelineEvents": [
+        { "name": "Planting (Cuttings or Potted)", "offsetDays": 0, "description": "Plant in full sun, well-drained soil." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water sparingly, allow to dry out between waterings." },
+        { "name": "Fertilize (Spring - Optional)", "offsetDays": 30, "description": "Light application of slow-release fertilizer." },
+        { "name": "Flowering Period (Late Spring - Summer)", "offsetDays": 60, "durationDays": 120, "description": "Fragrant blooms appear." },
+        { "name": "Pruning (Late Winter/Early Spring)", "offsetDays": -60, "description": "Prune lightly to shape before new growth (relative to next season's planting)." }
+      ],
+      "notes": "Drought-tolerant. Prefers warm climate. Sap can be an irritant. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Hibiscus",
-    "description": "Hibiscus brings bold, exotic colour to Queensland gardens and loves the warm, sunny conditions of spring. Plant hibiscus in a spot with full sun and rich, well-draining soil. Improve the soil with compost or organic matter before planting. Water regularly to keep the soil moist but not soggy\u2014hibiscus thrives on consistent moisture during the growing season. Mulch to retain water and suppress weeds. Apply a high-potassium fertiliser in spring and summer to support abundant flowering. Protect from strong winds, which can damage the large, delicate blooms. Prune lightly after flowering to encourage new growth and shape the plant. Hibiscus can be grown as shrubs or trained into small trees, making them suitable for hedges or focal points. Their vivid blooms, available in many colours, attract butterflies and brighten any garden. With proper care, hibiscus will flower generously from spring through to autumn in Queensland\u2019s tropical climate."
+    "description": "Hibiscus brings bold, exotic colour to Queensland gardens and loves the warm, sunny conditions of spring. Plant hibiscus in a spot with full sun and rich, well-draining soil. Improve the soil with compost or organic matter before planting. Water regularly to keep the soil moist but not soggy\u2014hibiscus thrives on consistent moisture during the growing season. Mulch to retain water and suppress weeds. Apply a high-potassium fertiliser in spring and summer to support abundant flowering. Protect from strong winds, which can damage the large, delicate blooms. Prune lightly after flowering to encourage new growth and shape the plant. Hibiscus can be grown as shrubs or trained into small trees, making them suitable for hedges or focal points. Their vivid blooms, available in many colours, attract butterflies and brighten any garden. With proper care, hibiscus will flower generously from spring through to autumn in Queensland\u2019s tropical climate.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Early Summer"],
+      "specificMonthsToPlant": ["September", "October", "November", "December"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, rich, well-draining soil." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly to keep soil moist." },
+        { "name": "Regular Fertilizing (High K)", "offsetDays": 30, "durationDays": 150, "description": "Feed during spring and summer." },
+        { "name": "Flowering Period (Spring - Autumn)", "offsetDays": 60, "durationDays": 180, "description": "Abundant, large blooms. Attracts butterflies." },
+        { "name": "Pruning (After Flowering)", "offsetDays": 240, "description": "Prune lightly to shape and encourage new growth." }
+      ],
+      "notes": "Protect from strong winds. Requires consistent moisture during growing season. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Heliconia",
-    "description": "Heliconias are lush, dramatic plants perfect for Queensland\u2019s warm and humid spring climate. Known for their bold, banana-like foliage and brightly colored bracts, they thrive in tropical and subtropical zones. Plant in spring in a partly shaded to sunny position with rich, moist, well-draining soil. Add compost or aged manure to enrich the soil. Water regularly\u2014heliconias prefer consistently moist (but not soggy) conditions. Mulch well to retain moisture and suppress weeds. Apply a balanced liquid fertilizer every two weeks during the growing season for lush foliage and prolific flowering. Space plants adequately\u2014around 1\u20131.5 metres apart\u2014as they form clumping colonies. Prune back old or dead stems at the base to promote new growth. Heliconias make excellent screening plants and create a tropical jungle feel in the garden. Protect from strong winds and frost. With proper care, they\u2019ll reward you with stunning, exotic blooms throughout the warmer months."
+    "description": "Heliconias are lush, dramatic plants perfect for Queensland\u2019s warm and humid spring climate. Known for their bold, banana-like foliage and brightly colored bracts, they thrive in tropical and subtropical zones. Plant in spring in a partly shaded to sunny position with rich, moist, well-draining soil. Add compost or aged manure to enrich the soil. Water regularly\u2014heliconias prefer consistently moist (but not soggy) conditions. Mulch well to retain moisture and suppress weeds. Apply a balanced liquid fertilizer every two weeks during the growing season for lush foliage and prolific flowering. Space plants adequately\u2014around 1\u20131.5 metres apart\u2014as they form clumping colonies. Prune back old or dead stems at the base to promote new growth. Heliconias make excellent screening plants and create a tropical jungle feel in the garden. Protect from strong winds and frost. With proper care, they\u2019ll reward you with stunning, exotic blooms throughout the warmer months.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring"],
+      "specificMonthsToPlant": ["September", "October", "November"],
+      "timelineEvents": [
+        { "name": "Planting (Rhizomes/Potted)", "offsetDays": 0, "description": "Plant in rich, moist, well-draining soil, part shade to sun." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water regularly, keep consistently moist." },
+        { "name": "Regular Fertilizing", "offsetDays": 30, "durationDays": 180, "description": "Feed every 2 weeks during growing season." },
+        { "name": "Flowering Period (Warm months)", "offsetDays": 120, "durationDays": 150, "description": "Stunning, exotic bracts appear." },
+        { "name": "Pruning (Old stems)", "offsetDays": 270, "description": "Cut back old or dead stems at the base." }
+      ],
+      "notes": "Loves humidity and moisture. Protect from strong winds and frost. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Cordyline",
-    "description": "Cordylines are vibrant, foliage-rich plants ideal for adding tropical flair to Queensland gardens in spring. They thrive in warm, humid conditions and prefer filtered sunlight to part shade, though some varieties tolerate full sun. Choose moist, well-draining soil and amend with compost before planting. Water regularly, especially during establishment, but don\u2019t let the soil stay soggy. Cordylines appreciate humidity, so misting can be beneficial in drier areas. Mulch to retain soil moisture and prevent weed growth. Feed monthly during the growing season with a diluted liquid fertilizer high in nitrogen for vibrant foliage color. Remove dead leaves and prune back leggy stems to encourage a bushier shape. With foliage in shades of green, burgundy, pink, and purple, cordylines provide year-round interest. They work beautifully in borders, pots, or as feature plants. Pest-resistant and low-maintenance, cordylines are a fantastic, colorful choice for spring planting in Queensland\u2019s tropical gardens."
+    "description": "Cordylines are vibrant, foliage-rich plants ideal for adding tropical flair to Queensland gardens in spring. They thrive in warm, humid conditions and prefer filtered sunlight to part shade, though some varieties tolerate full sun. Choose moist, well-draining soil and amend with compost before planting. Water regularly, especially during establishment, but don\u2019t let the soil stay soggy. Cordylines appreciate humidity, so misting can be beneficial in drier areas. Mulch to retain soil moisture and prevent weed growth. Feed monthly during the growing season with a diluted liquid fertilizer high in nitrogen for vibrant foliage color. Remove dead leaves and prune back leggy stems to encourage a bushier shape. With foliage in shades of green, burgundy, pink, and purple, cordylines provide year-round interest. They work beautifully in borders, pots, or as feature plants. Pest-resistant and low-maintenance, cordylines are a fantastic, colorful choice for spring planting in Queensland\u2019s tropical gardens.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Autumn"],
+      "specificMonthsToPlant": ["September", "October", "November", "March", "April"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in moist, well-draining soil, filtered sun to part shade." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly. Appreciates humidity." },
+        { "name": "Active Growth & Fertilizing", "offsetDays": 30, "durationDays": 180, "description": "Feed monthly with high-nitrogen liquid fertilizer." },
+        { "name": "Pruning (As needed)", "offsetDays": 90, "description": "Prune leggy stems to encourage bushiness. Remove dead leaves." }
+      ],
+      "notes": "Valued for colorful foliage. Protect from strong sun if not sun-tolerant variety. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Mango Tree",
-    "description": "Mango trees thrive in Queensland\u2019s hot, humid summers and are well-suited to large, sunny backyard spaces. Choose a location with full sun and well-draining soil\u2014mangoes dislike soggy conditions. Summer is a great time to plant as the warm temperatures encourage root growth. Dig a large hole and mix compost into the soil before planting. Water deeply after planting and continue regularly for the first few months. Once established, mangoes become drought-tolerant and need less frequent watering. Apply mulch to conserve moisture and control weeds, keeping it away from the trunk. Fertilise in spring and summer with a balanced fertiliser or one specifically for fruit trees. Prune after harvest to maintain size and airflow. Mango trees can grow large, so consider dwarf varieties for smaller yards. With patience, proper care, and plenty of sunlight, your mango tree will reward you with fragrant flowers and delicious fruit during the warmer months. Banana Tree Banana trees are fast-growing and ideal for Queensland\u2019s tropical summers. They love full sun, high humidity, and fertile, well-draining soil. Choose a sheltered spot out of strong winds, as large leaves can tear easily. Add plenty of compost or organic matter when planting, and space trees about 2\u20133 metres apart. Keep the soil consistently moist, especially during hot, dry spells\u2014bananas are thirsty plants. Mulch generously to conserve moisture and suppress weeds. Feed regularly with a high-potassium fertiliser to promote fruit production. Bananas grow from a central stem (mother plant) and send up new shoots (suckers). Remove weak suckers and keep 1\u20132 strong ones to replace the mother plant after fruiting. Fruit usually develops in 12\u201318 months. Prune dead leaves and remove old stems after harvest. With their tropical look and edible rewards, bananas are a great addition to a productive Queensland backyard."
+    "description": "Mango trees thrive in Queensland\u2019s hot, humid summers and are well-suited to large, sunny backyard spaces. Choose a location with full sun and well-draining soil\u2014mangoes dislike soggy conditions. Summer is a great time to plant as the warm temperatures encourage root growth. Dig a large hole and mix compost into the soil before planting. Water deeply after planting and continue regularly for the first few months. Once established, mangoes become drought-tolerant and need less frequent watering. Apply mulch to conserve moisture and control weeds, keeping it away from the trunk. Fertilise in spring and summer with a balanced fertiliser or one specifically for fruit trees. Prune after harvest to maintain size and airflow. Mango trees can grow large, so consider dwarf varieties for smaller yards. With patience, proper care, and plenty of sunlight, your mango tree will reward you with fragrant flowers and delicious fruit during the warmer months. Banana Tree Banana trees are fast-growing and ideal for Queensland\u2019s tropical summers. They love full sun, high humidity, and fertile, well-draining soil. Choose a sheltered spot out of strong winds, as large leaves can tear easily. Add plenty of compost or organic matter when planting, and space trees about 2\u20133 metres apart. Keep the soil consistently moist, especially during hot, dry spells\u2014bananas are thirsty plants. Mulch generously to conserve moisture and suppress weeds. Feed regularly with a high-potassium fertiliser to promote fruit production. Bananas grow from a central stem (mother plant) and send up new shoots (suckers). Remove weak suckers and keep 1\u20132 strong ones to replace the mother plant after fruiting. Fruit usually develops in 12\u201318 months. Prune dead leaves and remove old stems after harvest. With their tropical look and edible rewards, bananas are a great addition to a productive Queensland backyard.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Late Spring", "Summer"],
+      "specificMonthsToPlant": ["November", "December", "January", "February"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-draining soil. Add compost." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 180, "description": "Water regularly during first few months." },
+        { "name": "Fertilize (Spring/Summer)", "offsetDays": 90, "description": "Apply balanced fruit tree fertilizer." },
+        { "name": "Flowering Period (Late Winter/Spring - for next crop)", "offsetDays": 240, "durationDays": 60, "description": "Fragrant flowers appear before fruit set." },
+        { "name": "Fruit Development", "offsetDays": 300, "durationDays": 120, "description": "Fruit develops over several months." },
+        { "name": "Harvest Period (Summer/Autumn)", "offsetDays": 420, "durationDays": 90, "description": "Harvest when fruit is ripe." },
+        { "name": "Pruning (After Harvest)", "offsetDays": 510, "description": "Prune to maintain size and airflow." }
+      ],
+      "notes": "Requires large space unless dwarf variety. Protect young trees from frost. Fruiting may take several years. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Papaya",
-    "description": "Papaya is a tropical fruit tree that thrives in Queensland\u2019s summer warmth and abundant rainfall. Plant in a sunny, sheltered location with free-draining soil enriched with compost. Papayas don\u2019t tolerate waterlogging, so raised beds or sandy soils are ideal. Choose a self-pollinating variety or plant multiple trees to ensure good fruit set. Space trees 1.5\u20132 meters apart to allow room for growth. Water regularly, especially during dry periods, but avoid overwatering. Apply mulch to maintain soil moisture and suppress weeds. Use a balanced fertilizer monthly during the growing season for best results. Papayas grow fast and can bear fruit within 6\u201312 months. Protect from frost in cooler regions and stake young plants if necessary. Remove yellowing leaves to maintain airflow and reduce disease risk. With minimal care, papaya trees will provide sweet, nutritious fruit and a lush tropical look to your garden."
+    "description": "Papaya is a tropical fruit tree that thrives in Queensland\u2019s summer warmth and abundant rainfall. Plant in a sunny, sheltered location with free-draining soil enriched with compost. Papayas don\u2019t tolerate waterlogging, so raised beds or sandy soils are ideal. Choose a self-pollinating variety or plant multiple trees to ensure good fruit set. Space trees 1.5\u20132 meters apart to allow room for growth. Water regularly, especially during dry periods, but avoid overwatering. Apply mulch to maintain soil moisture and suppress weeds. Use a balanced fertilizer monthly during the growing season for best results. Papayas grow fast and can bear fruit within 6\u201312 months. Protect from frost in cooler regions and stake young plants if necessary. Remove yellowing leaves to maintain airflow and reduce disease risk. With minimal care, papaya trees will provide sweet, nutritious fruit and a lush tropical look to your garden.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Summer"],
+      "specificMonthsToPlant": ["September", "October", "November", "December", "January"],
+      "timelineEvents": [
+        { "name": "Planting (Seeds/Seedlings)", "offsetDays": 0, "description": "Plant in sunny, sheltered spot, free-draining soil." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly. Stake young plants if needed." },
+        { "name": "Regular Fertilizing", "offsetDays": 30, "durationDays": 180, "description": "Feed monthly with balanced fertilizer." },
+        { "name": "Flowering & Fruit Set", "offsetDays": 90, "durationDays": 60, "description": "Flowers appear, fruit begins to set." },
+        { "name": "Fruit Development & Harvest", "offsetDays": 150, "durationDays": 120, "description": "Fruit matures quickly. Harvest when ripe. Can fruit within 6-12 months." }
+      ],
+      "notes": "Fast-growing. Protect from frost and strong winds. Requires good drainage. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Passionfruit Vine",
-    "description": "Passionfruit vines flourish in Queensland\u2019s warm summer climate and can quickly transform a fence or trellis into a lush, fruit-laden feature. Plant in a sunny location with well-drained, fertile soil\u2014add compost or aged manure to enrich the planting hole. Install a sturdy support structure before planting, as vines grow rapidly. Space plants at least 2\u20133 meters apart to allow airflow and access. Water deeply and consistently during dry spells, especially in the first year. Mulch well to retain moisture and prevent weeds. Fertilise every 4\u20136 weeks with a balanced organic fertiliser to support vine growth and fruiting. Prune in late summer or early autumn to control size and remove dead wood. Passionfruit vines begin producing fruit within 12\u201318 months and yield best with regular feeding and care. With fragrant flowers, fast growth, and delicious fruit, they\u2019re an ideal addition to productive Queensland backyards."
+    "description": "Passionfruit vines flourish in Queensland\u2019s warm summer climate and can quickly transform a fence or trellis into a lush, fruit-laden feature. Plant in a sunny location with well-drained, fertile soil\u2014add compost or aged manure to enrich the planting hole. Install a sturdy support structure before planting, as vines grow rapidly. Space plants at least 2\u20133 meters apart to allow airflow and access. Water deeply and consistently during dry spells, especially in the first year. Mulch well to retain moisture and prevent weeds. Fertilise every 4\u20136 weeks with a balanced organic fertiliser to support vine growth and fruiting. Prune in late summer or early autumn to control size and remove dead wood. Passionfruit vines begin producing fruit within 12\u201318 months and yield best with regular feeding and care. With fragrant flowers, fast growth, and delicious fruit, they\u2019re an ideal addition to productive Queensland backyards.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Summer"],
+      "specificMonthsToPlant": ["September", "October", "November", "December", "January"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in sunny spot with sturdy support, well-drained fertile soil." },
+        { "name": "Establishment & Training", "offsetDays": 0, "durationDays": 90, "description": "Water regularly. Train vines onto support." },
+        { "name": "Regular Fertilizing", "offsetDays": 60, "durationDays": 200, "description": "Feed every 4-6 weeks." },
+        { "name": "Flowering Period (Warm months)", "offsetDays": 180, "durationDays": 120, "description": "Beautiful flowers appear." },
+        { "name": "Fruit Development & Harvest", "offsetDays": 240, "durationDays": 150, "description": "Fruit develops and ripens. Harvest when ready." },
+        { "name": "Pruning (Late Summer/Early Autumn)", "offsetDays": 365, "description": "Prune to control size and remove old wood." }
+      ],
+      "notes": "Needs strong support. Regular feeding and watering for best fruit. Assumes Southern Hemisphere seasons. Fruits in 12-18 months."
+    }
   },
   {
     "plantName": "Bougainvillea",
-    "description": "Bougainvillea is a hardy, vibrant climber that flourishes in Queensland\u2019s warm autumn weather. Plant it in full sun\u2014at least 6 hours daily\u2014for best flowering. Choose well-draining soil, preferably sandy or loamy, and avoid overly rich soil, which can lead to more foliage than flowers. Dig in a little compost to support root development, and position the plant near a fence, wall, or trellis for climbing. Water deeply at planting, then only when the soil is dry\u2014bougainvilleas are drought-tolerant once established. Avoid overwatering. Use a low-nitrogen fertilizer to encourage blooming over leaf growth. Prune lightly after flowering to maintain shape and remove unwanted branches. Watch out for thorns when handling. Bougainvillea\u2019s colourful bracts bloom prolifically from late autumn into spring, attracting pollinators and adding a tropical flair to any garden. With little maintenance and lots of sun, this showstopper thrives in Queensland\u2019s mild autumn climate."
+    "description": "Bougainvillea is a hardy, vibrant climber that flourishes in Queensland\u2019s warm autumn weather. Plant it in full sun\u2014at least 6 hours daily\u2014for best flowering. Choose well-draining soil, preferably sandy or loamy, and avoid overly rich soil, which can lead to more foliage than flowers. Dig in a little compost to support root development, and position the plant near a fence, wall, or trellis for climbing. Water deeply at planting, then only when the soil is dry\u2014bougainvilleas are drought-tolerant once established. Avoid overwatering. Use a low-nitrogen fertilizer to encourage blooming over leaf growth. Prune lightly after flowering to maintain shape and remove unwanted branches. Watch out for thorns when handling. Bougainvillea\u2019s colourful bracts bloom prolifically from late autumn into spring, attracting pollinators and adding a tropical flair to any garden. With little maintenance and lots of sun, this showstopper thrives in Queensland\u2019s mild autumn climate.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-draining soil. Provide support if climbing." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water until established, then very drought-tolerant." },
+        { "name": "Fertilize (Low Nitrogen - Spring)", "offsetDays": 180, "description": "Use low-nitrogen fertilizer to promote blooms." },
+        { "name": "Flowering Period (Autumn - Spring)", "offsetDays": 0, "durationDays": 270, "description": "Colorful bracts appear. Main flushes in cooler months." },
+        { "name": "Pruning (After Flowering)", "offsetDays": 270, "description": "Prune to shape and remove unwanted growth. Beware of thorns." }
+      ],
+      "notes": "Drought-tolerant. Loves sun. Thorns can be sharp. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Thai Basil",
-    "description": "Thai Basil thrives in Queensland\u2019s mild, humid autumn and brings spicy-sweet flavour and fragrance to garden beds and pots. Choose a sunny to partly shaded spot with rich, moist, well-draining soil. Autumn planting allows roots to develop before peak harvesting in late spring. Sow seeds or plant seedlings around 20\u201330 cm apart. Water regularly to keep the soil consistently moist but not soggy. Mulch to conserve moisture and suppress weeds. Pinch off flower buds early to encourage leafy growth and prolong the harvest season. Thai Basil grows quickly, so regular harvesting promotes a bushier plant. Feed monthly with a balanced organic fertiliser. It can be grown in-ground or in pots and pairs well with tomatoes, chillies, and other tropical herbs. Although sensitive to frost, it performs well in Queensland\u2019s autumn warmth. With aromatic leaves perfect for stir-fries and curries, Thai Basil is a rewarding and flavorful backyard herb."
+    "description": "Thai Basil thrives in Queensland\u2019s mild, humid autumn and brings spicy-sweet flavour and fragrance to garden beds and pots. Choose a sunny to partly shaded spot with rich, moist, well-draining soil. Autumn planting allows roots to develop before peak harvesting in late spring. Sow seeds or plant seedlings around 20\u201330 cm apart. Water regularly to keep the soil consistently moist but not soggy. Mulch to conserve moisture and suppress weeds. Pinch off flower buds early to encourage leafy growth and prolong the harvest season. Thai Basil grows quickly, so regular harvesting promotes a bushier plant. Feed monthly with a balanced organic fertiliser. It can be grown in-ground or in pots and pairs well with tomatoes, chillies, and other tropical herbs. Although sensitive to frost, it performs well in Queensland\u2019s autumn warmth. With aromatic leaves perfect for stir-fries and curries, Thai Basil is a rewarding and flavorful backyard herb.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring", "Early Summer"],
+      "specificMonthsToPlant": ["March", "April", "May", "September", "October", "November"],
+      "timelineEvents": [
+        { "name": "Planting (Seeds/Seedlings)", "offsetDays": 0, "description": "Plant in rich, moist, well-draining soil, sun to part shade." },
+        { "name": "Germination (if seeds)", "offsetDays": 7, "durationDays": 7, "description": "Keep soil moist for germination." },
+        { "name": "Establishment & Active Growth", "offsetDays": 14, "durationDays": 60, "description": "Water regularly. Pinch tips to encourage bushiness." },
+        { "name": "Regular Fertilizing", "offsetDays": 30, "durationDays": 90, "description": "Feed monthly with organic fertilizer." },
+        { "name": "Harvest Period", "offsetDays": 45, "durationDays": 100, "description": "Harvest leaves regularly. Pinch off flower buds." }
+      ],
+      "notes": "Prefers warm, humid conditions. Regular harvesting prolongs life. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Taro",
-    "description": "Taro is a tropical root vegetable that grows well in Queensland\u2019s warm, wet autumn season. It prefers consistently moist, rich soil and partial shade, though it can tolerate full sun with adequate watering. Choose a planting area near a water source, such as a boggy garden bed or container with good water retention. Plant taro corms or cuttings about 5\u201310 cm deep and 40\u201360 cm apart. Water frequently\u2014taro loves wet feet\u2014but ensure some drainage to avoid rot. Add compost or aged manure to the soil before planting, and apply a nitrogen-rich fertiliser every few weeks to support lush leaf and root development. Taro takes 8\u201312 months to mature, so patience is key. Mulch heavily to retain moisture. In colder regions of Queensland, protect young plants from unexpected chills. With large, tropical leaves and starchy edible roots, taro adds both beauty and function to your autumn garden."
+    "description": "Taro is a tropical root vegetable that grows well in Queensland\u2019s warm, wet autumn season. It prefers consistently moist, rich soil and partial shade, though it can tolerate full sun with adequate watering. Choose a planting area near a water source, such as a boggy garden bed or container with good water retention. Plant taro corms or cuttings about 5\u201310 cm deep and 40\u201360 cm apart. Water frequently\u2014taro loves wet feet\u2014but ensure some drainage to avoid rot. Add compost or aged manure to the soil before planting, and apply a nitrogen-rich fertiliser every few weeks to support lush leaf and root development. Taro takes 8\u201312 months to mature, so patience is key. Mulch heavily to retain moisture. In colder regions of Queensland, protect young plants from unexpected chills. With large, tropical leaves and starchy edible roots, taro adds both beauty and function to your autumn garden.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Autumn (in warm, wet areas)"],
+      "specificMonthsToPlant": ["September", "October", "March", "April"],
+      "timelineEvents": [
+        { "name": "Planting (Corms/Cuttings)", "offsetDays": 0, "description": "Plant in moist, rich soil, part shade. Needs consistent water." },
+        { "name": "Establishment & Active Growth", "offsetDays": 0, "durationDays": 200, "description": "Water frequently. Fertilize regularly with high nitrogen." },
+        { "name": "Tuber Development", "offsetDays": 150, "durationDays": 100, "description": "Tubers develop underground." },
+        { "name": "Harvest Period (8-12 months from planting)", "offsetDays": 240, "durationDays": 120, "description": "Harvest when leaves start to yellow or after first frost." }
+      ],
+      "notes": "Loves water and rich soil. Long growing season. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Lemongrass",
-    "description": "Lemongrass thrives in Queensland\u2019s humid autumn and is perfect for edible or ornamental garden beds. It prefers full sun and well-drained soil enriched with compost. Plant lemongrass stalks or clumps about 30\u201350 cm apart to allow space for the grassy foliage to spread. Autumn planting allows roots to establish before rapid growth in spring. Water regularly during dry spells but avoid soggy soil. Mulch well to retain moisture and suppress weeds. Feed with a liquid fertiliser every 4\u20136 weeks during the growing season to promote lush, aromatic leaves. Lemongrass grows quickly and can reach up to 1.5 metres tall, making it useful as a windbreak or natural privacy screen. Trim back in late winter to encourage new growth. Harvest outer stalks by cutting them close to the base. Fresh or dried, lemongrass adds citrusy flavour to teas, curries, and stir-fries. Easy to grow and fragrant, it\u2019s a backyard essential."
+    "description": "Lemongrass thrives in Queensland\u2019s humid autumn and is perfect for edible or ornamental garden beds. It prefers full sun and well-drained soil enriched with compost. Plant lemongrass stalks or clumps about 30\u201350 cm apart to allow space for the grassy foliage to spread. Autumn planting allows roots to establish before rapid growth in spring. Water regularly during dry spells but avoid soggy soil. Mulch well to retain moisture and suppress weeds. Feed with a liquid fertiliser every 4\u20136 weeks during the growing season to promote lush, aromatic leaves. Lemongrass grows quickly and can reach up to 1.5 metres tall, making it useful as a windbreak or natural privacy screen. Trim back in late winter to encourage new growth. Harvest outer stalks by cutting them close to the base. Fresh or dried, lemongrass adds citrusy flavour to teas, curries, and stir-fries. Easy to grow and fragrant, it\u2019s a backyard essential.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Autumn"],
+      "specificMonthsToPlant": ["September", "October", "November", "March", "April", "May"],
+      "timelineEvents": [
+        { "name": "Planting (Stalks/Clumps)", "offsetDays": 0, "description": "Plant in full sun, well-drained soil with compost." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly." },
+        { "name": "Active Growth & Fertilizing", "offsetDays": 60, "durationDays": 180, "description": "Feed every 4-6 weeks during growing season." },
+        { "name": "Harvest Period", "offsetDays": 90, "durationDays": 200, "description": "Harvest outer stalks as needed." },
+        { "name": "Pruning (Late Winter)", "offsetDays": 240, "description": "Trim back to encourage new growth." }
+      ],
+      "notes": "Grows quickly. Can be used as a screen. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Palm Tree",
-    "description": "Palm trees are iconic tropical features that grow well in Queensland\u2019s mild winter climate. Winter is an ideal time to plant as temperatures are cooler and rainfall is more consistent, helping roots establish before the intense summer heat. Choose a sunny or partly shaded spot with free-draining soil. Most palms prefer slightly acidic, sandy or loamy soils, and benefit from organic matter like compost. Water regularly during establishment, keeping the soil moist but not waterlogged. Once established, many palm species are drought-tolerant. Mulch around the base to conserve moisture and suppress weeds. Use a slow-release palm-specific fertiliser in spring to support healthy foliage. Remove dead fronds as needed, but avoid heavy pruning. Popular varieties for Queensland include Golden Cane, Bangalow, and Foxtail palms. Their upright structure, lush fronds, and minimal maintenance needs make palms perfect for tropical-style gardens, creating year-round greenery even in the winter months."
+    "description": "Palm trees are iconic tropical features that grow well in Queensland\u2019s mild winter climate. Winter is an ideal time to plant as temperatures are cooler and rainfall is more consistent, helping roots establish before the intense summer heat. Choose a sunny or partly shaded spot with free-draining soil. Most palms prefer slightly acidic, sandy or loamy soils, and benefit from organic matter like compost. Water regularly during establishment, keeping the soil moist but not waterlogged. Once established, many palm species are drought-tolerant. Mulch around the base to conserve moisture and suppress weeds. Use a slow-release palm-specific fertiliser in spring to support healthy foliage. Remove dead fronds as needed, but avoid heavy pruning. Popular varieties for Queensland include Golden Cane, Bangalow, and Foxtail palms. Their upright structure, lush fronds, and minimal maintenance needs make palms perfect for tropical-style gardens, creating year-round greenery even in the winter months.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Winter", "Spring"],
+      "specificMonthsToPlant": ["April", "May", "June", "July", "August", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in well-draining soil, sun to part shade. Add compost." },
+        { "name": "Establishment (First Year)", "offsetDays": 0, "durationDays": 365, "description": "Water regularly to keep soil moist." },
+        { "name": "Fertilize (Spring - Palm Specific)", "offsetDays": 180, "description": "Apply slow-release palm fertilizer." },
+        { "name": "Active Growth", "offsetDays": 210, "durationDays": 180, "description": "New fronds emerge." },
+        { "name": "Pruning (Remove dead fronds)", "offsetDays": 365, "description": "Remove old or dead fronds as needed, usually annually." }
+      ],
+      "notes": "Many varieties available. Check mature size. Some are drought-tolerant once established. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Sweet Potato",
-    "description": "Sweet potato is a vigorous, productive crop well-suited to Queensland\u2019s warm, frost-free winters. Plant slips or cuttings in loose, well-drained, sandy soil rich in organic matter. Choose a sunny position and space each plant about 30\u201340 cm apart, with 80\u2013100 cm between rows. Sweet potatoes thrive in soil temperatures above 18\u00b0C, which Queensland winters usually support. Water regularly, especially during the first few weeks, and mulch to retain soil moisture and suppress weeds. Avoid over-fertilising\u2014excess nitrogen leads to leafy growth at the expense of tubers. The vines can sprawl, so give them room or grow them in raised beds or large containers. Harvest typically occurs 4\u20135 months after planting when leaves begin to yellow. Handle roots gently to prevent bruising. Sweet potatoes are nutritious, easy to grow, and ideal for both ornamental and edible gardens. With minimal care, you\u2019ll enjoy a bountiful, healthy harvest by late spring."
+    "description": "Sweet potato is a vigorous, productive crop well-suited to Queensland\u2019s warm, frost-free winters. Plant slips or cuttings in loose, well-drained, sandy soil rich in organic matter. Choose a sunny position and space each plant about 30\u201340 cm apart, with 80\u2013100 cm between rows. Sweet potatoes thrive in soil temperatures above 18\u00b0C, which Queensland winters usually support. Water regularly, especially during the first few weeks, and mulch to retain soil moisture and suppress weeds. Avoid over-fertilising\u2014excess nitrogen leads to leafy growth at the expense of tubers. The vines can sprawl, so give them room or grow them in raised beds or large containers. Harvest typically occurs 4\u20135 months after planting when leaves begin to yellow. Handle roots gently to prevent bruising. Sweet potatoes are nutritious, easy to grow, and ideal for both ornamental and edible gardens. With minimal care, you\u2019ll enjoy a bountiful, healthy harvest by late spring.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Late Summer", "Autumn (in frost-free areas)"],
+      "specificMonthsToPlant": ["September", "October", "February", "March", "April"],
+      "timelineEvents": [
+        { "name": "Planting (Slips/Cuttings)", "offsetDays": 0, "description": "Plant in loose, well-drained soil, full sun." },
+        { "name": "Establishment & Vine Growth", "offsetDays": 0, "durationDays": 60, "description": "Water regularly. Vines will spread." },
+        { "name": "Tuber Development", "offsetDays": 60, "durationDays": 60, "description": "Tubers form underground. Avoid excess nitrogen." },
+        { "name": "Harvest Period (4-5 months from planting)", "offsetDays": 120, "durationDays": 30, "description": "Harvest when leaves yellow or before heavy frost." }
+      ],
+      "notes": "Vigorous grower. Needs space to sprawl or can be grown in containers. Assumes frost-free or mild winter for QLD winter planting. Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Jade Plant",
-    "description": "Jade Plant (Crassula ovata), a symbol of prosperity, is a hardy succulent perfect for Queensland\u2019s mild, dry winters. Plant in full sun to partial shade in well-drained soil\u2014gritty cactus or succulent mix works best. Winter is a great time to establish new jade plants, especially in frost-free regions. Allow soil to dry out between waterings, as jade is highly drought-tolerant and prone to root rot if overwatered. Avoid watering on cold nights. Use a balanced, diluted liquid fertiliser in early spring to support new growth. Jade plants grow well in pots or in-ground and are ideal for patios or rock gardens. Prune leggy stems to encourage a compact shape and remove dead leaves to prevent pest build-up. Their thick, glossy leaves store moisture and may take on red edges in bright light. With minimal care, jade plants thrive year-round, offering structure and a lush, architectural touch to the garden."
+    "description": "Jade Plant (Crassula ovata), a symbol of prosperity, is a hardy succulent perfect for Queensland\u2019s mild, dry winters. Plant in full sun to partial shade in well-drained soil\u2014gritty cactus or succulent mix works best. Winter is a great time to establish new jade plants, especially in frost-free regions. Allow soil to dry out between waterings, as jade is highly drought-tolerant and prone to root rot if overwatered. Avoid watering on cold nights. Use a balanced, diluted liquid fertiliser in early spring to support new growth. Jade plants grow well in pots or in-ground and are ideal for patios or rock gardens. Prune leggy stems to encourage a compact shape and remove dead leaves to prevent pest build-up. Their thick, glossy leaves store moisture and may take on red edges in bright light. With minimal care, jade plants thrive year-round, offering structure and a lush, architectural touch to the garden.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Anytime in frost-free areas", "Spring", "Autumn"],
+      "specificMonthsToPlant": ["All Year (frost-free)", "September", "October", "March", "April"],
+      "timelineEvents": [
+        { "name": "Planting (Cuttings/Potted)", "offsetDays": 0, "description": "Plant in well-draining gritty soil, sun to part shade." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 30, "description": "Water sparingly, allow soil to dry completely." },
+        { "name": "Active Growth (Warmer months)", "offsetDays": 60, "durationDays": 180, "description": "Water when soil is dry. Slow growing." },
+        { "name": "Fertilize (Spring - Optional)", "offsetDays": 180, "description": "Use diluted liquid fertilizer if desired." },
+        { "name": "Pruning (As needed)", "offsetDays": 365, "description": "Prune to shape or remove leggy growth." }
+      ],
+      "notes": "Very drought-tolerant. Prone to rot if overwatered. Protect from heavy frost. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Okra",
-    "description": "Okra is a heat-loving annual that can still be successfully planted in Queensland\u2019s subtropical winter, especially in warmer northern areas. Choose a sunny spot with well-drained, fertile soil enriched with compost or aged manure. Sow seeds directly into the soil or transplant seedlings once the soil warms to at least 18\u201320\u00b0C. Space plants 30\u201340 cm apart in rows 60\u201390 cm apart. Water consistently, especially during dry spells, but avoid overwatering. Mulch around plants to retain moisture and control weeds. Okra grows quickly and begins flowering within 6\u20138 weeks. Harvest young pods regularly while they are tender (about 5\u20138 cm long) to encourage further production. Wear gloves when harvesting, as the pods and leaves can be irritating to some skin types. With stunning hibiscus-like flowers and nutritious pods, okra is both ornamental and edible\u2014an ideal crop for productive Queensland gardens in winter."
+    "description": "Okra is a heat-loving annual that can still be successfully planted in Queensland\u2019s subtropical winter, especially in warmer northern areas. Choose a sunny spot with well-drained, fertile soil enriched with compost or aged manure. Sow seeds directly into the soil or transplant seedlings once the soil warms to at least 18\u201320\u00b0C. Space plants 30\u201340 cm apart in rows 60\u201390 cm apart. Water consistently, especially during dry spells, but avoid overwatering. Mulch around plants to retain moisture and control weeds. Okra grows quickly and begins flowering within 6\u20138 weeks. Harvest young pods regularly while they are tender (about 5\u20138 cm long) to encourage further production. Wear gloves when harvesting, as the pods and leaves can be irritating to some skin types. With stunning hibiscus-like flowers and nutritious pods, okra is both ornamental and edible\u2014an ideal crop for productive Queensland gardens in winter.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Summer", "Early Autumn (warm QLD)"],
+      "specificMonthsToPlant": ["September", "October", "November", "December", "January", "February", "March"],
+      "timelineEvents": [
+        { "name": "Plant seeds/seedlings", "offsetDays": 0, "description": "Plant in warm, sunny spot, fertile soil." },
+        { "name": "Germination (if seeds)", "offsetDays": 7, "durationDays": 10, "description": "Keep soil warm and moist." },
+        { "name": "Active Growth", "offsetDays": 20, "durationDays": 40, "description": "Water consistently. Mulch well." },
+        { "name": "Flowering Begins", "offsetDays": 45, "durationDays": 60, "description": "Hibiscus-like flowers appear." },
+        { "name": "Harvest Period (Young pods)", "offsetDays": 55, "durationDays": 70, "description": "Harvest pods regularly (5-8cm long) to encourage more." }
+      ],
+      "notes": "Heat-loving. Harvest pods when young and tender. Assumes Southern Hemisphere seasons. QLD winter planting viable in warmer northern regions."
+    }
   },
   {
     "plantName": "Eremophila",
-    "description": "Eremophila, or Emu Bush, is a hardy Australian native ideal for South Australia\u2019s dry spring conditions. It thrives in full sun and well-draining soil, including sandy or gravelly types. Spring is an excellent time to plant, giving the roots time to establish before summer heat. Eremophila is drought-tolerant and low-maintenance\u2014water occasionally during dry spells, especially in the first year. Avoid overwatering and do not plant in waterlogged areas. It rarely needs fertiliser, but a native plant mix can be used in spring. Light pruning after flowering helps maintain a compact shape and encourages new blooms. Eremophila varieties offer a range of colours, from purple and pink to yellow and red, often attracting birds and pollinators. Their tough nature makes them perfect for low-water, low-care native gardens in South Australia. With striking flowers and silvery foliage, Eremophilas are a beautiful and resilient feature in spring landscapes."
+    "description": "Eremophila, or Emu Bush, is a hardy Australian native ideal for South Australia\u2019s dry spring conditions. It thrives in full sun and well-draining soil, including sandy or gravelly types. Spring is an excellent time to plant, giving the roots time to establish before summer heat. Eremophila is drought-tolerant and low-maintenance\u2014water occasionally during dry spells, especially in the first year. Avoid overwatering and do not plant in waterlogged areas. It rarely needs fertiliser, but a native plant mix can be used in spring. Light pruning after flowering helps maintain a compact shape and encourages new blooms. Eremophila varieties offer a range of colours, from purple and pink to yellow and red, often attracting birds and pollinators. Their tough nature makes them perfect for low-water, low-care native gardens in South Australia. With striking flowers and silvery foliage, Eremophilas are a beautiful and resilient feature in spring landscapes.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, very well-draining soil." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water occasionally until established." },
+        { "name": "Flowering Period (Varies, often Spring/Autumn)", "offsetDays": 180, "durationDays": 120, "description": "Colorful tubular flowers attract birds." },
+        { "name": "Fertilize (Spring - Low P, optional)", "offsetDays": 210, "description": "Rarely needs fertilizer." },
+        { "name": "Pruning (Lightly After Flowering)", "offsetDays": 300, "description": "Maintain shape and encourage density." }
+      ],
+      "notes": "Very drought-tolerant. Ideal for dry, sunny spots. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Correa",
-    "description": "Correa, also known as Native Fuchsia, is a charming, low-growing native plant that thrives in South Australia's springtime gardens. It prefers part shade to full sun and does well in well-draining, sandy or loamy soils. Correa is perfect for coastal or inland areas, tolerating wind and light frost. Plant in spring when soil warmth supports root development. Water regularly during establishment, then reduce frequency\u2014Correa is drought-tolerant once mature. It responds well to mulching and benefits from light pruning after flowering to maintain shape. Its delicate, bell-shaped flowers bloom in soft shades of pink, red, or green, attracting native birds like honeyeaters. Correa suits rockeries, understorey plantings, or borders, and its tidy, compact form requires little upkeep. Ideal for wildlife gardens and low-maintenance landscapes, this native shrub adds subtle beauty and biodiversity to spring gardens across South Australia."
+    "description": "Correa, also known as Native Fuchsia, is a charming, low-growing native plant that thrives in South Australia's springtime gardens. It prefers part shade to full sun and does well in well-draining, sandy or loamy soils. Correa is perfect for coastal or inland areas, tolerating wind and light frost. Plant in spring when soil warmth supports root development. Water regularly during establishment, then reduce frequency\u2014Correa is drought-tolerant once mature. It responds well to mulching and benefits from light pruning after flowering to maintain shape. Its delicate, bell-shaped flowers bloom in soft shades of pink, red, or green, attracting native birds like honeyeaters. Correa suits rockeries, understorey plantings, or borders, and its tidy, compact form requires little upkeep. Ideal for wildlife gardens and low-maintenance landscapes, this native shrub adds subtle beauty and biodiversity to spring gardens across South Australia.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in well-draining soil, part shade to full sun." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water regularly until established." },
+        { "name": "Flowering Period (Autumn - Spring)", "offsetDays": 0, "durationDays": 270, "description": "Bell-shaped flowers attract honeyeaters." },
+        { "name": "Pruning (Lightly After Flowering)", "offsetDays": 270, "description": "Maintain shape and encourage bushiness." }
+      ],
+      "notes": "Drought-tolerant once mature. Good for coastal areas. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Leucophyta brownii",
-    "description": "Leucophyta brownii, commonly known as Cushion Bush, is a South Australian coastal native that thrives in harsh, dry spring conditions. Its striking silver foliage and rounded form make it a standout in low-water gardens. Plant in full sun and free-draining soil\u2014avoid clay or poorly drained locations. It\u2019s particularly suited to coastal environments due to its salt and wind tolerance. Cushion Bush needs minimal watering once established and does not require fertilising. Plant in spring for the best root establishment before summer. The plant maintains a compact, spherical shape naturally, but light pruning can keep it tidy. It produces small, yellowish-white flowers in late spring to summer. Leucophyta pairs well with other natives or succulents and provides excellent contrast in rock gardens and modern landscapes. Its drought resistance, low maintenance, and sculptural appearance make it an ideal feature for spring gardens in South Australia."
+    "description": "Leucophyta brownii, commonly known as Cushion Bush, is a South Australian coastal native that thrives in harsh, dry spring conditions. Its striking silver foliage and rounded form make it a standout in low-water gardens. Plant in full sun and free-draining soil\u2014avoid clay or poorly drained locations. It\u2019s particularly suited to coastal environments due to its salt and wind tolerance. Cushion Bush needs minimal watering once established and does not require fertilising. Plant in spring for the best root establishment before summer. The plant maintains a compact, spherical shape naturally, but light pruning can keep it tidy. It produces small, yellowish-white flowers in late spring to summer. Leucophyta pairs well with other natives or succulents and provides excellent contrast in rock gardens and modern landscapes. Its drought resistance, low maintenance, and sculptural appearance make it an ideal feature for spring gardens in South Australia.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, very free-draining soil." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Minimal watering once established." },
+        { "name": "Active Growth", "offsetDays": 30, "durationDays": 180, "description": "Maintains compact, silver form." },
+        { "name": "Flowering Period (Late Spring/Summer)", "offsetDays": 210, "durationDays": 60, "description": "Small, inconspicuous yellow-white flowers." },
+        { "name": "Pruning (Optional, for tidiness)", "offsetDays": 300, "description": "Lightly prune if needed to maintain shape." }
+      ],
+      "notes": "Extremely drought, salt, and wind tolerant. Needs excellent drainage. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Callistemon",
-    "description": "Callistemon 'Captain Cook' is a compact, eye-catching cultivar of the classic Bottlebrush, perfect for South Australia\u2019s spring planting. It loves full sun and performs best in well-draining, slightly acidic soils, though it tolerates a range of conditions. Spring planting helps roots establish before summer. Water regularly during the first year, then reduce as it becomes drought-tolerant. Mulch around the base to retain moisture and suppress weeds. Feed in spring with a low-phosphorus native fertiliser to support vibrant growth. 'Captain Cook' grows into a dense shrub about 1.5\u20132 metres tall, with vivid red bottlebrush flowers appearing in spring and again in summer. These flowers attract bees, butterflies, and nectar-feeding birds, making it a wonderful choice for wildlife-friendly gardens. Light pruning after flowering maintains its shape and encourages further blooms. Hardy, colourful, and low-maintenance, this cultivar is ideal for hedging, borders, or feature planting in South Australian spring gardens."
+    "description": "Callistemon 'Captain Cook' is a compact, eye-catching cultivar of the classic Bottlebrush, perfect for South Australia\u2019s spring planting. It loves full sun and performs best in well-draining, slightly acidic soils, though it tolerates a range of conditions. Spring planting helps roots establish before summer. Water regularly during the first year, then reduce as it becomes drought-tolerant. Mulch around the base to retain moisture and suppress weeds. Feed in spring with a low-phosphorus native fertiliser to support vibrant growth. 'Captain Cook' grows into a dense shrub about 1.5\u20132 metres tall, with vivid red bottlebrush flowers appearing in spring and again in summer. These flowers attract bees, butterflies, and nectar-feeding birds, making it a wonderful choice for wildlife-friendly gardens. Light pruning after flowering maintains its shape and encourages further blooms. Hardy, colourful, and low-maintenance, this cultivar is ideal for hedging, borders, or feature planting in South Australian spring gardens.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-draining soil." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 180, "description": "Water regularly during the first year." },
+        { "name": "Fertilize (Spring - Low P)", "offsetDays": 30, "description": "Apply native-specific, low-phosphorus fertilizer." },
+        { "name": "Flowering Period (Spring & Summer)", "offsetDays": 60, "durationDays": 120, "description": "Vivid red bottlebrush flowers attract birds and insects." },
+        { "name": "Pruning (Lightly After Flowering)", "offsetDays": 180, "description": "Prune behind spent flowers to encourage bushiness and more blooms." }
+      ],
+      "notes": "Drought-tolerant once established. Attracts wildlife. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Aloe Vera",
-    "description": "Aloe Vera is an ideal plant for South Australia\u2019s hot, dry summers. It thrives in full sun to light shade and prefers well-draining, sandy soil. Plant aloe in summer when warmth supports active root growth. Avoid clay soils\u2014use cactus or succulent mix if needed. Aloe stores water in its fleshy leaves, so it needs only occasional watering. Allow the soil to dry out completely between watering, and avoid wetting the crown to prevent rot. Aloe Vera does well in pots or garden beds and can be brought indoors in colder months if frost is a risk. No fertiliser is needed, but a light feed with diluted liquid fertiliser in spring can support growth. Propagate from pups that form at the base of mature plants. With its healing gel and minimal care needs, Aloe Vera is a practical, attractive, and low-maintenance addition to any drought-resilient South Australian summer garden."
+    "description": "Aloe Vera is an ideal plant for South Australia\u2019s hot, dry summers. It thrives in full sun to light shade and prefers well-draining, sandy soil. Plant aloe in summer when warmth supports active root growth. Avoid clay soils\u2014use cactus or succulent mix if needed. Aloe stores water in its fleshy leaves, so it needs only occasional watering. Allow the soil to dry out completely between watering, and avoid wetting the crown to prevent rot. Aloe Vera does well in pots or garden beds and can be brought indoors in colder months if frost is a risk. No fertiliser is needed, but a light feed with diluted liquid fertiliser in spring can support growth. Propagate from pups that form at the base of mature plants. With its healing gel and minimal care needs, Aloe Vera is a practical, attractive, and low-maintenance addition to any drought-resilient South Australian summer garden.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Summer"],
+      "specificMonthsToPlant": ["September", "October", "November", "December", "January", "February"],
+      "timelineEvents": [
+        { "name": "Planting (Pups/Potted)", "offsetDays": 0, "description": "Plant in well-draining sandy soil or cactus mix, sun to light shade." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 30, "description": "Water sparingly, allow soil to dry completely between waterings." },
+        { "name": "Active Growth (Warmer months)", "offsetDays": 60, "durationDays": 180, "description": "Water occasionally when soil is very dry." },
+        { "name": "Fertilize (Spring - Optional)", "offsetDays": 180, "description": "Light feed with diluted liquid fertilizer if desired." },
+        { "name": "Harvest Leaves (As needed)", "offsetDays": 365, "durationDays": 3650, "description": "Harvest outer leaves from mature plants." }
+      ],
+      "notes": "Very drought-tolerant. Avoid overwatering. Protect from frost. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Zucchini",
-    "description": "Zucchini is a fast-growing, heat-loving vegetable perfect for South Australia\u2019s long, sunny summers. Plant seeds or seedlings in full sun and rich, well-draining soil enriched with compost or aged manure. Space plants about 70\u201390 cm apart to allow air circulation and prevent fungal issues. Water deeply at the base every few days, keeping the soil evenly moist but not soggy. Avoid wetting the leaves to reduce the risk of powdery mildew. Mulch around plants to retain moisture and suppress weeds. Feed every 2\u20133 weeks with a liquid fertiliser high in potassium to support flowering and fruiting. Harvest zucchini when young (10\u201315 cm long) for the best texture and flavour. Pick regularly to encourage continuous production. Zucchini grows well in raised beds, veggie patches, or even large containers. With proper care, you\u2019ll enjoy an abundant, fast-producing crop throughout the summer months in South Australian backyards."
+    "description": "Zucchini is a fast-growing, heat-loving vegetable perfect for South Australia\u2019s long, sunny summers. Plant seeds or seedlings in full sun and rich, well-draining soil enriched with compost or aged manure. Space plants about 70\u201390 cm apart to allow air circulation and prevent fungal issues. Water deeply at the base every few days, keeping the soil evenly moist but not soggy. Avoid wetting the leaves to reduce the risk of powdery mildew. Mulch around plants to retain moisture and suppress weeds. Feed every 2\u20133 weeks with a liquid fertiliser high in potassium to support flowering and fruiting. Harvest zucchini when young (10\u201315 cm long) for the best texture and flavour. Pick regularly to encourage continuous production. Zucchini grows well in raised beds, veggie patches, or even large containers. With proper care, you\u2019ll enjoy an abundant, fast-producing crop throughout the summer months in South Australian backyards.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Early Summer"],
+      "specificMonthsToPlant": ["September", "October", "November", "December"],
+      "timelineEvents": [
+        { "name": "Plant seeds/seedlings", "offsetDays": 0, "description": "Plant in full sun, rich soil after last frost." },
+        { "name": "Germination (if seeds)", "offsetDays": 5, "durationDays": 7, "description": "Keep soil moist and warm." },
+        { "name": "Active Growth & Fertilizing", "offsetDays": 21, "durationDays": 60, "description": "Water regularly. Feed every 2-3 weeks with high potassium fertilizer." },
+        { "name": "Flowering Begins", "offsetDays": 40, "durationDays": 50, "description": "Flowers appear. Ensure pollination." },
+        { "name": "Harvest Period (Young fruit)", "offsetDays": 50, "durationDays": 60, "description": "Harvest zucchini regularly (10-15cm long) to encourage more." }
+      ],
+      "notes": "Fast-growing and productive. Prone to powdery mildew if leaves are wet. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Fig Tree",
-    "description": "Fig trees thrive in South Australia\u2019s hot, dry summers, making them a rewarding addition to backyard orchards. Choose a sunny, sheltered spot with well-drained soil\u2014figs dislike waterlogged conditions. Plant bare-root or potted trees in summer, ensuring roots are spread and the crown is level with the soil surface. Water regularly during establishment, then reduce as the tree matures\u2014figs are drought-tolerant but produce better with consistent moisture. Mulch heavily around the base to retain soil moisture and suppress weeds. Feed with compost or a balanced fertiliser in late spring or early summer. Prune in late winter to maintain shape and improve airflow. Figs typically bear fruit in summer and autumn; harvest when soft and sweet-smelling. Netting may be needed to protect fruit from birds. With its sculptural form, delicious fruit, and low maintenance needs, the fig tree is perfectly suited to South Australia\u2019s Mediterranean-style summers."
+    "description": "Fig trees thrive in South Australia\u2019s hot, dry summers, making them a rewarding addition to backyard orchards. Choose a sunny, sheltered spot with well-drained soil\u2014figs dislike waterlogged conditions. Plant bare-root or potted trees in summer, ensuring roots are spread and the crown is level with the soil surface. Water regularly during establishment, then reduce as the tree matures\u2014figs are drought-tolerant but produce better with consistent moisture. Mulch heavily around the base to retain soil moisture and suppress weeds. Feed with compost or a balanced fertiliser in late spring or early summer. Prune in late winter to maintain shape and improve airflow. Figs typically bear fruit in summer and autumn; harvest when soft and sweet-smelling. Netting may be needed to protect fruit from birds. With its sculptural form, delicious fruit, and low maintenance needs, the fig tree is perfectly suited to South Australia\u2019s Mediterranean-style summers.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Late Winter (bare-root)", "Spring", "Autumn"],
+      "specificMonthsToPlant": ["August", "September", "October", "March", "April"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-drained soil." },
+        { "name": "Establishment (First Year)", "offsetDays": 0, "durationDays": 365, "description": "Water regularly and deeply." },
+        { "name": "Fertilize (Late Spring/Early Summer)", "offsetDays": 210, "description": "Apply balanced fertilizer or compost." },
+        { "name": "Pruning (Late Winter)", "offsetDays": -60, "description": "Prune to shape and encourage fruiting (relative to next season's planting)." },
+        { "name": "Fruit Development (Summer)", "offsetDays": 300, "durationDays": 90, "description": "Fruit develops. Main crop often in late summer/autumn." },
+        { "name": "Harvest Period (Late Summer/Autumn)", "offsetDays": 360, "durationDays": 60, "description": "Harvest figs when soft and ripe." }
+      ],
+      "notes": "Drought-tolerant once established. Net fruit from birds. Fruiting can take 2-3 years. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Artichoke",
-    "description": "Artichokes are striking and productive perennials well-suited to South Australia\u2019s summer climate. They thrive in full sun and fertile, well-draining soil with plenty of organic matter. Plant crowns or seedlings in summer, spacing them 80\u2013100 cm apart to allow for their large, arching foliage. Water deeply and consistently, especially during hot, dry periods\u2014artichokes need regular moisture to form tender buds. Mulch around the base to conserve water and reduce weed competition. Feed every few weeks with a liquid fertiliser rich in nitrogen to encourage vigorous leaf and bud growth. Artichokes can take up to a year to fully mature, but in warm climates like South Australia, they often produce buds in the first growing season. Harvest flower buds when they are still tightly closed\u2014usually late summer to autumn. Leave a few to bloom if desired\u2014their purple thistle-like flowers are a stunning ornamental feature in any summer garden."
+    "description": "Artichokes are striking and productive perennials well-suited to South Australia\u2019s summer climate. They thrive in full sun and fertile, well-draining soil with plenty of organic matter. Plant crowns or seedlings in summer, spacing them 80\u2013100 cm apart to allow for their large, arching foliage. Water deeply and consistently, especially during hot, dry periods\u2014artichokes need regular moisture to form tender buds. Mulch around the base to conserve water and reduce weed competition. Feed every few weeks with a liquid fertiliser rich in nitrogen to encourage vigorous leaf and bud growth. Artichokes can take up to a year to fully mature, but in warm climates like South Australia, they often produce buds in the first growing season. Harvest flower buds when they are still tightly closed\u2014usually late summer to autumn. Leave a few to bloom if desired\u2014their purple thistle-like flowers are a stunning ornamental feature in any summer garden.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Autumn"],
+      "specificMonthsToPlant": ["September", "October", "March", "April"],
+      "timelineEvents": [
+        { "name": "Planting (Crowns/Seedlings)", "offsetDays": 0, "description": "Plant in full sun, fertile, well-draining soil. Space widely." },
+        { "name": "Establishment & Active Growth", "offsetDays": 0, "durationDays": 180, "description": "Water deeply and consistently. Feed regularly with high nitrogen." },
+        { "name": "Bud Development (Late Summer/Autumn)", "offsetDays": 210, "durationDays": 60, "description": "Flower buds (artichokes) form." },
+        { "name": "Harvest Period", "offsetDays": 270, "durationDays": 60, "description": "Harvest buds when tightly closed." },
+        { "name": "Dormancy Care (Winter - cut back)", "offsetDays": 365, "description": "Cut back old stems after harvest or in winter." }
+      ],
+      "notes": "Perennial, can produce for several years. Needs good moisture and feeding. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Nectarine Tree",
-    "description": "Nectarine trees thrive in South Australia\u2019s Mediterranean climate, and autumn is an excellent time to plant them. The cooler temperatures help young trees establish roots before the heat of summer returns. Choose a sunny location with well-draining, fertile soil. Avoid frost pockets and ensure good airflow to reduce fungal disease risk. Dig a wide hole and mix compost or aged manure into the soil. Water deeply after planting and continue regularly until winter rains begin. Mulch around the base to retain moisture, keeping it clear of the trunk. Nectarines benefit from winter pruning to encourage fruiting spurs and a strong shape. Fertilise in late winter or early spring with a balanced fruit tree fertiliser. Expect harvests in late summer, with juicy fruit varieties ranging from yellow to white flesh. Nectarine trees also produce lovely spring blossoms, making them a dual-purpose tree for beauty and backyard productivity."
+    "description": "Nectarine trees thrive in South Australia\u2019s Mediterranean climate, and autumn is an excellent time to plant them. The cooler temperatures help young trees establish roots before the heat of summer returns. Choose a sunny location with well-draining, fertile soil. Avoid frost pockets and ensure good airflow to reduce fungal disease risk. Dig a wide hole and mix compost or aged manure into the soil. Water deeply after planting and continue regularly until winter rains begin. Mulch around the base to retain moisture, keeping it clear of the trunk. Nectarines benefit from winter pruning to encourage fruiting spurs and a strong shape. Fertilise in late winter or early spring with a balanced fruit tree fertiliser. Expect harvests in late summer, with juicy fruit varieties ranging from yellow to white flesh. Nectarine trees also produce lovely spring blossoms, making them a dual-purpose tree for beauty and backyard productivity.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Winter (bare-root)"],
+      "specificMonthsToPlant": ["April", "May", "June", "July", "August"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in sunny spot, well-draining fertile soil." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 270, "description": "Water regularly until established." },
+        { "name": "Pruning (Winter - for shape & fruit)", "offsetDays": 180, "description": "Prune while dormant to establish framework and fruiting wood." },
+        { "name": "Fertilize (Late Winter/Early Spring)", "offsetDays": 210, "description": "Apply balanced fruit tree fertilizer." },
+        { "name": "Flowering Period (Spring)", "offsetDays": 270, "durationDays": 21, "description": "Beautiful spring blossoms appear." },
+        { "name": "Fruit Development (Spring/Summer)", "offsetDays": 290, "durationDays": 120, "description": "Fruit develops. May need thinning." },
+        { "name": "Harvest Period (Late Summer)", "offsetDays": 410, "durationDays": 45, "description": "Harvest when fruit is ripe and slightly soft." }
+      ],
+      "notes": "Requires winter chill for good fruiting (most varieties). Prone to peach leaf curl; consider preventative measures. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Rocket (Arugula)",
-    "description": "Rocket (Arugula) is a fast-growing leafy green perfect for South Australia\u2019s mild autumn weather. It prefers full sun to part shade and grows best in well-drained, fertile soil enriched with compost. Sow seeds directly into garden beds or pots, spacing them 10\u201315 cm apart. Water lightly and regularly to keep the soil moist. Rocket germinates quickly in cool weather and can be harvested in as little as 3\u20134 weeks. For a continuous supply, sow a new batch every 2\u20133 weeks during autumn. Harvest outer leaves when they are young and tender, or cut the whole plant just above the base. Rocket has a peppery flavour and is excellent in salads, sandwiches, and pesto. To reduce bitterness, pick leaves before the plant bolts in warm weather. As a cool-season crop, rocket thrives with minimal fuss and is a great option for beginner gardeners in autumn."
+    "description": "Rocket (Arugula) is a fast-growing leafy green perfect for South Australia\u2019s mild autumn weather. It prefers full sun to part shade and grows best in well-drained, fertile soil enriched with compost. Sow seeds directly into garden beds or pots, spacing them 10\u201315 cm apart. Water lightly and regularly to keep the soil moist. Rocket germinates quickly in cool weather and can be harvested in as little as 3\u20134 weeks. For a continuous supply, sow a new batch every 2\u20133 weeks during autumn. Harvest outer leaves when they are young and tender, or cut the whole plant just above the base. Rocket has a peppery flavour and is excellent in salads, sandwiches, and pesto. To reduce bitterness, pick leaves before the plant bolts in warm weather. As a cool-season crop, rocket thrives with minimal fuss and is a great option for beginner gardeners in autumn.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Early Spring", "Late Winter (under cover)"],
+      "specificMonthsToPlant": ["March", "April", "May", "August", "September"],
+      "timelineEvents": [
+        { "name": "Plant seeds", "offsetDays": 0, "description": "Sow seeds directly in fertile, well-drained soil." },
+        { "name": "Germination", "offsetDays": 5, "durationDays": 7, "description": "Keep soil moist." },
+        { "name": "Active Growth", "offsetDays": 12, "durationDays": 20, "description": "Water regularly." },
+        { "name": "Harvest Period (Young leaves)", "offsetDays": 21, "durationDays": 40, "description": "Harvest outer leaves or cut whole plant. Sow successively for continuous supply." }
+      ],
+      "notes": "Fast-growing cool-season crop. Bolts in heat. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "French Lavender",
-    "description": "French Lavender (Lavandula dentata) is a hardy, fragrant shrub that suits South Australia\u2019s dry autumns and is ideal for Mediterranean-style gardens. Plant in full sun with well-draining, slightly alkaline soil\u2014avoid clay-heavy or soggy locations. Autumn planting gives lavender time to establish before summer. Space plants about 60 cm apart to ensure airflow, which helps prevent fungal issues. Water young plants regularly, but once established, lavender becomes drought-tolerant and needs minimal watering. Avoid high-nitrogen fertilisers\u2014use a low-phosphorus mix in spring if needed. Prune after flowering to maintain shape and encourage new growth. French lavender blooms for long periods and its grey-green foliage adds year-round appeal. It\u2019s great for borders, hedges, pots, and bee-friendly gardens. With its beautiful flowers and calming scent, French lavender is both ornamental and practical\u2014an ideal choice for low-maintenance autumn planting in South Australia."
+    "description": "French Lavender (Lavandula dentata) is a hardy, fragrant shrub that suits South Australia\u2019s dry autumns and is ideal for Mediterranean-style gardens. Plant in full sun with well-draining, slightly alkaline soil\u2014avoid clay-heavy or soggy locations. Autumn planting gives lavender time to establish before summer. Space plants about 60 cm apart to ensure airflow, which helps prevent fungal issues. Water young plants regularly, but once established, lavender becomes drought-tolerant and needs minimal watering. Avoid high-nitrogen fertilisers\u2014use a low-phosphorus mix in spring if needed. Prune after flowering to maintain shape and encourage new growth. French lavender blooms for long periods and its grey-green foliage adds year-round appeal. It\u2019s great for borders, hedges, pots, and bee-friendly gardens. With its beautiful flowers and calming scent, French lavender is both ornamental and practical\u2014an ideal choice for low-maintenance autumn planting in South Australia.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-draining soil." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly until established." },
+        { "name": "Flowering Period (Long period, mainly Spring/Autumn)", "offsetDays": 90, "durationDays": 180, "description": "Fragrant purple flowers. Attracts bees." },
+        { "name": "Fertilize (Spring - Low P, optional)", "offsetDays": 180, "description": "Rarely needs fertilizer." },
+        { "name": "Pruning (After main flowering flush)", "offsetDays": 270, "description": "Prune to maintain shape and encourage new growth." }
+      ],
+      "notes": "Drought-tolerant. Prefers good airflow. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Oregano",
-    "description": "Oregano is a tough, aromatic herb that thrives in South Australia\u2019s dry, mild autumns. Plant in full sun in well-drained, slightly alkaline soil. Autumn planting gives oregano a chance to develop strong roots before winter dormancy. Space plants 20\u201330 cm apart and water regularly during establishment. Once mature, oregano is drought-tolerant and rarely needs feeding\u2014too much fertiliser can reduce flavour intensity. Oregano grows well in garden beds or pots and benefits from occasional trimming to encourage bushy growth. Harvest leaves as needed, ideally before flowering, for the best flavour. It pairs beautifully with tomatoes, meats, and Mediterranean dishes. In cooler parts of South Australia, oregano may die back in winter but will regrow in spring. Mulch lightly to protect the roots from cold snaps. With its rich aroma, culinary versatility, and easy care, oregano is a perfect autumn addition to productive or ornamental backyard gardens."
+    "description": "Oregano is a tough, aromatic herb that thrives in South Australia\u2019s dry, mild autumns. Plant in full sun in well-drained, slightly alkaline soil. Autumn planting gives oregano a chance to develop strong roots before winter dormancy. Space plants 20\u201330 cm apart and water regularly during establishment. Once mature, oregano is drought-tolerant and rarely needs feeding\u2014too much fertiliser can reduce flavour intensity. Oregano grows well in garden beds or pots and benefits from occasional trimming to encourage bushy growth. Harvest leaves as needed, ideally before flowering, for the best flavour. It pairs beautifully with tomatoes, meats, and Mediterranean dishes. In cooler parts of South Australia, oregano may die back in winter but will regrow in spring. Mulch lightly to protect the roots from cold snaps. With its rich aroma, culinary versatility, and easy care, oregano is a perfect autumn addition to productive or ornamental backyard gardens.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting (Seedlings/Divisions)", "offsetDays": 0, "description": "Plant in full sun, well-drained soil." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 45, "description": "Water regularly until established." },
+        { "name": "Active Growth & Harvest", "offsetDays": 45, "durationDays": 200, "description": "Harvest leaves as needed. Trim to keep bushy." },
+        { "name": "Flowering Period (Summer - if not trimmed)", "offsetDays": 210, "durationDays": 30, "description": "Small flowers appear; best flavor before flowering." }
+      ],
+      "notes": "Drought-tolerant once established. Flavor can reduce with over-fertilizing. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Rosemary",
-    "description": "Rosemary is a hardy, evergreen herb that thrives in South Australia\u2019s cool, sunny winters. Plant in full sun with free-draining, slightly alkaline soil\u2014avoid clay-heavy or soggy ground. Winter is an ideal time to plant as rosemary grows slowly and benefits from the milder weather. Space plants 50\u2013100 cm apart depending on the variety. Water regularly during establishment, then reduce frequency\u2014rosemary is highly drought-tolerant once mature. Mulch lightly to suppress weeds and maintain even moisture. Prune after flowering to maintain shape and promote bushiness. Avoid high-nitrogen fertilisers; instead, use compost or a light organic feed in spring. Rosemary grows well in pots or garden beds and provides year-round flavour for roasts, stews, and breads. Its aromatic leaves also deter pests and attract pollinators when in bloom. Tough, attractive, and versatile, rosemary is an essential addition to winter herb gardens in South Australia."
+    "description": "Rosemary is a hardy, evergreen herb that thrives in South Australia\u2019s cool, sunny winters. Plant in full sun with free-draining, slightly alkaline soil\u2014avoid clay-heavy or soggy ground. Winter is an ideal time to plant as rosemary grows slowly and benefits from the milder weather. Space plants 50\u2013100 cm apart depending on the variety. Water regularly during establishment, then reduce frequency\u2014rosemary is highly drought-tolerant once mature. Mulch lightly to suppress weeds and maintain even moisture. Prune after flowering to maintain shape and promote bushiness. Avoid high-nitrogen fertilisers; instead, use compost or a light organic feed in spring. Rosemary grows well in pots or garden beds and provides year-round flavour for roasts, stews, and breads. Its aromatic leaves also deter pests and attract pollinators when in bloom. Tough, attractive, and versatile, rosemary is an essential addition to winter herb gardens in South Australia.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Winter", "Spring"],
+      "specificMonthsToPlant": ["April", "May", "June", "July", "August", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting (Cuttings/Potted)", "offsetDays": 0, "description": "Plant in full sun, very well-draining soil." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water moderately until established." },
+        { "name": "Active Growth & Harvest", "offsetDays": 90, "durationDays": 300, "description": "Harvest sprigs year-round. Very drought-tolerant." },
+        { "name": "Flowering Period (Often Winter/Spring)", "offsetDays": 180, "durationDays": 90, "description": "Blue/purple flowers attract bees." },
+        { "name": "Pruning (After Flowering or as needed)", "offsetDays": 270, "description": "Prune to shape and maintain vigor." }
+      ],
+      "notes": "Extremely drought-tolerant. Needs excellent drainage. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Westringia",
-    "description": "Westringia, or Native Rosemary, is a hardy Australian shrub perfectly suited to South Australia\u2019s cool, dry winters. It thrives in full sun to part shade and tolerates a wide range of soil types, including poor or sandy soils, provided they drain well. Plant in winter to allow roots to establish before summer. Water regularly during the first year, then reduce as it becomes drought-tolerant. Prune lightly after flowering to encourage dense growth and maintain a neat, rounded shape. Westringia produces pale lilac to white flowers throughout much of the year, especially in winter and spring, and attracts pollinators like bees. It works beautifully as a low-maintenance hedge, border, or native feature plant. Westringia requires very little fertiliser\u2014apply a low-phosphorus native mix in spring if needed. With its resilience, tidy form, and soft flowers, it\u2019s an excellent choice for winter planting in South Australia\u2019s coastal and inland gardens."
+    "description": "Westringia, or Native Rosemary, is a hardy Australian shrub perfectly suited to South Australia\u2019s cool, dry winters. It thrives in full sun to part shade and tolerates a wide range of soil types, including poor or sandy soils, provided they drain well. Plant in winter to allow roots to establish before summer. Water regularly during the first year, then reduce as it becomes drought-tolerant. Prune lightly after flowering to encourage dense growth and maintain a neat, rounded shape. Westringia produces pale lilac to white flowers throughout much of the year, especially in winter and spring, and attracts pollinators like bees. It works beautifully as a low-maintenance hedge, border, or native feature plant. Westringia requires very little fertiliser\u2014apply a low-phosphorus native mix in spring if needed. With its resilience, tidy form, and soft flowers, it\u2019s an excellent choice for winter planting in South Australia\u2019s coastal and inland gardens.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Winter", "Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "June", "July", "August", "September", "October"],
+      "timelineEvents": [
+        { "name": "Planting", "offsetDays": 0, "description": "Plant in well-draining soil, sun to part shade." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 180, "description": "Water regularly during first year." },
+        { "name": "Flowering Period (Most of the year, peak Winter/Spring)", "offsetDays": 90, "durationDays": 270, "description": "Small lilac/white flowers attract bees." },
+        { "name": "Fertilize (Spring - Low P, optional)", "offsetDays": 210, "description": "Rarely needs fertilizer." },
+        { "name": "Pruning (Lightly After Main Flowering)", "offsetDays": 300, "description": "Encourage dense growth, can be hedged." }
+      ],
+      "notes": "Very hardy and drought-tolerant. Good for coastal conditions. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Kale",
-    "description": "Kale is a nutrient-rich leafy green that flourishes in South Australia\u2019s mild winters. It prefers full sun but tolerates partial shade and grows best in fertile, well-drained soil enriched with compost or aged manure. Sow seeds or plant seedlings 30\u201340 cm apart in rows spaced 50 cm apart. Water regularly to keep the soil consistently moist, especially during dry winter periods. Mulch to reduce weeds and retain moisture. Feed fortnightly with a liquid seaweed or organic fertiliser to promote leafy growth. Kale is cold-hardy and sweeter after light frosts, making winter the perfect time to grow it. Harvest outer leaves when they\u2019re around 15\u201320 cm long, leaving the centre to keep producing. Remove yellowing or damaged leaves to maintain plant health. Ideal for salads, soups, and stir-fries, kale is easy to grow and highly productive through the cooler months in South Australian gardens."
+    "description": "Kale is a nutrient-rich leafy green that flourishes in South Australia\u2019s mild winters. It prefers full sun but tolerates partial shade and grows best in fertile, well-drained soil enriched with compost or aged manure. Sow seeds or plant seedlings 30\u201340 cm apart in rows spaced 50 cm apart. Water regularly to keep the soil consistently moist, especially during dry winter periods. Mulch to reduce weeds and retain moisture. Feed fortnightly with a liquid seaweed or organic fertiliser to promote leafy growth. Kale is cold-hardy and sweeter after light frosts, making winter the perfect time to grow it. Harvest outer leaves when they\u2019re around 15\u201320 cm long, leaving the centre to keep producing. Remove yellowing or damaged leaves to maintain plant health. Ideal for salads, soups, and stir-fries, kale is easy to grow and highly productive through the cooler months in South Australian gardens.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Late Winter", "Early Spring"],
+      "specificMonthsToPlant": ["March", "April", "May", "August", "September"],
+      "timelineEvents": [
+        { "name": "Plant seeds/seedlings", "offsetDays": 0, "description": "Plant in fertile, well-drained soil, sun to part shade." },
+        { "name": "Germination (if seeds)", "offsetDays": 7, "durationDays": 10, "description": "Keep soil moist." },
+        { "name": "Active Growth & Fertilizing", "offsetDays": 21, "durationDays": 90, "description": "Water regularly. Feed fortnightly." },
+        { "name": "Harvest Period (Outer leaves)", "offsetDays": 60, "durationDays": 120, "description": "Harvest outer leaves as needed. Flavor improves after frost." }
+      ],
+      "notes": "Cold-hardy. Productive cool-season green. Assumes Southern Hemisphere seasons."
+    }
   },
   {
     "plantName": "Sage",
-    "description": "Sage is a hardy, aromatic herb that loves South Australia\u2019s sunny, dry winters. It grows best in full sun and well-drained, sandy or loamy soil with moderate fertility. Winter is a good time to plant sage, as the cool weather helps it establish roots without bolting. Space plants 30\u201350 cm apart and water regularly during establishment, then only when the topsoil is dry\u2014sage dislikes wet feet. Avoid high-nitrogen fertilisers; compost or a slow-release herb feed in spring is sufficient. Sage thrives in pots or garden beds and adds a silvery, textured look to herb gardens. Prune back lightly in early spring to keep the plant compact and encourage new growth. Harvest leaves regularly to encourage bushiness and prevent flowering. The leaves have a strong, earthy flavour, perfect for roasts, stuffings, and teas. Easy-care and beautifully aromatic, sage is an excellent winter herb for South Australian gardens."
+    "description": "Sage is a hardy, aromatic herb that loves South Australia\u2019s sunny, dry winters. It grows best in full sun and well-drained, sandy or loamy soil with moderate fertility. Winter is a good time to plant sage, as the cool weather helps it establish roots without bolting. Space plants 30\u201350 cm apart and water regularly during establishment, then only when the topsoil is dry\u2014sage dislikes wet feet. Avoid high-nitrogen fertilisers; compost or a slow-release herb feed in spring is sufficient. Sage thrives in pots or garden beds and adds a silvery, textured look to herb gardens. Prune back lightly in early spring to keep the plant compact and encourage new growth. Harvest leaves regularly to encourage bushiness and prevent flowering. The leaves have a strong, earthy flavour, perfect for roasts, stuffings, and teas. Easy-care and beautifully aromatic, sage is an excellent winter herb for South Australian gardens.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Autumn", "Winter", "Spring"],
+      "specificMonthsToPlant": ["April", "May", "June", "July", "August", "September"],
+      "timelineEvents": [
+        { "name": "Planting (Seedlings/Cuttings)", "offsetDays": 0, "description": "Plant in full sun, very well-draining soil." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water moderately until established." },
+        { "name": "Active Growth & Harvest", "offsetDays": 60, "durationDays": 250, "description": "Harvest leaves as needed. Drought-tolerant." },
+        { "name": "Flowering Period (Late Spring/Summer - if not trimmed)", "offsetDays": 210, "durationDays": 60, "description": "Purple/blue flowers appear. Trim to prevent if desired." },
+        { "name": "Pruning (Early Spring)", "offsetDays": -30, "description": "Prune back lightly before new spring growth (relative to next season)." }
+      ],
+      "notes": "Drought-tolerant. Needs good drainage. Assumes Southern Hemisphere seasons."
+    }
   }
 ]

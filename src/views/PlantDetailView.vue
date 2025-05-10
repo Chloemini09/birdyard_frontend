@@ -1,5 +1,5 @@
 <template>
-  <div class="plant-detail-container">
+  <div class="plant-detail-container" v-if="plant">
     <div class="back-button-wrapper">
       <button @click="goBack" class="back-button"><span class="back-icon">←</span> Back</button>
     </div>
@@ -12,13 +12,29 @@
           class="plant-image"
         />
       </div>
-
       <div class="plant-info-wrapper">
         <h1 class="plant-name">{{ plant.plantName }}</h1>
         <p class="plant-description">{{ plant.description }}</p>
+        <div class="calendar-link-section" v-if="plant.plantingCalendar">
+          <router-link
+            :to="{
+              name: 'PlantingCalendar',
+              params: { plantName: plant.plantName },
+              query: { hemisphere: determinedHemisphere } // Pass as query param
+            }"
+            class="btn btn-primary"
+          >
+            View Planting Calendar
+          </router-link>
+        </div>
+        <div v-else class="no-calendar-info">
+          Planting calendar information is not yet available for this plant.
+        </div>
       </div>
     </div>
   </div>
+  <div v-else-if="loading">Loading plant details...</div>
+  <div v-else class="error-message">Plant not found.</div>
 </template>
 
 <script>
@@ -130,6 +146,30 @@ export default {
   font-size: 1.2rem;
   line-height: 1.6;
   color: #333;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary, #0a3200);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #072200; /* Darken primary color on hover */
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
 }
 
 @media (max-width: 768px) {
