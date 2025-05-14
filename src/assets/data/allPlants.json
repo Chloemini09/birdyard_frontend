@@ -10,8 +10,7 @@
         { "name": "Germination", "offsetDays": 14, "durationDays": 7, "description": "Expect sprouts in 14-21 days." },
         { "name": "Seedling Care", "offsetDays": 21, "durationDays": 30, "description": "Water regularly, protect young plants." },
         { "name": "First Fertilize", "offsetDays": 60, "description": "Lightly fertilize with low-nitrogen fertilizer." },
-        { "name": "Flowering Begins", "offsetDays": 90, "durationDays": 60, "description": "Enjoy the blooms. Attracts bees and birds." },
-        { "name": "Pruning", "offsetDays": 150, "description": "Prune after flowering to maintain shape and encourage bushier growth." }
+        { "name": "Flowering Begins", "offsetDays": 90, "durationDays": 60, "description": "Enjoy the blooms. Attracts bees and birds." }
       ],
       "notes": "Lavender thrives on neglect once established. Good air circulation is important. Assumes Southern Hemisphere seasons."
     }
@@ -27,8 +26,7 @@
         { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly to establish roots." },
         { "name": "First Fertilize (Spring)", "offsetDays": 90, "description": "Apply rose-specific fertilizer as new growth appears." },
         { "name": "Regular Fertilizing", "offsetDays": 120, "durationDays": 90, "description": "Feed every 4-6 weeks during active growth." },
-        { "name": "Flowering Period", "offsetDays": 150, "durationDays": 120, "description": "Main bloom period. Deadhead spent flowers." },
-        { "name": "Pruning (Winter)", "offsetDays": 270, "description": "Major prune in late winter before spring growth." }
+        { "name": "Flowering Period", "offsetDays": 150, "durationDays": 120, "description": "Main bloom period. Deadhead spent flowers." }
       ],
       "notes": "Roses benefit from good air circulation. Mulch well. Assumes Southern Hemisphere seasons."
     }
@@ -43,8 +41,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in acidic, well-draining soil, filtered sun." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water regularly, especially during dry spells." },
         { "name": "Flowering Period (Late Winter/Spring)", "offsetDays": 180, "durationDays": 90, "description": "Blooms appear, protect from harsh frost if necessary." },
-        { "name": "Fertilize (After Flowering)", "offsetDays": 270, "description": "Use an acid-loving plant food." },
-        { "name": "Pruning (Lightly After Flowering)", "offsetDays": 280, "description": "Shape the plant and encourage bushiness." }
+        { "name": "Fertilize (After Flowering)", "offsetDays": 270, "description": "Use an acid-loving plant food." }
       ],
       "notes": "Camellias prefer acidic soil and protection from hot afternoon sun. Mulch with pine bark. Assumes Southern Hemisphere seasons."
     }
@@ -59,8 +56,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-drained soil. Use native plant mix." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly until established." },
         { "name": "Flowering Period (Varies by species)", "offsetDays": 90, "durationDays": 180, "description": "Many bloom in spring and autumn, some year-round. Attracts birds." },
-        { "name": "Fertilize (Spring - Low Phosphorus)", "offsetDays": 120, "description": "Use native-specific, low-phosphorus fertilizer if needed." },
-        { "name": "Pruning (Lightly After Main Flowering)", "offsetDays": 270, "description": "Maintain shape and encourage new blooms." }
+        { "name": "Fertilize (Spring - Low Phosphorus)", "offsetDays": 120, "description": "Use native-specific, low-phosphorus fertilizer if needed." }
       ],
       "notes": "Grevilleas are generally drought-tolerant once established. Avoid high phosphorus fertilizers. Assumes Southern Hemisphere seasons."
     }
@@ -144,8 +140,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-drained soil. Use native plant mix." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly until established." },
         { "name": "Flowering Period (Mainly Spring/Summer)", "offsetDays": 180, "durationDays": 120, "description": "Iconic paw-shaped flowers appear. Attracts birds." },
-        { "name": "Fertilize (Spring - Low Phosphorus)", "offsetDays": 210, "description": "Apply native-specific, low-phosphorus fertilizer." },
-        { "name": "Pruning (After Flowering)", "offsetDays": 300, "description": "Cut back old flower stems and dead leaves to the base." }
+        { "name": "Fertilize (Spring - Low Phosphorus)", "offsetDays": 210, "description": "Apply native-specific, low-phosphorus fertilizer." }
       ],
       "notes": "Ensure good air circulation. Drought-tolerant once established. Assumes Southern Hemisphere seasons."
     }
@@ -161,8 +156,7 @@
         { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water regularly. Train new canes onto support." },
         { "name": "First Fertilize (Spring)", "offsetDays": 120, "description": "Apply rose-specific fertilizer as new growth appears." },
         { "name": "Regular Fertilizing", "offsetDays": 150, "durationDays": 90, "description": "Feed every 4-6 weeks during active growth." },
-        { "name": "Flowering Period (Spring/Summer)", "offsetDays": 210, "durationDays": 150, "description": "Main bloom period. Deadhead and train." },
-        { "name": "Pruning (Late Summer/Autumn & Winter)", "offsetDays": 360, "description": "Main structural prune in winter. Light prune after flowering." }
+        { "name": "Flowering Period (Spring/Summer)", "offsetDays": 210, "durationDays": 150, "description": "Main bloom period. Deadhead and train." }
       ],
       "notes": "Requires sturdy support. Train canes horizontally for more blooms. Assumes Southern Hemisphere seasons."
     }
@@ -178,8 +172,7 @@
         { "name": "Establishment", "offsetDays": 0, "durationDays": 180, "description": "Water regularly, especially in first year." },
         { "name": "Fertilize (Spring & Autumn - Low P)", "offsetDays": 90, "description": "Apply native-specific, low-phosphorus fertilizer." },
         { "name": "Flowering Period (Summer)", "offsetDays": 270, "durationDays": 60, "description": "Small white/cream flowers appear." },
-        { "name": "Fruit Development (Autumn/Winter)", "offsetDays": 330, "durationDays": 90, "description": "Colorful berries develop, attracting birds." },
-        { "name": "Pruning (After new growth flushes)", "offsetDays": 120, "description": "Prune to shape and encourage density. Can be done multiple times." }
+        { "name": "Fruit Development (Autumn/Winter)", "offsetDays": 330, "durationDays": 90, "description": "Colorful berries develop, attracting birds." }
       ],
       "notes": "Fast-growing, ideal for hedging. Some varieties prone to psyllids. Assumes Southern Hemisphere seasons."
     }
@@ -242,8 +235,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-drained soil." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water moderately until established." },
         { "name": "Active Growth & Harvest", "offsetDays": 60, "durationDays": 250, "description": "Harvest sprigs as needed. Drought-tolerant once established." },
-        { "name": "Flowering Period (Late Spring/Summer)", "offsetDays": 210, "durationDays": 60, "description": "Small flowers appear, attractive to bees." },
-        { "name": "Pruning (After Flowering)", "offsetDays": 270, "description": "Prune lightly to maintain shape." }
+        { "name": "Flowering Period (Late Spring/Summer)", "offsetDays": 210, "durationDays": 60, "description": "Small flowers appear, attractive to bees." }
       ],
       "notes": "Drought-tolerant. Prefers full sun and good drainage. Assumes Southern Hemisphere seasons."
     }
@@ -258,8 +250,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in well-drained soil, sun to part shade." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 180, "description": "Water regularly until established, then very drought-tolerant." },
         { "name": "Active Growth (Spring/Summer)", "offsetDays": 180, "durationDays": 180, "description": "Grasses put on most of their growth." },
-        { "name": "Fertilize (Spring - Low P, if needed)", "offsetDays": 210, "description": "Optional, use native-specific fertilizer." },
-        { "name": "Pruning/Trimming (Late Winter)", "offsetDays": 300, "description": "Trim old or dead foliage to encourage fresh growth." }
+        { "name": "Fertilize (Spring - Low P, if needed)", "offsetDays": 210, "description": "Optional, use native-specific fertilizer." }
       ],
       "notes": "Very low maintenance. Provide habitat and texture. Assumes Southern Hemisphere seasons."
     }
@@ -274,8 +265,7 @@
         { "name": "Planting (Cuttings or Potted)", "offsetDays": 0, "description": "Plant in full sun, well-drained soil." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water sparingly, allow to dry out between waterings." },
         { "name": "Fertilize (Spring - Optional)", "offsetDays": 30, "description": "Light application of slow-release fertilizer." },
-        { "name": "Flowering Period (Late Spring - Summer)", "offsetDays": 60, "durationDays": 120, "description": "Fragrant blooms appear." },
-        { "name": "Pruning (Late Winter/Early Spring)", "offsetDays": -60, "description": "Prune lightly to shape before new growth (relative to next season's planting)." }
+        { "name": "Flowering Period (Late Spring - Summer)", "offsetDays": 60, "durationDays": 120, "description": "Fragrant blooms appear." }
       ],
       "notes": "Drought-tolerant. Prefers warm climate. Sap can be an irritant. Assumes Southern Hemisphere seasons."
     }
@@ -290,8 +280,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, rich, well-draining soil." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly to keep soil moist." },
         { "name": "Regular Fertilizing (High K)", "offsetDays": 30, "durationDays": 150, "description": "Feed during spring and summer." },
-        { "name": "Flowering Period (Spring - Autumn)", "offsetDays": 60, "durationDays": 180, "description": "Abundant, large blooms. Attracts butterflies." },
-        { "name": "Pruning (After Flowering)", "offsetDays": 240, "description": "Prune lightly to shape and encourage new growth." }
+        { "name": "Flowering Period (Spring - Autumn)", "offsetDays": 60, "durationDays": 180, "description": "Abundant, large blooms. Attracts butterflies." }
       ],
       "notes": "Protect from strong winds. Requires consistent moisture during growing season. Assumes Southern Hemisphere seasons."
     }
@@ -306,8 +295,7 @@
         { "name": "Planting (Rhizomes/Potted)", "offsetDays": 0, "description": "Plant in rich, moist, well-draining soil, part shade to sun." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water regularly, keep consistently moist." },
         { "name": "Regular Fertilizing", "offsetDays": 30, "durationDays": 180, "description": "Feed every 2 weeks during growing season." },
-        { "name": "Flowering Period (Warm months)", "offsetDays": 120, "durationDays": 150, "description": "Stunning, exotic bracts appear." },
-        { "name": "Pruning (Old stems)", "offsetDays": 270, "description": "Cut back old or dead stems at the base." }
+        { "name": "Flowering Period (Warm months)", "offsetDays": 120, "durationDays": 150, "description": "Stunning, exotic bracts appear." }
       ],
       "notes": "Loves humidity and moisture. Protect from strong winds and frost. Assumes Southern Hemisphere seasons."
     }
@@ -321,15 +309,14 @@
       "timelineEvents": [
         { "name": "Planting", "offsetDays": 0, "description": "Plant in moist, well-draining soil, filtered sun to part shade." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly. Appreciates humidity." },
-        { "name": "Active Growth & Fertilizing", "offsetDays": 30, "durationDays": 180, "description": "Feed monthly with high-nitrogen liquid fertilizer." },
-        { "name": "Pruning (As needed)", "offsetDays": 90, "description": "Prune leggy stems to encourage bushiness. Remove dead leaves." }
+        { "name": "Active Growth & Fertilizing", "offsetDays": 30, "durationDays": 180, "description": "Feed monthly with high-nitrogen liquid fertilizer." }
       ],
       "notes": "Valued for colorful foliage. Protect from strong sun if not sun-tolerant variety. Assumes Southern Hemisphere seasons."
     }
   },
   {
     "plantName": "Mango Tree",
-    "description": "Mango trees thrive in Queensland\u2019s hot, humid summers and are well-suited to large, sunny backyard spaces. Choose a location with full sun and well-draining soil\u2014mangoes dislike soggy conditions. Summer is a great time to plant as the warm temperatures encourage root growth. Dig a large hole and mix compost into the soil before planting. Water deeply after planting and continue regularly for the first few months. Once established, mangoes become drought-tolerant and need less frequent watering. Apply mulch to conserve moisture and control weeds, keeping it away from the trunk. Fertilise in spring and summer with a balanced fertiliser or one specifically for fruit trees. Prune after harvest to maintain size and airflow. Mango trees can grow large, so consider dwarf varieties for smaller yards. With patience, proper care, and plenty of sunlight, your mango tree will reward you with fragrant flowers and delicious fruit during the warmer months. Banana Tree Banana trees are fast-growing and ideal for Queensland\u2019s tropical summers. They love full sun, high humidity, and fertile, well-draining soil. Choose a sheltered spot out of strong winds, as large leaves can tear easily. Add plenty of compost or organic matter when planting, and space trees about 2\u20133 metres apart. Keep the soil consistently moist, especially during hot, dry spells\u2014bananas are thirsty plants. Mulch generously to conserve moisture and suppress weeds. Feed regularly with a high-potassium fertiliser to promote fruit production. Bananas grow from a central stem (mother plant) and send up new shoots (suckers). Remove weak suckers and keep 1\u20132 strong ones to replace the mother plant after fruiting. Fruit usually develops in 12\u201318 months. Prune dead leaves and remove old stems after harvest. With their tropical look and edible rewards, bananas are a great addition to a productive Queensland backyard.",
+    "description": "Mango trees thrive in Queensland’s hot, humid summers and are well-suited to large, sunny backyard spaces. Choose a location with full sun and well-draining soil—mangoes dislike soggy conditions. Summer is a great time to plant as the warm temperatures encourage root growth. Dig a large hole and mix compost into the soil before planting. Water deeply after planting and continue regularly for the first few months. Once established, mangoes become drought-tolerant and need less frequent watering. Apply mulch to conserve moisture and control weeds, keeping it away from the trunk. Fertilise in spring and summer with a balanced fertiliser or one specifically for fruit trees. Prune after harvest to maintain size and airflow. Mango trees can grow large, so consider dwarf varieties for smaller yards. With patience, proper care, and plenty of sunlight, your mango tree will reward you with fragrant flowers and delicious fruit during the warmer months.",
     "plantingCalendar": {
       "bestSeasonsToPlant": ["Late Spring", "Summer"],
       "specificMonthsToPlant": ["November", "December", "January", "February"],
@@ -343,6 +330,25 @@
         { "name": "Pruning (After Harvest)", "offsetDays": 510, "description": "Prune to maintain size and airflow." }
       ],
       "notes": "Requires large space unless dwarf variety. Protect young trees from frost. Fruiting may take several years. Assumes Southern Hemisphere seasons."
+    }
+  },
+  {
+    "plantName": "Banana Tree",
+    "description": "Banana trees are fast-growing and ideal for Queensland’s tropical summers. They love full sun, high humidity, and fertile, well-draining soil. Choose a sheltered spot out of strong winds, as large leaves can tear easily. Add plenty of compost or organic matter when planting, and space trees about 2–3 metres apart. Keep the soil consistently moist, especially during hot, dry spells—bananas are thirsty plants. Mulch generously to conserve moisture and suppress weeds. Feed regularly with a high-potassium fertiliser to promote fruit production. Bananas grow from a central stem (mother plant) and send up new shoots (suckers). Remove weak suckers and keep 1–2 strong ones to replace the mother plant after fruiting. Fruit usually develops in 12–18 months. Prune dead leaves and remove old stems after harvest. With their tropical look and edible rewards, bananas are a great addition to a productive Queensland backyard.",
+    "plantingCalendar": {
+      "bestSeasonsToPlant": ["Spring", "Summer", "Early Autumn"],
+      "specificMonthsToPlant": ["September", "October", "November", "December", "January", "February", "March"],
+      "timelineEvents": [
+        { "name": "Planting (Suckers/Potted)", "offsetDays": 0, "description": "Plant in full sun, fertile, well-draining soil. Add compost. Protect from strong winds." },
+        { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Keep soil consistently moist. Mulch well." },
+        { "name": "Regular Fertilizing (High K)", "offsetDays": 60, "durationDays": 300, "description": "Feed regularly, especially with high potassium fertilizer." },
+        { "name": "Sucker Management", "offsetDays": 180, "durationDays": 365, "description": "Remove weak suckers, keep 1-2 strong ones for succession." },
+        { "name": "Flowering & Fruit Set (Approx. 9-12 months)", "offsetDays": 270, "durationDays": 90, "description": "Large flower/bract appears, fruit bunch develops." },
+        { "name": "Fruit Development (3-6 months after flowering)", "offsetDays": 360, "durationDays": 120, "description": "Bananas mature on the bunch." },
+        { "name": "Harvest Period (Approx. 12-18 months from planting)", "offsetDays": 450, "durationDays": 60, "description": "Harvest bunch when fingers are plump. Ripen off plant." },
+        { "name": "Pruning (Remove main stem after harvest)", "offsetDays": 510, "description": "Cut down main stem that fruited. Allow suckers to take over." }
+      ],
+      "notes": "Loves heat, humidity, and moisture. Fast-growing. Protect from strong winds. Each stem fruits only once. Assumes Southern Hemisphere seasons."
     }
   },
   {
@@ -372,8 +378,7 @@
         { "name": "Establishment & Training", "offsetDays": 0, "durationDays": 90, "description": "Water regularly. Train vines onto support." },
         { "name": "Regular Fertilizing", "offsetDays": 60, "durationDays": 200, "description": "Feed every 4-6 weeks." },
         { "name": "Flowering Period (Warm months)", "offsetDays": 180, "durationDays": 120, "description": "Beautiful flowers appear." },
-        { "name": "Fruit Development & Harvest", "offsetDays": 240, "durationDays": 150, "description": "Fruit develops and ripens. Harvest when ready." },
-        { "name": "Pruning (Late Summer/Early Autumn)", "offsetDays": 365, "description": "Prune to control size and remove old wood." }
+        { "name": "Fruit Development & Harvest", "offsetDays": 240, "durationDays": 150, "description": "Fruit develops and ripens. Harvest when ready." }
       ],
       "notes": "Needs strong support. Regular feeding and watering for best fruit. Assumes Southern Hemisphere seasons. Fruits in 12-18 months."
     }
@@ -388,8 +393,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-draining soil. Provide support if climbing." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water until established, then very drought-tolerant." },
         { "name": "Fertilize (Low Nitrogen - Spring)", "offsetDays": 180, "description": "Use low-nitrogen fertilizer to promote blooms." },
-        { "name": "Flowering Period (Autumn - Spring)", "offsetDays": 0, "durationDays": 270, "description": "Colorful bracts appear. Main flushes in cooler months." },
-        { "name": "Pruning (After Flowering)", "offsetDays": 270, "description": "Prune to shape and remove unwanted growth. Beware of thorns." }
+        { "name": "Flowering Period (Autumn - Spring)", "offsetDays": 0, "durationDays": 270, "description": "Colorful bracts appear. Main flushes in cooler months." }
       ],
       "notes": "Drought-tolerant. Loves sun. Thorns can be sharp. Assumes Southern Hemisphere seasons."
     }
@@ -435,8 +439,7 @@
         { "name": "Planting (Stalks/Clumps)", "offsetDays": 0, "description": "Plant in full sun, well-drained soil with compost." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly." },
         { "name": "Active Growth & Fertilizing", "offsetDays": 60, "durationDays": 180, "description": "Feed every 4-6 weeks during growing season." },
-        { "name": "Harvest Period", "offsetDays": 90, "durationDays": 200, "description": "Harvest outer stalks as needed." },
-        { "name": "Pruning (Late Winter)", "offsetDays": 240, "description": "Trim back to encourage new growth." }
+        { "name": "Harvest Period", "offsetDays": 90, "durationDays": 200, "description": "Harvest outer stalks as needed." }
       ],
       "notes": "Grows quickly. Can be used as a screen. Assumes Southern Hemisphere seasons."
     }
@@ -451,8 +454,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in well-draining soil, sun to part shade. Add compost." },
         { "name": "Establishment (First Year)", "offsetDays": 0, "durationDays": 365, "description": "Water regularly to keep soil moist." },
         { "name": "Fertilize (Spring - Palm Specific)", "offsetDays": 180, "description": "Apply slow-release palm fertilizer." },
-        { "name": "Active Growth", "offsetDays": 210, "durationDays": 180, "description": "New fronds emerge." },
-        { "name": "Pruning (Remove dead fronds)", "offsetDays": 365, "description": "Remove old or dead fronds as needed, usually annually." }
+        { "name": "Active Growth", "offsetDays": 210, "durationDays": 180, "description": "New fronds emerge." }
       ],
       "notes": "Many varieties available. Check mature size. Some are drought-tolerant once established. Assumes Southern Hemisphere seasons."
     }
@@ -482,8 +484,7 @@
         { "name": "Planting (Cuttings/Potted)", "offsetDays": 0, "description": "Plant in well-draining gritty soil, sun to part shade." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 30, "description": "Water sparingly, allow soil to dry completely." },
         { "name": "Active Growth (Warmer months)", "offsetDays": 60, "durationDays": 180, "description": "Water when soil is dry. Slow growing." },
-        { "name": "Fertilize (Spring - Optional)", "offsetDays": 180, "description": "Use diluted liquid fertilizer if desired." },
-        { "name": "Pruning (As needed)", "offsetDays": 365, "description": "Prune to shape or remove leggy growth." }
+        { "name": "Fertilize (Spring - Optional)", "offsetDays": 180, "description": "Use diluted liquid fertilizer if desired." }
       ],
       "notes": "Very drought-tolerant. Prone to rot if overwatered. Protect from heavy frost. Assumes Southern Hemisphere seasons."
     }
@@ -514,8 +515,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, very well-draining soil." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water occasionally until established." },
         { "name": "Flowering Period (Varies, often Spring/Autumn)", "offsetDays": 180, "durationDays": 120, "description": "Colorful tubular flowers attract birds." },
-        { "name": "Fertilize (Spring - Low P, optional)", "offsetDays": 210, "description": "Rarely needs fertilizer." },
-        { "name": "Pruning (Lightly After Flowering)", "offsetDays": 300, "description": "Maintain shape and encourage density." }
+        { "name": "Fertilize (Spring - Low P, optional)", "offsetDays": 210, "description": "Rarely needs fertilizer." }
       ],
       "notes": "Very drought-tolerant. Ideal for dry, sunny spots. Assumes Southern Hemisphere seasons."
     }
@@ -529,8 +529,7 @@
       "timelineEvents": [
         { "name": "Planting", "offsetDays": 0, "description": "Plant in well-draining soil, part shade to full sun." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water regularly until established." },
-        { "name": "Flowering Period (Autumn - Spring)", "offsetDays": 0, "durationDays": 270, "description": "Bell-shaped flowers attract honeyeaters." },
-        { "name": "Pruning (Lightly After Flowering)", "offsetDays": 270, "description": "Maintain shape and encourage bushiness." }
+        { "name": "Flowering Period (Autumn - Spring)", "offsetDays": 0, "durationDays": 270, "description": "Bell-shaped flowers attract honeyeaters." }
       ],
       "notes": "Drought-tolerant once mature. Good for coastal areas. Assumes Southern Hemisphere seasons."
     }
@@ -545,8 +544,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, very free-draining soil." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Minimal watering once established." },
         { "name": "Active Growth", "offsetDays": 30, "durationDays": 180, "description": "Maintains compact, silver form." },
-        { "name": "Flowering Period (Late Spring/Summer)", "offsetDays": 210, "durationDays": 60, "description": "Small, inconspicuous yellow-white flowers." },
-        { "name": "Pruning (Optional, for tidiness)", "offsetDays": 300, "description": "Lightly prune if needed to maintain shape." }
+        { "name": "Flowering Period (Late Spring/Summer)", "offsetDays": 210, "durationDays": 60, "description": "Small, inconspicuous yellow-white flowers." }
       ],
       "notes": "Extremely drought, salt, and wind tolerant. Needs excellent drainage. Assumes Southern Hemisphere seasons."
     }
@@ -561,8 +559,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-draining soil." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 180, "description": "Water regularly during the first year." },
         { "name": "Fertilize (Spring - Low P)", "offsetDays": 30, "description": "Apply native-specific, low-phosphorus fertilizer." },
-        { "name": "Flowering Period (Spring & Summer)", "offsetDays": 60, "durationDays": 120, "description": "Vivid red bottlebrush flowers attract birds and insects." },
-        { "name": "Pruning (Lightly After Flowering)", "offsetDays": 180, "description": "Prune behind spent flowers to encourage bushiness and more blooms." }
+        { "name": "Flowering Period (Spring & Summer)", "offsetDays": 60, "durationDays": 120, "description": "Vivid red bottlebrush flowers attract birds and insects." }
       ],
       "notes": "Drought-tolerant once established. Attracts wildlife. Assumes Southern Hemisphere seasons."
     }
@@ -609,7 +606,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-drained soil." },
         { "name": "Establishment (First Year)", "offsetDays": 0, "durationDays": 365, "description": "Water regularly and deeply." },
         { "name": "Fertilize (Late Spring/Early Summer)", "offsetDays": 210, "description": "Apply balanced fertilizer or compost." },
-        { "name": "Pruning (Late Winter)", "offsetDays": -60, "description": "Prune to shape and encourage fruiting (relative to next season's planting)." },
+        { "name": "Pruning (Late Winter)", "offsetDays": 60, "description": "Prune to shape and encourage fruiting (relative to next season's planting)." },
         { "name": "Fruit Development (Summer)", "offsetDays": 300, "durationDays": 90, "description": "Fruit develops. Main crop often in late summer/autumn." },
         { "name": "Harvest Period (Late Summer/Autumn)", "offsetDays": 360, "durationDays": 60, "description": "Harvest figs when soft and ripe." }
       ],
@@ -675,8 +672,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in full sun, well-draining soil." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water regularly until established." },
         { "name": "Flowering Period (Long period, mainly Spring/Autumn)", "offsetDays": 90, "durationDays": 180, "description": "Fragrant purple flowers. Attracts bees." },
-        { "name": "Fertilize (Spring - Low P, optional)", "offsetDays": 180, "description": "Rarely needs fertilizer." },
-        { "name": "Pruning (After main flowering flush)", "offsetDays": 270, "description": "Prune to maintain shape and encourage new growth." }
+        { "name": "Fertilize (Spring - Low P, optional)", "offsetDays": 180, "description": "Rarely needs fertilizer." }
       ],
       "notes": "Drought-tolerant. Prefers good airflow. Assumes Southern Hemisphere seasons."
     }
@@ -706,8 +702,7 @@
         { "name": "Planting (Cuttings/Potted)", "offsetDays": 0, "description": "Plant in full sun, very well-draining soil." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 90, "description": "Water moderately until established." },
         { "name": "Active Growth & Harvest", "offsetDays": 90, "durationDays": 300, "description": "Harvest sprigs year-round. Very drought-tolerant." },
-        { "name": "Flowering Period (Often Winter/Spring)", "offsetDays": 180, "durationDays": 90, "description": "Blue/purple flowers attract bees." },
-        { "name": "Pruning (After Flowering or as needed)", "offsetDays": 270, "description": "Prune to shape and maintain vigor." }
+        { "name": "Flowering Period (Often Winter/Spring)", "offsetDays": 180, "durationDays": 90, "description": "Blue/purple flowers attract bees." }
       ],
       "notes": "Extremely drought-tolerant. Needs excellent drainage. Assumes Southern Hemisphere seasons."
     }
@@ -722,8 +717,7 @@
         { "name": "Planting", "offsetDays": 0, "description": "Plant in well-draining soil, sun to part shade." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 180, "description": "Water regularly during first year." },
         { "name": "Flowering Period (Most of the year, peak Winter/Spring)", "offsetDays": 90, "durationDays": 270, "description": "Small lilac/white flowers attract bees." },
-        { "name": "Fertilize (Spring - Low P, optional)", "offsetDays": 210, "description": "Rarely needs fertilizer." },
-        { "name": "Pruning (Lightly After Main Flowering)", "offsetDays": 300, "description": "Encourage dense growth, can be hedged." }
+        { "name": "Fertilize (Spring - Low P, optional)", "offsetDays": 210, "description": "Rarely needs fertilizer." }
       ],
       "notes": "Very hardy and drought-tolerant. Good for coastal conditions. Assumes Southern Hemisphere seasons."
     }
@@ -753,8 +747,7 @@
         { "name": "Planting (Seedlings/Cuttings)", "offsetDays": 0, "description": "Plant in full sun, very well-draining soil." },
         { "name": "Establishment", "offsetDays": 0, "durationDays": 60, "description": "Water moderately until established." },
         { "name": "Active Growth & Harvest", "offsetDays": 60, "durationDays": 250, "description": "Harvest leaves as needed. Drought-tolerant." },
-        { "name": "Flowering Period (Late Spring/Summer - if not trimmed)", "offsetDays": 210, "durationDays": 60, "description": "Purple/blue flowers appear. Trim to prevent if desired." },
-        { "name": "Pruning (Early Spring)", "offsetDays": -30, "description": "Prune back lightly before new spring growth (relative to next season)." }
+        { "name": "Flowering Period (Late Spring/Summer - if not trimmed)", "offsetDays": 210, "durationDays": 60, "description": "Purple/blue flowers appear. Trim to prevent if desired." }
       ],
       "notes": "Drought-tolerant. Needs good drainage. Assumes Southern Hemisphere seasons."
     }

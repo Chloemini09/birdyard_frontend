@@ -15,25 +15,40 @@
       <nav class="nav-menu">
         <ul>
           <li><router-link to="/home">HOME</router-link></li>
-          <!-- Bird Menu -->
+          <!-- Garden Menu -->
           <li class="dropdown">
             <a href="#">GARDEN</a>
             <ul class="dropdown-menu">
               <li><router-link to="/plantadvice">Plants Advice</router-link></li>
               <li><router-link to="/layout">Garden Layout</router-link></li>
               <li><router-link to="/gardenguide">Garden Guide</router-link></li>
+              <!-- New Link for Planting Planner -->
+              <li v-if="allPlantNamesForPlanner.length > 0">
+                <router-link
+                  :to="{
+                    name: 'PlantingCalendar',
+                    params: { plantName: defaultPlannerPlantName },
+                    query: {
+                      recommendedPlantNames: allPlantNamesForPlanner.join(','),
+                      hemisphere: 'southern' // Assuming a default, or make this dynamic if needed
+                    }
+                  }"
+                >
+                  Planting Planner
+                </router-link>
+              </li>
             </ul>
           </li>
-          
+
           <li class="dropdown">
             <a href="#">BIRD</a>
             <ul class="dropdown-menu">
-              <li><router-link to="/gardenguide">Garden Guide</router-link></li>
+              <li><router-link to="/gardenguide">Garden Guide</router-link></li> <!-- Duplicate? -->
               <li><router-link to="/nesting">Nesting Guide</router-link></li>
               <li><router-link to="/bird">Bird Detection</router-link></li>
             </ul>
           </li>
-          
+
           <li><router-link to="/learninghub">LEARNING HUB</router-link></li>
           <li><router-link to="/contact">CONTACT US</router-link></li>
         </ul>
@@ -43,12 +58,31 @@
 </template>
 
 <script>
+import allPlantsRaw from '@/assets/data/allPlants.json'; // Import all plant data
+
 export default {
   name: 'BHeader',
+  data() {
+    return {
+      allPlantDataForPlanner: allPlantsRaw // Store it in data for reactivity if needed, or directly in computed
+    }
+  },
   computed: {
     showBackButton() {
       return this.$route.path !== '/home' && this.$route.path !== '/'
     },
+    allPlantNamesForPlanner() {
+      if (this.allPlantDataForPlanner && this.allPlantDataForPlanner.length > 0) {
+        return this.allPlantDataForPlanner.map(plant => plant.plantName);
+      }
+      return [];
+    },
+    defaultPlannerPlantName() {
+      if (this.allPlantNamesForPlanner.length > 0) {
+        return this.allPlantNamesForPlanner[0]; // Default to the first plant in the list
+      }
+      return 'DefaultPlant'; // Fallback, though ideally allPlantNamesForPlanner shouldn't be empty
+    }
   },
   methods: {
     goBack() {
@@ -111,7 +145,7 @@ export default {
 
 .nav-menu li {
   margin-left: 30px;
-  position: relative; 
+  position: relative;
 }
 
 .nav-menu a {
@@ -134,7 +168,7 @@ export default {
   left: 0;
   background-color: rgba(10, 50, 0, 0.95);
   padding: 10px 0;
-  min-width: 200px; 
+  min-width: 200px;
   border-radius: 5px;
   z-index: 1001;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -145,7 +179,7 @@ export default {
 
 .dropdown-menu li {
   margin: 0;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 
@@ -160,8 +194,8 @@ export default {
 
 
 .dropdown-menu a:hover {
-  background-color: #c2e59c; 
-  color: #0a3200;            
+  background-color: #c2e59c;
+  color: #0a3200;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -214,7 +248,7 @@ export default {
     border-radius: 0;
     opacity: 1;
     visibility: visible;
-    transition: none;  
+    transition: none;
   }
 
   .dropdown-menu a {
