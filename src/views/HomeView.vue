@@ -118,7 +118,7 @@
 
         <div class="vertical-card-container">
           <!-- Step 1: Plant Information Card -->
-          <div class="step-number-indicator">STEP 1</div>
+          <div class="step-number-indicator">STEP 01</div>
           <div class="info-card">
             <router-link to="/plantadvice" class="card-image">
               <img src="@/assets/images/plant-importance.jpg" alt="Plant importance" />
@@ -149,7 +149,7 @@
             </div>
           </div>
           <!-- Step 2: Birds Information Card -->
-          <div class="step-number-indicator">STEP 2</div>
+          <div class="step-number-indicator">STEP 02</div>
           <div class="info-card">
             <router-link to="/gardenguide" class="card-image">
               <img src="@/assets/images/attracting-birds.jpg" alt="Attracting birds" />

@@ -25,31 +25,29 @@
             </div>
           </div>
 
-          <transition name="fade">
-            <div class="info-panel">
-              <h1>Attracting Birds to your Garden</h1>
-              <h3>Abstract</h3>
-              <p>
-                The article “Attracting Birds to Your Garden” from the Sustainable Gardening
-                Australia (SGA) website offers practical advice on how to create a bird-friendly
-                garden using sustainable methods. It encourages planting native flowering shrubs,
-                fruiting trees, grasses, and insect-attracting plants to provide natural food
-                sources for birds. The article also highlights the importance of supplying clean
-                water through shallow dishes or birdbaths, and creating safe shelter and nesting
-                opportunities with a variety of plant heights and structures. It advises against
-                using pesticides and fertilizers to protect both birds and their insect food
-                sources. Additional tips include deterring cats, providing branch piles for cover,
-                and minimizing window strikes. Overall, the guide emphasizes that supporting
-                birdlife in gardens not only enhances biodiversity but also brings joy and
-                ecological value to the gardening experience.
-              </p>
-              <h3>Reference</h3>
-              <cite>
-                Sustainable Gardening Australia. (n.d.). Attracting birds to your garden. Retrieved
-                May 1, 2025, from https://www.sgaonline.org.au/attracting-birds-to-your-garden/
-              </cite>
-            </div>
-          </transition>
+          <div class="info-panel">
+            <h1>Attracting Birds To Your Garden</h1>
+            <h3>Abstract</h3>
+            <p>
+            The article “Attracting Birds to Your Garden” from the Sustainable Gardening
+            Australia (SGA) website offers practical advice on how to create a bird-friendly
+            garden using sustainable methods. It encourages planting native flowering shrubs,
+            fruiting trees, grasses, and insect-attracting plants to provide natural food
+            sources for birds. The article also highlights the importance of supplying clean
+            water through shallow dishes or birdbaths, and creating safe shelter and nesting
+            opportunities with a variety of plant heights and structures. It advises against
+            using pesticides and fertilizers to protect both birds and their insect food
+            sources. Additional tips include deterring cats, providing branch piles for cover,
+            and minimizing window strikes. Overall, the guide emphasizes that supporting
+            birdlife in gardens not only enhances biodiversity but also brings joy and
+            ecological value to the gardening experience.
+            </p>
+            <h3>Reference</h3>
+            <cite>
+            Sustainable Gardening Australia. (n.d.). Attracting birds to your garden. Retrieved
+            May 1, 2025, from https://www.sgaonline.org.au/attracting-birds-to-your-garden/
+            </cite>
+          </div>
         </div>
 
         <!-- article 2 -->
@@ -64,28 +62,26 @@
             </div>
           </div>
 
-          <transition name="fade">
-            <div class="info-panel">
-              <h1>Bird Friendly Garden: Design Ideas & Plants</h1>
-              <h3>Abstract</h3>
-              <p>
-                The article from Fryd Garden Magazine provides a concise guide on creating a
-                bird-friendly garden by focusing on biodiversity, natural food sources, and safe
-                habitats. It recommends planting native trees, shrubs, and flowers that produce
-                berries, seeds, and nectar to attract various bird species. The piece also
-                emphasizes the importance of providing water, nesting spaces, and avoiding
-                pesticides to ensure a healthy, balanced environment. Overall, it promotes a
-                holistic, nature-based approach to gardening that supports both bird populations and
-                ecological sustainability.
-              </p>
-              <h3>Reference</h3>
-              <cite>
-                Fryd Garden. (n.d.). Bird-friendly garden: Tips for attracting birds to your garden.
-                Fryd Garden Magazine. Retrieved May 1, 2025, from
-                https://fryd.app/en/magazine/bird-friendly-garden
-              </cite>
-            </div>
-          </transition>
+          <div class="info-panel">
+            <h1>Bird Friendly Garden: Design Ideas & Plants</h1>
+            <h3>Abstract</h3>
+            <p>
+            The article from Fryd Garden Magazine provides a concise guide on creating a
+            bird-friendly garden by focusing on biodiversity, natural food sources, and safe
+            habitats. It recommends planting native trees, shrubs, and flowers that produce
+            berries, seeds, and nectar to attract various bird species. The piece also
+            emphasizes the importance of providing water, nesting spaces, and avoiding
+            pesticides to ensure a healthy, balanced environment. Overall, it promotes a
+            holistic, nature-based approach to gardening that supports both bird populations and
+            ecological sustainability.
+            </p>
+            <h3>Reference</h3>
+            <cite>
+            Fryd Garden. (n.d.). Bird-friendly garden: Tips for attracting birds to your garden.
+            Fryd Garden Magazine. Retrieved May 1, 2025, from
+            https://fryd.app/en/magazine/bird-friendly-garden
+            </cite>
+          </div>
         </div>
         <!-- article 3 -->
         <div class="info-card-container">
@@ -99,28 +95,26 @@
             </div>
           </div>
 
-          <transition name="fade">
-            <div class="info-panel">
-              <h1>Best Australian Native Habitat Plants for Birds</h1>
-              <h3>Abstract</h3>
-              <p>
-                The article from Best Plants Australia highlights the top Australian native plants
-                for attracting birds to your garden. It emphasizes that selecting region-appropriate
-                native species helps provide essential food, shelter, and nesting opportunities
-                while supporting ecological balance. Recommended plants include flowering shrubs
-                like bottlebrush and acacia, fruit-bearing species such as dianella and native
-                pepper, and taller trees that offer canopy habitat. The article also encourages
-                gardeners to avoid herbicides and pesticides and to use natural structures to create
-                safe, bird-friendly environments tailored to local ecosystems.
-              </p>
-              <h3>Reference</h3>
-              <cite>
-                Best Plants Australia. (n.d.). Best Australian native habitat plants for birds.
-                BestPlants.com.au. Retrieved May 1, 2025, from
-                https://bestplants.com.au/best-australian-native-habitat-plants-for-birds/
-              </cite>
-            </div>
-          </transition>
+          <div class="info-panel">
+            <h1>Best Australian Native Habitat Plants For Birds</h1>
+            <h3>Abstract</h3>
+            <p>
+            The article from Best Plants Australia highlights the top Australian native plants
+            for attracting birds to your garden. It emphasizes that selecting region-appropriate
+            native species helps provide essential food, shelter, and nesting opportunities
+            while supporting ecological balance. Recommended plants include flowering shrubs
+            like bottlebrush and acacia, fruit-bearing species such as dianella and native
+            pepper, and taller trees that offer canopy habitat. The article also encourages
+            gardeners to avoid herbicides and pesticides and to use natural structures to create
+            safe, bird-friendly environments tailored to local ecosystems.
+            </p>
+            <h3>Reference</h3>
+            <cite>
+            Best Plants Australia. (n.d.). Best Australian native habitat plants for birds.
+            BestPlants.com.au. Retrieved May 1, 2025, from
+            https://bestplants.com.au/best-australian-native-habitat-plants-for-birds/
+            </cite>
+          </div>
         </div>
       </div>
     </section>
@@ -133,7 +127,7 @@
         <!-- vedio 1 -->
         <div class="info-card-container">
           <div class="info-card">
-            <div class="card-image" @click="openExternalLinkV1">
+            <div class="card-image-2" @click="openExternalLinkV1">
               <img src="@/assets/images/garden-vedio1.png" alt="garden vedio 1" />
               <div class="card-overlay">
                 <h3>
@@ -145,69 +139,62 @@
             </div>
           </div>
 
-          <transition name="fade">
-            <div class="info-panel">
-              <h1>
-                Attract birds to your garden by feeding responsibly | Beneficial Animals | Gardening
-                Australia
-              </h1>
-              <h3>Abstract</h3>
-              <p>
-                Attracting birds to your garden involves responsible feeding practices. Urban
-                ecologist Darryl Jones emphasizes the importance of providing a variety of foods,
-                such as seeds and fruits, while ensuring cleanliness to prevent disease.
-                Additionally, planting insect-attracting plants can enhance bird visits, creating a
-                connection with nature in your garden.
-              </p>
-              <h3>Uploader</h3>
-              <cite> Gardening Australia </cite>
-              <h3>Platform</h3>
-              <cite> YouTube </cite>
-              <h3>Upload Time</h3>
-              <cite> 17 May 2020 </cite>
-            </div>
-          </transition>
+          <div class="info-panel">
+            <h1>
+            Attract Birds To Your Garden By Feeding Responsibly | Beneficial Animals | Gardening Australia
+            </h1>
+            <h3>Abstract</h3>
+            <p>
+            Attracting birds to your garden involves responsible feeding practices. Urban
+            ecologist Darryl Jones emphasizes the importance of providing a variety of foods,
+            such as seeds and fruits, while ensuring cleanliness to prevent disease.
+            Additionally, planting insect-attracting plants can enhance bird visits, creating a
+            connection with nature in your garden.
+            </p>
+            <h3>Uploader</h3>
+            <cite> Gardening Australia </cite>
+            <h3>Platform</h3>
+            <cite> YouTube </cite>
+            <h3>Upload Time</h3>
+            <cite> 17 May 2020 </cite>
+          </div>
         </div>
 
         <!-- vedio 2 -->
         <div class="info-card-container birds-container">
           <div class="info-card">
-            <div class="card-image" @click="openExternalLinkV2">
+            <div class="card-image-2" @click="openExternalLinkV2">
               <img src="@/assets/images/garden-vedio2.png" alt="garden vedio 2" />
               <div class="card-overlay">
                 <h3>
-                  HOW TO ATTRACT & FEED GARDEN BIRDS - Bird feeders, baths, hygiene & creating
-                  wildlife habitats
+                    How To Attract & Feed Garden Birds
                 </h3>
                 <span class="learn-more">Learn More</span>
               </div>
             </div>
           </div>
 
-          <transition name="fade">
             <div class="info-panel">
-              <h1>
-                HOW TO ATTRACT & FEED GARDEN BIRDS - Bird feeders, baths, hygiene & creating
-                wildlife habitats
-              </h1>
-              <h3>Abstract</h3>
-              <p>
-                Welcome to Adam's Gardening Guide. In this video, Adam—an avid year-round bird
-                feeder—shows viewers the types of feeders and food he uses, including a
-                window-mounted feeder that allows birds to come very close. Water is also essential,
-                and Adam demonstrates his birdbath and how a simple tray can be turned into one. He
-                also discusses how he enhances the wildlife value of his garden, the plants he uses
-                to create habitats, and the berry-producing shrubs that provide food for birds
-                during autumn and winter.
-              </p>
-              <h3>Uploader</h3>
-              <cite> Adam's Gardening Guides </cite>
-              <h3>Platform</h3>
-              <cite> YouTube </cite>
-              <h3>Upload Time</h3>
-              <cite> 26 Oct 2023 </cite>
+            <h1>
+                How To Attract & Feed Garden Bird
+            </h1>
+            <h3>Abstract</h3>
+            <p>
+              Welcome to Adam's Gardening Guide. In this video, Adam—an avid year-round bird
+              feeder—shows viewers the types of feeders and food he uses, including a
+              window-mounted feeder that allows birds to come very close. Water is also essential,
+              and Adam demonstrates his birdbath and how a simple tray can be turned into one. He
+              also discusses how he enhances the wildlife value of his garden, the plants he uses
+              to create habitats, and the berry-producing shrubs that provide food for birds
+              during autumn and winter.
+            </p>
+            <h3>Uploader</h3>
+            <cite> Adam's Gardening Guides </cite>
+            <h3>Platform</h3>
+            <cite> YouTube </cite>
+            <h3>Upload Time</h3>
+            <cite> 26 Oct 2023 </cite>
             </div>
-          </transition>
         </div>
       </div>
     </section>
@@ -340,7 +327,22 @@ export default {
 .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.card-image-2 {
+  position: relative;
+  height: 500px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card-image-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
   transition: transform 0.5s ease;
 }
 

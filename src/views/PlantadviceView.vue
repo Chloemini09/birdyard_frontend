@@ -162,7 +162,7 @@
 </template>
 
 <script>
-import { ref, reactive, onMounted, computed } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import axios from 'axios'
 
 const getRecommendedPlants = async (state, season) => {

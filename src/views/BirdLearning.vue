@@ -25,31 +25,29 @@
                         </div>
                     </div>
 
-                    <transition name="fade">
-                        <div class="info-panel">
-                            <h1>Birds Red Hot List:
-                                The Australian birds most at risk of extinction </h1>
-                            <h3>Abstract</h3>
+                      <div class="info-panel">
+                          <h1>Birds Red Hot List:
+                              The Australian birds most at risk of extinction </h1>
+                          <h3>Abstract</h3>
                             <p>
-                                (correct)This research report, supported by Australia's National Environmental Science
-                                Program, brings together insights from bird conservation experts and provides the first
-                                assessment of the Australian bird species most likely to become extinct in the next 20
-                                years. The report warns that without more effective management efforts, up to 10
-                                additional bird species could become extinct by 2038. Most high-risk species are found
-                                on islands or in the heavily developed regions of southern Australia. The report
-                                highlights that early identification of at-risk species and the implementation of
-                                targeted actions are crucial to preventing future extinctions.
+                              (correct)This research report, supported by Australia's National Environmental Science
+                              Program, brings together insights from bird conservation experts and provides the first
+                              assessment of the Australian bird species most likely to become extinct in the next 20
+                              years. The report warns that without more effective management efforts, up to 10
+                              additional bird species could become extinct by 2038. Most high-risk species are found
+                              on islands or in the heavily developed regions of southern Australia. The report
+                              highlights that early identification of at-risk species and the implementation of
+                              targeted actions are crucial to preventing future extinctions.
 
                             </p>
-                            <h3>Reference</h3>
-                            <cite>
-                                Garnett, S. T., & The NESP Threatened Species Recovery Hub. (n.d.). Birds Red Hot
-                                List:
-                                The Australian birds most at risk of extinction (Project 2.1, Research findings
-                                factsheet). National Environmental Science Program.
-                            </cite>
-                        </div>
-                    </transition>
+                          <h3>Reference</h3>
+                          <cite>
+                              Garnett, S. T., & The NESP Threatened Species Recovery Hub. (n.d.). Birds Red Hot
+                              List:
+                              The Australian birds most at risk of extinction (Project 2.1, Research findings
+                              factsheet). National Environmental Science Program.
+                          </cite>
+                      </div>
                 </div>
 
                 <!-- article 2 -->
@@ -64,29 +62,27 @@
                         </div>
                     </div>
 
-                    <transition name="fade">
-                        <div class="info-panel">
-                            <h1>
-                                How are Australian Birds
-                                Protected by Law?
-                            </h1>
-                            <h3>Abstract</h3>
-                            <p>
-                                This PDF provides a brief overview of the legal framework protecting birds in Australia.
-                                It emphasizes that mistreating, hunting, or harming wild birds—as well as destroying
-                                nests and habitats—is prohibited. The document lists relevant laws at both the federal
-                                and state/territory levels, such as the Environment Protection and Biodiversity
-                                Conservation Act (EPBC Act) and various Wildlife and Nature Conservation Acts. It
-                                highlights how Australia uses legislation across multiple levels to safeguard native
-                                bird species and their ecosystems.
-                            </p>
-                            <h3>Reference</h3>
-                            <cite>
-                                Birds in Backyards. (n.d.). How are Australian birds protected by law? [Case study PDF].
-                                https://www.birdsinbackyards.net/sites/www.birdsinbackyards.net/files/page/attachments/Birds-Law-Casestudy_0.pdf
-                            </cite>
-                        </div>
-                    </transition>
+                    <div class="info-panel">
+                      <h1>
+                        How are Australian Birds
+                        Protected by Law?
+                      </h1>
+                      <h3>Abstract</h3>
+                      <p>
+                        This PDF provides a brief overview of the legal framework protecting birds in Australia.
+                        It emphasizes that mistreating, hunting, or harming wild birds—as well as destroying
+                        nests and habitats—is prohibited. The document lists relevant laws at both the federal
+                        and state/territory levels, such as the Environment Protection and Biodiversity
+                        Conservation Act (EPBC Act) and various Wildlife and Nature Conservation Acts. It
+                        highlights how Australia uses legislation across multiple levels to safeguard native
+                        bird species and their ecosystems.
+                      </p>
+                      <h3>Reference</h3>
+                      <cite>
+                        Birds in Backyards. (n.d.). How are Australian birds protected by law? [Case study PDF].
+                        https://www.birdsinbackyards.net/sites/www.birdsinbackyards.net/files/page/attachments/Birds-Law-Casestudy_0.pdf
+                      </cite>
+                    </div>
                 </div>
                 <!-- article 3 -->
                 <div class="info-card-container">
@@ -100,30 +96,28 @@
                         </div>
                     </div>
 
-                    <transition name="fade">
-                        <div class="info-panel">
-                            <h1>
-                                Land of the Birds
-                            </h1>
-                            <h3>Abstract</h3>
-                            <p>
-                                published by the Royal Society of Victoria, explores the uniqueness of Australia's
-                                birdlife. With over 830 species—about 45% of which are endemic—the article highlights
-                                the country's vibrant bird species such as parrots and kingfishers, large flightless
-                                birds like emus and cassowaries, and the complex intelligence and social behavior of
-                                many native birds. It also discusses their distinct evolutionary history shaped by
-                                Australia's long geographic isolation, and how they've adapted to diverse environments
-                                ranging from arid deserts to tropical rainforests. The article calls for greater
-                                awareness and protection of these unique species in the face of threats like habitat
-                                loss and changing fire patterns.
-                            </p>
-                            <h3>Reference</h3>
-                            <cite>
-                                Royal Society of Victoria. (n.d.). Land of the Birds: What Sets Australia's Avian Life
-                                Apart? Retrieved April 30, 2025, from https://rsv.org.au/land-of-birds/
-                            </cite>
-                        </div>
-                    </transition>
+                    <div class="info-panel">
+                      <h1>
+                        LAND OF THE BIRDS
+                      </h1>
+                      <h3>Abstract</h3>
+                      <p>
+                        published by the Royal Society of Victoria, explores the uniqueness of Australia's
+                        birdlife. With over 830 species—about 45% of which are endemic—the article highlights
+                        the country's vibrant bird species such as parrots and kingfishers, large flightless
+                        birds like emus and cassowaries, and the complex intelligence and social behavior of
+                        many native birds. It also discusses their distinct evolutionary history shaped by
+                        Australia's long geographic isolation, and how they've adapted to diverse environments
+                        ranging from arid deserts to tropical rainforests. The article calls for greater
+                        awareness and protection of these unique species in the face of threats like habitat
+                        loss and changing fire patterns.
+                      </p>
+                      <h3>Reference</h3>
+                      <cite>
+                        Royal Society of Victoria. (n.d.). Land of the Birds: What Sets Australia's Avian Life
+                        Apart? Retrieved April 30, 2025, from https://rsv.org.au/land-of-birds/
+                      </cite>
+                    </div>
                 </div>
             </div>
         </section>
@@ -145,31 +139,29 @@
                         </div>
                     </div>
 
-                    <transition name="fade">
-                        <div class="info-panel">
-                            <h1>Australian Small Birds </h1>
-                            <h3>Abstract</h3>
-                            <p>
-                                The documentary showcases various small bird species in Australia, highlighting their
-                                unique behaviors, habitats, and characteristics. From the intricate courtship displays
-                                of male bowerbirds to the vibrant colors of honeyeaters, it captures the diversity and
-                                beauty of these avian creatures across different environments, emphasizing their
-                                ecological significance.
-                            </p>
-                            <h3>Uploader</h3>
-                            <cite>
-                                Stash - Free Documentaries
-                            </cite>
-                            <h3>Platform</h3>
-                            <cite>
-                                YouTube
-                            </cite>
-                            <h3>Upload Time</h3>
-                            <cite>
-                                31 Oct 2023
-                            </cite>
-                        </div>
-                    </transition>
+                    <div class="info-panel">
+                      <h1>Australian Small Birds </h1>
+                      <h3>Abstract</h3>
+                      <p>
+                        The documentary showcases various small bird species in Australia, highlighting their
+                        unique behaviors, habitats, and characteristics. From the intricate courtship displays
+                        of male bowerbirds to the vibrant colors of honeyeaters, it captures the diversity and
+                        beauty of these avian creatures across different environments, emphasizing their
+                        ecological significance.
+                      </p>
+                      <h3>Uploader</h3>
+                      <cite>
+                        Stash - Free Documentaries
+                      </cite>
+                      <h3>Platform</h3>
+                      <cite>
+                        YouTube
+                      </cite>
+                      <h3>Upload Time</h3>
+                      <cite>
+                        31 Oct 2023
+                      </cite>
+                    </div>
                 </div>
 
                 <!-- vedio 2 -->
@@ -184,30 +176,28 @@
                         </div>
                     </div>
 
-                    <transition name="fade">
-                        <div class="info-panel">
-                            <h1>How Smart Are Australia's Ravens? </h1>
-                            <h3>Abstract</h3>
-                            <p>
-                                This video showcases five corvid species found in Australia. It outlines the differences
-                                between them and delves into the strange behaviors of ravens. While there are many eerie
-                                legends surrounding these birds, not all of them are gloomy. Ravens, in particular,
-                                display remarkable intelligence—comparable to that of a seven-year-old child.
-                            </p>
-                            <h3>Uploader</h3>
-                            <cite>
-                                The Backyard Naturalist
-                            </cite>
-                            <h3>Platform</h3>
-                            <cite>
-                                YouTube
-                            </cite>
-                            <h3>Upload Time</h3>
-                            <cite>
-                                7 Jan 2024
-                            </cite>
-                        </div>
-                    </transition>
+                    <div class="info-panel">
+                      <h1>How Smart Are Australia's Ravens? </h1>
+                      <h3>Abstract</h3>
+                      <p>
+                        This video showcases five corvid species found in Australia. It outlines the differences
+                        between them and delves into the strange behaviors of ravens. While there are many eerie
+                        legends surrounding these birds, not all of them are gloomy. Ravens, in particular,
+                        display remarkable intelligence—comparable to that of a seven-year-old child.
+                      </p>
+                      <h3>Uploader</h3>
+                      <cite>
+                        The Backyard Naturalist
+                      </cite>
+                      <h3>Platform</h3>
+                      <cite>
+                        YouTube
+                      </cite>
+                      <h3>Upload Time</h3>
+                      <cite>
+                        7 Jan 2024
+                      </cite>
+                    </div>
                 </div>
             </div>
         </section>
@@ -352,10 +342,11 @@ export default {
 }
 
 .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
 .info-card:hover .card-image img {
