@@ -14,6 +14,7 @@ import GardenLearning from '@/views/GardenLearning.vue'
 import QuizView from '@/views/QuizView.vue'
 import BirdLearning from '@/views/BirdLearning.vue'
 import PlantingCalendarView from '@/views/PlantingCalendarView.vue'
+import MapView from '@/views/MapView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -113,6 +114,12 @@ const router = createRouter({
       path: '/quiz',
       name: 'quiz',
       component: QuizView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/map',
+      name: 'map',
+      component: MapView,
       meta: { requiresAuth: true },
     },
   ],

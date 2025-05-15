@@ -1,0 +1,231 @@
+[
+  {
+    "id": "australian-magpie",
+    "name": "Australian Magpie",
+    "scientificName": "Gymnorhina tibicen",
+    "family": "Artamidae",
+    "status": "Least Concern (LC)",
+    "overview": "A familiar and widespread bird known for its loud, melodious carolling and bold behaviour. Common in urban parks and rural areas.",
+    "location": "Victoria, South Australia, Queensland, Other",
+    "birdGroup": [
+      "Songbirds",
+      "Urban birds"
+    ],
+    "identification": "Medium-sized black-and-white bird with a sturdy build and red eyes. Males and females look similar but differ slightly in back colouration.",
+    "size": "38-44cm",
+    "weight": "350 grams",
+    "behaviour": "Highly territorial, particularly during breeding season when they may swoop at perceived threats. Intelligent and capable of complex social interactions.",
+    "habitat": [
+      "Urban",
+      "Grassland",
+      "Woodland"
+    ],
+    "feeding": "Insects, small animals, carrion, and food scraps. Often forages on the ground.",
+    "risks": [
+      "Urban conflict",
+      "Vehicle collisions"
+    ],
+    "image": "Australian Magpie.png"
+  },
+  {
+    "id": "sulphur-crested-cockatoo",
+    "name": "Sulphur-crested Cockatoo",
+    "scientificName": "Cacatua galerita",
+    "family": "Cacatuidae",
+    "status": "Least Concern (LC)",
+    "overview": "Large, noisy white cockatoo with a distinctive yellow crest. Commonly seen in flocks in both urban and rural areas of Australia.",
+    "location": "Victoria, South Australia, Queensland, Other",
+    "birdGroup": [
+      "Parrots",
+      "Urban birds"
+    ],
+    "identification": "White plumage, yellow crest, black beak and feet. Large and conspicuous, especially when calling.",
+    "size": "44-55cm",
+    "weight": "800-1000 grams",
+    "behaviour": "Highly social and intelligent, known for loud calls and destructive behaviour (e.g., chewing wood). Often roosts communally.",
+    "habitat": [
+      "Urban",
+      "Woodland",
+      "Forest"
+    ],
+    "feeding": "Seeds, nuts, fruits, berries, roots, and cultivated crops. Also scavenges food in urban settings.",
+    "risks": [
+      "Human-wildlife conflict",
+      "Illegal pet trade"
+    ],
+    "image": "Sulphur-crested Cockatoo.png"
+  },
+  {
+    "id": "rainbow-lorikeet",
+    "name": "Rainbow Lorikeet",
+    "scientificName": "Trichoglossus moluccanus",
+    "family": "Psittaculidae",
+    "status": "Least Concern (LC)",
+    "overview": "Vibrantly coloured parrot found in coastal regions, often seen in pairs or noisy flocks in flowering trees.",
+    "location": "Victoria, South Australia, Queensland, Other",
+    "birdGroup": [
+      "Parrots",
+      "Urban birds"
+    ],
+    "identification": "Bright blue head and belly, green wings and back, orange-yellow breast. Medium-sized parrot with a curved beak.",
+    "size": "25-30cm",
+    "weight": "130 grams",
+    "behaviour": "Fast-flying, gregarious, and highly active. Feeds in flowering trees and nests in tree hollows.",
+    "habitat": [
+      "Urban",
+      "Forest",
+      "Woodland"
+    ],
+    "feeding": "Nectar, pollen, fruits, and soft seeds. Uses a specialised brush-tipped tongue to feed on nectar.",
+    "risks": [
+      "Competition with native species",
+      "Urban development"
+    ],
+    "image": "Rainbow Lorikeet.png"
+  },
+  {
+    "id": "eastern-rosella",
+    "name": "Eastern Rosella",
+    "scientificName": "Platycercus eximius",
+    "family": "Psittaculidae",
+    "status": "Least Concern (LC)",
+    "overview": "A brightly coloured parrot with a red head and white cheek patch. Common in woodlands, farmlands, and suburban gardens.",
+    "location": "Victoria, South Australia, Queensland, Other",
+    "birdGroup": [
+      "Parrots"
+    ],
+    "identification": "Red head, white cheeks, yellow underparts, green rump, and blue wings. Striking and easily recognisable.",
+    "size": "29-33cm",
+    "weight": "120 grams",
+    "behaviour": "Usually seen in pairs or small groups. Forages mostly on the ground but nests in tree hollows.",
+    "habitat": [
+      "Woodland",
+      "Urban",
+      "Grassland"
+    ],
+    "feeding": "Seeds, fruits, buds, nectar, and insects.",
+    "risks": [
+      "Habitat fragmentation",
+      "Vehicle strikes"
+    ],
+    "image": "Eastern Rosella.png"
+  },
+  {
+    "id": "superb-fairywren",
+    "name": "Superb Fairywren",
+    "scientificName": "Malurus cyaneus",
+    "family": "Maluridae",
+    "status": "Least Concern (LC)",
+    "overview": "A small, social bird with striking blue plumage in males during the breeding season. Frequently seen flitting in shrubs and gardens.",
+    "location": "Victoria, South Australia, Queensland, Other",
+    "birdGroup": [
+      "Small insect eaters",
+      "Songbirds"
+    ],
+    "identification": "Breeding males have vivid blue and black plumage; females and non-breeding males are brown with a dull blue tail.",
+    "size": "14cm",
+    "weight": "8-13 grams",
+    "behaviour": "Forms social groups with one breeding male and several helper birds. Active and restless, with constant tail flicking.",
+    "habitat": [
+      "Urban",
+      "Forest",
+      "Shrubland"
+    ],
+    "feeding": "Insects, spiders, and small invertebrates. Forages close to the ground.",
+    "risks": [
+      "Predation by cats",
+      "Habitat loss"
+    ],
+    "image": "Superb Fairywren.png"
+  },
+  {
+    "id": "brown-thornbill",
+    "name": "Brown Thornbill",
+    "scientificName": "Unknown",
+    "family": "Unknown",
+    "status": "Unknown",
+    "overview": "Information about this species is currently limited. Further ecological and behavioral studies are required.",
+    "location": "Unknown",
+    "birdGroup": [],
+    "identification": "Details not available.",
+    "size": "Unknown",
+    "weight": "Unknown",
+    "behaviour": "Unknown",
+    "habitat": [],
+    "feeding": "Unknown",
+    "risks": [],
+    "image": "Brown Thornbill.png"
+  },
+  {
+    "id": "baraus-petrel",
+    "name": "Barau's Petrel",
+    "scientificName": "Unknown",
+    "family": "Unknown",
+    "status": "Unknown",
+    "overview": "Information about this species is currently limited. Further ecological and behavioral studies are required.",
+    "location": "Unknown",
+    "birdGroup": [],
+    "identification": "Details not available.",
+    "size": "Unknown",
+    "weight": "Unknown",
+    "behaviour": "Unknown",
+    "habitat": [],
+    "feeding": "Unknown",
+    "risks": [],
+    "image": "Barau's Petrel.png"
+  },
+  {
+    "id": "grey-falcon",
+    "name": "Grey Falcon",
+    "scientificName": "Unknown",
+    "family": "Unknown",
+    "status": "Unknown",
+    "overview": "Information about this species is currently limited. Further ecological and behavioral studies are required.",
+    "location": "Unknown",
+    "birdGroup": [],
+    "identification": "Details not available.",
+    "size": "Unknown",
+    "weight": "Unknown",
+    "behaviour": "Unknown",
+    "habitat": [],
+    "feeding": "Unknown",
+    "risks": [],
+    "image": "Grey Falcon.png"
+  },
+  {
+    "id": "southern-whiteface",
+    "name": "Southern Whiteface",
+    "scientificName": "Unknown",
+    "family": "Unknown",
+    "status": "Unknown",
+    "overview": "Information about this species is currently limited. Further ecological and behavioral studies are required.",
+    "location": "Unknown",
+    "birdGroup": [],
+    "identification": "Details not available.",
+    "size": "Unknown",
+    "weight": "Unknown",
+    "behaviour": "Unknown",
+    "habitat": [],
+    "feeding": "Unknown",
+    "risks": [],
+    "image": "Southern Whiteface.png"
+  },
+  {
+    "id": "gentoo-penguin",
+    "name": "Gentoo Penguin",
+    "scientificName": "Unknown",
+    "family": "Unknown",
+    "status": "Unknown",
+    "overview": "Information about this species is currently limited. Further ecological and behavioral studies are required.",
+    "location": "Unknown",
+    "birdGroup": [],
+    "identification": "Details not available.",
+    "size": "Unknown",
+    "weight": "Unknown",
+    "behaviour": "Unknown",
+    "habitat": [],
+    "feeding": "Unknown",
+    "risks": [],
+    "image": "Gentoo Penguin.png"
+  }
+]
