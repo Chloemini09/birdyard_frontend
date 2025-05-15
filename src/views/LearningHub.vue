@@ -72,7 +72,7 @@
         <div id="info-title3" class="info-card-container">
           <div class="info-card">
             <div class="card-image" @click="$router.push('/quiz')">
-              <img src="@/assets/images/QUIZ.png" alt="QUIZ" />
+              <img src="@/assets/images/quiz1.jpg" alt="QUIZ" />
               <div class="card-overlay">
                 <h3>QUIZ Hub</h3>
                 <span class="learn-more">Start Trip</span>
