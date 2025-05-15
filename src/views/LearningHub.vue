@@ -14,7 +14,9 @@
     <section class="info-section">
       <div class="container">
         <h2 id="info-title" class="info-title">START YOUR LEARNING TRIP</h2>
-        <p class="info-subtitle">Click "Start Trip" and picture to see details.</p>
+        <p class="info-subtitle">
+          Click "<span class="highlight">Start Trip</span>" or <span class="highlight">picture</span> to see details.
+        </p>
 
         <!-- Plant intro Card -->
         <div id="info-title1" class="info-card-container">
@@ -300,6 +302,10 @@ export default {
   text-align: center;
   margin-bottom: 20px;
   color: #0a3200;
+}
+
+.highlight {
+  font-weight: bold;
 }
 
 .info-card-container {

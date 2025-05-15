@@ -135,7 +135,7 @@ function closeModal() {
   showModal.value = false
 }
 
-function handleOverlayClick(event) {
+function handleOverlayClick() {
   closeModal()
 }
 

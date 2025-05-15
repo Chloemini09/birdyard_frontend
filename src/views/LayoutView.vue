@@ -211,16 +211,19 @@ function setStateFilter(state) {
 .cta-button {
   margin-top: 1rem;
   display: inline-block;
-  background-color: #5c9c3e;
-  color: #fff;
-  padding: 0.8rem 1.4rem;
-  border-radius: 6px;
+  background-color: #c7eaa3;   
+  color: #0a3200;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 .cta-button:hover {
-  background-color: #487b2e;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive */

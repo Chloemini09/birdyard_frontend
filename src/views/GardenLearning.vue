@@ -11,7 +11,9 @@
     <section class="info-section">
       <div class="container">
         <h2 id="info-title" class="info-title">GARDEN-LEARNING ARTICLE</h2>
-        <p class="info-subtitle">Click "learn more" or picture to see details.</p>
+        <p class="info-subtitle">
+          Click "<span class="highlight">learn more</span>" or <span class="highlight">picture</span> to see details.
+        </p>
 
         <!-- article 1 -->
         <div class="info-card-container">
@@ -122,7 +124,10 @@
     <section class="info-section">
       <div class="container">
         <h2 id="info-title" class="info-title">GARDEN-LEARNING VEDIO</h2>
-        <p class="info-subtitle">Click "learn more" or picture to see details.</p>
+        <p class="info-subtitle">
+          Click "<span class="highlight">learn more</span>" or <span class="highlight">picture</span> to see details.
+        </p>
+
 
         <!-- vedio 1 -->
         <div class="info-card-container">
@@ -287,6 +292,10 @@ export default {
   text-align: center;
   margin-bottom: 20px;
   color: #0a3200;
+}
+
+.highlight {
+  font-weight: bold;
 }
 
 .info-card-container {
