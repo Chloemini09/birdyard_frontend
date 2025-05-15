@@ -73,9 +73,9 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal-overlay" v-if="showModal">
-      <div class="modal">
-        <button class="close-btn" @click="showModal = false">×</button>
+    <div class="modal-overlay" v-if="showModal" @click="handleOverlayClick">
+      <div class="modal" @click.stop>
+        <button class="close-btn" @click="closeModal">×</button>
         <h3>{{ selectedIssue }}</h3>
         <ul>
           <li v-for="(tip, i) in troubleTips[selectedIssue]" :key="i">{{ tip }}</li>
@@ -97,7 +97,7 @@ const troubleTips = {
   'Drought Stress': [
     '💧 Water early in the morning or late evening to minimize water loss due to evaporation. Morning watering is ideal as it allows moisture to reach the roots before the heat of the day. For deep-rooted plants, consider slow-drip irrigation to ensure penetration beyond surface level, which helps build drought resilience over time.',
 
-    '🌿 Apply a 5–10 cm layer of organic mulch such as sugarcane, straw, pine bark, or composted leaf litter. Mulch acts as an insulating blanket, keeping soil temperature stable and reducing evaporation. It also suppresses weeds that compete for limited moisture and breaks down over time to enrich the soil.',
+    '🌿 Apply a 5-10 cm layer of organic mulch such as sugarcane, straw, pine bark, or composted leaf litter. Mulch acts as an insulating blanket, keeping soil temperature stable and reducing evaporation. It also suppresses weeds that compete for limited moisture and breaks down over time to enrich the soil.',
 
     '🌵 Choose and group plants according to their drought tolerance. Native plants like grevillea, banksia, and saltbush are adapted to local dry conditions and often require less care once established. Avoid placing thirsty plants like ferns or hydrangeas in exposed areas—use zoning principles to match water needs by location.',
   ],
@@ -105,7 +105,7 @@ const troubleTips = {
   'Insect Infestations': [
     '🐞 Attract natural predators such as ladybugs, hoverflies, and praying mantises by planting companion plants like dill, marigold, alyssum, or yarrow. These “insectary” species offer nectar and shelter for beneficial insects. Avoid broad-spectrum pesticides which kill both pests and helpful organisms, disrupting the ecosystem balance.',
 
-    '🌱 Neem oil, made from the neem tree, is an effective organic pesticide with systemic and contact properties. Mix according to label (typically 5–10 ml per litre), apply in the early evening to avoid burning leaves, and repeat every 5–7 days. It interrupts pest breeding cycles and deters feeding, while remaining safe for bees if applied properly.',
+    '🌱 Neem oil, made from the neem tree, is an effective organic pesticide with systemic and contact properties. Mix according to label (typically 5-10 ml per litre), apply in the early evening to avoid burning leaves, and repeat every 5–7 days. It interrupts pest breeding cycles and deters feeding, while remaining safe for bees if applied properly.',
 
     '✂️ Regular inspection and manual removal are vital. Check the undersides of leaves where pests often hide. Prune affected foliage using clean, sterilized shears to avoid spreading disease. For severe infestations, isolate the plant from others until the problem is under control.',
   ],
@@ -130,6 +130,13 @@ const troubleTips = {
 function openModal(issue) {
   selectedIssue.value = issue
   showModal.value = true
+}
+function closeModal() {
+  showModal.value = false
+}
+
+function handleOverlayClick(event) {
+  closeModal()
 }
 
 const tipsData = {

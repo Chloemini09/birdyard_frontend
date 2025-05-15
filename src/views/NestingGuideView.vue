@@ -157,6 +157,10 @@ const galleryBirds = [
   font-size: 1rem;
 }
 
+.selector-section label {
+  font-weight: bold;
+}
+
 .selector-section select {
   padding: 8px 12px;
   border-radius: 6px;

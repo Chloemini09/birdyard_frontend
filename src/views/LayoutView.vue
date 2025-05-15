@@ -60,7 +60,7 @@
     <!-- CTA Bottom -->
     <section class="cta-gardenguide">
       <p>Would you like to help birds find a home?</p>
-      <router-link to="/gardenguide" class="cta-button">Go to gardenguide Guide →</router-link>
+      <router-link to="/gardenguide" class="cta-button">Garden Tips & Tricks →</router-link>
     </section>
   </div>
 </template>

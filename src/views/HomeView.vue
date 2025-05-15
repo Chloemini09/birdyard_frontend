@@ -19,7 +19,7 @@
           <div class="about-text">
             <h2>Welcome to Bird-Yard,<br />Where Birds Feel at Home, Right in Your Backyard.</h2>
             <router-link to="/about" class="about-link">
-              Know more about us
+              Know More About Us
               <span class="arrow">→</span>
             </router-link>
           </div>
@@ -40,7 +40,7 @@
     <section class="process-section">
       <div class="process-header">
         <h2 class="process-title">Simple and Effective Journey</h2>
-        <a href="/learninghub" class="process-link">How It Works</a>
+        <router-link to="/learninghub" class="process-link">How It Works</router-link>
       </div>
 
       <div class="process-steps">
@@ -104,7 +104,7 @@
         <h3 class="next-steps-title">Ready to begin your journey?</h3>
         <div class="next-steps-content">
           <router-link to="/plantadvice" class="btn btn-large"
-            >Let's Find Plants for your Garden
+            >Let's Find Plants For Your Garden
           </router-link>
         </div>
       </div>
@@ -129,7 +129,7 @@
                   nesting materials.
                 </p>
                 <div class="btn-container">
-                  <span class="find-plants-btn">Find Nice Plants for your Garden</span>
+                  <span class="find-plants-btn">Pick Your Perfect Plants</span>
                 </div>
               </div>
               <div class="hover-overlay"></div>
@@ -138,23 +138,16 @@
 
           <!-- Arrow indicator -->
           <div class="step-arrow">
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 5V19M12 19L19 12M12 19L5 12"
-                stroke="#0a3200"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+            <div class="step-arrow">
+              <img
+                src="/arrow.png"
+                alt="Arrow"
+                width="40"
+                height="40"
+                class="green-arrow"
               />
-            </svg>
+            </div>
           </div>
-
           <!-- Step 2: Birds Information Card -->
           <div class="step-number-indicator">STEP 2</div>
           <div class="info-card">
@@ -167,7 +160,7 @@
                   supporting biodiversity.
                 </p>
                 <div class="btn-container">
-                  <span class="find-plants-btn">Attract birds for your Garden</span>
+                  <span class="find-plants-btn">Invite Birds To Your Garden</span>
                 </div>
               </div>
               <div class="hover-overlay"></div>
@@ -178,7 +171,7 @@
     </section>
     <!-- stats -->
     <section class="stats-section">
-      <p class="stats-section-intro">Our Website Scope</p>
+      <p class="stats-section-intro" style="font-weight: bold; color: #2c5530;">Our Website Scope</p>
       <div class="stats-container">
         <div class="stat-item">
           <div class="stat-number">27</div>
@@ -203,7 +196,7 @@
       <div class="next-steps">
         <div class="next-steps-content">
           <router-link to="/learninghub" class="btn btn-large"
-            >WE HAVE MORE RESOURCES FOR YOU
+            >Click For More Resources
           </router-link>
         </div>
       </div>
@@ -212,7 +205,7 @@
     <!-- Grow in 4 Steps Section -->
     <section class="steps-section">
       <div class="container">
-        <h2 class="steps-title">"Grow in 4 Steps:"</h2>
+        <h2 class="steps-title">Grow in 4 Steps</h2>
         <div class="steps-container">
           <!-- Step 1 -->
           <div class="step">
@@ -768,7 +761,7 @@ export default defineComponent({
   opacity: 0;
   transform: translateY(50px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  width: 90%;
+  width: 60%;
   text-align: center;
 }
 
@@ -837,7 +830,8 @@ export default defineComponent({
 .process-link {
   border: 1px solid #f5f5dc;
   padding: 0.75rem 2rem;
-  color: #f5f5dc;
+  color: #0a3200;
+  background-color: #c2e59c;
   text-decoration: none;
   transition: all 0.3s ease;
   font-size: 2rem;
@@ -897,6 +891,7 @@ export default defineComponent({
   font-weight: 600;
   margin-bottom: 1rem;
   color: #f5f5dc;
+  text-decoration: underline;
 }
 
 .step-description {
@@ -978,6 +973,9 @@ export default defineComponent({
 
   .card-image {
     height: 350px;
+  }
+  .green-arrow {
+  filter: brightness(0) saturate(100%) invert(21%) sepia(82%) saturate(436%) hue-rotate(74deg) brightness(93%) contrast(108%);
   }
 }
 
