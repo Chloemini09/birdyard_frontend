@@ -40,7 +40,7 @@
     <section class="process-section">
       <div class="process-header">
         <h2 class="process-title">Simple and Effective Journey</h2>
-        <router-link to="/learninghub" class="process-link">How It Works</router-link>
+        <!-- <router-link to="/learninghub" class="process-link">How It Works</router-link> -->
       </div>
 
       <div class="process-steps">
