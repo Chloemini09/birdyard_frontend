@@ -1,231 +1,281 @@
 [
   {
-    "id": "australian-magpie",
-    "name": "Australian Magpie",
-    "scientificName": "Gymnorhina tibicen",
-    "family": "Artamidae",
-    "status": "Least Concern (LC)",
-    "overview": "A familiar and widespread bird known for its loud, melodious carolling and bold behaviour. Common in urban parks and rural areas.",
-    "location": "Victoria, South Australia, Queensland, Other",
+    "id": "australasian-bittern",
+    "name": "Australasian Bittern",
+    "scientificName": "Botaurus poiciloptilus",
+    "family": "Ardeidae",
+    "status": "Endangered (EN)",
+    "overview": "The Australasian Bittern is a large, secretive heron-like bird inhabiting densely vegetated wetlands across southeastern Australia and New Zealand. Often referred to as the 'bunyip bird' due to its distinctive booming call, it is more often heard than seen. Its elusive nature and declining habitat have made it a focus of conservation efforts.",
+    "location": "Southeastern Australia, including parts of New South Wales, Victoria, South Australia, and Tasmania.",
     "birdGroup": [
-      "Songbirds",
-      "Urban birds"
+      "Herons",
+      "Wetland Birds"
     ],
-    "identification": "Medium-sized black-and-white bird with a sturdy build and red eyes. Males and females look similar but differ slightly in back colouration.",
-    "size": "38-44cm",
-    "weight": "350 grams",
-    "behaviour": "Highly territorial, particularly during breeding season when they may swoop at perceived threats. Intelligent and capable of complex social interactions.",
+    "identification": "This species has mottled brown upperparts and buff underparts with dark streaks, providing excellent camouflage among reeds. It possesses a long, thick neck and a straight, brownish-yellow bill.",
+    "size": "65\u201375 cm in length.",
+    "weight": "Approximately 1.4\u20131.5 kg.",
+    "behaviour": "Australasian Bitterns are solitary and primarily nocturnal. When alarmed, they adopt a 'freeze' posture, stretching their necks upward to blend with surrounding reeds. They are known for their deep, booming calls during the breeding season.",
     "habitat": [
-      "Urban",
-      "Grassland",
-      "Woodland"
+      "Freshwater wetlands",
+      "Brackish swamps",
+      "Reed beds"
     ],
-    "feeding": "Insects, small animals, carrion, and food scraps. Often forages on the ground.",
+    "feeding": "Their diet includes fish, frogs, insects, crustaceans, and small mammals, foraged mostly at night along wetland edges.",
     "risks": [
-      "Urban conflict",
-      "Vehicle collisions"
+      "Wetland drainage",
+      "Habitat degradation",
+      "Invasive species",
+      "Climate change"
     ],
-    "image": "Australian Magpie.png"
+    "image": "Australasian Bittern1.png"
   },
   {
-    "id": "sulphur-crested-cockatoo",
-    "name": "Sulphur-crested Cockatoo",
-    "scientificName": "Cacatua galerita",
-    "family": "Cacatuidae",
+    "id": "australian-white-ibis",
+    "name": "Australian White Ibis",
+    "scientificName": "Threskiornis molucca",
+    "family": "Threskiornithidae",
     "status": "Least Concern (LC)",
-    "overview": "Large, noisy white cockatoo with a distinctive yellow crest. Commonly seen in flocks in both urban and rural areas of Australia.",
-    "location": "Victoria, South Australia, Queensland, Other",
+    "overview": "The Australian White Ibis is a large wading bird commonly found in urban areas, earning nicknames like 'bin chicken' due to its scavenging habits. Despite its adaptability, the species faces challenges from habitat loss and human-wildlife conflicts.",
+    "location": "Widespread across Australia, particularly in eastern and southeastern regions.",
     "birdGroup": [
-      "Parrots",
-      "Urban birds"
+      "Wading Birds"
     ],
-    "identification": "White plumage, yellow crest, black beak and feet. Large and conspicuous, especially when calling.",
-    "size": "44-55cm",
-    "weight": "800-1000 grams",
-    "behaviour": "Highly social and intelligent, known for loud calls and destructive behaviour (e.g., chewing wood). Often roosts communally.",
+    "identification": "Characterized by its white body, black featherless head and neck, and long down-curved black bill. In flight, it displays black wingtips.",
+    "size": "65\u201375 cm in length.",
+    "weight": "Approximately 1.5\u20132.5 kg.",
+    "behaviour": "Often seen in large flocks, the ibis is known for its adaptability to urban environments, feeding in parks, landfills, and wetlands. It nests in colonies, often with other waterbirds.",
     "habitat": [
-      "Urban",
-      "Woodland",
-      "Forest"
+      "Wetlands",
+      "Urban areas",
+      "Grasslands"
     ],
-    "feeding": "Seeds, nuts, fruits, berries, roots, and cultivated crops. Also scavenges food in urban settings.",
+    "feeding": "Omnivorous, feeding on insects, crustaceans, human scraps, and other small animals.",
     "risks": [
+      "Habitat loss",
       "Human-wildlife conflict",
-      "Illegal pet trade"
+      "Pollution"
     ],
-    "image": "Sulphur-crested Cockatoo.png"
+    "image": "Australian White Ibis1.png"
   },
   {
-    "id": "rainbow-lorikeet",
-    "name": "Rainbow Lorikeet",
-    "scientificName": "Trichoglossus moluccanus",
-    "family": "Psittaculidae",
+    "id": "cotton-pygmy-goose",
+    "name": "Cotton Pygmy-goose",
+    "scientificName": "Nettapus coromandelianus",
+    "family": "Anatidae",
     "status": "Least Concern (LC)",
-    "overview": "Vibrantly coloured parrot found in coastal regions, often seen in pairs or noisy flocks in flowering trees.",
-    "location": "Victoria, South Australia, Queensland, Other",
+    "overview": "The Cotton Pygmy-goose is one of the smallest waterfowl species, inhabiting freshwater wetlands across northern Australia and parts of Asia. Known for its striking plumage and agile flight, it is often seen in pairs or small groups.",
+    "location": "Northern and northeastern Australia, including parts of Queensland and the Northern Territory.",
     "birdGroup": [
-      "Parrots",
-      "Urban birds"
+      "Waterfowl"
     ],
-    "identification": "Bright blue head and belly, green wings and back, orange-yellow breast. Medium-sized parrot with a curved beak.",
-    "size": "25-30cm",
-    "weight": "130 grams",
-    "behaviour": "Fast-flying, gregarious, and highly active. Feeds in flowering trees and nests in tree hollows.",
+    "identification": "Males have a distinctive white head and underparts with dark green upperparts, while females are duller with a brownish cap and eye stripe. Both sexes have a short, dark bill.",
+    "size": "26\u201330 cm in length.",
+    "weight": "Approximately 160\u2013190 g.",
+    "behaviour": "These birds are strong fliers and often perch in trees near water. They nest in tree hollows close to water bodies.",
     "habitat": [
-      "Urban",
-      "Forest",
-      "Woodland"
+      "Freshwater lakes",
+      "Ponds",
+      "Swamps"
     ],
-    "feeding": "Nectar, pollen, fruits, and soft seeds. Uses a specialised brush-tipped tongue to feed on nectar.",
+    "feeding": "Feeds on aquatic vegetation, seeds, and small invertebrates, often dabbling on the water's surface.",
     "risks": [
-      "Competition with native species",
-      "Urban development"
+      "Wetland drainage",
+      "Habitat disturbance",
+      "Climate change"
     ],
-    "image": "Rainbow Lorikeet.png"
-  },
-  {
-    "id": "eastern-rosella",
-    "name": "Eastern Rosella",
-    "scientificName": "Platycercus eximius",
-    "family": "Psittaculidae",
-    "status": "Least Concern (LC)",
-    "overview": "A brightly coloured parrot with a red head and white cheek patch. Common in woodlands, farmlands, and suburban gardens.",
-    "location": "Victoria, South Australia, Queensland, Other",
-    "birdGroup": [
-      "Parrots"
-    ],
-    "identification": "Red head, white cheeks, yellow underparts, green rump, and blue wings. Striking and easily recognisable.",
-    "size": "29-33cm",
-    "weight": "120 grams",
-    "behaviour": "Usually seen in pairs or small groups. Forages mostly on the ground but nests in tree hollows.",
-    "habitat": [
-      "Woodland",
-      "Urban",
-      "Grassland"
-    ],
-    "feeding": "Seeds, fruits, buds, nectar, and insects.",
-    "risks": [
-      "Habitat fragmentation",
-      "Vehicle strikes"
-    ],
-    "image": "Eastern Rosella.png"
-  },
-  {
-    "id": "superb-fairywren",
-    "name": "Superb Fairywren",
-    "scientificName": "Malurus cyaneus",
-    "family": "Maluridae",
-    "status": "Least Concern (LC)",
-    "overview": "A small, social bird with striking blue plumage in males during the breeding season. Frequently seen flitting in shrubs and gardens.",
-    "location": "Victoria, South Australia, Queensland, Other",
-    "birdGroup": [
-      "Small insect eaters",
-      "Songbirds"
-    ],
-    "identification": "Breeding males have vivid blue and black plumage; females and non-breeding males are brown with a dull blue tail.",
-    "size": "14cm",
-    "weight": "8-13 grams",
-    "behaviour": "Forms social groups with one breeding male and several helper birds. Active and restless, with constant tail flicking.",
-    "habitat": [
-      "Urban",
-      "Forest",
-      "Shrubland"
-    ],
-    "feeding": "Insects, spiders, and small invertebrates. Forages close to the ground.",
-    "risks": [
-      "Predation by cats",
-      "Habitat loss"
-    ],
-    "image": "Superb Fairywren.png"
-  },
-  {
-    "id": "brown-thornbill",
-    "name": "Brown Thornbill",
-    "scientificName": "Unknown",
-    "family": "Unknown",
-    "status": "Unknown",
-    "overview": "Information about this species is currently limited. Further ecological and behavioral studies are required.",
-    "location": "Unknown",
-    "birdGroup": [],
-    "identification": "Details not available.",
-    "size": "Unknown",
-    "weight": "Unknown",
-    "behaviour": "Unknown",
-    "habitat": [],
-    "feeding": "Unknown",
-    "risks": [],
-    "image": "Brown Thornbill.png"
-  },
-  {
-    "id": "baraus-petrel",
-    "name": "Barau's Petrel",
-    "scientificName": "Unknown",
-    "family": "Unknown",
-    "status": "Unknown",
-    "overview": "Information about this species is currently limited. Further ecological and behavioral studies are required.",
-    "location": "Unknown",
-    "birdGroup": [],
-    "identification": "Details not available.",
-    "size": "Unknown",
-    "weight": "Unknown",
-    "behaviour": "Unknown",
-    "habitat": [],
-    "feeding": "Unknown",
-    "risks": [],
-    "image": "Barau's Petrel.png"
+    "image": "Cotton Pygmy-goose1.png"
   },
   {
     "id": "grey-falcon",
     "name": "Grey Falcon",
-    "scientificName": "Unknown",
-    "family": "Unknown",
-    "status": "Unknown",
-    "overview": "Information about this species is currently limited. Further ecological and behavioral studies are required.",
-    "location": "Unknown",
-    "birdGroup": [],
-    "identification": "Details not available.",
-    "size": "Unknown",
-    "weight": "Unknown",
-    "behaviour": "Unknown",
-    "habitat": [],
-    "feeding": "Unknown",
-    "risks": [],
-    "image": "Grey Falcon.png"
+    "scientificName": "Falco hypoleucos",
+    "family": "Falconidae",
+    "status": "Endangered (EN)",
+    "overview": "The Grey Falcon is a rare, medium-sized raptor endemic to Australia. It is known for its speed, agility, and elusive nature, inhabiting the arid and semi-arid interior regions. It's considered one of Australia's least-known birds of prey due to its sparse distribution and remote habitat.",
+    "location": "South Australia, Queensland, Victoria, Other",
+    "birdGroup": [
+      "Raptors",
+      "Birds of Prey"
+    ],
+    "identification": "The Grey Falcon is a distinctive raptor recognized by its overall pale grey plumage, darker wingtips, and bright yellow cere, eye-ring, and feet. This medium-sized falcon possesses relatively broad wings and a somewhat square-tipped tail, distinguishing it from similar darker falcon species.",
+    "size": "30 - 45 cm (females generally larger than males)",
+    "weight": "350 - 600 g",
+    "behaviour": "Known for its fast, powerful flight, often low to the ground, the Grey Falcon is an agile aerial hunter that frequently perches conspicuously on vantage points like dead trees. Typically solitary or in pairs, it breeds using old stick nests of other birds, usually located in trees along inland watercourses.",
+    "habitat": [
+      "Arid"
+    ],
+    "feeding": "This falcon primarily preys on other birds, especially parrots and pigeons, which it captures with great speed and agility in mid-air. Although birds are its main food source, it will supplement its diet opportunistically with small mammals, reptiles, and large insects.",
+    "risks": [
+      "Habitat Degradation",
+      "Secondary Poisoning",
+      "Climate Change",
+      "Nest Disturbance/Illegal Collection",
+      "Low Population Density"
+    ],
+    "image": "Grey Falcon1.png"
   },
   {
-    "id": "southern-whiteface",
-    "name": "Southern Whiteface",
-    "scientificName": "Unknown",
-    "family": "Unknown",
-    "status": "Unknown",
-    "overview": "Information about this species is currently limited. Further ecological and behavioral studies are required.",
-    "location": "Unknown",
-    "birdGroup": [],
-    "identification": "Details not available.",
-    "size": "Unknown",
-    "weight": "Unknown",
-    "behaviour": "Unknown",
-    "habitat": [],
-    "feeding": "Unknown",
-    "risks": [],
-    "image": "Southern Whiteface.png"
+    "id": "southern-scrub-robin",
+    "name": "Southern Scrub-robin",
+    "scientificName": "Drymodes brunneopygia",
+    "family": "Petroicidae",
+    "status": "Least Concern (LC)",
+    "overview": "The Southern Scrub-robin is a ground-dwelling songbird endemic to southern Australia. It inhabits mallee and heathland regions, characterized by semi-arid conditions and sparse vegetation. Its elusive nature and preference for dense underbrush make it a challenging species to observe.",
+    "location": "Southern Australia, including parts of Victoria, South Australia, and Western Australia.",
+    "birdGroup": [
+      "Songbirds",
+      "Ground birds"
+    ],
+    "identification": "This species exhibits brownish upperparts with pale underparts and a distinctive rufous rump. It has a relatively long tail and strong legs adapted for terrestrial movement.",
+    "size": "Approximately 20 cm in length.",
+    "weight": "Around 25\u201330 g.",
+    "behaviour": "Southern Scrub-robins are territorial and shy, often foraging alone or in pairs. They feed primarily on insects, searching through leaf litter on the ground. Their call is a soft 'pee, pee' or a more musical 'chip, chip, par-ee.'",
+    "habitat": [
+      "Mallee",
+      "Heathland",
+      "Shrubland"
+    ],
+    "feeding": "Insects such as beetles, termites, and ants; occasionally consumes fruit from low bushes.",
+    "risks": [
+      "Habitat fragmentation",
+      "Predation by introduced species",
+      "Climate change"
+    ],
+    "image": "Southern Scrub-robin1.png"
   },
   {
-    "id": "gentoo-penguin",
-    "name": "Gentoo Penguin",
-    "scientificName": "Unknown",
-    "family": "Unknown",
-    "status": "Unknown",
-    "overview": "Information about this species is currently limited. Further ecological and behavioral studies are required.",
-    "location": "Unknown",
-    "birdGroup": [],
-    "identification": "Details not available.",
-    "size": "Unknown",
-    "weight": "Unknown",
-    "behaviour": "Unknown",
-    "habitat": [],
-    "feeding": "Unknown",
-    "risks": [],
-    "image": "Gentoo Penguin.png"
+    "id": "plumed-egret",
+    "name": "Plumed Egret",
+    "scientificName": "Ardea plumifera",
+    "family": "Ardeidae",
+    "status": "Least Concern (LC)",
+    "overview": "The Plumed Egret, also known as the Intermediate Egret, is a medium-sized heron found across Australasia. It is recognized for its elegant white plumage and delicate breeding plumes. This species frequents wetlands and is often seen wading in shallow waters.",
+    "location": "Eastern and northern Australia, New Guinea, and parts of Southeast Asia.",
+    "birdGroup": [
+      "Waterbirds"
+    ],
+    "identification": "All-white plumage with a yellow bill and black legs. During breeding season, it develops long, delicate plumes on its back and breast, and the bill may turn reddish with green lores.",
+    "size": "Approximately 65\u201372 cm in length.",
+    "weight": "Around 400\u2013600 g.",
+    "behaviour": "Plumed Egrets are diurnal feeders, often seen stalking prey in shallow waters. They breed in colonies, constructing platform nests in trees over water.",
+    "habitat": [
+      "Wetlands",
+      "Floodplains",
+      "Mangroves"
+    ],
+    "feeding": "Fish, frogs, aquatic insects, and crustaceans.",
+    "risks": [
+      "Wetland drainage",
+      "Pollution",
+      "Disturbance from human activity"
+    ],
+    "image": "Plumed Egret1.png"
+  },
+  {
+    "id": "painted-honeyeater",
+    "name": "Painted Honeyeater",
+    "scientificName": "Grantiella picta",
+    "family": "Meliphagidae",
+    "status": "Vulnerable (VU)",
+    "overview": "The Painted Honeyeater is a nomadic bird known for its striking plumage and reliance on mistletoe berries. It plays a crucial role in seed dispersal for mistletoe plants, making it an important species for ecosystem health.",
+    "location": "Eastern and southeastern Australia, including parts of Queensland, New South Wales, and Victoria.",
+    "birdGroup": [
+      "Honeyeaters"
+    ],
+    "identification": "Males have black upperparts with white underparts and bright yellow edges on the wings and tail. They possess a pale pink bill. Females are similar but with duller coloration.",
+    "size": "Approximately 16 cm in length.",
+    "weight": "Around 20\u201325 g.",
+    "behaviour": "Often observed alone or in pairs, Painted Honeyeaters are known for their melodious calls. They breed in loose colonies, constructing cup-shaped nests suspended from branches, often within mistletoe clumps.",
+    "habitat": [
+      "Box-ironbark forests",
+      "Woodlands with mistletoe presence"
+    ],
+    "feeding": "Primarily mistletoe berries; also consumes nectar and insects.",
+    "risks": [
+      "Habitat clearing",
+      "Mistletoe removal",
+      "Fragmentation of breeding habitats"
+    ],
+    "image": "Painted Honeyeater1.png"
+  },
+  {
+    "id": "plains-wanderer",
+    "name": "Plains-wanderer",
+    "scientificName": "Pedionomus torquatus",
+    "family": "Pedionomidae",
+    "status": "Critically Endangered (CR)",
+    "overview": "The Plains-wanderer is a unique, ground-dwelling bird endemic to the native grasslands of southeastern Australia. It is the sole member of its family and exhibits distinct sexual dimorphism, with females being more brightly colored.",
+    "location": "Southeastern Australia, primarily in the Riverina region of New South Wales and northern Victoria.",
+    "birdGroup": [
+      "Grassland birds"
+    ],
+    "identification": "Mottled brown and sandy plumage provides excellent camouflage. Females display a distinctive black collar and rufous breast, while males are paler.",
+    "size": "Approximately 15\u201319 cm in length.",
+    "weight": "Around 40\u201395 g.",
+    "behaviour": "Primarily nocturnal and elusive, Plains-wanderers are solitary or found in pairs. Males are responsible for incubating eggs and rearing chicks.",
+    "habitat": [
+      "Native grasslands with sparse vegetation"
+    ],
+    "feeding": "Insects, seeds, and leaves; known to peck at soil to uncover prey.",
+    "risks": [
+      "Habitat loss due to agriculture",
+      "Overgrazing",
+      "Predation by introduced species"
+    ],
+    "image": "Plains-wanderer1.png"
+  },
+  {
+    "id": "pilotbird",
+    "name": "Pilotbird",
+    "scientificName": "Pycnoptilus floccosus",
+    "family": "Acanthizidae",
+    "status": "Least Concern (LC)",
+    "overview": "The Pilotbird is a secretive songbird inhabiting the dense undergrowth of southeastern Australia's forests. Its name derives from its habit of following lyrebirds, potentially benefiting from prey flushed out by them.",
+    "location": "Southeastern Australia, including parts of New South Wales and Victoria.",
+    "birdGroup": [
+      "Songbirds"
+    ],
+    "identification": "Brownish plumage with pale underparts and a large tail. Notable for its loud, rich song, especially during dawn and dusk.",
+    "size": "Approximately 18 cm in length.",
+    "weight": "Around 30 g.",
+    "behaviour": "Forages in leaf litter, flicking its tail up and down. Builds dome-shaped nests on or near the ground. Only the female incubates, but both parents feed the young.",
+    "habitat": [
+      "Wet forests",
+      "Rainforests"
+    ],
+    "feeding": "Insects, spiders, and other invertebrates.",
+    "risks": [
+      "Habitat disturbance",
+      "Predation by introduced species"
+    ],
+    "image": "Pilotbird1.png"
+  },
+  {
+    "id": "yellow-breasted-boatbill",
+    "name": "Yellow-breasted Boatbill",
+    "scientificName": "Machaerirhynchus flaviventer",
+    "family": "Machaerirhynchidae",
+    "status": "Least Concern (LC)",
+    "overview": "The Yellow-breasted Boatbill is a small, insectivorous bird found in the rainforests of northeastern Australia and New Guinea. Its distinctive boat-shaped bill and vibrant yellow underparts make it a unique member of the forest avifauna.",
+    "location": "Far North Queensland, Australia, and New Guinea.",
+    "birdGroup": [
+      "Passerines",
+      "Forest Birds"
+    ],
+    "identification": "Features a bright yellow breast and belly, olive-green upperparts, and a broad, flat bill resembling the shape of a boat.",
+    "size": "11\u201312.5 cm in length.",
+    "weight": "9\u201310 g.",
+    "behaviour": "Often seen flitting through the lower to mid-levels of the forest, gleaning insects from foliage. It is known for its agility and distinctive foraging style.",
+    "habitat": [
+      "Tropical rainforests",
+      "Moist lowland forests"
+    ],
+    "feeding": "Feeds primarily on insects and other small invertebrates, captured by sallying from perches or gleaning from leaves.",
+    "risks": [
+      "Habitat loss",
+      "Deforestation",
+      "Climate change"
+    ],
+    "image": "Yellow-breasted Boatbill1.png"
   }
 ]
