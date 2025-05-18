@@ -12,7 +12,7 @@
             <div class="container">
                 <h2 id="info-title" class="info-title">BIRD-LEARNING ARTICLE</h2>
                 <p class="info-subtitle">
-                  Click "<span class="highlight">learn more</span>" or <span class="highlight">picture</span> to see details.
+                  Click "<span class="highlight">learn more</span>" to see details.
                 </p>
 
                 <!-- article 1 -->
@@ -128,7 +128,7 @@
             <div class="container">
                 <h2 id="info-title" class="info-title">BIRD-LEARNING VEDIO</h2>
                 <p class="info-subtitle">
-                  Click "<span class="highlight">learn more</span>" or <span class="highlight">picture</span> to see details.
+                  Click "<span class="highlight">learn more</span>" to see details.
                 </p>
 
                 <!-- vedio 1 -->

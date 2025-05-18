@@ -3,11 +3,11 @@
     <!-- Header Banner -->
     <div class="banner">
       <h1 class="banner-title">ECO-LEARNING HUB</h1>
-      <p class="banner-subtitle">READ ARTICLES AND WATCH VEDIOS</p>
+      <p class="banner-subtitle">Welcome to the Garden Learning Hub</p>
       <p class="banner-subtitle">
-        LEARN ABOUT BIRD CONSERVATION IN AUSTRALIA AND BIRD-FRIENDLY GARDENS
+        Our go-to spot for simple, practical tips to grow, care for, and enjoy your garden.
       </p>
-      <p class="banner-subtitle">TEST YOUR KNOWLEDGE WITH FUN QUIZZES</p>
+      <p class="banner-subtitle">Whether you're just starting or already green-thumbed, dig in and grow with us!</p>
     </div>
 
     <!-- Information Section with Modal Popups -->
@@ -15,7 +15,7 @@
       <div class="container">
         <h2 id="info-title" class="info-title">START YOUR LEARNING TRIP</h2>
         <p class="info-subtitle">
-          Click "<span class="highlight">Start Trip</span>" or <span class="highlight">picture</span> to see details.
+          Click "<span class="highlight">Start Trip</span>" to see details.
         </p>
 
         <!-- Plant intro Card -->

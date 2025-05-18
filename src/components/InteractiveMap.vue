@@ -2,9 +2,9 @@
 <template>
 
     <div class="interactive-map-layout">
-        <!-- mapbox-gl.js?v=462659a1:443 The map container element should be empty, 
-         otherwise the map's interactivity will be negatively impacted. 
-         If you want to display a message when WebGL is not supported, 
+        <!-- mapbox-gl.js?v=462659a1:443 The map container element should be empty,
+         otherwise the map's interactivity will be negatively impacted.
+         If you want to display a message when WebGL is not supported,
          use the Mapbox GL Supported plugin instead. -->
         <!-- <div v-if="!isAnimating" class="month-dropdown">
             <label for="monthSelect">Jump to Month:</label>
@@ -15,7 +15,7 @@
         </div> -->
         <div ref="mapContainer" class="map-section">
             <div class="map-control-top-left month-dropdown">
-                <label for="monthSelect"> See where the bird is during</label>
+                <label for="monthSelect"> Select month for bird's location</label>
                 <select id="monthSelect" v-model="selectedMonth" @change="handleMonthJump" :disabled="isAnimating">
                     <option disabled value="">Select Month</option>
                     <option v-for="(name, idx) in monthNames" :key="idx" :value="idx + 1">
