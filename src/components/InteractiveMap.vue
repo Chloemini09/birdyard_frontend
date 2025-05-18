@@ -1,10 +1,38 @@
 <!-- npm install mapbox-gl -->
 <template>
+
     <div class="interactive-map-layout">
+        <!-- mapbox-gl.js?v=462659a1:443 The map container element should be empty, 
+         otherwise the map's interactivity will be negatively impacted. 
+         If you want to display a message when WebGL is not supported, 
+         use the Mapbox GL Supported plugin instead. -->
+        <!-- <div v-if="!isAnimating" class="month-dropdown">
+            <label for="monthSelect">Jump to Month:</label>
+            <select id="monthSelect" v-model="selectedMonth" @change="handleMonthJump">
+                <option disabled value="">Select Month</option>
+                <option v-for="(name, idx) in monthNames" :key="idx" :value="idx + 1">{{ name }}</option>
+            </select>
+        </div> -->
         <div ref="mapContainer" class="map-section">
+            <div class="map-control-top-left month-dropdown">
+                <label for="monthSelect"> See where the bird is during</label>
+                <select id="monthSelect" v-model="selectedMonth" @change="handleMonthJump" :disabled="isAnimating">
+                    <option disabled value="">Select Month</option>
+                    <option v-for="(name, idx) in monthNames" :key="idx" :value="idx + 1">
+                        {{ name }}
+                    </option>
+                </select>
+
+            </div>
         </div>
+
         <div class="sidebar">
-            <h2 class="sidebar-title">Select Bird Species</h2>
+            <div class="container">
+                <h2 class="sidebar-title">Select Bird Species</h2>
+                <h2 class="sidebar-title">Explore Its Migration</h2>
+                <!-- <h2 class="sidebar-title">Choose a bird to explore its migration</h2> -->
+                <p class="sidebar-graph">From year beginning to currrent month</p>
+            </div>
             <div class="species-scroll">
                 <label v-for="bird in filteredBirdList" :key="bird.name" class="bird-card"
                     :class="{ selected: selectedSpecies === bird.name }">
@@ -102,7 +130,6 @@
         </div>
 
     </div>
-
 </template>
 
 <script setup>
@@ -164,6 +191,8 @@ const animatedMarkers = ref([])
 const selectedBirdInfo = ref(null)
 const showBirdPopup = ref(false)
 const map = ref(null)
+const lastMonthIndex = ref(new Date().getMonth() + 1)
+
 let markers = []
 let popup // Mapbox Popup, used to display information when hovering the mouse
 let animationController = { cancelled: false }
@@ -186,6 +215,9 @@ const getBirdImagePath = (filename) => {
     return new URL(`../assets/images/${filename}`, import.meta.url).href
 }
 
+const selectedMonth = ref('')
+
+
 // Function to add a layer for month labels
 function addMonthLabelLayer(species, geojson) {
     const sourceId = `${species}-month-label-source`
@@ -207,47 +239,47 @@ function addMonthLabelLayer(species, geojson) {
         source: sourceId,
         layout: {
             'text-field': ['get', 'months'],
-            'text-size': 15,
+            'text-size': 20,
             'text-offset': [0, 1],
             'text-anchor': 'top',
             'text-allow-overlap': true,
-            'text-ignore-placement': true
+            'text-ignore-placement': true,
         },
         paint: {
             'text-color': '#013e05',
             'text-halo-color': '#ffffff',
-            'text-halo-width': 1.2
+            'text-halo-width': 1.5,
         }
     })
 }
 
-// Function to add a dashed path layer
-function addDashedPathLayer(species, geojson) {
-    const sourceId = `${species}-dashed-source`
-    const layerId = `${species}-dashed-layer`
 
-    if (map.value.getLayer(layerId)) {
-        map.value.removeLayer(layerId)
-        map.value.removeSource(sourceId)
-    }
+// function addDashedPathLayer(species, geojson)// Function to add a dashed path layer {
+//     const sourceId = `${species}-dashed-source`
+//     const layerId = `${species}-dashed-layer`
 
-    map.value.addSource(sourceId, { type: 'geojson', data: geojson })
+//     if (map.value.getLayer(layerId)) {
+//         map.value.removeLayer(layerId)
+//         map.value.removeSource(sourceId)
+//     }
 
-    map.value.addLayer({
-        id: layerId,
-        type: 'line',
-        source: sourceId,
-        layout: {
-            'line-cap': 'round',
-            'line-join': 'round'
-        },
-        paint: {
-            'line-color': '#a9cf7a',
-            'line-width': 3,
-            'line-dasharray': [2, 2]
-        }
-    })
-}
+//     map.value.addSource(sourceId, { type: 'geojson', data: geojson })
+
+//     map.value.addLayer({
+//         id: layerId,
+//         type: 'line',
+//         source: sourceId,
+//         layout: {
+//             'line-cap': 'round',
+//             'line-join': 'round'
+//         },
+//         paint: {
+//             'line-color': '#a9cf7a',
+//             'line-width': 3,
+//             'line-dasharray': [2, 2]
+//         }
+//     })
+// }
 
 // Function to animate circular motion
 function animateCircularMotion(marker, center, onComplete, radius = 1.5, rounds = 1, steps = 100) {
@@ -270,37 +302,55 @@ function animateCircularMotion(marker, center, onComplete, radius = 1.5, rounds 
 // Function to animate a path segment
 function animatePathSegment(species, start, end, segmentIndex, onComplete) {
     const id = `${species}-segment-${segmentIndex}`
-    const totalFrames = 30
-    let frame = 0
-
-    const curvedLine = createCurvedLine(start, end, 1, totalFrames)
-    const geojson = createEmptyGeoJSON()
-
-    initLineLayer(map.value, id, geojson)
+    const samePoint = start[0] === end[0] && start[1] === end[1]
 
     const el = createBirdElement(species, birdList.value)
-
-    animatedMarkers.value.forEach(marker => marker.remove())
-    animatedMarkers.value = []
-
     const movingMarker = new mapboxgl.Marker({ element: el, anchor: 'bottom' })
         .setLngLat(start)
         .addTo(map.value)
 
-    animatedMarkers.value.push(movingMarker)
+    animatedMarkers.value.forEach(marker => marker.remove())
+    animatedMarkers.value = [movingMarker]
 
-    const samePoint = start[0] === end[0] && start[1] === end[1]
+    if (samePoint) {
+        console.log('🔁')
+        animateCircularMotion(movingMarker, start, () => {
+            console.log('✅')
+            if (onComplete) onComplete()
+        })
+        return
+    }
+
+    const totalFrames = 35
+    let frame = 0
+    const curvedLine = createCurvedLine(start, end, 1, totalFrames)
+    const geojson = createEmptyGeoJSON()
+
+    if (map.value.getSource(id)) {
+        map.value.removeLayer(id)
+        map.value.removeSource(id)
+    }
+
+    map.value.addSource(id, { type: 'geojson', data: geojson })
+    map.value.addLayer({
+        id,
+        type: 'line',
+        source: id,
+        layout: {
+            'line-cap': 'round',
+            'line-join': 'round'
+        },
+        paint: {
+            'line-color': '#01cd0e',
+            'line-width': 3,
+            'line-opacity': 0.9,
+            'line-dasharray': [2, 2]
+        }
+    })
 
     function animate() {
-        if (samePoint) {
-            animateCircularMotion(movingMarker, start, onComplete)
-            return
-        }
         if (frame >= curvedLine.length) {
-            animatedMarkers.value.forEach(marker => marker.remove())
-            animatedMarkers.value = []
-            const finalMarker = new mapboxgl.Marker(el.cloneNode(true)).setLngLat(end).addTo(map.value)
-            animatedMarkers.value.push(finalMarker)
+            startFadeOutLine(id)
             if (onComplete) onComplete()
             return
         }
@@ -411,6 +461,15 @@ function createBirdElement(species, birdList) {
     el.style.backgroundSize = 'contain'
     el.style.backgroundRepeat = 'no-repeat'
     el.style.backgroundPosition = 'center'
+
+    const bird = birdList.find(b => b.name === species)
+    if (bird) {
+        el.addEventListener('click', () => {
+            selectedBirdInfo.value = bird
+            showBirdPopup.value = true
+        })
+    }
+
     return el
 }
 
@@ -445,6 +504,17 @@ function clearPaths(speciesToClear) {
 function clearMarkers() {
     markers.forEach(m => m.remove())
     markers = []
+}
+
+function clearAnimationSegments(species) {
+    for (let i = 0; i < 12; i++) {
+        const id = `${species}-segment-${i}`
+        if (map.value.getLayer(id)) map.value.removeLayer(id)
+        if (map.value.getSource(id)) map.value.removeSource(id)
+    }
+
+    animatedMarkers.value.forEach(m => m.remove())
+    animatedMarkers.value = []
 }
 
 // The curvature parameter controls how "curvy" the line is
@@ -503,30 +573,105 @@ function getColorForSpecies(species) {
     return palette[index % palette.length]
 }
 
-// Function to initialize a line layer
-function initLineLayer(map, id, geojson, color = '#ff0000') {
-    if (map.getSource(id)) {
-        map.removeLayer(id)
-        map.removeSource(id)
-    }
 
-    map.addSource(id, { type: 'geojson', data: geojson })
-    map.addLayer({
-        id,
-        type: 'line',
-        source: id,
-        layout: {
-            'line-cap': 'round',
-            'line-join': 'round'
-        },
-        paint: {
-            'line-color': '#01cd0e',
-            'line-width': 3,
-            'line-opacity': 0.9
-        }
-    })
+// function initLineLayer(map, id, geojson, color = '#ff0000') // Function to initialize a line layer{
+//     if (map.getSource(id)) {
+//         map.removeLayer(id)
+//         map.removeSource(id)
+//     }
+
+//     map.addSource(id, { type: 'geojson', data: geojson })
+//     map.addLayer({
+//         id,
+//         type: 'line',
+//         source: id,
+//         layout: {
+//             'line-cap': 'round',
+//             'line-join': 'round'
+//         },
+//         paint: {
+//             'line-color': '#01cd0e',
+//             'line-width': 3,
+//             'line-opacity': 0.9
+//         }
+//     })
+// }
+
+
+function getLoopingMonthSequence(from, to) {
+    const result = []
+    let m = from
+    while (true) {
+        result.push(m)
+        if (m === to) break
+        m = (m % 12) + 1
+    }
+    return result
 }
 
+
+// Function to handle month jump
+function handleMonthJump() {
+    const monthNum = parseInt(selectedMonth.value)
+    if (!selectedSpecies.value || isAnimating.value || !map.value?.isStyleLoaded()) return
+
+    const startMonth = lastMonthIndex.value
+    const monthSequence = getLoopingMonthSequence(startMonth, monthNum)
+    const species = selectedSpecies.value
+
+    clearAnimationSegments(species)
+
+    const pathCoords = []
+    for (const m of monthSequence) {
+        const coord = getDominantStateForSpeciesMonth(species, m)
+        if (coord) pathCoords.push(coord)
+    }
+
+    if (pathCoords.length < 2) {
+        isAnimating.value = false
+
+        if (pathCoords.length === 1) {
+            const species = selectedSpecies.value
+            const coord = pathCoords[0]
+
+            animatedMarkers.value.forEach(m => m.remove())
+            animatedMarkers.value = []
+
+            placeAnimatedBirdMarker(species, coord)
+        }
+
+        return
+    }
+
+
+    isAnimating.value = true
+    animatedMarkers.value.forEach(m => m.remove())
+    animatedMarkers.value = []
+
+    let index = 1
+    function nextStep() {
+        if (index >= pathCoords.length) {
+            isAnimating.value = false
+            lastMonthIndex.value = monthNum
+
+            placeInteractivePointMarkers(species)
+
+            const labelGeojson = buildMonthPointsGeoJSON(species)
+            addMonthLabelLayer(species, labelGeojson)
+
+            return
+        }
+
+        const start = pathCoords[index - 1]
+        const end = pathCoords[index]
+        animatePathSegment(species, start, end, index - 1, () => {
+            index++
+            nextStep()
+        })
+    }
+
+    nextStep()
+}
 
 // Function to place an animated bird marker
 function placeAnimatedBirdMarker(species, point) {
@@ -559,7 +704,7 @@ function placeAnimatedBirdMarker(species, point) {
     return marker
 }
 
-// Function to clear all markers
+// Function to place interactive point markers
 function placeInteractivePointMarkers(species) {
     const pointMap = {} // key: "lng,lat" → { coord, entries: [] }
 
@@ -581,8 +726,8 @@ function placeInteractivePointMarkers(species) {
         const coord = stateCapitals[topState]
         const key = coord.map(x => x.toFixed(4)).join(',')
 
-        const exampleEntry = filtered.find(e => e.state === topState)
-        if (!exampleEntry) continue
+        const topEntries = filtered.filter(e => e.state === topState)
+        if (!topEntries.length) continue
 
         if (!pointMap[key]) {
             pointMap[key] = {
@@ -591,12 +736,15 @@ function placeInteractivePointMarkers(species) {
             }
         }
 
-        pointMap[key].entries.push({
-            month: monthStr,
-            status: exampleEntry.status,
-            state: topState,
-            species_common_name: exampleEntry.species_common_name
+        topEntries.forEach(entry => {
+            pointMap[key].entries.push({
+                month: monthStr,
+                status: entry.status,
+                state: topState,
+                species_common_name: entry.species_common_name
+            })
         })
+
     }
 
     Object.values(pointMap).forEach(({ coord, entries }) => {
@@ -614,11 +762,39 @@ function placeInteractivePointMarkers(species) {
             .addTo(map.value)
 
         el.addEventListener('mouseenter', () => {
-            const content = entries.map(entry =>
-                `${entry.species_common_name} is ${entry.status} at ${entry.state} in ${entry.month}`
-            ).join('<br>')
+            const grouped = {}
+
+            entries.forEach(entry => {
+                const key = `${entry.species_common_name}|${entry.state}|${entry.month}`
+                if (!grouped[key]) {
+                    grouped[key] = {
+                        species: entry.species_common_name,
+                        state: entry.state,
+                        month: entry.month,
+                        statuses: new Set()
+                    }
+                }
+                grouped[key].statuses.add(entry.status)
+            })
+
+            const content = Object.values(grouped).map(group => {
+                const statusList = Array.from(group.statuses).join(', ')
+                return `${group.species} is ${statusList} at ${group.state} in ${group.month}`
+            }).join('<br><br>')
+
             popup.setLngLat(coord)
-                .setHTML(`<div style="font-size:13px; padding:4px 8px;">${content}</div>`)
+            popup.setHTML(`
+  <div style="
+    font-size:14px;
+    padding:12px;
+    background-color:#ffffff;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+  ">
+    ${content}
+  </div>
+`)
                 .addTo(map.value)
         })
 
@@ -629,6 +805,29 @@ function placeInteractivePointMarkers(species) {
         markers.push(marker)
     })
 }
+
+// Function to start the fade-out animation
+function startFadeOutLine(layerId, step = 0.05, interval = 100) {
+    let opacity = 0.9
+
+    const fadeInterval = setInterval(() => {
+        if (!map.value.getLayer(layerId)) {
+            clearInterval(fadeInterval)
+            return
+        }
+
+        opacity -= step
+        if (opacity <= 0) {
+            map.value.removeLayer(layerId)
+            map.value.removeSource(layerId)
+            clearInterval(fadeInterval)
+            return
+        }
+
+        map.value.setPaintProperty(layerId, 'line-opacity', opacity)
+    }, interval)
+}
+
 
 // Function to start the autoplay animation
 function startAutoPlayAnimation() {
@@ -703,6 +902,9 @@ onMounted(() => {
             zoom: 3.8
         })
 
+        const navControl = new mapboxgl.NavigationControl({ showCompass: false })
+        map.value.addControl(navControl, 'bottom-left')
+
         // Confirm successful load
         map.value.on('load', () => {
             console.log('Mapbox loaded successfully.')
@@ -715,7 +917,12 @@ onMounted(() => {
         })
 
         // Initialize popup object
-        popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false })
+        popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false,
+            className: 'wide-popup'
+        })
+
 
     } catch (err) {
         console.error('Error initializing Mapbox:', err)
@@ -725,6 +932,8 @@ onMounted(() => {
 
 
 watch(selectedSpecies, () => {
+    lastMonthIndex.value = new Date().getMonth() + 1
+    selectedMonth.value = ''
     if (isAnimating.value) return
     if (!map.value?.isStyleLoaded()) return
 
@@ -737,8 +946,18 @@ watch(selectedSpecies, () => {
     lastSpecies = species
     clearPaths(previousSpecies)
 
+    map.value.fitBounds([
+        [112, -44],
+        [154, -10]
+    ], {
+        padding: 50,
+        duration: 1000
+    })
+
+
+
     const dashed = buildDashedPathGeoJSON(species)
-    addDashedPathLayer(species, dashed)
+    // addDashedPathLayer(species, dashed)//whole year path
 
     const labelGeojson = buildMonthPointsGeoJSON(species)
     addMonthLabelLayer(species, labelGeojson)
@@ -772,11 +991,30 @@ watch(selectedSpecies, () => {
     position: relative;
 }
 
+/* Styles for the select title container */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    background: #c2e59c;
+    border: 2px solid #c5d8bd;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
 /* Styles for the sidebar */
 .sidebar {
     width: 25%;
     overflow-y: auto;
-    padding: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 0px;
     border-left: 1px solid #ccc;
     background: #f3f6ef;
 }
@@ -784,9 +1022,17 @@ watch(selectedSpecies, () => {
 
 /* Styles for the sidebar title */
 .sidebar-title {
+    font-family: 'Merriweather', serif;
     font-size: 20px;
-    margin-bottom: 12px;
+    margin-bottom: -10px;
     text-align: center;
+    color: #000000;
+}
+
+.sidebar-graph {
+    margin-bottom: 0px;
+    text-align: center;
+    color: #000000;
 }
 
 /* Styles for the species scroll */
@@ -824,8 +1070,8 @@ watch(selectedSpecies, () => {
 
 /* Styles for the bird image */
 .bird-image {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 6px;
     flex-shrink: 0;
@@ -865,6 +1111,26 @@ watch(selectedSpecies, () => {
     background-size: contain;
 
 }
+
+/* faild, can not use style scoped  */
+/* .bird-marker {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bird-marker:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+} */
 
 /* Styles for the bird image in model */
 .bird-modal-image {
@@ -1101,5 +1367,55 @@ watch(selectedSpecies, () => {
 /* Styles for the info point on hover */
 .info-point:hover {
     transform: scale(1.4);
+}
+
+/* Styles for the wide popup */
+:global(.wide-popup .mapboxgl-popup-content) {
+    max-width: none !important;
+    width: 340px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Styles for month dropdown */
+.month-dropdown {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.month-dropdown label {
+    margin-right: 8px;
+    font-weight: 600;
+}
+
+.month-dropdown select {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+.map-control-top-left.month-dropdown {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 10;
+    background-color: white;
+    border-radius: 6px;
+    padding: 6px 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.map-control-top-left select {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
 }
 </style>
