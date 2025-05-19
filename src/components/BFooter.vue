@@ -51,6 +51,7 @@
       <p>
         &copy; {{ currentYear }} Bird-Yard. All rights reserved. Where plants take roots, birds find
         home.
+         All images on this website have been used through open data source
       </p>
     </div>
   </footer>
