@@ -119,7 +119,7 @@
                           title="Drag to change planting date"
                         >🌱</div>
                         <div class="event-emojis-calendar">
-                            <span v-if="day.isWaitingForGrowth && !day.isPlantingDate" class="calendar-event-emoji waiting-emoji-on-line" :title="'Waiting for Growth'">
+                            <span v-if="day.isWaitingForGrowth && !day.isPlantingDate" class="calendar-event-emoji waiting-emoji-on-line" :title="'Waiting for Growth (Observe, Care and Water if Dry)'">
                                   {{ getEventLook('waiting').emoji }}
                             </span>
                             <template v-else-if="day.eventsOnDay.length > 0 && !day.isPlantingDate && !day.isWaitingForGrowth">
@@ -135,8 +135,8 @@
                     </div>
                      <div class="timeline-calendar-legend">
                         <span v-for="look in uniqueEventLooksInTimeline" :key="look.name" class="legend-item"> <span class="event-emoji-legend">{{ look.emoji }}</span> <span class="event-color-indicator-legend" :style="{ backgroundColor: look.color }"></span> {{ look.name }} </span>
-                        <span class="legend-item waiting-legend" v-if="timelineHasWaitingPeriod"> <span class="event-emoji-legend">{{ getEventLook('waiting').emoji }}</span> <span class="waiting-line-legend-indicator"></span> Waiting for Growth </span>
-                        <span class="legend-item planting-date-legend"> 🌱 Planting Date (draggable) </span>
+                        <span class="legend-item waiting-legend" v-if="timelineHasWaitingPeriod"> <span class="event-emoji-legend">{{ getEventLook('waiting').emoji }}</span> <span class="waiting-line-legend-indicator"></span> Waiting for Growth (Observe, Care and Water if Dry)</span>
+                        <span class="legend-item planting-date-legend"> 🌱 Planting Date (Draggable) </span>
                     </div>
                   </div>
                    <div v-else class="info-message small-info"> Please select a planting date to view the timeline calendar. </div>
@@ -484,7 +484,8 @@ const milestoneLooks = {
   prune:     { emoji: '✂️', color: '#A1887F', bgColorAlpha: 0.15 }, // For "Prune" (will be prioritized)
   Pruning:     { emoji: '✂️', color: '#A1887F', bgColorAlpha: 0.15 }, // Handles capitalization
   dormancy:  { emoji: '🍂', color: '#BDBDBD', bgColorAlpha: 0.1 }, // For "Dormancy"
-  waiting:   { emoji: '⏳', color: '#ADD8E6' } // Special key for "waiting for growth" periods
+  waiting:   { emoji: '⏳', color: '#ADD8E6' }, // Special key for "waiting for growth" periods
+  'Deadhead Spent Flowers': {emoji: '✂️', color: '#BDBDBD', bgColorAlpha: 0.1}, // For "Regular Fertilizing"
 };
 
 // Retrieves the emoji and color for a given event name based on keywords
@@ -680,9 +681,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
 }
 
-.plant-info-column {
-  flex: 0 0 320px; /* Fixed width, no grow/shrink */
-}
+/* .plant-info-column definition moved to its more complete version later */
 
 .timeline-monthly-calendar {
   margin-top: 20px;
@@ -726,7 +725,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   text-align: center;
 }
 
-.days-of-week {
+.days-of-week { /* Specific styles for .days-of-week */
   margin-bottom: 8px;
   font-weight: bold;
   color: #666;
@@ -737,17 +736,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   padding: 5px 0;
 }
 
-.timeline-day-cell {
-  border: 1px solid #eee;
-  min-height: 70px;
-  padding: 5px;
-  font-size: 0.9em;
-  position: relative; /* For positioning elements within the cell */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
+/* First definition of .timeline-day-cell removed as it was superseded by a later one with min-height: 80px */
 
 .timeline-day-cell .day-number {
   font-weight: 500;
@@ -807,7 +796,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   top: 50%;
   transform: translateY(-50%); /* Vertically center the line */
   width: 100%;
-  height: 20%; /* Height of the waiting line indicator */
+  height: 60%; /* Height of the waiting line indicator */
   background-color: #ADD8E6A0; /* Semi-transparent light blue */
   z-index: 0; /* Behind other cell content like day number and emojis */
 }
@@ -832,11 +821,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   z-index: 1; /* Ensure emojis are above background elements like waiting line */
 }
 
-.calendar-event-emoji {
-  font-size: 1.1em;
-  line-height: 1;
-  padding: 1px;
-}
+/* First definition of .calendar-event-emoji removed as it was superseded by a later one with font-size: 1.8em */
 
 .more-events-emoji {
   font-size: 0.9em;
@@ -890,7 +875,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   /* Styles specific to the planting date item in the legend, if any */
 }
 
-.timeline-event .event-name {
+.timeline-event .event-name { /* This is distinct from the general .event-name below */
   display: flex;
   align-items: center;
 }
@@ -937,7 +922,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   gap: 30px;
 }
 
-.plant-info-column {
+.plant-info-column { /* This is the complete definition */
   flex: 0 0 320px; /* Fixed width column, does not grow or shrink */
   display: flex;
   flex-direction: column;
@@ -1021,8 +1006,9 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 }
 
 /* Adjust timeline calendar day cell min-height if needed */
+/* This is the effective definition of .timeline-day-cell after removing the earlier superseded one */
 .timeline-day-cell {
-  min-height: 80px;
+  min-height: 80px; /* Effective min-height */
   border: 1px solid #eee;
   padding: 5px;
   font-size: 0.9em;
@@ -1097,7 +1083,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
     grid-template-columns: repeat(7, minmax(0,1fr)); /* Ensure columns can shrink */
   }
 
-  .timeline-day-cell {
+  .timeline-day-cell { /* This will override the base .timeline-day-cell styles in this media query */
     min-height: 60px;
     font-size: 0.8em;
   }
@@ -1144,31 +1130,6 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   margin-bottom: 25px;
   font-size: 2.2em;
   font-weight: 600;
-}
-
-.plant-selector-dropdown-container {
-  margin-bottom: 15px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.plant-selector-dropdown-container label {
-  font-size: 0.9em;
-  font-weight: 500;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.plant-select-dropdown {
-  width: 100%;
-  padding: 8px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: white;
-  font-size: 0.95em;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
 }
 
 .plant-name-header {
@@ -1301,12 +1262,12 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 
 .month-name {
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.6em;
   color: #333;
 }
 
 .month-season-indicator {
-  font-size: 0.75em;
+  font-size: 1.2em;
   color: #555;
   padding: 2px 0px;
   border-radius: 3px;
@@ -1321,7 +1282,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 
 .optimal-indicator,
 .secondary-indicator {
-  font-size: 1em;
+  font-size: 1.2em;
   margin-top: 4px;
   padding: 2px 0;
   border-radius: 4px;
@@ -1362,7 +1323,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 }
 
 .current-day-marker {
-  font-size: 0.65em;
+  font-size: 1em;
   color: var(--color-primary, #0a3200);
   font-style: italic;
   margin-top: 2px;
@@ -1480,7 +1441,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   border-radius: 10px; /* Pill shape */
 }
 
-.event-name {
+.event-name { /* General .event-name styles */
   font-size: 1.1em;
   margin: 0 0 5px 0;
 }
@@ -1501,192 +1462,14 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   text-align: center;
 }
 
-/* Timeline Monthly Calendar specific styles */
-.timeline-monthly-calendar {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  padding: 15px;
-  background-color: #fdfdfd;
-}
+/* Timeline Monthly Calendar specific styles - many duplicates were removed from here */
+/* Styles that were unique or intentionally overridden remain */
 
-.timeline-calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.month-year-display {
-  font-size: 1.3em;
-  font-weight: 500;
-  color: var(--color-primary, #0a3200);
-}
-
-.nav-button {
-  padding: 6px 12px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.nav-button:hover {
-  background-color: #e0e0e0;
-}
-
-.days-of-week {
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #666;
-  font-size: 0.9em;
-}
-
-.dow-header {
-  padding: 5px 0;
-}
-
-.timeline-days-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
-  text-align: center;
-}
-
-.timeline-day-cell .day-number {
-  font-weight: 500;
-  margin-bottom: 3px;
-  z-index: 1; /* Above background elements */
-  align-self: flex-start;
-  padding-left: 2px;
-}
-
-.timeline-day-cell.other-month .day-number {
-  color: #aaa;
-}
-
-.timeline-day-cell.planting-date {
-  background-color: var(--color-secondary, #c2e59c) !important;
-  font-weight: bold;
-}
-
-.timeline-day-cell.planting-date .day-number {
-  color: var(--color-primary, #0a3200);
-}
-
-.draggable-planting-marker {
-  cursor: grab;
-  font-size: 1.8em;
-  padding: 2px;
-  border-radius: 4px;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center element */
-  z-index: 10; /* High z-index for draggable item */
-}
-
-.draggable-planting-marker:active {
-  cursor: grabbing;
-}
-
-.static-legend-marker {
-  font-size: 1.1em;
-  display: inline-block;
-}
-
-.timeline-day-cell.drop-target-highlight {
-  background-color: #e6ffe6 !important;
-  outline: 2px dashed var(--color-primary);
-  outline-offset: -2px; /* Inset outline */
-}
-
-.timeline-day-cell.waiting-for-growth::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%); /* Vertically center line */
-  width: 100%;
-  height: 20%;
-  background-color: #ADD8E6A0; /* Semi-transparent background line */
-  z-index: 0; /* Below day number and emojis */
-}
-
-.waiting-emoji-on-line {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center emoji */
-  z-index: 1; /* Above the waiting line */
-  font-size: 1.2em;
-}
-
-.event-emojis-calendar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  flex-wrap: wrap;
-  width: 100%;
-  padding-bottom: 2px;
-  z-index: 1; /* Above background line */
-}
-
+/* This is the effective definition of .calendar-event-emoji after removing the earlier superseded one */
 .calendar-event-emoji {
-  font-size: 1.8em; /* Larger emoji size in this context */
+  font-size: 1.8em; /* Larger emoji size in this context, now the primary definition */
   line-height: 1;
   padding: 1px;
-}
-
-.more-events-emoji {
-  font-size: 0.9em;
-  background-color: #ccc;
-  color: white;
-  border-radius: 50%; /* Circular indicator */
-  width: 16px;
-  height: 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.timeline-calendar-legend {
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 15px;
-  font-size: 0.8em;
-}
-
-.timeline-calendar-legend .legend-item {
-  display: flex;
-  align-items: center;
-}
-
-.event-emoji-legend {
-  font-size: 1em;
-  margin-right: 4px;
-}
-
-.event-color-indicator-legend {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  margin-right: 5px;
-  border: 1px solid rgba(0,0,0,0.1);
-}
-
-.waiting-line-legend-indicator {
-  width: 18px;
-  height: 10px;
-  background-color: #ADD8E6;
-  border: 1px solid #90C3D4;
-  margin-right: 5px;
-  display: inline-block;
 }
 
 @media (max-width: 768px) {
@@ -1726,17 +1509,17 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
     border-bottom: none; /* Remove border from last button */
   }
 
-  .timeline-day-cell {
+  .timeline-day-cell { /* This will override the base .timeline-day-cell styles in this media query */
     min-height: 50px;
     font-size: 0.75em;
     padding: 3px;
   }
 
-  .calendar-event-emoji {
+  .calendar-event-emoji { /* This will override the base .calendar-event-emoji styles in this media query */
     font-size: 1em; /* Smaller emojis on smaller screens */
   }
 
-  .more-events-emoji {
+  .more-events-emoji { /* This will override the base .more-events-emoji styles in this media query */
     font-size: 0.8em;
     width: 14px;
     height: 14px;
