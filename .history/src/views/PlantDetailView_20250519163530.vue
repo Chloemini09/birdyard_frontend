@@ -22,8 +22,8 @@
               params: { plantName: plant.plantName },
               query: {
                 hemisphere: this.hemisphere, // Pass received hemisphere
-                recommendedPlantNames: this.recommendedPlantNamesString, // Pass received string
-              },
+                recommendedPlantNames: this.recommendedPlantNamesString // Pass received string
+              }
             }"
             class="btn btn-primary"
           >
@@ -36,8 +36,7 @@
       </div>
     </div>
   </div>
-  <div v-else-if="loading">Loading plant details...</div>
-  <!-- Added loading state for completeness -->
+  <div v-else-if="loading">Loading plant details...</div> <!-- Added loading state for completeness -->
   <div v-else class="error-message">Plant not found.</div>
 </template>
 
@@ -48,16 +47,14 @@ export default {
   name: 'PlantDetailView',
   props: {
     plantName: String,
-    recommendedPlantNamesString: {
-      // To receive the comma-separated string
+    recommendedPlantNamesString: { // To receive the comma-separated string
       type: String,
-      default: '',
+      default: ''
     },
-    hemisphere: {
-      // To receive the hemisphere
+    hemisphere: { // To receive the hemisphere
       type: String,
-      default: 'southern', // Default if not provided
-    },
+      default: 'southern' // Default if not provided
+    }
   },
   data() {
     return {
@@ -67,50 +64,45 @@ export default {
   },
   methods: {
     getPlantImage(plant) {
-      if (!plant || !plant.plantName) return '/images/plants/default-plant.jpg'
+      if (!plant || !plant.plantName) return '/images/plants/default-plant.jpg';
       return `/images/plants/${encodeURIComponent(plant.plantName)}.jpg`
     },
     handleImageError(event) {
-      const currentSrc = event.target.src
+      const currentSrc = event.target.src;
       // Attempt to load .png if .jpg fails, then default
       if (currentSrc.endsWith('.jpg')) {
-        event.target.src = currentSrc.replace('.jpg', '.png')
+        event.target.src = currentSrc.replace('.jpg', '.png');
       } else {
-        event.target.src = '/images/plants/default-plant.jpg'
+        event.target.src = '/images/plants/default-plant.jpg';
       }
-      event.target.onerror = null // Prevent infinite loop if .png also fails or is the default
+      event.target.onerror = null; // Prevent infinite loop if .png also fails or is the default
     },
     goBack() {
       this.$router.go(-1)
     },
     loadPlantData() {
-      this.loading = true
+      this.loading = true;
       const found = plantData.find(
         (item) => item.plantName.toLowerCase() === this.plantName.toLowerCase(),
       )
       if (found) {
-        this.plant = found
+        this.plant = found;
       } else {
         // If not found in allPlants.json, create a basic object to prevent errors
         // Or, you might want to show an error message and not set this.plant
-        this.plant = {
-          plantName: this.plantName,
-          description:
-            'No detailed description available. Planting calendar may still be accessible if data exists elsewhere.',
-        }
+        this.plant = { plantName: this.plantName, description: 'No detailed description available. Planting calendar may still be accessible if data exists elsewhere.' };
       }
-      this.loading = false
-    },
+      this.loading = false;
+    }
   },
   created() {
-    this.loadPlantData()
+    this.loadPlantData();
   },
   watch: {
-    plantName() {
-      // Watch for changes in plantName prop (e.g., if route changes)
-      this.loadPlantData()
-    },
-  },
+    plantName() { // Watch for changes in plantName prop (e.g., if route changes)
+      this.loadPlantData();
+    }
+  }
 }
 </script>
 
@@ -205,6 +197,7 @@ export default {
   color: #666;
   margin-top: 20px;
 }
+
 
 .btn {
   display: inline-block;

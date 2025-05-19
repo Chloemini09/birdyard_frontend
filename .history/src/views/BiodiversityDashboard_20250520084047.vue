@@ -29,6 +29,10 @@
       <InteractiveMap :biodiversityData="biodiversityData" />
     </div>
 
+    <div class="table-container">
+      <TableAuView />
+    </div>
+
     <div v-if="loading" class="loading-container">
       <div class="loading-spinner"></div>
       <p>Loading...</p>
@@ -53,10 +57,6 @@
         create bird-friendly gardens in your region.
       </p>
 
-      <div class="table-container">
-        <TableAuView />
-      </div>
-
       <div class="charts-container">
         <div class="chart-row full-width">
           <div class="chart-header">
@@ -71,6 +71,29 @@
             ref="monthlyBirdChart"
             class="full-width-chart"
           />
+        </div>
+
+        <div class="chart-row">
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3>Plant Suitability by Region</h3>
+              <p class="chart-instructions">
+                Discover which native plants thrive in different Australian regions and attract
+                local birds.
+              </p>
+            </div>
+            <PlantRegionSuitabilityMap :plantsData="biodiversityData" ref="regionMapChart" />
+          </div>
+
+          <div class="chart-container">
+            <div class="chart-header">
+              <h3>Plant Requirements Analysis</h3>
+              <p class="chart-instructions">
+                Compare water, sunlight, and maintenance needs for different bird-attracting plants.
+              </p>
+            </div>
+            <PlantRequirementsChart :plantsData="biodiversityData" ref="requirementsChart" />
+          </div>
         </div>
       </div>
     </div>
@@ -87,14 +110,20 @@ import csvPath from '@/assets/data/australia_birds_plants.csv?url'
 
 import { ref, onMounted, nextTick } from 'vue'
 import Papa from 'papaparse'
+import BirdPlantPreferenceChart from '@/components/BirdPlantPreferenceChart.vue'
 import MonthlyBirdActivityChart from '@/components/MonthlyBirdActivityChart.vue'
+import PlantRegionSuitabilityMap from '@/components/PlantRegionSuitabilityMap.vue'
+import PlantRequirementsChart from '@/components/PlantRequirementsChart.vue'
 import InteractiveMap from '@/components/InteractiveMap.vue'
 import TableAuView from '@/components/TableAuView.vue'
 
 export default {
   name: 'BiodiversityDashboard',
   components: {
+    BirdPlantPreferenceChart,
     MonthlyBirdActivityChart,
+    PlantRegionSuitabilityMap,
+    PlantRequirementsChart,
     InteractiveMap,
     TableAuView,
   },

@@ -29,6 +29,10 @@
       <InteractiveMap :biodiversityData="biodiversityData" />
     </div>
 
+    <div class="table-container">
+      <TableAuView />
+    </div>
+
     <div v-if="loading" class="loading-container">
       <div class="loading-spinner"></div>
       <p>Loading...</p>
@@ -52,10 +56,6 @@
         The charts below show relationships between native birds and plants. Use these insights to
         create bird-friendly gardens in your region.
       </p>
-
-      <div class="table-container">
-        <TableAuView />
-      </div>
 
       <div class="charts-container">
         <div class="chart-row full-width">

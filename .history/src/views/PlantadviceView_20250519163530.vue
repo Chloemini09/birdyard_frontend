@@ -126,9 +126,9 @@ fetchRecommendedPlants(); });
               name: 'PlantDetail',
               params: { plantName: plant.plantName },
               query: {
-                recommendedPlantNames: recommendedPlants.map((p) => p.plantName).join(','),
-                hemisphere: 'southern', // Assuming all supported states are southern hemisphere
-              },
+                recommendedPlantNames: recommendedPlants.map(p => p.plantName).join(','),
+                hemisphere: 'southern' // Assuming all supported states are southern hemisphere
+              }
             }"
             class="plant-card"
           >
@@ -371,15 +371,10 @@ export default {
       } else {
         // Try to determine the state using reverse geocoding if not found in address
         try {
-          if (
-            !selectedLocation.value ||
-            !selectedLocation.value.lng ||
-            !selectedLocation.value.lat
-          ) {
-            locationError.value =
-              'Could not determine location coordinates. Please select a valid address suggestion.'
-            selectedState.value = ''
-            return
+          if (!selectedLocation.value || !selectedLocation.value.lng || !selectedLocation.value.lat) {
+             locationError.value = 'Could not determine location coordinates. Please select a valid address suggestion.';
+             selectedState.value = '';
+             return;
           }
           const reverseUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${selectedLocation.value.lng},${selectedLocation.value.lat}.json?access_token=${mapboxToken}&types=region&limit=1`
           const response = await fetch(reverseUrl)
@@ -457,25 +452,25 @@ export default {
     }
     onMounted(() => {
       // Load from localStorage first if available
-      const savedAddress = localStorage.getItem('plantAddress')
-      const savedSelectedLocation = localStorage.getItem('plantSelectedLocation')
-      const savedState = localStorage.getItem('selectedState')
-      const savedSeason = localStorage.getItem('selectedSeason')
-      const savedRecommendedPlants = localStorage.getItem('recommendedPlants')
+      const savedAddress = localStorage.getItem('plantAddress');
+      const savedSelectedLocation = localStorage.getItem('plantSelectedLocation');
+      const savedState = localStorage.getItem('selectedState');
+      const savedSeason = localStorage.getItem('selectedSeason');
+      const savedRecommendedPlants = localStorage.getItem('recommendedPlants');
 
-      if (savedAddress) address.value = savedAddress
-      if (savedSelectedLocation) selectedLocation.value = JSON.parse(savedSelectedLocation)
-      if (savedState) selectedState.value = savedState
-      if (savedSeason) selectedSeason.value = savedSeason
+      if (savedAddress) address.value = savedAddress;
+      if (savedSelectedLocation) selectedLocation.value = JSON.parse(savedSelectedLocation);
+      if (savedState) selectedState.value = savedState;
+      if (savedSeason) selectedSeason.value = savedSeason;
 
       if (savedRecommendedPlants) {
-        recommendedPlants.value = JSON.parse(savedRecommendedPlants)
+        recommendedPlants.value = JSON.parse(savedRecommendedPlants);
         if (recommendedPlants.value.length === 0 && selectedState.value && selectedSeason.value) {
           // If saved plants are empty but state/season exist, fetch fresh
-          fetchRecommendedPlants()
+          fetchRecommendedPlants();
         }
       } else if (selectedState.value && selectedSeason.value) {
-        fetchRecommendedPlants()
+        fetchRecommendedPlants();
       }
     })
     return {

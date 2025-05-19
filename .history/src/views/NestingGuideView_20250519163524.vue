@@ -42,8 +42,8 @@
   </section>
 
   <section class="cta-section">
-    <p class="cta-section-info">Is there any birds in your garden?</p>
-    <router-link to="/bio" class="btn btn-large">To see where is your bird!</router-link>
+      <p class="cta-section-info">Is there any birds in your garden?</p>
+      <router-link to="/bird" class="btn btn-large">Birds Detection</router-link>
   </section>
 </template>
 
@@ -239,12 +239,12 @@ const galleryBirds = [
   padding: 40px 0;
   text-align: center;
   background-color: #f9f7f0;
-}
+  }
 .cta-section-info {
-  font-size: 1.2rem;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 .btn {
   display: inline-block;

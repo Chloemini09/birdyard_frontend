@@ -15,23 +15,54 @@
       <div class="plant-info-wrapper">
         <h1 class="plant-name">{{ plant.plantName }}</h1>
         <p class="plant-description">{{ plant.description }}</p>
-        <div class="calendar-link-section" v-if="plant.plantingCalendar">
-          <router-link
-            :to="{
-              name: 'PlantingCalendar',
-              params: { plantName: plant.plantName },
-              query: {
-                hemisphere: this.hemisphere, // Pass received hemisphere
-                recommendedPlantNames: this.recommendedPlantNamesString, // Pass received string
-              },
-            }"
-            class="btn btn-primary"
-          >
-            View Planting Calendar
-          </router-link>
+        <div class="buttons-wrapper">
+          <div class="calendar-link-section" v-if="plant.plantingCalendar">
+            <router-link
+              :to="{
+                name: 'PlantingCalendar',
+                params: { plantName: plant.plantName },
+                query: {
+                  hemisphere: this.hemisphere, // Pass received hemisphere
+                  recommendedPlantNames: this.recommendedPlantNamesString, // Pass received string
+                },
+              }"
+              class="btn btn-primary"
+            >
+              View Planting Calendar
+            </router-link>
+          </div>
+          <div v-else class="no-calendar-info">
+            Planting calendar information is not yet available for this plant.
+          </div>
+
+          <!-- New "How to Plant It" button -->
+          <button @click="showPlantingInstructions" class="btn btn-secondary how-to-plant-btn">
+            <span class="plus-icon">+</span> How to Plant It
+          </button>
         </div>
-        <div v-else class="no-calendar-info">
-          Planting calendar information is not yet available for this plant.
+
+        <!-- Planting instructions section (hidden by default) -->
+        <div v-if="showInstructions" class="planting-instructions">
+          <h3>Planting Instructions for {{ plant.plantName }}</h3>
+          <div v-if="plant.plantingInstructions">
+            <p>{{ plant.plantingInstructions }}</p>
+          </div>
+          <div v-else>
+            <p>General planting guidelines:</p>
+            <ul>
+              <li>Choose a location with appropriate sunlight for this plant</li>
+              <li>Prepare soil with compost and ensure good drainage</li>
+              <li>Plant at the recommended depth and spacing</li>
+              <li>Water thoroughly after planting</li>
+              <li>Apply mulch to retain moisture and prevent weeds</li>
+            </ul>
+            <p>
+              <em
+                >For specific planting instructions for {{ plant.plantName }}, consult a local
+                gardening guide.</em
+              >
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -63,6 +94,7 @@ export default {
     return {
       plant: null, // Initialize plant as null
       loading: true, // Added loading state
+      showInstructions: false, // Controls visibility of planting instructions
     }
   },
   methods: {
@@ -100,6 +132,9 @@ export default {
         }
       }
       this.loading = false
+    },
+    showPlantingInstructions() {
+      this.showInstructions = !this.showInstructions // Toggle instructions visibility
     },
   },
   created() {
@@ -196,14 +231,23 @@ export default {
   margin-bottom: 25px; /* Add margin for spacing */
 }
 
+/* New styles for buttons wrapper */
+.buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: auto; /* Push to bottom if content is short */
+  align-items: center;
+}
+
 .calendar-link-section {
-  margin-top: auto; /* Pushes button to the bottom if content is short */
+  /* Remove margin-top as it's now handled by buttons-wrapper */
 }
 
 .no-calendar-info {
   font-style: italic;
   color: #666;
-  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .btn {
@@ -213,6 +257,8 @@ export default {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
 }
 
 .btn-primary {
@@ -222,6 +268,54 @@ export default {
 
 .btn-primary:hover {
   background-color: #072200; /* Darken primary color on hover */
+}
+
+/* Styles for the new How to Plant button */
+.btn-secondary {
+  background-color: #4a7c40; /* Slightly lighter green */
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #3a6230; /* Darker on hover */
+}
+
+.how-to-plant-btn {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.plus-icon {
+  margin-right: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Planting instructions section */
+.planting-instructions {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #f0f7e6;
+  border-radius: 8px;
+  border-left: 4px solid #4a7c40;
+  transition: all 0.3s ease;
+}
+
+.planting-instructions h3 {
+  color: #0a3200;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.planting-instructions ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.planting-instructions li {
+  margin-bottom: 8px;
+  line-height: 1.4;
 }
 
 .error-message {
@@ -246,6 +340,17 @@ export default {
 
   .back-button-wrapper {
     padding: 0 10px;
+  }
+
+  /* Responsive adjustments for buttons */
+  .buttons-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%; /* Full width buttons on mobile */
   }
 }
 </style>
