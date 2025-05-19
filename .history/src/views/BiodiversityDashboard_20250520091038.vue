@@ -94,7 +94,6 @@ import Papa from 'papaparse'
 import MonthlyBirdActivityChart from '@/components/MonthlyBirdActivityChart.vue'
 import InteractiveMap from '@/components/InteractiveMap.vue'
 import TableAuView from '@/components/TableAuView.vue'
-import TableTwo from '@/components/TableTwo.vue'
 
 export default {
   name: 'BiodiversityDashboard',
@@ -102,7 +101,6 @@ export default {
     MonthlyBirdActivityChart,
     InteractiveMap,
     TableAuView,
-    TableTwo,
   },
   setup() {
     const biodiversityData = ref([])
