@@ -122,7 +122,14 @@ fetchRecommendedPlants(); });
           <router-link
             v-for="(plant, index) in recommendedPlants"
             :key="index"
-            :to="{ name: 'PlantDetail', params: { plantName: plant.plantName } }"
+            :to="{
+              name: 'PlantDetail',
+              params: { plantName: plant.plantName },
+              query: {
+                recommendedPlantNames: recommendedPlants.map(p => p.plantName).join(','),
+                hemisphere: 'southern' // Assuming all supported states are southern hemisphere
+              }
+            }"
             class="plant-card"
           >
             <div class="plant-image">
@@ -307,8 +314,6 @@ export default {
       }
     }
 
-    // These are the two functions that need to be modified:
-
     const selectSuggestion = (index) => {
       if (suggestions.value.length <= index) return
 
@@ -366,6 +371,11 @@ export default {
       } else {
         // Try to determine the state using reverse geocoding if not found in address
         try {
+          if (!selectedLocation.value || !selectedLocation.value.lng || !selectedLocation.value.lat) {
+             locationError.value = 'Could not determine location coordinates. Please select a valid address suggestion.';
+             selectedState.value = '';
+             return;
+          }
           const reverseUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${selectedLocation.value.lng},${selectedLocation.value.lat}.json?access_token=${mapboxToken}&types=region&limit=1`
           const response = await fetch(reverseUrl)
           const data = await response.json()
@@ -420,7 +430,7 @@ export default {
         const plantData = await getRecommendedPlants(selectedState.value, selectedSeason.value)
         console.log('API return plants array:', plantData)
         recommendedPlants.value = plantData
-        localStorage.setItem('recommendedPlants', JSON.stringify(plantData))
+        localStorage.setItem('recommendedPlants', JSON.stringify(plantData)) // Save current recommendations
       } catch (err) {
         console.error('Failed to get plant recommendations:', err)
         error.value = 'Could not load plant recommendations. Please try again later.'
@@ -441,13 +451,26 @@ export default {
       return imagePath
     }
     onMounted(() => {
-      if (selectedState.value && selectedSeason.value) {
-        const savedPlants = localStorage.getItem('recommendedPlants')
-        if (savedPlants) {
-          recommendedPlants.value = JSON.parse(savedPlants)
-        } else {
-          fetchRecommendedPlants()
+      // Load from localStorage first if available
+      const savedAddress = localStorage.getItem('plantAddress');
+      const savedSelectedLocation = localStorage.getItem('plantSelectedLocation');
+      const savedState = localStorage.getItem('selectedState');
+      const savedSeason = localStorage.getItem('selectedSeason');
+      const savedRecommendedPlants = localStorage.getItem('recommendedPlants');
+
+      if (savedAddress) address.value = savedAddress;
+      if (savedSelectedLocation) selectedLocation.value = JSON.parse(savedSelectedLocation);
+      if (savedState) selectedState.value = savedState;
+      if (savedSeason) selectedSeason.value = savedSeason;
+
+      if (savedRecommendedPlants) {
+        recommendedPlants.value = JSON.parse(savedRecommendedPlants);
+        if (recommendedPlants.value.length === 0 && selectedState.value && selectedSeason.value) {
+          // If saved plants are empty but state/season exist, fetch fresh
+          fetchRecommendedPlants();
         }
+      } else if (selectedState.value && selectedSeason.value) {
+        fetchRecommendedPlants();
       }
     })
     return {

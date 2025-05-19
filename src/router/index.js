@@ -65,7 +65,11 @@ const router = createRouter({
       path: '/plant/:plantName',
       name: 'PlantDetail',
       component: PlantDetailView,
-      props: true,
+      props: route => ({
+        plantName: route.params.plantName,
+        recommendedPlantNamesString: route.query.recommendedPlantNames || '', // Map query to prop
+        hemisphere: route.query.hemisphere || 'southern' // Map query to prop
+      }),
       meta: { requiresAuth: true },
     },
     {
@@ -81,8 +85,7 @@ const router = createRouter({
       props: route => ({
         plantName: route.params.plantName, // From route param
         userHemisphere: route.query.hemisphere || 'southern', // From query
-        // Map recommendedPlantNames query to a prop
-        recommendedPlantNamesString: route.query.recommendedPlantNames || ''
+        recommendedPlantNamesString: route.query.recommendedPlantNames || '' // From query
       }),
       meta: { requiresAuth: true },
     },

@@ -12,9 +12,9 @@
 
       <div class="main-layout-container">
         <div class="plant-info-column">
-          <!-- ... Plant Info Column content (dropdown, name, image, description) ... -->
+          <!-- Plant Selector Dropdown -->
           <div class="plant-selector-dropdown-container" v-if="availablePlantsForSelection.length > 1">
-            <label for="plant-select-calendar">Select Recommended Plant:</label>
+            <label for="plant-select-calendar">Recommeded Plants:</label>
             <select id="plant-select-calendar" v-model="selectedPlantNameForCalendar" class="plant-select-dropdown">
               <option v-for="plantNameOption in availablePlantsForSelection" :key="plantNameOption" :value="plantNameOption">
                 {{ plantNameOption }}
@@ -34,7 +34,6 @@
 
         <div class="dynamic-content-column">
           <div class="view-selector">
-            <!-- ... Selector Buttons ... -->
             <button @click="setActiveView('calendar')" :class="{ active: activeView === 'calendar' }" class="selector-button">Planting Calendar</button>
             <button @click="setActiveView('timeline')" :class="{ active: activeView === 'timeline' }" class="selector-button">Set Planting & See Timeline</button>
           </div>
@@ -42,7 +41,6 @@
           <div class="content-area">
             <!-- Optimal Planting Times (Annual Calendar) -->
             <section v-if="activeView === 'calendar' && plantingCalendarData" class="section-container optimal-planting-section">
-              <!-- ... Optimal Planting Times content ... -->
                <h2 class="section-title">Optimal Planting Times</h2>
               <p class="section-subtitle"> Annual overview. Optimal planting months are highlighted. Seasons are based on {{ userHemisphere === 'northern' ? 'Northern' : 'Southern' }} Hemisphere. </p>
               <div class="calendar-display">
@@ -79,9 +77,7 @@
                 <input type="date" id="planting-start-date" v-model="selectedStartDateString" class="form-input"/>
               </div>
 
-              <!-- NEW: Two-column layout for timeline calendar and event list -->
               <div class="timeline-content-split">
-                <!-- Left: Timeline Monthly Calendar -->
                 <div class="timeline-calendar-panel">
                   <div v-if="selectedStartDateOrDefault" class="timeline-monthly-calendar">
                     <div class="timeline-calendar-header">
@@ -146,7 +142,6 @@
                    <div v-else class="info-message small-info"> Please select a planting date to view the timeline calendar. </div>
                 </div>
 
-                <!-- Right: Timeline Event List -->
                 <div class="timeline-list-panel">
                   <div v-if="timeline && timeline.length > 0 && selectedStartDateOrDefault" class="timeline-visual">
                     <h3 class="subsection-title">Timeline Events:</h3>
@@ -185,82 +180,82 @@ const props = defineProps({
 
 // --- Vue Router instances ---
 const route = useRoute();
-const router = useRouter(); // For potential URL updates (e.g., on dropdown change)
+const router = useRouter();
 
 // --- UI State ---
-const activeView = ref('calendar'); // Tracks active tab: 'calendar' (Optimal Planting Times) or 'timeline' (Growth Timeline)
-const setActiveView = (viewName) => { activeView.value = viewName; }; // Method to switch tabs
+const activeView = ref('calendar');
+const setActiveView = (viewName) => { activeView.value = viewName; };
 
 // --- Data State ---
-const allPlantsData = ref(allPlantsRaw); // Holds all plant data from JSON
-const loading = ref(true); // Loading indicator state
-const error = ref(''); // Error message display state
+const allPlantsData = ref(allPlantsRaw);
+const loading = ref(true);
+const error = ref('');
 
 // --- Plant Selection State ---
-const availablePlantsForSelection = ref([]); // Populated from recommendedPlantNamesString for the dropdown
-const selectedPlantNameForCalendar = ref(props.plantName); // Currently selected plant, initialized from route
-const initialPlantNameFromRoute = ref(props.plantName); // Stores the first plant name from route for context/error messages
+const availablePlantsForSelection = ref([]);
+const selectedPlantNameForCalendar = ref(props.plantName);
+const initialPlantNameFromRoute = ref(props.plantName);
 
 // --- System Date Information ---
 const systemCurrentDate = new Date();
-const systemCurrentMonthIndex = systemCurrentDate.getMonth(); // 0-indexed current month (for highlighting in annual calendar)
+const systemCurrentMonthIndex = systemCurrentDate.getMonth();
 
 // --- Personalized Timeline Start Date ---
-const getTodayDateString = () => { // Formats date as YYYY-MM-DD for date input
+const getTodayDateString = () => {
   const today = new Date();
   return `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 };
-const selectedStartDateString = ref(getTodayDateString()); // User-selected planting start date, defaults to today
+const selectedStartDateString = ref(getTodayDateString());
 
 // --- Core Computed Properties for Displaying Plant Data ---
-// Retrieves full data object for the currently selected plant
 const currentPlantData = computed(() => {
   if (!selectedPlantNameForCalendar.value || !allPlantsData.value) return null;
-  return allPlantsData.value.find((p) => p.plantName === selectedPlantNameForCalendar.value);
+  return allPlantsData.value.find((p) => p.plantName.toLowerCase() === selectedPlantNameForCalendar.value.toLowerCase());
 });
-// Extracts the 'plantingCalendar' object from the current plant's data
 const plantingCalendarData = computed(() => currentPlantData.value?.plantingCalendar || null);
-// Generates the image URL for the current plant
 const plantImageUrl = computed(() => {
-  if (!currentPlantData.value?.plantName) return '/images/plants/default-plant.jpg'; // Fallback image
-  return `/images/plants/${encodeURIComponent(currentPlantData.value.plantName)}.jpg`;
+  if (!currentPlantData.value?.plantName) return '/images/plants/default-plant.jpg';
+  const imageName = currentPlantData.value.plantName; // Use original case for file name
+  return `/images/plants/${encodeURIComponent(imageName)}.jpg`;
 });
-// Handles errors if a plant image fails to load
 const handleImageError = (event) => {
-  event.target.src = '/images/plants/default-plant.jpg';
-  event.target.onerror = null; // Prevent infinite loop on fallback error
+  const currentSrc = event.target.src;
+  if (currentSrc.endsWith('.jpg')) {
+    event.target.src = currentSrc.replace('.jpg', '.png');
+    // If .png also fails, this new onerror will trigger.
+    event.target.onerror = () => { event.target.src = '/images/plants/default-plant.jpg'; event.target.onerror = null; };
+  } else {
+    event.target.src = '/images/plants/default-plant.jpg';
+    event.target.onerror = null; // Prevent infinite loop if default also somehow fails
+  }
 };
 
+
 // --- Data & Logic for "Optimal Planting Times" (Annual Calendar) ---
-const baseMonths = [ /* Defines month names and their 0-indexed numbers */
+const baseMonths = [
   { name: 'January', monthIndex: 0 }, { name: 'February', monthIndex: 1 }, { name: 'March', monthIndex: 2 }, { name: 'April', monthIndex: 3 },
   { name: 'May', monthIndex: 4 }, { name: 'June', monthIndex: 5 }, { name: 'July', monthIndex: 6 }, { name: 'August', monthIndex: 7 },
   { name: 'September', monthIndex: 8 }, { name: 'October', monthIndex: 9 }, { name: 'November', monthIndex: 10 }, { name: 'December', monthIndex: 11 },
 ];
-const seasonsConfig = { /* Maps months to seasons and emojis for Southern/Northern hemispheres */
+const seasonsConfig = {
   southern: [
     { name: 'Summer', emoji: '☀️' }, { name: 'Summer', emoji: '☀️' }, { name: 'Autumn', emoji: '🍁' }, { name: 'Autumn', emoji: '🍁' }, { name: 'Autumn', emoji: '🍁' },
     { name: 'Winter', emoji: '❄️' }, { name: 'Winter', emoji: '❄️' }, { name: 'Winter', emoji: '❄️' }, { name: 'Spring', emoji: '🌸' }, { name: 'Spring', emoji: '🌸' },
     { name: 'Spring', emoji: '🌸' }, { name: 'Summer', emoji: '☀️' }
   ],
-  northern: [ /* ... config for northern hemisphere ... */
+  northern: [
     { name: 'Winter', emoji: '❄️' }, { name: 'Winter', emoji: '❄️' }, { name: 'Spring', emoji: '🌸' }, { name: 'Spring', emoji: '🌸' }, { name: 'Spring', emoji: '🌸' },
     { name: 'Summer', emoji: '☀️' }, { name: 'Summer', emoji: '☀️' }, { name: 'Summer', emoji: '☀️' }, { name: 'Autumn', emoji: '🍁' }, { name: 'Autumn', emoji: '🍁' },
     { name: 'Autumn', emoji: '🍁' }, { name: 'Winter', emoji: '❄️' }
   ]
 };
-// Dynamically generates month data including seasons based on user's hemisphere
 const monthsWithSeasons = computed(() => {
   const currentHemisphereSeasons = seasonsConfig[props.userHemisphere];
   return baseMonths.map((month, index) => ({ ...month, season_full: currentHemisphereSeasons[index].name, season_emoji: currentHemisphereSeasons[index].emoji, }));
 });
-// Checks if a given month name is listed as a specific best planting month for the current plant
 const isBestPlantingMonth = (monthName) => plantingCalendarData.value?.specificMonthsToPlant?.includes(monthName) || false;
-// Checks if a given season name is listed as a best planting season for the current plant
 const isSeasonOptimalForMonth = (fullSeasonName) => plantingCalendarData.value?.bestSeasonsToPlant?.includes(fullSeasonName) || false;
-// Determines if a month index matches the current system month (for highlighting)
 const isCurrentSystemMonth = (monthIdx) => monthIdx === systemCurrentMonthIndex;
-// Identifies contiguous ranges of prime planting months for connected styling in the annual calendar
 const primePlantingRanges = computed(() => {
   if (!plantingCalendarData.value?.specificMonthsToPlant) return [];
   const primeMonthsIndices = monthsWithSeasons.value.map((m, index) => (isBestPlantingMonth(m.name) ? index : -1)).filter(index => index !== -1);
@@ -274,7 +269,6 @@ const primePlantingRanges = computed(() => {
   if (currentRange.length) ranges.push(currentRange);
   return ranges;
 });
-// Generates CSS classes for styling month cells in the annual "Optimal Planting Times" calendar
 const getMonthCellClasses = (monthObject, monthArrayIndex) => {
   const classes = [];
   const isPrime = isBestPlantingMonth(monthObject.name);
@@ -297,112 +291,95 @@ const getMonthCellClasses = (monthObject, monthArrayIndex) => {
 };
 
 // --- Data and Logic for "Personalized Growing Timeline" (Monthly Calendar + List) ---
-// Converts the string `selectedStartDateString` to a Date object (or null if invalid)
 const selectedStartDateOrDefault = computed(() => {
   return selectedStartDateString.value ? new Date(selectedStartDateString.value + 'T00:00:00') : null;
 });
-// Formats a Date object to "Mon DD" string (e.g., "Jan 01")
 const formatDate = (dateObj) => {
   if (!(dateObj instanceof Date) || isNaN(dateObj.getTime())) return 'N/A'
   return dateObj.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
 };
-// Adds a specified number of days to a given date
 const addDays = (date, days) => {
   const result = new Date(date);
   result.setDate(result.getDate() + days);
   return result
 };
-// Calculates all timeline events with their specific start/end dates based on `selectedStartDateOrDefault`
 const timeline = computed(() => {
   if (!plantingCalendarData.value?.timelineEvents || !selectedStartDateOrDefault.value) return []
   return plantingCalendarData.value.timelineEvents.map((event) => {
     const calculatedDate = addDays(selectedStartDateOrDefault.value, event.offsetDays)
     let calculatedEndDate = null
-    if (event.durationDays && event.durationDays > 1) calculatedEndDate = addDays(calculatedDate, event.durationDays - 1) // Duration includes start day
+    if (event.durationDays && event.durationDays > 1) calculatedEndDate = addDays(calculatedDate, event.durationDays - 1)
     return { ...event, calculatedDate, calculatedEndDate }
   })
 });
 
 // --- State for Timeline Monthly Calendar Navigation ---
-const timelineCalendarYear = ref(new Date().getFullYear()); // Year displayed in the timeline calendar
-const timelineCalendarMonth = ref(new Date().getMonth()); // Month (0-indexed) displayed in timeline calendar
+const timelineCalendarYear = ref(new Date().getFullYear());
+const timelineCalendarMonth = ref(new Date().getMonth());
 
-// Updates the timeline calendar's displayed month/year when the selected planting start date changes
 watch(selectedStartDateOrDefault, (newDate) => {
   if (newDate) {
     timelineCalendarYear.value = newDate.getFullYear();
     timelineCalendarMonth.value = newDate.getMonth();
   }
-}, { immediate: true }); // Run immediately on component mount
+}, { immediate: true });
 
-// Full name of the month currently displayed in the timeline calendar (e.g., "January")
 const currentTimelineCalendarMonthName = computed(() => new Date(timelineCalendarYear.value, timelineCalendarMonth.value).toLocaleString('default', { month: 'long' }));
-const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']; // For timeline calendar day headers
+const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-// Generates the grid of day objects for the timeline monthly calendar.
-// Each day object contains info about its number, if it's in the current month,
-// if it's the planting date, any events occurring on it, and if it's a "waiting" period.
 const daysForTimelineCalendarGrid = computed(() => {
-  if (!selectedStartDateOrDefault.value || !timeline.value || timeline.value.length === 0) return []; // Guard clause
+  if (!selectedStartDateOrDefault.value || !timeline.value || timeline.value.length === 0) return [];
   const daysArray = [];
   const year = timelineCalendarYear.value;
   const month = timelineCalendarMonth.value;
-  const firstDayOfMonth = new Date(year, month, 1).getDay(); // Day of the week for the 1st (0=Sun, 1=Mon...)
-  const daysInMonth = new Date(year, month + 1, 0).getDate(); // Total days in the current calendar month
+  const firstDayOfMonth = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-  const normalizeDate = (d) => d ? new Date(d.getFullYear(), d.getMonth(), d.getDate()) : null; // Helper to compare dates without time
+  const normalizeDate = (d) => d ? new Date(d.getFullYear(), d.getMonth(), d.getDate()) : null;
 
-  // Pre-calculate normalized start/end dates for all timeline events for efficiency
   const normalizedTimelineEvents = timeline.value.map(event => ({
       ...event,
       normStart: normalizeDate(event.calculatedDate),
-      normEnd: normalizeDate(event.calculatedEndDate || event.calculatedDate) // Use start date if no end date (single day event)
-  })).sort((a, b) => a.normStart - b.normStart); // Sort events chronologically
+      normEnd: normalizeDate(event.calculatedEndDate || event.calculatedDate)
+  })).sort((a, b) => a.normStart - b.normStart);
 
-  // Add padding days from the previous month to fill the start of the grid
   for (let i = 0; i < firstDayOfMonth; i++) {
     daysArray.push({ dayNumber: '', isCurrentMonth: false, eventsOnDay: [], eventClasses: [], isWaitingForGrowth: false });
   }
 
-  // Populate days of the current month
   for (let day = 1; day <= daysInMonth; day++) {
     const currentDate = new Date(year, month, day);
     const normCurrentDate = normalizeDate(currentDate);
     let eventsOnDay = [];
     let eventClasses = [];
     let isWaitingForGrowth = false;
-    let isPartOfAnEvent = false; // Flag to track if the day is covered by any specific milestone
+    let isPartOfAnEvent = false;
 
-    // Check if current day falls within any specific milestone's duration
     normalizedTimelineEvents.forEach(event => {
       if (normCurrentDate >= event.normStart && normCurrentDate <= event.normEnd) {
         eventsOnDay.push(event);
         isPartOfAnEvent = true;
-        eventClasses.push('event-day'); // General class for any event day
-        if (normCurrentDate.getTime() === event.normStart.getTime()) eventClasses.push('event-start-day'); // Mark start of event
-        if (normCurrentDate.getTime() === event.normEnd.getTime()) eventClasses.push('event-end-day'); // Mark end of event
+        eventClasses.push('event-day');
+        if (normCurrentDate.getTime() === event.normStart.getTime()) eventClasses.push('event-start-day');
+        if (normCurrentDate.getTime() === event.normEnd.getTime()) eventClasses.push('event-end-day');
       }
     });
 
-    // If not part of any specific event, check if it's a "waiting" period between events
     if (!isPartOfAnEvent) {
       const normPlantingDate = normalizeDate(selectedStartDateOrDefault.value);
-      // Check gap between planting date and the very first timeline event
       if (normalizedTimelineEvents.length > 0 && normCurrentDate < normalizedTimelineEvents[0].normStart && normCurrentDate > normPlantingDate) {
          isWaitingForGrowth = true;
       }
-      // Check gaps between consecutive scheduled events
       for (let i = 0; i < normalizedTimelineEvents.length - 1; i++) {
         const event1_end = normalizedTimelineEvents[i].normEnd;
         const event2_start = normalizedTimelineEvents[i+1].normStart;
-        if (normCurrentDate > event1_end && normCurrentDate < event2_start) { // Strictly between
+        if (normCurrentDate > event1_end && normCurrentDate < event2_start) {
           isWaitingForGrowth = true;
           break;
         }
       }
     }
 
-    // If it's determined to be a waiting day, clear any event markers for that day to prioritize the waiting indicator
     if (isWaitingForGrowth) {
         eventsOnDay = [];
         eventClasses = [];
@@ -412,117 +389,93 @@ const daysForTimelineCalendarGrid = computed(() => {
         date: currentDate,
         dayNumber: day,
         isCurrentMonth: true,
-        // Check if this day is the selected planting date
         isPlantingDate: selectedStartDateOrDefault.value && normCurrentDate.getTime() === normalizeDate(selectedStartDateOrDefault.value).getTime(),
         eventsOnDay,
         eventClasses,
         isWaitingForGrowth
     });
   }
-  // Pad the end of the grid with days from the next month if needed
   while (daysArray.length % 7 !== 0) {
     daysArray.push({ dayNumber: '', isCurrentMonth: false, eventsOnDay: [], eventClasses: [], isWaitingForGrowth: false });
   }
   return daysArray;
 });
 
-// Determines if the current timeline has any "waiting for growth" periods to show in the legend
 const timelineHasWaitingPeriod = computed(() => {
     if (!timeline.value || timeline.value.length === 0) return false;
-    // Create a sorted list of normalized event start/end dates
     const normalizedTimelineEvents = timeline.value.map(event => ({
         normStart: new Date(event.calculatedDate.getFullYear(), event.calculatedDate.getMonth(), event.calculatedDate.getDate()),
         normEnd: event.calculatedEndDate ? new Date(event.calculatedEndDate.getFullYear(), event.calculatedEndDate.getMonth(), event.calculatedEndDate.getDate()) : new Date(event.calculatedDate.getFullYear(), event.calculatedDate.getMonth(), event.calculatedDate.getDate())
     })).sort((a,b) => a.normStart - b.normStart);
 
-    // Check for gap between planting date and the first event
     const plantingDate = selectedStartDateOrDefault.value ? new Date(selectedStartDateOrDefault.value.getFullYear(), selectedStartDateOrDefault.value.getMonth(), selectedStartDateOrDefault.value.getDate()) : null;
     if (plantingDate && normalizedTimelineEvents.length > 0 && normalizedTimelineEvents[0].normStart > addDays(plantingDate,0) && timeline.value[0].offsetDays > 0) {
-      // Check if there's at least a one full day gap (first event starts 2+ days after planting)
       if (normalizedTimelineEvents[0].normStart.getTime() > addDays(plantingDate, 1).getTime()){
          return true;
       }
     }
-
-    // Check for gaps between consecutive events
     for (let i = 0; i < normalizedTimelineEvents.length - 1; i++) {
         const event1_end = normalizedTimelineEvents[i].normEnd;
         const event2_start = normalizedTimelineEvents[i+1].normStart;
-        // Check if there's at least a one full day gap
         if (event2_start.getTime() > addDays(event1_end, 1).getTime()) {
             return true;
         }
     }
-    return false; // No significant waiting periods found
+    return false;
 });
 
-// Navigation functions for the monthly timeline calendar
 const goToPreviousTimelineMonth = () => { if (timelineCalendarMonth.value === 0) { timelineCalendarMonth.value = 11; timelineCalendarYear.value--; } else timelineCalendarMonth.value--; };
 const goToNextTimelineMonth = () => { if (timelineCalendarMonth.value === 11) { timelineCalendarMonth.value = 0; timelineCalendarYear.value++; } else timelineCalendarMonth.value++; };
 
-// Helper function to convert HEX color to RGBA for applying opacity
 const hexToRgba = (hex, alpha = 1) => {
-  if (!hex || typeof hex !== 'string' || !hex.startsWith('#')) return hex; // Return original if not a valid hex
+  if (!hex || typeof hex !== 'string' || !hex.startsWith('#')) return hex;
   const r = parseInt(hex.slice(1, 3), 16);
   const g = parseInt(hex.slice(3, 5), 16);
   const b = parseInt(hex.slice(5, 7), 16);
-  if (isNaN(r) || isNaN(g) || isNaN(b)) return hex; // Handle cases where hex might be invalid after slicing
+  if (isNaN(r) || isNaN(g) || isNaN(b)) return hex;
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
 
-// Defines standard emojis and colors for various timeline milestones
 const milestoneLooks = {
-  default: { emoji: '🗓️', color: '#757575', bgColorAlpha: 0.15 }, // Default look
-  plant:   { emoji: '🌱', color: '#4CAF50', bgColorAlpha: 0.15 }, // For "Plant", "Plant seeds", "Plant seedlings"
+  default: { emoji: '🗓️', color: '#757575', bgColorAlpha: 0.15 },
+  plant:   { emoji: '🌱', color: '#4CAF50', bgColorAlpha: 0.15 },
   seeds:   { emoji: '🌱', color: '#4CAF50', bgColorAlpha: 0.15 },
   seedlings: { emoji: '🌱', color: '#66BB6A', bgColorAlpha: 0.15 },
-  germination: { emoji: '✨', color: '#AED581', bgColorAlpha: 0.15 }, // For "Germination"
-  'seedling care': { emoji: '💧', color: '#2196F3', bgColorAlpha: 0.15 }, // For "Seedling Care"
-  establishment: {emoji: '🌳', color: '#8BC34A', bgColorAlpha: 0.15 }, // For "Establishment"
-  fertilize: { emoji: '🌿', color: '#388E3C', bgColorAlpha: 0.15 }, // For "Fertilize"
-  'Regular Fertilizing': {emoji: '🪴', color: '#BDBDBD', bgColorAlpha: 0.1}, // For "Regular Fertilizing"
-  'active growth': { emoji: '📈', color: '#009688', bgColorAlpha: 0.15 }, // For "Active Growth"
-  flowering: { emoji: '🌸', color: '#E91E63', bgColorAlpha: 0.15 }, // For "Flowering"
-  fruit:     { emoji: '🍓', color: '#FF9800', bgColorAlpha: 0.15 }, // For "Fruit Development", "Fruit Set"
-  harvest:   { emoji: '🧺', color: '#F57C00', bgColorAlpha: 0.15 }, // For "Harvest"
-  prune:     { emoji: '✂️', color: '#A1887F', bgColorAlpha: 0.15 }, // For "Prune" (will be prioritized)
-  Pruning:     { emoji: '✂️', color: '#A1887F', bgColorAlpha: 0.15 }, // Handles capitalization
-  dormancy:  { emoji: '🍂', color: '#BDBDBD', bgColorAlpha: 0.1 }, // For "Dormancy"
-  waiting:   { emoji: '⏳', color: '#ADD8E6' }, // Special key for "waiting for growth" periods
-  'Deadhead Spent Flowers': {emoji: '✂️', color: '#BDBDBD', bgColorAlpha: 0.1}, // For "Regular Fertilizing"
+  germination: { emoji: '✨', color: '#AED581', bgColorAlpha: 0.15 },
+  'seedling care': { emoji: '💧', color: '#2196F3', bgColorAlpha: 0.15 },
+  establishment: {emoji: '🌳', color: '#8BC34A', bgColorAlpha: 0.15 },
+  fertilize: { emoji: '🌿', color: '#388E3C', bgColorAlpha: 0.15 },
+  'Regular Fertilizing': {emoji: '🪴', color: '#BDBDBD', bgColorAlpha: 0.1},
+  'active growth': { emoji: '📈', color: '#009688', bgColorAlpha: 0.15 },
+  flowering: { emoji: '🌸', color: '#E91E63', bgColorAlpha: 0.15 },
+  fruit:     { emoji: '🍓', color: '#FF9800', bgColorAlpha: 0.15 },
+  harvest:   { emoji: '🧺', color: '#F57C00', bgColorAlpha: 0.15 },
+  prune:     { emoji: '✂️', color: '#A1887F', bgColorAlpha: 0.15 },
+  Pruning:     { emoji: '✂️', color: '#A1887F', bgColorAlpha: 0.15 },
+  dormancy:  { emoji: '🍂', color: '#BDBDBD', bgColorAlpha: 0.1 },
+  waiting:   { emoji: '⏳', color: '#ADD8E6' },
+  'Deadhead Spent Flowers': {emoji: '✂️', color: '#BDBDBD', bgColorAlpha: 0.1},
 };
 
-// Retrieves the emoji and color for a given event name based on keywords
 const getEventLook = (eventNameOrKey) => {
   if (!eventNameOrKey) return milestoneLooks.default;
-  // Check for direct key match first (e.g. for 'waiting')
   if (milestoneLooks[eventNameOrKey]) return milestoneLooks[eventNameOrKey];
-
   const nameLower = eventNameOrKey.toLowerCase();
-  // Prioritize 'prune' or 'pruning' to ensure it gets the scissors emoji
   if (nameLower.includes('prune') || nameLower.includes('pruning')) return milestoneLooks.prune;
-
-  // Iterate through other keywords defined in milestoneLooks
   for (const key in milestoneLooks) {
-    // Skip generic/special keys already handled or not meant for general keyword matching
     if (key === 'default' || key === 'prune' || key === 'waiting' || key === 'Pruning') continue;
-    if (nameLower.includes(key.toLowerCase())) return milestoneLooks[key]; // Match if keyword is in event name
+    if (nameLower.includes(key.toLowerCase())) return milestoneLooks[key];
   }
-  return milestoneLooks.default; // Fallback to default if no specific keyword matches
+  return milestoneLooks.default;
 };
 
-// Generates a list of unique event types and their looks for the timeline calendar legend
 const uniqueEventLooksInTimeline = computed(() => {
     if (!timeline.value || timeline.value.length === 0) return [];
     const distinctLooks = [];
-    const addedKeywords = new Set(); // Tracks keywords for which a legend item has been added
-
-    // Iterate through actual timeline events to build legend based on what's present
+    const addedKeywords = new Set();
     timeline.value.forEach(event => {
         const eventNameLower = event.name.toLowerCase();
         let keywordFound = null;
-
-        // Check if this event matches a predefined keyword (excluding default/waiting)
         for (const key in milestoneLooks) {
             if (key === 'default' || key === 'waiting') continue;
             if (eventNameLower.includes(key.toLowerCase())) {
@@ -530,22 +483,18 @@ const uniqueEventLooksInTimeline = computed(() => {
                 break;
             }
         }
-
         if (keywordFound) {
-            // If it's the initial planting event (offset 0 and a "plant" type keyword), skip it for this generic legend,
-            // as it's covered by the "Planting Date (draggable)" legend item.
             const isPlantingTypeEvent = ['plant', 'seeds', 'seedlings'].includes(keywordFound.toLowerCase());
             if (isPlantingTypeEvent && event.offsetDays === 0) {
-                // This event is essentially the planting date, already has a dedicated legend item
-            } else if (!addedKeywords.has(keywordFound)) { // Add only if this keyword type hasn't been added yet
-                distinctLooks.push({ name: event.name, ...milestoneLooks[keywordFound] }); // Use full event name for better context in legend
+                // Skip
+            } else if (!addedKeywords.has(keywordFound)) {
+                distinctLooks.push({ name: event.name, ...milestoneLooks[keywordFound] });
                 addedKeywords.add(keywordFound);
             }
-        } else { // For events not matching any specific keyword
-            // Avoid adding the initial planting event to the default list if it didn't match specific keywords
+        } else {
             const isPlantingEvent = (eventNameLower.includes('plant') || eventNameLower.includes('seed')) && event.offsetDays === 0;
             if (!isPlantingEvent) {
-                const firstWord = eventNameLower.split(' ')[0]; // Group by first word for unknown types
+                const firstWord = eventNameLower.split(' ')[0];
                 if (!addedKeywords.has(firstWord)) {
                     distinctLooks.push({ name: event.name, ...milestoneLooks.default });
                     addedKeywords.add(firstWord);
@@ -553,99 +502,102 @@ const uniqueEventLooksInTimeline = computed(() => {
             }
         }
     });
-    return distinctLooks.slice(0, 5); // Limit the number of legend items for space
+    return distinctLooks.slice(0, 5);
 });
 
 // --- Drag and Drop Logic for Planting Date on Timeline Calendar ---
-const draggingPlantDate = ref(false); // Flag to indicate if planting date marker is being dragged
-// Handles the start of a drag operation
+const draggingPlantDate = ref(false);
 const handleDragStart = (event, date) => {
   if (!date) return;
-  event.dataTransfer.setData('text/plain', date.toISOString()); // Store date being dragged
-  event.dataTransfer.effectAllowed = 'move'; // Indicate a move operation
+  event.dataTransfer.setData('text/plain', date.toISOString());
+  event.dataTransfer.effectAllowed = 'move';
   draggingPlantDate.value = true;
 };
-// Handles the end of a drag operation (whether successful drop or not)
 const handleDragEnd = () => {
   draggingPlantDate.value = false;
-  // Clean up any lingering highlight styles on drop targets
   document.querySelectorAll('.drop-target-highlight').forEach(el => el.classList.remove('drop-target-highlight'));
 };
-// Handles when a dragged item is over a potential drop target cell
 const handleDragOver = (event, day) => {
-  // Allow drop only on valid days (current month, not already the planting date)
   if (day.isCurrentMonth && !day.isPlantingDate) {
-    event.preventDefault(); // Necessary to allow the drop event to fire
-    if (event.currentTarget instanceof HTMLElement) event.currentTarget.classList.add('drop-target-highlight'); // Visual feedback
+    event.preventDefault();
+    if (event.currentTarget instanceof HTMLElement) event.currentTarget.classList.add('drop-target-highlight');
   }
 };
-// Handles when a dragged item leaves a potential drop target cell
 const handleDragLeave = (event, day) => {
   if (event.currentTarget instanceof HTMLElement) event.currentTarget.classList.remove('drop-target-highlight');
 };
-// Handles the drop action on a target cell
 const handleDrop = (event, day) => {
-  if (day.isCurrentMonth && day.date) { // Ensure it's a valid day with a date object
+  if (day.isCurrentMonth && day.date) {
     event.preventDefault();
     const targetDate = day.date;
-    // Update the selectedStartDateString with the new date in YYYY-MM-DD format
     selectedStartDateString.value = `${targetDate.getFullYear()}-${String(targetDate.getMonth() + 1).padStart(2, '0')}-${String(targetDate.getDate()).padStart(2, '0')}`;
   }
   if (event.currentTarget instanceof HTMLElement) event.currentTarget.classList.remove('drop-target-highlight');
-  draggingPlantDate.value = false; // Clear dragging flag
+  draggingPlantDate.value = false;
 };
 
 // --- Lifecycle Hooks & Watchers ---
-// Component mounted: Initialize data
 onMounted(() => {
   loading.value = true;
-  initialPlantNameFromRoute.value = props.plantName; // Store initial plant from route
-  selectedPlantNameForCalendar.value = props.plantName; // Set dropdown to initial plant
-  // Populate dropdown options from query param or default to initial plant
+  initialPlantNameFromRoute.value = props.plantName;
+  selectedPlantNameForCalendar.value = props.plantName;
+
+  let namesList = [];
   if (props.recommendedPlantNamesString) {
-    availablePlantsForSelection.value = props.recommendedPlantNamesString.split(',');
-  } else {
-    availablePlantsForSelection.value = [props.plantName];
+    namesList = props.recommendedPlantNamesString.split(',');
   }
-  // Check if data for the initial plant is available
+  // Ensure the plant from the URL (props.plantName) is in the dropdown list, and put it first
+  if (!namesList.includes(props.plantName)) {
+    namesList.unshift(props.plantName);
+  } else {
+    // Move props.plantName to the front if it exists
+    namesList = [props.plantName, ...namesList.filter(name => name !== props.plantName)];
+  }
+  availablePlantsForSelection.value = [...new Set(namesList)]; // Make unique, props.plantName is first
+
   if (!currentPlantData.value) {
     error.value = `Details for plant "${props.plantName}" not found.`;
   }
   loading.value = false;
 });
 
-// Watcher: When a new plant is selected from the dropdown
 watch(selectedPlantNameForCalendar, (newPlantName, oldPlantName) => {
   if (newPlantName && newPlantName !== oldPlantName) {
-    // activeView.value = 'calendar'; // Removed: Keep current view active
     error.value = '';
-    selectedStartDateString.value = getTodayDateString(); // Reset planting date to today for the new plant
-    // Update timeline calendar display to the new planting date's month/year
+    selectedStartDateString.value = getTodayDateString();
     if(selectedStartDateOrDefault.value) {
       timelineCalendarYear.value = selectedStartDateOrDefault.value.getFullYear();
       timelineCalendarMonth.value = selectedStartDateOrDefault.value.getMonth();
     }
-    // Check if data for the newly selected plant is available
     if (!currentPlantData.value) {
       error.value = `Details for plant "${newPlantName}" not found.`;
     }
+     // Optionally, update URL if a different plant is selected from dropdown
+    // router.replace({ params: { plantName: newPlantName }, query: route.query });
+    // Be cautious with router.replace here as it might re-trigger the props watch if not handled carefully.
+    // For now, selecting from dropdown only changes internal state for display.
   }
 });
 
-// Watcher: When route props change (e.g., user navigates to this page again with different params)
-watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPlant, newRecNamesString]) => {
+watch(() => [props.plantName, props.recommendedPlantNamesString, props.userHemisphere], ([newInitialPlant, newRecNamesString, newHemisphere]) => {
     loading.value = true;
     initialPlantNameFromRoute.value = newInitialPlant;
-    selectedPlantNameForCalendar.value = newInitialPlant; // Reset dropdown and current plant
-    activeView.value = 'calendar'; // Reset to default view (Optimal Planting Times)
+    selectedPlantNameForCalendar.value = newInitialPlant; // Reset to current plant from route
+    activeView.value = 'calendar';
 
+    let namesList = [];
     if (newRecNamesString) {
-      availablePlantsForSelection.value = newRecNamesString.split(',');
-    } else {
-      availablePlantsForSelection.value = [newInitialPlant];
+      namesList = newRecNamesString.split(',');
     }
+    if (!namesList.includes(newInitialPlant)) {
+      namesList.unshift(newInitialPlant);
+    } else {
+      namesList = [newInitialPlant, ...namesList.filter(name => name !== newInitialPlant)];
+    }
+    availablePlantsForSelection.value = [...new Set(namesList)];
+
     error.value = '';
-    selectedStartDateString.value = getTodayDateString(); // Reset planting date
+    selectedStartDateString.value = getTodayDateString();
     if(selectedStartDateOrDefault.value) {
       timelineCalendarYear.value = selectedStartDateOrDefault.value.getFullYear();
       timelineCalendarMonth.value = selectedStartDateOrDefault.value.getMonth();
@@ -654,7 +606,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
       error.value = `Details for plant "${newInitialPlant}" not found.`;
     }
     loading.value = false;
-}, { immediate: false }); // `immediate: false` because onMounted handles the initial setup
+}, { immediate: false });
 
 </script>
 
@@ -684,8 +636,6 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   font-size: 0.95em;
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
 }
-
-/* .plant-info-column definition moved to its more complete version later */
 
 .timeline-monthly-calendar {
   margin-top: 20px;
@@ -725,11 +675,11 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 .days-of-week,
 .timeline-days-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 equal columns for days of the week */
+  grid-template-columns: repeat(7, 1fr);
   text-align: center;
 }
 
-.days-of-week { /* Specific styles for .days-of-week */
+.days-of-week {
   margin-bottom: 8px;
   font-weight: bold;
   color: #666;
@@ -737,21 +687,20 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 }
 
 .dow-header {
+  font-weight: bold;
   padding: 5px 0;
 }
-
-/* First definition of .timeline-day-cell removed as it was superseded by a later one with min-height: 80px */
 
 .timeline-day-cell .day-number {
   font-weight: 500;
   margin-bottom: 3px;
-  z-index: 1; /* Ensure day number is above background elements */
+  z-index: 1;
   align-self: flex-start;
   padding-left: 2px;
 }
 
 .timeline-day-cell.other-month .day-number {
-  color: #aaa; /* Dim numbers for days not in the current month */
+  color: #aaa;
 }
 
 .timeline-day-cell.planting-date {
@@ -763,18 +712,17 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   color: var(--color-primary, #0a3200);
 }
 
-/* Draggable Marker Style */
 .draggable-planting-marker {
   cursor: grab;
   font-size: 1.8em;
   padding: 2px;
   border-radius: 4px;
   display: inline-block;
-  position: absolute; /* For centering and drag functionality */
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center element */
-  z-index: 10; /* Ensure marker is interactive and above other cell content */
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 .draggable-planting-marker:active {
@@ -786,11 +734,10 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   display: inline-block;
 }
 
-/* Visual feedback for drop target */
 .timeline-day-cell.drop-target-highlight {
   background-color: #e6ffe6 !important;
   outline: 2px dashed var(--color-primary);
-  outline-offset: -2px; /* Inset outline */
+  outline-offset: -2px;
 }
 
 .timeline-day-cell.waiting-for-growth::after {
@@ -798,19 +745,19 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%); /* Vertically center the line */
+  transform: translateY(-50%);
   width: 100%;
-  height: 60%; /* Height of the waiting line indicator */
-  background-color: #ADD8E6A0; /* Semi-transparent light blue */
-  z-index: 0; /* Behind other cell content like day number and emojis */
+  height: 60%;
+  background-color: #ADD8E6A0;
+  z-index: 0;
 }
 
 .waiting-emoji-on-line {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center emoji on the line */
-  z-index: 1; /* Ensure emoji is above the waiting line */
+  transform: translate(-50%, -50%);
+  z-index: 1;
   font-size: 1.2em;
 }
 
@@ -822,16 +769,14 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   flex-wrap: wrap;
   width: 100%;
   padding-bottom: 2px;
-  z-index: 1; /* Ensure emojis are above background elements like waiting line */
+  z-index: 1;
 }
-
-/* First definition of .calendar-event-emoji removed as it was superseded by a later one with font-size: 1.8em */
 
 .more-events-emoji {
   font-size: 0.9em;
   background-color: #ccc;
   color: white;
-  border-radius: 50%; /* Circular shape */
+  border-radius: 50%;
   width: 16px;
   height: 16px;
   display: inline-flex;
@@ -875,11 +820,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   display: inline-block;
 }
 
-.planting-date-legend {
-  /* Styles specific to the planting date item in the legend, if any */
-}
-
-.timeline-event .event-name { /* This is distinct from the general .event-name below */
+.timeline-event .event-name {
   display: flex;
   align-items: center;
 }
@@ -896,7 +837,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   border-radius: 3px;
   margin-right: 8px;
   display: inline-block;
-  flex-shrink: 0; /* Prevent shrinking if event name is long */
+  flex-shrink: 0;
 }
 
 .calendar-column .section-title,
@@ -926,21 +867,21 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   gap: 30px;
 }
 
-.plant-info-column { /* This is the complete definition */
-  flex: 0 0 320px; /* Fixed width column, does not grow or shrink */
+.plant-info-column {
+  flex: 0 0 320px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */ /* Commented out to allow label to align left */
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-  align-self: flex-start; /* Align to the start of the cross axis (top) */
+  align-self: flex-start;
 }
 
 .dynamic-content-column {
-  flex: 1; /* Takes remaining available space */
-  min-width: 0; /* Prevents content from overflowing flex container */
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
 }
@@ -951,16 +892,16 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 }
 
 .timeline-calendar-panel {
-  flex: 1; /* Takes available space, can be adjusted with proportions */
+  flex: 1;
   min-width: 350px;
 }
 
 .timeline-list-panel {
-  flex: 1; /* Takes available space, can be adjusted with proportions */
+  flex: 1;
   min-width: 300px;
   max-height: 600px;
-  overflow-y: auto; /* Enable vertical scroll if content overflows */
-  padding-right: 10px; /* Space for scrollbar */
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
 .timeline-list-panel::-webkit-scrollbar {
@@ -976,11 +917,10 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   background-color: #f0f0f0;
 }
 
-/* Adjustments for month cells in Optimal Planting Times if overall width increases */
 .months-calendar-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns for months display */
-  gap: 0; /* No gap between cells, borders will define separation */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
   border: 1px solid #ccc;
 }
 
@@ -996,23 +936,19 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative; /* For potential absolute positioned elements inside */
+  position: relative;
 }
 
-/* Remove right border from the last cell in each row (4th child) */
 .month-cell-container:nth-child(4n) {
   border-right: none;
 }
 
-/* Remove bottom border from cells in the last row (children from 9th onwards for a 3x4 grid) */
-.month-cell-container:nth-child(n+9) { /* Assuming 12 months, 3 rows of 4 */
+.month-cell-container:nth-child(n+9) {
   border-bottom: none;
 }
 
-/* Adjust timeline calendar day cell min-height if needed */
-/* This is the effective definition of .timeline-day-cell after removing the earlier superseded one */
 .timeline-day-cell {
-  min-height: 80px; /* Effective min-height */
+  min-height: 80px;
   border: 1px solid #eee;
   padding: 5px;
   font-size: 0.9em;
@@ -1023,14 +959,13 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   justify-content: space-between;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1200px) {
   .planting-calendar-view {
     max-width: 1140px;
   }
 
   .plant-info-column {
-    flex: 0 0 280px; /* Slightly reduce plant info column width */
+    flex: 0 0 280px;
   }
 
   .timeline-list-panel {
@@ -1044,15 +979,15 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   }
 
   .main-layout-container {
-    flex-direction: column; /* Stack columns vertically */
-    align-items: stretch; /* Make items take full width */
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .plant-info-column {
-    flex-basis: auto; /* Reset flex-basis */
+    flex-basis: auto;
     width: 100%;
     margin-bottom: 20px;
-    align-items: center;
+    /* align-items: center; */ /* Keep default (stretch) or set to flex-start */
   }
 
   .dynamic-content-column {
@@ -1060,50 +995,46 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   }
 
   .months-calendar-grid {
-    grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns */
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .month-cell-container {
     min-height: 110px;
   }
-  /* Re-apply right border for 4n as it's no longer last in row */
   .month-cell-container:nth-child(4n) {
     border-right: 1px solid #ccc;
   }
-  /* Remove right border from the new last cell in each row (3rd child) */
   .month-cell-container:nth-child(3n) {
     border-right: none;
   }
-  /* Re-apply bottom border for n+9 as it might not be last row */
   .month-cell-container:nth-child(n+9) {
     border-bottom: 1px solid #ccc;
   }
-  /* Remove bottom border from cells in the new last row (children from 10th onwards for a 4x3 grid) */
-  .month-cell-container:nth-child(n+10) { /* Assuming 12 months, 4 rows of 3 */
+  .month-cell-container:nth-child(n+10) {
     border-bottom: none;
   }
 
   .timeline-days-grid {
-    grid-template-columns: repeat(7, minmax(0,1fr)); /* Ensure columns can shrink */
+    grid-template-columns: repeat(7, minmax(0,1fr));
   }
 
-  .timeline-day-cell { /* This will override the base .timeline-day-cell styles in this media query */
+  .timeline-day-cell {
     min-height: 60px;
     font-size: 0.8em;
   }
 
   .timeline-content-split {
-    flex-direction: column; /* Stack timeline calendar and list */
+    flex-direction: column;
   }
 
   .timeline-calendar-panel {
-    min-width: auto; /* Reset min-width */
+    min-width: auto;
   }
 
   .timeline-list-panel {
     max-height: 300px;
     margin-top: 20px;
-    min-width: auto; /* Reset min-width */
+    min-width: auto;
   }
 }
 
@@ -1131,7 +1062,6 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 .view-title {
   color: var(--color-primary, #0a3200);
   text-align: center;
-  margin-bottom: 25px;
   font-size: 2.2em;
   font-weight: 600;
 }
@@ -1150,8 +1080,9 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   font-size: 1.6em;
   color: var(--color-primary, #0a3200);
   margin-bottom: 10px;
-  text-align: center;
+  text-align: center; /* Center header text */
   font-weight: 500;
+  width: 100%; /* Ensure it takes full width for centering */
 }
 
 .plant-image-wrapper {
@@ -1163,7 +1094,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 .plant-image-container {
   width: 250px;
   height: 250px;
-  overflow: hidden; /* Clip image to container bounds */
+  overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin-bottom: 15px;
@@ -1172,7 +1103,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 .plant-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Scale image to cover container, cropping if necessary */
+  object-fit: cover;
 }
 
 .plant-description {
@@ -1182,7 +1113,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   text-align: left;
   padding: 0 5px;
   max-height: 250px;
-  overflow-y: auto; /* Enable vertical scroll for long descriptions */
+  overflow-y: auto;
   width: 100%;
 }
 
@@ -1203,12 +1134,12 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   display: flex;
   margin-bottom: 20px;
   border-radius: 6px;
-  overflow: hidden; /* To make border-radius clip children */
+  overflow: hidden;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .selector-button {
-  flex: 1; /* Distribute space equally among buttons */
+  flex: 1;
   padding: 12px 15px;
   background-color: #f0f0f0;
   color: #555;
@@ -1269,19 +1200,19 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 }
 
 .months-calendar-grid.no-interaction .month-cell-container:hover {
-  transform: none; /* Disable hover effect for non-interactive grid */
+  transform: none;
   z-index: auto;
   box-shadow: none;
 }
 
 .month-name {
   font-weight: bold;
-  font-size: 1.6em;
+  font-size: 1.6em; /* Reduced from 1.6em for better fit */
   color: #333;
 }
 
 .month-season-indicator {
-  font-size: 1.2em;
+  font-size: 1.2em; /* Reduced from 1.2em */
   color: #555;
   padding: 2px 0px;
   border-radius: 3px;
@@ -1290,13 +1221,13 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 }
 
 .season-emoji {
-  font-size: 2em;
+  font-size: 2em; /* Reduced from 2em */
   margin-right: 2px;
 }
 
 .optimal-indicator,
 .secondary-indicator {
-  font-size: 1.2em;
+  font-size: 1.2em; /* Reduced from 1.2em */
   margin-top: 4px;
   padding: 2px 0;
   border-radius: 4px;
@@ -1304,11 +1235,11 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 }
 
 .prime-range {
-  background-color: #d4edda; /* Light green for prime planting range */
+  background-color: #d4edda;
 }
 
 .prime-range .month-name {
-  color: #155724; /* Darker green for text contrast */
+  color: #155724;
 }
 
 .prime-range .optimal-indicator {
@@ -1316,11 +1247,11 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 }
 
 .secondary-optimal-month {
-  background-color: #fff3cd; /* Light yellow for secondary range */
+  background-color: #fff3cd;
 }
 
 .secondary-optimal-month .month-name {
-  color: #856404; /* Darker yellow/brown for text contrast */
+  color: #856404;
 }
 
 .secondary-optimal-month .secondary-indicator {
@@ -1329,7 +1260,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 
 .current-month-highlight {
   outline: 2px solid var(--color-primary, #0a3200);
-  outline-offset: -2px; /* Inset outline for highlight */
+  outline-offset: -2px;
 }
 
 .current-month-highlight .month-name {
@@ -1337,7 +1268,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 }
 
 .current-day-marker {
-  font-size: 1em;
+  font-size: 1em; /* Reduced from 1em */
   color: var(--color-primary, #0a3200);
   font-style: italic;
   margin-top: 2px;
@@ -1345,7 +1276,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 
 .current-month-highlight-legend {
   outline: 2px solid var(--color-primary, #0a3200);
-  background-color: #f0f7e6; /* Different background for legend item */
+  background-color: #f0f7e6;
 }
 
 .legend {
@@ -1452,10 +1383,10 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   color: #777;
   background-color: #e0e0e0;
   padding: 2px 6px;
-  border-radius: 10px; /* Pill shape */
+  border-radius: 10px;
 }
 
-.event-name { /* General .event-name styles */
+.event-name {
   font-size: 1.1em;
   margin: 0 0 5px 0;
 }
@@ -1469,71 +1400,63 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
 
 .no-timeline-message {
   padding: 15px;
-  background-color: #fffbe6; /* Light yellow for informational message */
+  background-color: #fffbe6;
   border: 1px solid #ffe58f;
   color: #8a6d3b;
   border-radius: 4px;
   text-align: center;
 }
 
-/* Timeline Monthly Calendar specific styles - many duplicates were removed from here */
-/* Styles that were unique or intentionally overridden remain */
-
-/* This is the effective definition of .calendar-event-emoji after removing the earlier superseded one */
 .calendar-event-emoji {
-  font-size: 1.8em; /* Larger emoji size in this context, now the primary definition */
+  font-size: 1.8em;
   line-height: 1;
   padding: 1px;
 }
 
 @media (max-width: 768px) {
   .months-calendar-grid {
-    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .month-cell-container {
     min-height: 120px;
   }
-  /* Re-apply right border for 3n as it's no longer last in row */
   .month-cell-container:nth-child(3n) {
     border-right: 1px solid #ccc;
   }
-  /* Remove right border from the new last cell in each row (2nd child) */
   .month-cell-container:nth-child(2n) {
     border-right: none;
   }
-  /* Re-apply bottom border for n+10 as it might not be last row */
   .month-cell-container:nth-child(n+10) {
     border-bottom: 1px solid #ccc;
   }
-  /* Remove bottom border from cells in the new last row (children from 11th onwards for a 6x2 grid) */
-  .month-cell-container:nth-child(n+11) { /* Assuming 12 months, 6 rows of 2 */
+  .month-cell-container:nth-child(n+11) {
     border-bottom: none;
   }
 
   .view-selector {
-    flex-direction: column; /* Stack view selector buttons vertically */
+    flex-direction: column;
   }
 
   .selector-button {
-    border-bottom: 1px solid #ddd; /* Add separator between stacked buttons */
+    border-bottom: 1px solid #ddd;
   }
 
   .selector-button:last-child {
-    border-bottom: none; /* Remove border from last button */
+    border-bottom: none;
   }
 
-  .timeline-day-cell { /* This will override the base .timeline-day-cell styles in this media query */
+  .timeline-day-cell {
     min-height: 50px;
     font-size: 0.75em;
     padding: 3px;
   }
 
-  .calendar-event-emoji { /* This will override the base .calendar-event-emoji styles in this media query */
-    font-size: 1em; /* Smaller emojis on smaller screens */
+  .calendar-event-emoji {
+    font-size: 1em;
   }
 
-  .more-events-emoji { /* This will override the base .more-events-emoji styles in this media query */
+  .more-events-emoji {
     font-size: 0.8em;
     width: 14px;
     height: 14px;
@@ -1551,7 +1474,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   }
 
   .month-cell-container {
-    min-height: 130px;
+    min-height: 130px; /* Increased min-height slightly for very small screens */
     padding: 6px;
   }
 
@@ -1563,33 +1486,40 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
     font-size: 0.7em;
   }
 
+  .season-emoji {
+      font-size: 1.5em; /* Slightly smaller emoji for very small screens */
+  }
+
   .optimal-indicator,
   .secondary-indicator {
-    font-size: 1em;
+    font-size: 0.8em; /* Smaller indicator text */
+  }
+
+  .current-day-marker {
+      font-size: 0.7em;
   }
 
   .legend {
-    flex-direction: column; /* Stack legend items vertically */
-    align-items: flex-start; /* Align items to the start */
+    flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
   }
 }
 
 @media (min-width: 600px) {
   .timeline-event {
-    flex-direction: row; /* Layout event parts in a row */
+    flex-direction: row;
     align-items: flex-start;
   }
 
   .event-date-badge {
-    min-width: 180px; /* Allocate fixed space for date badge */
-    flex-shrink: 0; /* Prevent date badge from shrinking */
+    min-width: 180px;
+    flex-shrink: 0;
   }
 
   .event-info {
-    flex-grow: 1; /* Allow event info to take remaining space */
+    flex-grow: 1;
   }
 }
 
 </style>
-
