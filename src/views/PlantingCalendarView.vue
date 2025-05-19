@@ -5,6 +5,10 @@
 
     <div v-if="currentPlantData" class="calendar-content">
       <h1 class="view-title">Planting Planner</h1>
+      <div class="view-subtitle-container">
+        <p class="view-subtitle">Plan your garden with ease!</p>
+        <p class="view-subtitle">Get personalised tips to grow a thriving, eco-friendly garden.</p>
+      </div>
 
       <div class="main-layout-container">
         <div class="plant-info-column">
@@ -1144,6 +1148,17 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   margin-bottom: 25px;
   font-size: 2.2em;
   font-weight: 600;
+}
+
+.view-subtitle-container {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.view-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .plant-selector-dropdown-container {
