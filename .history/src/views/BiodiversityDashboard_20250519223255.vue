@@ -320,7 +320,7 @@ export default {
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 800px;
-  margin: 0 auto 0px;
+  margin: 0 auto 30px;
 }
 
 /* Chart Header Styles */

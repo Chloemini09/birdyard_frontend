@@ -20,8 +20,7 @@
       <h2>Interactive Biodiversity Map</h2>
       <p class="section-instructions">
         Explore native bird habitats across Australia. Click on regions to see detailed information
-        about local species and plant preferences. You could Click the bird on map to see more
-        information!
+        about local species and plant preferences.
       </p>
     </div>
 
@@ -320,7 +319,7 @@ export default {
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 800px;
-  margin: 0 auto 0px;
+  margin: 0 auto 30px;
 }
 
 /* Chart Header Styles */
