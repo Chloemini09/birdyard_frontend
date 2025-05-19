@@ -14,7 +14,7 @@
         <div class="plant-info-column">
           <!-- Plant Selector Dropdown -->
           <div class="plant-selector-dropdown-container" v-if="availablePlantsForSelection.length > 1">
-            <label for="plant-select-calendar">Recommeded Plants:</label>
+            <label for="plant-select-calendar">Recommended Plants</label>
             <select id="plant-select-calendar" v-model="selectedPlantNameForCalendar" class="plant-select-dropdown">
               <option v-for="plantNameOption in availablePlantsForSelection" :key="plantNameOption" :value="plantNameOption">
                 {{ plantNameOption }}
@@ -1062,6 +1062,7 @@ watch(() => [props.plantName, props.recommendedPlantNamesString, props.userHemis
 .view-title {
   color: var(--color-primary, #0a3200);
   text-align: center;
+  margin-bottom: 10px;
   font-size: 2.2em;
   font-weight: 600;
 }
