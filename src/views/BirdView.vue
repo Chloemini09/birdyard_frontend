@@ -138,9 +138,9 @@
             </button>
           </div>
             <p class="state-filter-info">
-            <strong>EN:</strong> ENDANGERED
-            <strong>VU:</strong> VULNERABLE
-            <strong>CR:</strong> CRITICAL ENDANGERED
+            <strong>EN:</strong> ENDANGERED.
+            <strong>VU:</strong> VULNERABLE.
+            <strong>CR:</strong> CRITICAL ENDANGERED.
             </p>
         </div>
 
