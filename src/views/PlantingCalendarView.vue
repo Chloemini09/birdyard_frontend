@@ -1136,6 +1136,16 @@ watch(() => [props.plantName, props.recommendedPlantNamesString], ([newInitialPl
   font-weight: 600;
 }
 
+.view-subtitle-container {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.view-subtitle {
+  font-size: 1.1rem;
+}
+
 .plant-name-header {
   font-size: 1.6em;
   color: var(--color-primary, #0a3200);
