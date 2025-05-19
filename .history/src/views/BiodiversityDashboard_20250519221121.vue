@@ -36,12 +36,9 @@
     </div>
 
     <div v-else class="charts-container">
-      <div class="chart-row full-width">
-        <MonthlyBirdActivityChart
-          :birdsData="biodiversityData"
-          ref="monthlyBirdChart"
-          class="full-width-chart"
-        />
+      <div class="chart-row">
+        <MonthlyBirdActivityChart :birdsData="biodiversityData" ref="monthlyBirdChart" />
+        <BirdPlantPreferenceChart :birdsData="biodiversityData" ref="birdPlantChart" />
       </div>
 
       <div class="chart-row">
@@ -338,18 +335,6 @@ export default {
   gap: 0;
   width: 100%;
   margin-bottom: 20px;
-}
-
-/* Add full-width style for the MonthlyBirdActivityChart */
-.chart-row.full-width {
-  grid-template-columns: 1fr;
-}
-
-.full-width-chart {
-  width: 100%;
-  margin: 10px;
-  border: 1px solid #f3f4f6;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .chart-row > * {
