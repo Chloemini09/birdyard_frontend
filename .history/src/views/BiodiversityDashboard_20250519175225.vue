@@ -176,20 +176,17 @@ export default {
 
 <style scoped>
 .biodiversity-dashboard {
-  max-width: 100%; /* 修改为占满屏幕 */
-  width: 100%;
-  margin: 0;
-  padding: 0; /* 移除内边距 */
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
   font-family: 'Montserrat', 'Arial', sans-serif;
   background-color: #f9fafb;
   color: #374151;
-  overflow-x: hidden; /* 防止水平滚动条 */
 }
 
 .layout-page-container {
   font-family: 'Montserrat', 'Arial', sans-serif;
   color: #374151;
-  width: 100%;
 }
 
 /* Banner Section */
@@ -204,17 +201,16 @@ export default {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-radius: 0; /* 移除圆角 */
-  margin-bottom: 0; /* 移除下边距 */
+  border-radius: 12px;
+  margin-bottom: 40px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   transition: all 0.3s ease;
-  width: 100%; /* 确保宽度是100% */
 }
 
 .contact-banner:hover {
-  transform: translateY(0); /* 移除悬停效果，保持稳定 */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 .banner-overlay {
@@ -257,7 +253,6 @@ export default {
   margin-bottom: 40px;
   padding-bottom: 25px;
   border-bottom: 2px solid #e5e7eb;
-  width: 100%;
 }
 
 .dashboard-header h1 {
@@ -278,7 +273,7 @@ export default {
   border: 2px solid rgba(255, 255, 255, 0.3);
   padding: 12px 24px;
   margin-top: 24px;
-  border-radius: 0; /* 移除圆角 */
+  border-radius: 30px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
@@ -312,35 +307,27 @@ export default {
 
 .map-container {
   background: #ffffff;
-  border-radius: 0; /* 移除圆角 */
-  box-shadow: none;
-  padding: 0; /* 移除内边距 */
-  margin-bottom: 0; /* 移除下边距 */
-  border: none;
-  width: 100%; /* 确保宽度是100% */
-  height: 80vh; /* 增加高度 */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #f3f4f6;
+}
+
+.refresh-button:active {
+  transform: translateY(0);
 }
 
 .charts-container {
   display: flex;
   flex-direction: column;
-  gap: 0; /* 移除间隔 */
-  width: 100%;
-  padding: 20px; /* 添加内边距 */
+  gap: 40px;
 }
 
 .chart-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0; /* 移除间隔 */
-  width: 100%;
-  margin-bottom: 20px; /* 添加下边距 */
-}
-
-.chart-row > * {
-  margin: 10px; /* 为图表添加间距 */
-  border: 1px solid #f3f4f6;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  gap: 30px;
 }
 
 .loading-container,
@@ -349,22 +336,16 @@ export default {
   text-align: center;
   padding: 70px;
   background: #ffffff;
-  border-radius: 0; /* 移除圆角 */
-  margin: 0; /* 移除外边距 */
-  box-shadow: none;
-  border: none;
-  width: 100%;
-  height: 100vh; /* 填充整个视口高度 */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  border-radius: 12px;
+  margin: 40px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f3f4f6;
 }
 
 .loading-spinner {
   border: 5px solid #f3f3f3;
   border-top: 5px solid #1a2d00;
-  border-radius: 50%; /* 保留圆形加载动画 */
+  border-radius: 50%;
   width: 50px;
   height: 50px;
   animation: spin 1.5s linear infinite;
@@ -376,7 +357,7 @@ export default {
   color: white;
   border: none;
   padding: 12px 24px;
-  border-radius: 0; /* 移除圆角 */
+  border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
@@ -394,27 +375,22 @@ export default {
   padding: 40px 0;
   text-align: center;
   background-color: #ffffff;
-  width: 100%;
-  margin: 0; /* 移除外边距 */
 }
-
 .cta-section-info {
   font-size: 1.2rem;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 20px;
 }
-
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  border-radius: 0; /* 移除圆角 */
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
   text-align: center;
 }
-
 .btn-large {
   padding: 15px 30px;
   font-size: 18px;
@@ -423,7 +399,6 @@ export default {
   border: 2px solid #c2e59c;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -440,14 +415,11 @@ export default {
   .contact-subtitle {
     font-size: 1.2rem;
   }
-  .map-container {
-    height: 60vh; /* 适应平板高度 */
-  }
 }
 
 @media (max-width: 768px) {
   .chart-row {
-    grid-template-columns: 1fr; /* 单列布局 */
+    grid-template-columns: 1fr;
   }
   .contact-banner {
     min-height: 350px;
@@ -459,9 +431,6 @@ export default {
   .error-container,
   .no-data-container {
     padding: 40px;
-  }
-  .map-container {
-    height: 50vh; /* 适应移动设备高度 */
   }
 }
 </style>
