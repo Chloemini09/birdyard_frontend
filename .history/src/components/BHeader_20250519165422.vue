@@ -47,7 +47,8 @@
               <!-- Duplicate? -->
               <li><router-link to="/nesting">Nesting Guide</router-link></li>
               <li><router-link to="/bird">Bird Detection</router-link></li>
-              <li><router-link to="/bio">Bird Migration</router-link></li>
+              <li><router-link to="/map">Bird Map</router-link></li>
+              <li><router-link to="/bio">Bird BIO</router-link></li>
             </ul>
           </li>
 

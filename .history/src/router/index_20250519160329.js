@@ -14,6 +14,7 @@ import GardenLearning from '@/views/GardenLearning.vue'
 import QuizView from '@/views/QuizView.vue'
 import BirdLearning from '@/views/BirdLearning.vue'
 import PlantingCalendarView from '@/views/PlantingCalendarView.vue'
+import MapView from '@/views/MapView.vue'
 import BiodiversityDashboard from '@/views/BiodiversityDashboard.vue'
 
 const router = createRouter({
@@ -65,11 +66,7 @@ const router = createRouter({
       path: '/plant/:plantName',
       name: 'PlantDetail',
       component: PlantDetailView,
-      props: (route) => ({
-        plantName: route.params.plantName,
-        recommendedPlantNamesString: route.query.recommendedPlantNames || '', // Map query to prop
-        hemisphere: route.query.hemisphere || 'southern', // Map query to prop
-      }),
+      props: true,
       meta: { requiresAuth: true },
     },
     {
@@ -85,7 +82,8 @@ const router = createRouter({
       props: (route) => ({
         plantName: route.params.plantName, // From route param
         userHemisphere: route.query.hemisphere || 'southern', // From query
-        recommendedPlantNamesString: route.query.recommendedPlantNames || '', // From query
+        // Map recommendedPlantNames query to a prop
+        recommendedPlantNamesString: route.query.recommendedPlantNames || '',
       }),
       meta: { requiresAuth: true },
     },
@@ -117,6 +115,12 @@ const router = createRouter({
       path: '/quiz',
       name: 'quiz',
       component: QuizView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/map',
+      name: 'map',
+      component: MapView,
       meta: { requiresAuth: true },
     },
     {
