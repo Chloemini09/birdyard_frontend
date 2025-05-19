@@ -336,7 +336,7 @@ export default {
   border-color: #4caf50;
 }
 .chart {
-  height: 200px;
+  height: 350px;
   width: 100%;
 }
 </style>

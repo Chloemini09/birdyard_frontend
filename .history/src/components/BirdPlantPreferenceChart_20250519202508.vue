@@ -148,15 +148,15 @@ export default {
                 ticks: {
                   padding: 5,
                 },
-              },
-              x: {
-                display: true,
-                position: 'bottom',
+                x: {
+                  display: true,
+                  position: 'bottom',
+                },
               },
             },
-            barPercentage: 0.8,
+            barPercentage: 0.5,
             barThickness: 20,
-            categoryPercentage: 0.2,
+            categoryPercentage: 0.9,
             plugins: {
               legend: {
                 display: false,
@@ -225,7 +225,7 @@ export default {
   margin-bottom: 15px;
 }
 .chart {
-  height: 200px;
+  height: 150px;
   width: 100%;
 }
 select {

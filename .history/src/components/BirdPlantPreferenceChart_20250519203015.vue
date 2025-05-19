@@ -60,13 +60,18 @@ export default {
         props.birdsData?.length || 0,
       )
 
-      // Strictly check data and DOM elements
+      // 1. 首先确保旧图表被完全销毁
+      if (chart.value) {
+        chart.value.destroy()
+        chart.value = null // 明确设置为null
+      }
+
+      // 检查容器和数据
       if (!chartContainer.value) {
         console.error('Chart container element does not exist or is not mounted')
         return
       }
 
-      // Check if data is valid
       if (!props.birdsData || !Array.isArray(props.birdsData) || props.birdsData.length === 0) {
         console.error('Bird data is invalid or empty')
         return
@@ -78,10 +83,13 @@ export default {
       }
 
       try {
-        // Further validate data structure
+        // 2. 确保数据处理更严格
         const validBirdData = props.birdsData.filter(
           (item) =>
-            item && item.species_common_name === selectedBird.value && item.plant_common_name,
+            item &&
+            item.species_common_name === selectedBird.value &&
+            item.plant_common_name &&
+            item.plant_common_name.trim() !== '', // 确保植物名称不为空
         )
 
         if (validBirdData.length === 0) {
@@ -89,43 +97,41 @@ export default {
           return
         }
 
-        // Prepare data for selected bird
+        // 3. 确保数据处理不会产生重复
         const plantCounts = {}
         validBirdData.forEach((item) => {
-          if (!plantCounts[item.plant_common_name]) {
-            plantCounts[item.plant_common_name] = 0
+          const plantName = item.plant_common_name.trim() // 修剪空格
+          if (!plantCounts[plantName]) {
+            plantCounts[plantName] = 0
           }
-          plantCounts[item.plant_common_name] += Number(item.observation_count) || 1
+          plantCounts[plantName] += Number(item.observation_count) || 1
         })
 
-        // Sort plants by observation count
+        // 排序植物
         const sortedPlants = Object.entries(plantCounts)
           .sort((a, b) => b[1] - a[1])
           .slice(0, 5)
 
-        console.log('Data prepared for chart:', sortedPlants)
-
-        // Ensure there is data to draw
-        if (sortedPlants.length === 0) {
-          console.error('Not enough data to create chart')
-          return
-        }
-
-        // Destroy old chart (if exists)
-        if (chart.value) {
-          chart.value.destroy()
-        }
-
-        // Force wait for DOM update
+        // 4. 确保等待DOM更新
         await nextTick()
 
-        // Create new chart - ensure element is ready
+        // 5. 重置canvas元素
+        const canvas = chartContainer.value
+        const parent = canvas.parentNode
+        if (parent) {
+          const newCanvas = document.createElement('canvas')
+          parent.replaceChild(newCanvas, canvas)
+          chartContainer.value = newCanvas
+        }
+
+        // 6. 创建新图表之前确保获取新的上下文
         const ctx = chartContainer.value.getContext('2d')
         if (!ctx) {
           console.error('Could not get canvas context')
           return
         }
 
+        // 7. 创建新图表
         chart.value = new Chart(ctx, {
           type: 'bar',
           data: {
@@ -143,20 +149,9 @@ export default {
             responsive: true,
             maintainAspectRatio: false,
             indexAxis: 'y',
-            scales: {
-              y: {
-                ticks: {
-                  padding: 5,
-                },
-              },
-              x: {
-                display: true,
-                position: 'bottom',
-              },
-            },
-            barPercentage: 0.8,
-            barThickness: 20,
-            categoryPercentage: 0.2,
+            barThickness: 20, // 减小条形高度
+            barPercentage: 0.7,
+            categoryPercentage: 0.7,
             plugins: {
               legend: {
                 display: false,
@@ -167,6 +162,20 @@ export default {
                 font: {
                   size: 16,
                 },
+              },
+            },
+            scales: {
+              y: {
+                ticks: {
+                  padding: 5,
+                },
+                // 这个设置帮助解决标签重复问题
+                afterDataLimits(scale) {
+                  scale.options.ticks.autoSkip = false
+                },
+              },
+              x: {
+                beginAtZero: true,
               },
             },
           },
@@ -225,7 +234,7 @@ export default {
   margin-bottom: 15px;
 }
 .chart {
-  height: 200px;
+  height: 150px;
   width: 100%;
 }
 select {

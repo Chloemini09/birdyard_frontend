@@ -143,20 +143,6 @@ export default {
             responsive: true,
             maintainAspectRatio: false,
             indexAxis: 'y',
-            scales: {
-              y: {
-                ticks: {
-                  padding: 5,
-                },
-              },
-              x: {
-                display: true,
-                position: 'bottom',
-              },
-            },
-            barPercentage: 0.8,
-            barThickness: 20,
-            categoryPercentage: 0.2,
             plugins: {
               legend: {
                 display: false,
@@ -215,17 +201,17 @@ export default {
 
 <style scoped>
 .chart-container {
-  padding: 10px;
+  padding: 20px;
   background: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .bird-selector {
   margin-bottom: 15px;
 }
 .chart {
-  height: 200px;
+  height: 300px;
   width: 100%;
 }
 select {

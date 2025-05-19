@@ -9,13 +9,15 @@
         </option>
       </select>
     </div>
-    <!-- Using canvas tag instead of div -->
-    <canvas ref="chartContainer" class="chart"></canvas>
+    <!-- 确保每次只创建一个canvas实例 -->
+    <div class="chart-wrapper">
+      <canvas ref="chartContainer" class="chart"></canvas>
+    </div>
   </div>
 </template>
 
 <script>
-import { onMounted, ref, watch, nextTick } from 'vue'
+import { onMounted, ref, watch, nextTick, onBeforeUnmount } from 'vue'
 import Chart from 'chart.js/auto'
 
 export default {
@@ -32,23 +34,35 @@ export default {
     const selectedBird = ref('')
     const birdsList = ref([])
 
+    // 在组件卸载前确保销毁图表实例
+    onBeforeUnmount(() => {
+      if (chart.value) {
+        chart.value.destroy()
+        chart.value = null
+      }
+    })
+
     onMounted(async () => {
       console.log(
         'BirdPlantPreferenceChart component mounted, data status:',
         props.birdsData?.length || 0,
       )
-      // Wait for data to load and DOM to be mounted
+
+      // 确保数据已加载
       if (props.birdsData && props.birdsData.length > 0) {
-        // Extract unique birds
+        // 提取唯一的鸟类名称
         const birds = [...new Set(props.birdsData.map((item) => item.species_common_name))].filter(
           Boolean,
         )
         birdsList.value = birds
         selectedBird.value = birds[0] || ''
 
-        // Wait for DOM update
+        // 等待DOM更新
         await nextTick()
-        updateChart()
+        // 延迟一点时间确保DOM完全渲染
+        setTimeout(() => {
+          updateChart()
+        }, 100)
       } else {
         console.log('Bird data not yet loaded')
       }
@@ -60,13 +74,13 @@ export default {
         props.birdsData?.length || 0,
       )
 
-      // Strictly check data and DOM elements
+      // 确保chartContainer已挂载
       if (!chartContainer.value) {
         console.error('Chart container element does not exist or is not mounted')
         return
       }
 
-      // Check if data is valid
+      // 验证数据
       if (!props.birdsData || !Array.isArray(props.birdsData) || props.birdsData.length === 0) {
         console.error('Bird data is invalid or empty')
         return
@@ -78,7 +92,7 @@ export default {
       }
 
       try {
-        // Further validate data structure
+        // 进一步验证数据结构
         const validBirdData = props.birdsData.filter(
           (item) =>
             item && item.species_common_name === selectedBird.value && item.plant_common_name,
@@ -89,7 +103,7 @@ export default {
           return
         }
 
-        // Prepare data for selected bird
+        // 准备所选鸟类的数据
         const plantCounts = {}
         validBirdData.forEach((item) => {
           if (!plantCounts[item.plant_common_name]) {
@@ -98,34 +112,36 @@ export default {
           plantCounts[item.plant_common_name] += Number(item.observation_count) || 1
         })
 
-        // Sort plants by observation count
+        // 按观察计数对植物进行排序
         const sortedPlants = Object.entries(plantCounts)
           .sort((a, b) => b[1] - a[1])
           .slice(0, 5)
 
         console.log('Data prepared for chart:', sortedPlants)
 
-        // Ensure there is data to draw
+        // 确保有数据可绘制
         if (sortedPlants.length === 0) {
           console.error('Not enough data to create chart')
           return
         }
 
-        // Destroy old chart (if exists)
+        // 先销毁旧图表（如果存在）
         if (chart.value) {
           chart.value.destroy()
+          chart.value = null
         }
 
-        // Force wait for DOM update
+        // 强制等待DOM更新
         await nextTick()
 
-        // Create new chart - ensure element is ready
+        // 创建新图表 - 确保元素已就绪
         const ctx = chartContainer.value.getContext('2d')
         if (!ctx) {
           console.error('Could not get canvas context')
           return
         }
 
+        // 确保在此处创建图表前canvas上下文是干净的
         chart.value = new Chart(ctx, {
           type: 'bar',
           data: {
@@ -176,13 +192,13 @@ export default {
       }
     }
 
-    // Watch for data changes
+    // 监视数据变化
     watch(
       () => props.birdsData,
       async (newValue) => {
         console.log('Bird data updated, data amount:', newValue?.length || 0)
         if (newValue && newValue.length > 0) {
-          // Extract unique birds
+          // 提取唯一的鸟类
           const birds = [...new Set(newValue.map((item) => item.species_common_name))].filter(
             Boolean,
           )
@@ -192,16 +208,27 @@ export default {
             selectedBird.value = birds[0]
           }
 
-          // Wait for DOM update
+          // 等待DOM更新
           await nextTick()
-          updateChart()
+          // 延迟图表更新确保DOM已更新
+          setTimeout(() => {
+            updateChart()
+          }, 100)
         }
       },
       { deep: true },
     )
 
-    // Watch for selected bird changes
-    watch(() => selectedBird.value, updateChart)
+    // 监视所选鸟类变化
+    watch(
+      () => selectedBird.value,
+      () => {
+        // 延迟图表更新以确保DOM已更新
+        setTimeout(() => {
+          updateChart()
+        }, 100)
+      },
+    )
 
     return {
       chartContainer,
@@ -224,8 +251,13 @@ export default {
 .bird-selector {
   margin-bottom: 15px;
 }
-.chart {
+.chart-wrapper {
   height: 200px;
+  width: 100%;
+  position: relative;
+}
+.chart {
+  height: 100%;
   width: 100%;
 }
 select {

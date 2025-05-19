@@ -36,11 +36,11 @@ export default {
     const birdsList = ref([])
     const selectedBirds = ref([])
     const birdColors = {
-      'Australian Magpie': '#bcdb40',
-      'Sulphur-crested Cockatoo': '#2a5736',
-      'Rainbow Lorikeet': '#5ab3c4',
-      'Eastern Rosella': '#4456db',
-      'Superb Fairywren': '#457b9d',
+      'Australian Magpie': '#000000',
+      'Sulphur-crested Cockatoo': '#000000',
+      'Rainbow Lorikeet': '#000000',
+      'Eastern Rosella': '#000000',
+      'Superb Fairywren': '#000000',
     }
 
     const months = [

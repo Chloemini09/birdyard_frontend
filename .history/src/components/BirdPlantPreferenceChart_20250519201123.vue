@@ -148,15 +148,14 @@ export default {
                 ticks: {
                   padding: 5,
                 },
-              },
-              x: {
-                display: true,
-                position: 'bottom',
+                x: {
+                  display: true,
+                  position: 'bottom',
+                },
               },
             },
-            barPercentage: 0.8,
-            barThickness: 20,
-            categoryPercentage: 0.2,
+            barPercentage: 0.5,
+            categoryPercentage: 0.9,
             plugins: {
               legend: {
                 display: false,

@@ -154,9 +154,9 @@ export default {
                 position: 'bottom',
               },
             },
-            barPercentage: 0.8,
-            barThickness: 20,
-            categoryPercentage: 0.2,
+            barPercentage: 0.5,
+            barThickness: 10,
+            categoryPercentage: 0.9,
             plugins: {
               legend: {
                 display: false,

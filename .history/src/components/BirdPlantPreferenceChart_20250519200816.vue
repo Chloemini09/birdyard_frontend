@@ -144,19 +144,11 @@ export default {
             maintainAspectRatio: false,
             indexAxis: 'y',
             scales: {
-              y: {
-                ticks: {
-                  padding: 5,
-                },
-              },
               x: {
                 display: true,
                 position: 'bottom',
               },
             },
-            barPercentage: 0.8,
-            barThickness: 20,
-            categoryPercentage: 0.2,
             plugins: {
               legend: {
                 display: false,

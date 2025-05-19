@@ -259,7 +259,7 @@ function addMonthLabelLayer(species, geojson) {
     source: sourceId,
     layout: {
       'text-field': ['get', 'months'],
-      'text-size': 10,
+      'text-size': 20,
       'text-offset': [0, 1],
       'text-anchor': 'top',
       'text-allow-overlap': true,

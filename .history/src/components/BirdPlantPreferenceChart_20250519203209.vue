@@ -60,7 +60,7 @@ export default {
         props.birdsData?.length || 0,
       )
 
-      // Strictly check data and DOM elements
+      // Check if the container exists
       if (!chartContainer.value) {
         console.error('Chart container element does not exist or is not mounted')
         return
@@ -78,7 +78,7 @@ export default {
       }
 
       try {
-        // Further validate data structure
+        // Filter bird data
         const validBirdData = props.birdsData.filter(
           (item) =>
             item && item.species_common_name === selectedBird.value && item.plant_common_name,
@@ -89,43 +89,39 @@ export default {
           return
         }
 
-        // Prepare data for selected bird
+        // Process data
         const plantCounts = {}
         validBirdData.forEach((item) => {
-          if (!plantCounts[item.plant_common_name]) {
-            plantCounts[item.plant_common_name] = 0
+          const plantName = item.plant_common_name
+          if (!plantCounts[plantName]) {
+            plantCounts[plantName] = 0
           }
-          plantCounts[item.plant_common_name] += Number(item.observation_count) || 1
+          plantCounts[plantName] += Number(item.observation_count) || 1
         })
 
-        // Sort plants by observation count
+        // Sort plants
         const sortedPlants = Object.entries(plantCounts)
           .sort((a, b) => b[1] - a[1])
           .slice(0, 5)
 
         console.log('Data prepared for chart:', sortedPlants)
 
-        // Ensure there is data to draw
-        if (sortedPlants.length === 0) {
-          console.error('Not enough data to create chart')
-          return
-        }
-
-        // Destroy old chart (if exists)
+        // Ensure previous chart is destroyed
         if (chart.value) {
           chart.value.destroy()
         }
 
-        // Force wait for DOM update
+        // Wait for DOM update to ensure clean rendering
         await nextTick()
 
-        // Create new chart - ensure element is ready
+        // Get fresh context
         const ctx = chartContainer.value.getContext('2d')
         if (!ctx) {
           console.error('Could not get canvas context')
           return
         }
 
+        // Create new chart with optimized options
         chart.value = new Chart(ctx, {
           type: 'bar',
           data: {
@@ -143,20 +139,9 @@ export default {
             responsive: true,
             maintainAspectRatio: false,
             indexAxis: 'y',
-            scales: {
-              y: {
-                ticks: {
-                  padding: 5,
-                },
-              },
-              x: {
-                display: true,
-                position: 'bottom',
-              },
-            },
-            barPercentage: 0.8,
-            barThickness: 20,
-            categoryPercentage: 0.2,
+            barThickness: 20, // Fixed bar height
+            barPercentage: 0.7, // Reduced bar height percentage
+            categoryPercentage: 0.7, // Increased spacing between bars
             plugins: {
               legend: {
                 display: false,
@@ -169,12 +154,60 @@ export default {
                 },
               },
             },
+            scales: {
+              y: {
+                ticks: {
+                  padding: 5,
+                  autoSkip: false, // Prevent label skipping to avoid duplicates
+                },
+                grid: {
+                  display: true,
+                  drawOnChartArea: true,
+                },
+              },
+              x: {
+                beginAtZero: true,
+                grid: {
+                  display: true,
+                  drawOnChartArea: true,
+                },
+              },
+            },
+            animation: {
+              duration: 500, // Shorter animation for quicker rendering
+              easing: 'easeOutQuad',
+              onComplete: function () {
+                // Ensure chart is fully rendered before allowing interactions
+                isChartReady = true
+              },
+            },
           },
         })
       } catch (error) {
         console.error('Error creating chart:', error)
       }
     }
+
+    // Improved component lifecycle management
+    onMounted(async () => {
+      // Add a small delay to ensure DOM is fully ready before first render
+      setTimeout(async () => {
+        console.log('BirdPlantPreferenceChart component mounted with delayed initialization')
+        if (props.birdsData && props.birdsData.length > 0) {
+          // Extract unique birds
+          const birds = [
+            ...new Set(props.birdsData.map((item) => item.species_common_name)),
+          ].filter(Boolean)
+          birdsList.value = birds
+          selectedBird.value = birds[0] || ''
+
+          // Wait for DOM update
+          await nextTick()
+          // Then update chart
+          updateChart()
+        }
+      }, 100)
+    })
 
     // Watch for data changes
     watch(
@@ -225,7 +258,7 @@ export default {
   margin-bottom: 15px;
 }
 .chart {
-  height: 200px;
+  height: 150px;
   width: 100%;
 }
 select {

@@ -1,13 +1,22 @@
 <template>
   <div class="chart-container">
     <h2>Bird-Plant Preferences</h2>
-    <div class="bird-selector">
-      <label for="bird-select">Select Bird:</label>
-      <select id="bird-select" v-model="selectedBird" @change="updateChart">
-        <option v-for="bird in birdsList" :key="bird" :value="bird">
+    <div class="bird-selector-container">
+      <div class="bird-selector-label">Select Bird:</div>
+      <div class="bird-selector-buttons">
+        <button
+          v-for="bird in birdsList"
+          :key="bird"
+          class="bird-selector-button"
+          :class="{ active: selectedBird === bird }"
+          @click="
+            selectedBird = bird
+            updateChart()
+          "
+        >
           {{ bird }}
-        </option>
-      </select>
+        </button>
+      </div>
     </div>
     <!-- Using canvas tag instead of div -->
     <canvas ref="chartContainer" class="chart"></canvas>
@@ -143,20 +152,6 @@ export default {
             responsive: true,
             maintainAspectRatio: false,
             indexAxis: 'y',
-            scales: {
-              y: {
-                ticks: {
-                  padding: 5,
-                },
-              },
-              x: {
-                display: true,
-                position: 'bottom',
-              },
-            },
-            barPercentage: 0.8,
-            barThickness: 20,
-            categoryPercentage: 0.2,
             plugins: {
               legend: {
                 display: false,
@@ -215,22 +210,58 @@ export default {
 
 <style scoped>
 .chart-container {
-  padding: 10px;
+  padding: 20px;
   background: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
-.bird-selector {
+
+/* Updated styles for bird selector using buttons */
+.bird-selector-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.bird-selector-label {
+  font-size: 1.1rem;
+  color: #1a2d00;
   margin-bottom: 15px;
+  font-weight: 600;
 }
+
+.bird-selector-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bird-selector-button {
+  padding: 8px 16px;
+  background-color: #f2f2f2;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.bird-selector-button:hover {
+  background-color: #e6e6e6;
+  color: #333;
+}
+
+.bird-selector-button.active {
+  background-color: #1a2d00;
+  color: #f3f9c0;
+  border-color: #1a2d00;
+}
+
 .chart {
-  height: 200px;
+  height: 300px;
   width: 100%;
-}
-select {
-  padding: 8px;
-  border-radius: 4px;
-  font-size: 16px;
 }
 </style>
