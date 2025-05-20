@@ -139,9 +139,8 @@
             </button>
           </div>
           <p class="state-filter-info">
-            <span class="status-label en">EN</span>: ENDANGERED
-            <span class="status-label vu">VU</span>: VULNERABLE
-            <span class="status-label cr">CR</span>: CRITICALLY ENDANGERED
+            <strong>EN:</strong> ENDANGERED. <strong>VU:</strong> VULNERABLE.
+            <strong>CR:</strong> CRITICAL ENDANGERED.
           </p>
         </div>
 
@@ -411,6 +410,18 @@ export default {
       document.body.style.overflow = 'hidden'
     }
 
+    const resetAndUpload = () => {
+      // Clear error and results
+      error.value = ''
+      result.value = null
+
+      // Close the current modal
+      closeDetectionModal()
+
+      // Trigger the file input click
+      document.getElementById('upload').click()
+    }
+
     const closeDetectionModal = () => {
       previewUrl.value = ''
       result.value = null
@@ -472,18 +483,6 @@ export default {
     const closeModal = () => {
       selectedBird.value = null
       document.body.style.overflow = '' // Restore scrolling
-    }
-
-    const resetAndUpload = () => {
-      // Clear error and results
-      error.value = ''
-      result.value = null
-
-      // Close the current modal
-      closeDetectionModal()
-
-      // Trigger the file input click
-      document.getElementById('upload').click()
     }
 
     return {
@@ -789,28 +788,9 @@ export default {
   margin-top: 1rem;
 }
 
-.status-label {
-  display: inline-block;
-  padding: 0.3em 0.8em;
-  border-radius: 20px;
-  color: white;
+.state-filter-info strong {
   font-weight: bold;
-  font-size: 0.9rem;
-  margin-right: 0.3em;
 }
-
-.status-label.en {
-  background-color: #f4a940;
-}
-
-.status-label.vu {
-  background-color: #56c6e9;
-}
-
-.status-label.cr {
-  background-color: #e84c4c;
-}
-
 
 .section-title {
   font-size: 2.5rem;
@@ -1199,6 +1179,34 @@ export default {
   }
 }
 
+.detection-error-message {
+  margin-top: 20px;
+  color: #fff;
+  background-color: #ff6b6b;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.try-again-button {
+  display: inline-block;
+  background-color: #fff;
+  color: #ff6b6b;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  margin-top: 15px;
+}
+
+.try-again-button:hover {
+  background-color: #f3f3f3;
+  transform: translateY(-2px);
+}
 @media (max-width: 768px) {
   .hero-section {
     padding: 0 5%;
@@ -1239,23 +1247,5 @@ export default {
   .section-title {
     font-size: 2rem;
   }
-}
-.try-again-button {
-  display: inline-block;
-  background-color: #fff;
-  color: #ff6b6b;
-  font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  margin-top: 15px;
-}
-
-.try-again-button:hover {
-  background-color: #f3f3f3;
-  transform: translateY(-2px);
 }
 </style>
