@@ -137,11 +137,11 @@
               Other Regions
             </button>
           </div>
-            <p class="state-filter-info">
-            <strong>EN:</strong> ENDANGERED.
-            <strong>VU:</strong> VULNERABLE.
-            <strong>CR:</strong> CRITICAL ENDANGERED.
-            </p>
+          <p class="state-filter-info">
+            <span class="status-label en">EN</span>: ENDANGERED
+            <span class="status-label vu">VU</span>: VULNERABLE
+            <span class="status-label cr">CR</span>: CRITICALLY ENDANGERED
+          </p>
         </div>
 
         <!-- Horizontal Scrolling Bird Cards -->
@@ -775,9 +775,28 @@ export default {
   margin-top: 1rem;
 }
 
-.state-filter-info strong {
+.status-label {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  color: white;
   font-weight: bold;
+  font-size: 0.9rem;
+  margin-right: 0.3em;
 }
+
+.status-label.en {
+  background-color: #f4a940;
+}
+
+.status-label.vu {
+  background-color: #56c6e9;
+}
+
+.status-label.cr {
+  background-color: #e84c4c;
+}
+
 
 .section-title {
   font-size: 2.5rem;
