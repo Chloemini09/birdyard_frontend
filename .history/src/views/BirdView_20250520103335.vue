@@ -410,6 +410,18 @@ export default {
       document.body.style.overflow = 'hidden'
     }
 
+    const resetAndUpload = () => {
+      // Clear error and results
+      error.value = ''
+      result.value = null
+
+      // Close the current modal
+      closeDetectionModal()
+
+      // Trigger the file input click
+      document.getElementById('upload').click()
+    }
+
     const closeDetectionModal = () => {
       previewUrl.value = ''
       result.value = null
@@ -473,18 +485,6 @@ export default {
       document.body.style.overflow = '' // Restore scrolling
     }
 
-    const resetAndUpload = () => {
-      // Clear error and results
-      error.value = ''
-      result.value = null
-
-      // Close the current modal
-      closeDetectionModal()
-
-      // Trigger the file input click
-      document.getElementById('upload').click()
-    }
-
     return {
       previewUrl,
       result,
@@ -505,7 +505,6 @@ export default {
       closeModal,
       closeDetectionModal,
       setStateFilter,
-      resetAndUpload,
     }
   },
 }
@@ -1179,6 +1178,34 @@ export default {
   }
 }
 
+.detection-error-message {
+  margin-top: 20px;
+  color: #fff;
+  background-color: #ff6b6b;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.try-again-button {
+  display: inline-block;
+  background-color: #fff;
+  color: #ff6b6b;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  margin-top: 15px;
+}
+
+.try-again-button:hover {
+  background-color: #f3f3f3;
+  transform: translateY(-2px);
+}
 @media (max-width: 768px) {
   .hero-section {
     padding: 0 5%;
@@ -1219,23 +1246,5 @@ export default {
   .section-title {
     font-size: 2rem;
   }
-}
-.try-again-button {
-  display: inline-block;
-  background-color: #fff;
-  color: #ff6b6b;
-  font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  margin-top: 15px;
-}
-
-.try-again-button:hover {
-  background-color: #f3f3f3;
-  transform: translateY(-2px);
 }
 </style>

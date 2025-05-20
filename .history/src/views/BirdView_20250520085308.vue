@@ -88,7 +88,6 @@
 
               <div v-if="error" class="detection-error-message">
                 {{ error }}
-                <button class="try-again-button" @click="resetAndUpload">Try Again</button>
               </div>
             </div>
           </div>
@@ -138,10 +137,11 @@
               Other Regions
             </button>
           </div>
-          <p class="state-filter-info">
-            <strong>EN:</strong> ENDANGERED. <strong>VU:</strong> VULNERABLE.
+            <p class="state-filter-info">
+            <strong>EN:</strong> ENDANGERED.
+            <strong>VU:</strong> VULNERABLE.
             <strong>CR:</strong> CRITICAL ENDANGERED.
-          </p>
+            </p>
         </div>
 
         <!-- Horizontal Scrolling Bird Cards -->
@@ -473,18 +473,6 @@ export default {
       document.body.style.overflow = '' // Restore scrolling
     }
 
-    const resetAndUpload = () => {
-      // Clear error and results
-      error.value = ''
-      result.value = null
-
-      // Close the current modal
-      closeDetectionModal()
-
-      // Trigger the file input click
-      document.getElementById('upload').click()
-    }
-
     return {
       previewUrl,
       result,
@@ -505,7 +493,6 @@ export default {
       closeModal,
       closeDetectionModal,
       setStateFilter,
-      resetAndUpload,
     }
   },
 }
@@ -1219,23 +1206,5 @@ export default {
   .section-title {
     font-size: 2rem;
   }
-}
-.try-again-button {
-  display: inline-block;
-  background-color: #fff;
-  color: #ff6b6b;
-  font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  margin-top: 15px;
-}
-
-.try-again-button:hover {
-  background-color: #f3f3f3;
-  transform: translateY(-2px);
 }
 </style>
