@@ -12,13 +12,8 @@
       <h2>Interactive Biodiversity Map</h2>
       <p class="section-instructions">
         Explore native bird habitats across Australia. Click on regions to see detailed information
-        about local species and plant preferences. We will show you bird's route with Australia!
-      </p>
-      <p class="section-instructions">
-        Waiting the botton from 🔘 to 🔵, you could click another bird.
-      </p>
-      <p class="section-instructions">
-        You could Click the bird 🦜 map to see more bird information!
+        about local species and plant preferences. You could Click the bird on map to see more
+        information!
       </p>
     </div>
 
@@ -300,7 +295,7 @@ export default {
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 800px;
-  margin: 0 auto 10px;
+  margin: 0 auto 20px;
 }
 
 /* Chart Header Styles */

@@ -2,8 +2,16 @@
   <div class="biodiversity-dashboard">
     <section class="contact-banner">
       <div class="banner-overlay">
-        <h1 class="contact-title">Birds on the Move</h1>
-        <p class="contact-subtitle">Discover, Track, and Support Native Species</p>
+        <h1 class="contact-title">Australia Diversity</h1>
+        <p class="contact-subtitle">Discover the best plants for attracting native birds</p>
+        <button
+          v-if="!loading && !error && biodiversityData.length > 0"
+          @click="refreshCharts"
+          class="banner-refresh-button"
+        >
+          <span class="refresh-icon">↻</span>
+          Refresh Data
+        </button>
       </div>
     </section>
 
@@ -12,13 +20,8 @@
       <h2>Interactive Biodiversity Map</h2>
       <p class="section-instructions">
         Explore native bird habitats across Australia. Click on regions to see detailed information
-        about local species and plant preferences. We will show you bird's route with Australia!
-      </p>
-      <p class="section-instructions">
-        Waiting the botton from 🔘 to 🔵, you could click another bird.
-      </p>
-      <p class="section-instructions">
-        You could Click the bird 🦜 map to see more bird information!
+        about local species and plant preferences. You could Click the bird on map to see more
+        information!
       </p>
     </div>
 
@@ -300,7 +303,7 @@ export default {
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 800px;
-  margin: 0 auto 10px;
+  margin: 0 auto 20px;
 }
 
 /* Chart Header Styles */
@@ -377,6 +380,12 @@ export default {
 
 .banner-refresh-button:active {
   transform: translateY(-1px);
+}
+
+.refresh-icon {
+  font-size: 18px;
+  display: inline-block;
+  transition: transform 0.4s ease;
 }
 
 .banner-refresh-button:hover .refresh-icon {

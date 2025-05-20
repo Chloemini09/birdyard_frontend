@@ -36,22 +36,20 @@ const props = defineProps({
   // Component display props
   title: {
     type: String,
-    default: 'Bird-Plant Interaction Heatmap',
+    default: '',
   },
   description: {
     type: String,
-    default:
-      'This heatmap shows the percentage of bird–plant interactions, with each cell representing how often a specific bird was observed visiting a specific plant.',
+    default: '',
   },
   ariaLabel: {
     type: String,
-    default:
-      'Bird-plant interaction heatmap showing visit frequency of different birds to various plants',
+    default: 'Tableau visualization',
   },
   // Tableau specific props
   vizId: {
     type: String,
-    default: 'viz1747699307769', // Using the ID from your provided code
+    default: () => `viz${Date.now()}${Math.floor(Math.random() * 1000)}`, // Generate a unique ID
   },
   tableauHostUrl: {
     type: String,
@@ -63,7 +61,7 @@ const props = defineProps({
   },
   tableauVizName: {
     type: String,
-    default: 'Visualizations_PlantBird/Heatmap',
+    default: 'Plant_BirdInteraction_SuitabilityScore/Plant_Bird_Interaction',
   },
   tableauWorkbookUrl: {
     type: String,
@@ -79,12 +77,13 @@ const props = defineProps({
   },
   staticImageUrl: {
     type: String,
-    default: 'https://public.tableau.com/static/images/Vi/Visualizations_PlantBird/Heatmap/1.png',
+    default:
+      'https://public.tableau.com/static/images/Pl/Plant_BirdInteraction_SuitabilityScore/Plant_Bird_Interaction/1.png',
   },
   noscriptAltText: {
     type: String,
     default:
-      'This heatmap shows the percentage of bird–plant interactions, with each cell representing how often a specific bird was observed visiting a specific plant.',
+      'This chart shows which birds are most observed in your region and how well the available plants suit them.',
   },
   language: {
     type: String,
@@ -101,12 +100,7 @@ const props = defineProps({
 })
 
 // Emits for event handling
-const emit = defineEmits([
-  'visualization-loaded',
-  'visualization-error',
-  'filter-applied',
-  'filter-error',
-])
+const emit = defineEmits(['visualization-loaded', 'visualization-error'])
 
 // --- Reactive Refs for DOM Elements ---
 const vizContainerRef = ref(null)

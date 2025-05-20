@@ -130,7 +130,10 @@ fetchRecommendedPlants(); });
               },
             }"
             class="plant-card"
+            @click.stop
+            title="View INFO"
           >
+            🔍 >
             <div class="plant-image">
               <img :src="getPlantImage(plant)" :alt="plant.plantName" @error="handleImageError" />
             </div>
@@ -155,7 +158,6 @@ fetchRecommendedPlants(); });
             </div>
           </router-link>
         </div>
-        <h3>Click the card to see more info of your plants</h3>
         <h3>Click the 🗓️ button to plan your planting schedule</h3>
       </div>
     </div>

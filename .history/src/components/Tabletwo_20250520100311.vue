@@ -36,22 +36,20 @@ const props = defineProps({
   // Component display props
   title: {
     type: String,
-    default: 'Bird-Plant Interaction Heatmap',
+    default: '鸟类-植物交互热图',
   },
   description: {
     type: String,
-    default:
-      'This heatmap shows the percentage of bird–plant interactions, with each cell representing how often a specific bird was observed visiting a specific plant.',
+    default: '此热图显示了鸟类-植物交互的百分比，每个单元格代表特定鸟类访问特定植物的频率。',
   },
   ariaLabel: {
     type: String,
-    default:
-      'Bird-plant interaction heatmap showing visit frequency of different birds to various plants',
+    default: '鸟类-植物交互热图，展示不同鸟类对不同植物的访问频率',
   },
   // Tableau specific props
   vizId: {
     type: String,
-    default: 'viz1747699307769', // Using the ID from your provided code
+    default: 'viz1747699307769', // 使用您提供的ID，也可以生成随机ID
   },
   tableauHostUrl: {
     type: String,
@@ -83,8 +81,7 @@ const props = defineProps({
   },
   noscriptAltText: {
     type: String,
-    default:
-      'This heatmap shows the percentage of bird–plant interactions, with each cell representing how often a specific bird was observed visiting a specific plant.',
+    default: '此热图显示了鸟类-植物交互的百分比，每个单元格代表特定鸟类访问特定植物的频率。',
   },
   language: {
     type: String,

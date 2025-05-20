@@ -13,8 +13,6 @@
       <p class="section-instructions">
         Explore native bird habitats across Australia. Click on regions to see detailed information
         about local species and plant preferences. We will show you bird's route with Australia!
-      </p>
-      <p class="section-instructions">
         Waiting the botton from 🔘 to 🔵, you could click another bird.
       </p>
       <p class="section-instructions">

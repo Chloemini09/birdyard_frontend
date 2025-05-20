@@ -118,19 +118,7 @@ fetchRecommendedPlants(); });
         </div>
 
         <div v-else class="plants-grid">
-          <router-link
-            v-for="(plant, index) in recommendedPlants"
-            :key="index"
-            :to="{
-              name: 'PlantDetail',
-              params: { plantName: plant.plantName },
-              query: {
-                recommendedPlantNames: recommendedPlants.map((p) => p.plantName).join(','),
-                hemisphere: 'southern', // Assuming all supported states are southern hemisphere
-              },
-            }"
-            class="plant-card"
-          >
+
             <div class="plant-image">
               <img :src="getPlantImage(plant)" :alt="plant.plantName" @error="handleImageError" />
             </div>
@@ -138,25 +126,39 @@ fetchRecommendedPlants(); });
               <h3>{{ plant.plantName }}</h3>
               <p>{{ plant.description }}</p>
               <router-link
-                :to="{
-                  name: 'PlantingCalendar',
-                  params: { plantName: plant.plantName },
-                  query: {
-                    hemisphere: 'southern',
-                    recommendedPlantNames: recommendedPlants.map((p) => p.plantName).join(','),
-                  },
-                }"
-                class="btn-calendar-link"
-                @click.stop
-                title="View Planting Calendar"
-              >
-                🗓️
+                      v-for="(plant, index) in recommendedPlants"
+                      :key="index"
+                      :to="{
+                        name: 'PlantDetail',
+                        params: { plantName: plant.plantName },
+                        query: {
+                          recommendedPlantNames: recommendedPlants.map((p) => p.plantName).join(','),
+                          hemisphere: 'southern', // Assuming all supported states are southern hemisphere
+                        },
+                      }"
+                      class="plant-card"
+                        @click.stop
+                        title="View INFO">
+                        🔍
+                    >
+              <router-link
+              :to="{
+                name: 'PlantingCalendar',
+                params: { plantName: plant.plantName },
+                query: {
+                  hemisphere: 'southern',
+                  recommendedPlantNames: recommendedPlants.map((p) => p.plantName).join(',')
+                }
+              }"
+              class="btn-calendar-link"
+              @click.stop
+              title="View Planting Calendar">
+              🗓️
               </router-link>
             </div>
           </router-link>
         </div>
-        <h3>Click the card to see more info of your plants</h3>
-        <h3>Click the 🗓️ button to plan your planting schedule</h3>
+        <h3> Click the 🗓️ button to plan your planting schedule </h3>
       </div>
     </div>
     <section class="cta-section">
@@ -774,6 +776,7 @@ export default {
   flex-direction: column;
 }
 
+
 .plant-card:hover {
   transform: translateY(-5px);
 }
@@ -821,10 +824,7 @@ export default {
   border-radius: 4px;
   font-size: 1.2em;
   align-self: flex-end;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   line-height: 1;
 }
 
@@ -833,6 +833,7 @@ export default {
   border-color: #6a994a;
   color: #6a994a;
 }
+
 
 .cta-section {
   padding: 40px 0;
@@ -866,5 +867,6 @@ export default {
     margin: 5px;
     min-width: 120px;
   }
+
 }
 </style>

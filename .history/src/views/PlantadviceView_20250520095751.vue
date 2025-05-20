@@ -130,32 +130,34 @@ fetchRecommendedPlants(); });
               },
             }"
             class="plant-card"
+            @click.stop
+            title="View INFO"
           >
-            <div class="plant-image">
-              <img :src="getPlantImage(plant)" :alt="plant.plantName" @error="handleImageError" />
-            </div>
-            <div class="plant-info">
-              <h3>{{ plant.plantName }}</h3>
-              <p>{{ plant.description }}</p>
-              <router-link
-                :to="{
-                  name: 'PlantingCalendar',
-                  params: { plantName: plant.plantName },
-                  query: {
-                    hemisphere: 'southern',
-                    recommendedPlantNames: recommendedPlants.map((p) => p.plantName).join(','),
-                  },
-                }"
-                class="btn-calendar-link"
-                @click.stop
-                title="View Planting Calendar"
-              >
-                🗓️
-              </router-link>
-            </div>
+            🔍 >
           </router-link>
+          <div class="plant-image">
+            <img :src="getPlantImage(plant)" :alt="plant.plantName" @error="handleImageError" />
+          </div>
+          <div class="plant-info">
+            <h3>{{ plant.plantName }}</h3>
+            <p>{{ plant.description }}</p>
+            <router-link
+              :to="{
+                name: 'PlantingCalendar',
+                params: { plantName: plant.plantName },
+                query: {
+                  hemisphere: 'southern',
+                  recommendedPlantNames: recommendedPlants.map((p) => p.plantName).join(','),
+                },
+              }"
+              class="btn-calendar-link"
+              @click.stop
+              title="View Planting Calendar"
+            >
+              🗓️
+            </router-link>
+          </div>
         </div>
-        <h3>Click the card to see more info of your plants</h3>
         <h3>Click the 🗓️ button to plan your planting schedule</h3>
       </div>
     </div>
