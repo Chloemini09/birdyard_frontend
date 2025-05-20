@@ -13,38 +13,79 @@
                 <option v-for="(name, idx) in monthNames" :key="idx" :value="idx + 1">{{ name }}</option>
             </select>
         </div> -->
-        <div ref="mapContainer" class="map-section">
-            <div class="map-control-top-left month-dropdown">
-                <label for="monthSelect"> See where the bird is during</label>
-                <select id="monthSelect" v-model="selectedMonth" @change="handleMonthJump" :disabled="isAnimating">
-                    <option disabled value="">Select Month</option>
-                    <option v-for="(name, idx) in monthNames" :key="idx" :value="idx + 1">
-                        {{ name }}
-                    </option>
-                </select>
-
+        <div class="top-image-bar">
+            <div class="image-item">
+                <img src="/images/guide/guide1.png" alt="Image 1" />
+                <p class="image-caption">Migrates between two loccations
+                </p>
+            </div>
+            <div class="image-item">
+                <img src="/images/guide/guide2.png" alt="Image 2" />
+                <p class="image-caption">Stays at this location for one month
+                </p>
+            </div>
+            <div class="image-item">
+                <img src="/images/guide/guide3.png" alt="Image 3" />
+                <p class="image-caption">Hover to view bird's status
+                </p>
+            </div>
+            <div class="image-item">
+                <img src="/images/guide/guide4.png" alt="Image 4" />
+                <p class="image-caption">Click image to view bird's information
+                </p>
+            </div>
+            <div class="image-item">
+                <img src="/images/guide/guide5.png" alt="Image 5" />
+                <p class="image-caption">grey means animation is playing please wait blue</p>
+            </div>
+            <div class="image-item">
+                <img src="/images/guide/guide6.png" alt="Image 6" />
+                <p class="image-caption">grey means animation is playing please wait </p>
             </div>
         </div>
+        <div class="map-main">
+            <div ref="mapContainer" class="map-section">
+                <div class="map-top-right-control">
+                    <button class="toggle-animation-button" :disabled="isAnimating" @click="toggleAnimationSetting">
+                        {{ animationEnabled ? 'Animation: ON' : 'Animation: OFF' }}
+                    </button>
+                    <button class="toggle-path-button" :disabled="!selectedSpecies || isAnimating"
+                        @click="toggleYearPath">
+                        {{ isYearPathVisible ? 'Hide Year Path' : 'Show Year Path' }}
+                    </button>
 
-        <div class="sidebar">
-            <div class="container">
-                <h2 class="sidebar-title">Select Bird Species</h2>
-                <h2 class="sidebar-title">Explore Its Migration</h2>
-                <!-- <h2 class="sidebar-title">Choose a bird to explore its migration</h2> -->
-                <p class="sidebar-graph">From year beginning to currrent month</p>
+                </div>
+                <div class="map-control-top-left month-dropdown">
+                    <label for="monthSelect"> See where the bird is during</label>
+                    <select id="monthSelect" v-model="selectedMonth" @change="handleMonthJump" :disabled="isAnimating">
+                        <option disabled value="">Select Month</option>
+                        <option v-for="(name, idx) in monthNames" :key="idx" :value="idx + 1">
+                            {{ name }}
+                        </option>
+                    </select>
+                </div>
             </div>
-            <div class="species-scroll">
-                <label v-for="bird in filteredBirdList" :key="bird.name" class="bird-card"
-                    :class="{ selected: selectedSpecies === bird.name }">
 
-                    <img :src="getBirdImagePath(bird.image)" :alt="bird.name" class="bird-image" />
-                    <div class="bird-info">
-                        <input type="radio" name="bird-selection" :value="bird.name" v-model="selectedSpecies"
-                            :disabled="isAnimating" />
-                        <strong>{{ bird.name }}</strong>
-                        <p>{{ bird.description }}</p>
-                    </div>
-                </label>
+            <div class="sidebar">
+                <div class="container">
+                    <h2 class="sidebar-title">Select Bird Species</h2>
+                    <h2 class="sidebar-title">Explore Its Migration</h2>
+                    <!-- <h2 class="sidebar-title">Choose a bird to explore its migration</h2> -->
+                    <p class="sidebar-graph">From year beginning to currrent month</p>
+                </div>
+                <div class="species-scroll">
+                    <label v-for="bird in filteredBirdList" :key="bird.name" class="bird-card"
+                        :class="{ selected: selectedSpecies === bird.name }">
+
+                        <img :src="getBirdImagePath(bird.image)" :alt="bird.name" class="bird-image" />
+                        <div class="bird-info">
+                            <input type="radio" name="bird-selection" :value="bird.name" v-model="selectedSpecies"
+                                :disabled="isAnimating" />
+                            <strong>{{ bird.name }}</strong>
+                            <p>{{ bird.description }}</p>
+                        </div>
+                    </label>
+                </div>
             </div>
         </div>
     </div>
@@ -192,6 +233,8 @@ const selectedBirdInfo = ref(null)
 const showBirdPopup = ref(false)
 const map = ref(null)
 const lastMonthIndex = ref(new Date().getMonth() + 1)
+const isYearPathVisible = ref(false)
+const animationEnabled = ref(true)
 
 let markers = []
 let popup // Mapbox Popup, used to display information when hovering the mouse
@@ -313,9 +356,9 @@ function animatePathSegment(species, start, end, segmentIndex, onComplete) {
     animatedMarkers.value = [movingMarker]
 
     if (samePoint) {
-        console.log('🔁')
+        //console.log('🔁')
         animateCircularMotion(movingMarker, start, () => {
-            console.log('✅')
+            //console.log('✅')
             if (onComplete) onComplete()
         })
         return
@@ -506,6 +549,7 @@ function clearMarkers() {
     markers = []
 }
 
+// Function to clear all animation segments
 function clearAnimationSegments(species) {
     for (let i = 0; i < 12; i++) {
         const id = `${species}-segment-${i}`
@@ -560,7 +604,7 @@ function getDominantStateForSpeciesMonth(species, monthNumber) {
 
 // Function to get the state name from coordinates
 function getStateNameFromCoord(coord) {
-    const entry = Object.entries(stateCapitals).find(([state, c]) =>
+    const entry = Object.entries(stateCapitals).find(([, c]) =>
         c[0] === coord[0] && c[1] === coord[1]
     )
     return entry ? entry[0] : null
@@ -572,7 +616,6 @@ function getColorForSpecies(species) {
     const index = birdList.value.findIndex(b => b.name === species)
     return palette[index % palette.length]
 }
-
 
 // function initLineLayer(map, id, geojson, color = '#ff0000') // Function to initialize a line layer{
 //     if (map.getSource(id)) {
@@ -597,7 +640,6 @@ function getColorForSpecies(species) {
 //     })
 // }
 
-
 function getLoopingMonthSequence(from, to) {
     const result = []
     let m = from
@@ -608,7 +650,6 @@ function getLoopingMonthSequence(from, to) {
     }
     return result
 }
-
 
 // Function to handle month jump
 function handleMonthJump() {
@@ -627,22 +668,34 @@ function handleMonthJump() {
         if (coord) pathCoords.push(coord)
     }
 
-    if (pathCoords.length < 2) {
+    if (!animationEnabled.value) {
         isAnimating.value = false
-
-        if (pathCoords.length === 1) {
-            const species = selectedSpecies.value
-            const coord = pathCoords[0]
-
+        if (pathCoords.length > 0) {
+            const lastCoord = pathCoords[pathCoords.length - 1]
             animatedMarkers.value.forEach(m => m.remove())
             animatedMarkers.value = []
+            placeAnimatedBirdMarker(species, lastCoord)
 
-            placeAnimatedBirdMarker(species, coord)
+            placeInteractivePointMarkers(species)
+
+            const labelGeojson = buildMonthPointsGeoJSON(species)
+            addMonthLabelLayer(species, labelGeojson)
+
+            lastMonthIndex.value = monthNum
         }
-
         return
     }
 
+    if (pathCoords.length < 2) {
+        isAnimating.value = false
+        if (pathCoords.length === 1) {
+            const coord = pathCoords[0]
+            animatedMarkers.value.forEach(m => m.remove())
+            animatedMarkers.value = []
+            placeAnimatedBirdMarker(species, coord)
+        }
+        return
+    }
 
     isAnimating.value = true
     animatedMarkers.value.forEach(m => m.remove())
@@ -653,12 +706,9 @@ function handleMonthJump() {
         if (index >= pathCoords.length) {
             isAnimating.value = false
             lastMonthIndex.value = monthNum
-
             placeInteractivePointMarkers(species)
-
             const labelGeojson = buildMonthPointsGeoJSON(species)
             addMonthLabelLayer(species, labelGeojson)
-
             return
         }
 
@@ -704,7 +754,7 @@ function placeAnimatedBirdMarker(species, point) {
     return marker
 }
 
-// Function to place interactive point markers
+// Function to place interactive point markers with one status
 function placeInteractivePointMarkers(species) {
     const pointMap = {} // key: "lng,lat" → { coord, entries: [] }
 
@@ -741,10 +791,10 @@ function placeInteractivePointMarkers(species) {
                 month: monthStr,
                 status: entry.status,
                 state: topState,
-                species_common_name: entry.species_common_name
+                species_common_name: entry.species_common_name,
+                observation_count: entry.observation_count
             })
         })
-
     }
 
     Object.values(pointMap).forEach(({ coord, entries }) => {
@@ -766,36 +816,45 @@ function placeInteractivePointMarkers(species) {
 
             entries.forEach(entry => {
                 const key = `${entry.species_common_name}|${entry.state}|${entry.month}`
+
                 if (!grouped[key]) {
                     grouped[key] = {
                         species: entry.species_common_name,
                         state: entry.state,
                         month: entry.month,
-                        statuses: new Set()
+                        statusCounts: {}
                     }
                 }
-                grouped[key].statuses.add(entry.status)
+
+                const status = entry.status
+                const count = entry.observation_count || 0
+
+                if (!grouped[key].statusCounts[status]) {
+                    grouped[key].statusCounts[status] = 0
+                }
+
+                grouped[key].statusCounts[status] += count
             })
 
             const content = Object.values(grouped).map(group => {
-                const statusList = Array.from(group.statuses).join(', ')
-                return `${group.species} is ${statusList} at ${group.state} in ${group.month}`
+                const statusCounts = group.statusCounts
+                const mostCommonStatus = Object.entries(statusCounts).reduce((a, b) => (b[1] > a[1] ? b : a))[0]
+                return `${group.species} is ${mostCommonStatus} at ${group.state} in ${group.month}`
             }).join('<br><br>')
 
             popup.setLngLat(coord)
             popup.setHTML(`
-  <div style="
-    font-size:14px;
-    padding:12px;
-    background-color:#ffffff;
-    border-radius: 6px;
-    width: 100%;
-    box-sizing: border-box;
-  ">
-    ${content}
-  </div>
-`)
-                .addTo(map.value)
+              <div style="
+                font-size:14px;
+                padding:12px;
+                background-color:#ffffff;
+                border-radius: 6px;
+                width: 100%;
+                box-sizing: border-box;
+              ">
+                ${content}
+              </div>
+            `).addTo(map.value)
         })
 
         el.addEventListener('mouseleave', () => {
@@ -805,6 +864,110 @@ function placeInteractivePointMarkers(species) {
         markers.push(marker)
     })
 }
+
+// Function to place interactive point markers with all statuses
+
+// function placeInteractivePointMarkers(species) {
+//     const pointMap = {} // key: "lng,lat" → { coord, entries: [] }
+
+//     for (let m = 1; m <= 12; m++) {
+//         const monthStr = monthNames[m - 1]
+//         const filtered = observationData.filter(entry =>
+//             entry.species_common_name === species &&
+//             entry.month === monthStr
+//         )
+
+//         const stateCounts = {}
+//         filtered.forEach(entry => {
+//             stateCounts[entry.state] = (stateCounts[entry.state] || 0) + entry.observation_count
+//         })
+
+//         const topState = Object.entries(stateCounts).sort((a, b) => b[1] - a[1])[0]?.[0]
+//         if (!topState) continue
+
+//         const coord = stateCapitals[topState]
+//         const key = coord.map(x => x.toFixed(4)).join(',')
+
+//         const topEntries = filtered.filter(e => e.state === topState)
+//         if (!topEntries.length) continue
+
+//         if (!pointMap[key]) {
+//             pointMap[key] = {
+//                 coord,
+//                 entries: []
+//             }
+//         }
+
+//         topEntries.forEach(entry => {
+//             pointMap[key].entries.push({
+//                 month: monthStr,
+//                 status: entry.status,
+//                 state: topState,
+//                 species_common_name: entry.species_common_name
+//             })
+//         })
+
+//     }
+
+//     Object.values(pointMap).forEach(({ coord, entries }) => {
+//         const el = document.createElement('div')
+//         el.className = 'info-point'
+//         el.style.width = '18px'
+//         el.style.height = '18px'
+//         el.style.borderRadius = '50%'
+//         el.style.backgroundColor = 'orange'
+//         el.style.border = '2px solid white'
+//         el.style.cursor = 'pointer'
+
+//         const marker = new mapboxgl.Marker(el)
+//             .setLngLat(coord)
+//             .addTo(map.value)
+
+//         el.addEventListener('mouseenter', () => {
+//             const grouped = {}
+
+//             entries.forEach(entry => {
+//                 const key = `${entry.species_common_name}|${entry.state}|${entry.month}`
+//                 if (!grouped[key]) {
+//                     grouped[key] = {
+//                         species: entry.species_common_name,
+//                         state: entry.state,
+//                         month: entry.month,
+//                         statuses: new Set()
+//                     }
+//                 }
+//                 grouped[key].statuses.add(entry.status)
+//             })
+
+//             const content = Object.values(grouped).map(group => {
+//                 const statusList = Array.from(group.statuses).join(', ')
+//                 return `${group.species} is ${statusList} at ${group.state} in ${group.month}`
+//             }).join('<br><br>')
+
+//             popup.setLngLat(coord)
+//             popup.setHTML(`
+//   <div style="
+//     font-size:14px;
+//     padding:12px;
+//     background-color:#ffffff;
+//     border-radius: 6px;
+//     width: 100%;
+//     box-sizing: border-box;
+//   ">
+//     ${content}
+//   </div>
+// `)
+//                 .addTo(map.value)
+//         })
+
+//         el.addEventListener('mouseleave', () => {
+//             popup.remove()
+//         })
+
+//         markers.push(marker)
+//     })
+// }
+
 
 // Function to start the fade-out animation
 function startFadeOutLine(layerId, step = 0.05, interval = 100) {
@@ -889,6 +1052,41 @@ function startAutoPlayAnimation() {
     nextSegment()
 }
 
+function toggleYearPath() {
+    const species = selectedSpecies.value
+    if (!map.value?.isStyleLoaded() || !species) return
+
+    const dashedLayerId = `${species}-dashed-layer`
+    const dashedSourceId = `${species}-dashed-source`
+
+    if (isYearPathVisible.value) {
+        if (map.value.getLayer(dashedLayerId)) map.value.removeLayer(dashedLayerId)
+        if (map.value.getSource(dashedSourceId)) map.value.removeSource(dashedSourceId)
+        isYearPathVisible.value = false
+    } else {
+        const geojson = buildDashedPathGeoJSON(species)
+        map.value.addSource(dashedSourceId, { type: 'geojson', data: geojson })
+        map.value.addLayer({
+            id: dashedLayerId,
+            type: 'line',
+            source: dashedSourceId,
+            layout: { 'line-cap': 'round', 'line-join': 'round' },
+            paint: {
+                'line-color': '#a9cf7a',
+                'line-width': 3,
+                'line-dasharray': [2, 2]
+            }
+        })
+        isYearPathVisible.value = true
+    }
+}
+
+
+function toggleAnimationSetting() {
+    animationEnabled.value = !animationEnabled.value
+}
+
+
 onMounted(() => {
     try {
         // Set your Mapbox access token
@@ -933,7 +1131,7 @@ onMounted(() => {
 
 watch(selectedSpecies, () => {
     lastMonthIndex.value = new Date().getMonth() + 1
-    selectedMonth.value = ''
+    selectedMonth.value = new Date().getMonth() + 1
     if (isAnimating.value) return
     if (!map.value?.isStyleLoaded()) return
 
@@ -954,34 +1152,110 @@ watch(selectedSpecies, () => {
         duration: 1000
     })
 
-
-
-    const dashed = buildDashedPathGeoJSON(species)
-    // addDashedPathLayer(species, dashed)//whole year path
+    if (isYearPathVisible.value) {
+        const geojson = buildDashedPathGeoJSON(species)
+        map.value.addSource(`${species}-dashed-source`, {
+            type: 'geojson',
+            data: geojson
+        })
+        map.value.addLayer({
+            id: `${species}-dashed-layer`,
+            type: 'line',
+            source: `${species}-dashed-source`,
+            layout: { 'line-cap': 'round', 'line-join': 'round' },
+            paint: {
+                'line-color': '#a9cf7a',
+                'line-width': 3,
+                'line-dasharray': [2, 2]
+            }
+        })
+    }
 
     const labelGeojson = buildMonthPointsGeoJSON(species)
     addMonthLabelLayer(species, labelGeojson)
-    startAutoPlayAnimation()
+
+    if (animationEnabled.value) {
+        startAutoPlayAnimation()
+    } else {
+        const currentMonth = new Date().getMonth() + 1
+        const lastCoord = getDominantStateForSpeciesMonth(species, currentMonth)
+        if (lastCoord) {
+            animatedMarkers.value.forEach(m => m.remove())
+            animatedMarkers.value = []
+            placeAnimatedBirdMarker(species, lastCoord)
+        }
+    }
+
     placeInteractivePointMarkers(species)
-
 })
-
 </script>
 
 <style scoped>
 /* Styles for the interactive map layout */
 .interactive-map-layout {
+    flex-direction: column;
     margin: 100px auto 0 auto;
     padding: 16px;
     display: flex;
-    height: 600px;
+    height: 850px;
     max-width: 90%;
     border-radius: 16px;
     box-sizing: border-box;
     overflow: hidden;
     background-color: #f3f6ef;
-    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+    border-color: #f3f6ef;
 }
+
+/* Styles for the top image bar */
+.top-image-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px 50px 5px 50px;
+    overflow-x: auto;
+    width: 100%;
+    height: 20%;
+    gap: 16px;
+    background-color: #f5f9ef;
+}
+
+/* Styles for the main map section */
+.map-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: 80%;
+}
+
+/* Styles for the image item */
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 16%;
+    min-width: 120px;
+    max-width: 150px;
+}
+
+/* Styles for the image item */
+.image-item img {
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Styles for the image caption */
+.image-caption {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
 
 /* Styles for the map section */
 .map-section {
@@ -1006,15 +1280,16 @@ watch(selectedSpecies, () => {
     padding-top: 16px;
     padding-bottom: 16px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+    height: 20%;
 }
 
 /* Styles for the sidebar */
 .sidebar {
     width: 25%;
-    overflow-y: auto;
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 0px;
+    padding-bottom: 16px;
     border-left: 1px solid #ccc;
     background: #f3f6ef;
 }
@@ -1037,6 +1312,8 @@ watch(selectedSpecies, () => {
 
 /* Styles for the species scroll */
 .species-scroll {
+    height: 80%;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -1417,5 +1694,57 @@ watch(selectedSpecies, () => {
     border-radius: 4px;
     border: 1px solid #ccc;
     font-size: 14px;
+}
+
+/* Styles for the toggle path button */
+.map-top-right-control {
+    position: absolute;
+    top: 32px;
+    right: 12px;
+    z-index: 11;
+}
+
+.toggle-path-button {
+    padding: 12px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-path-button:hover {
+    background-color: #c5d8bd;
+}
+
+.toggle-path-button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+/* Styles for the toggle animation button on hover */
+.toggle-animation-button {
+    margin-right: 8px;
+    padding: 12px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-animation-button:hover {
+    background-color: #c5d8bd;
+}
+
+.toggle-animation-button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
 }
 </style>
