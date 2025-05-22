@@ -1259,15 +1259,14 @@ export default {
   transform: translateY(-2px);
 }
 .btn {
-  display: block;
-  margin: 0 auto;
-  width: fit-content;
+  display: inline-block;
   padding: 12px 24px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
   text-align: center;
+  position: center;
 }
 .btn-large {
   padding: 15px 30px;

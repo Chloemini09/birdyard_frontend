@@ -311,14 +311,7 @@ html {
   position: relative;
   height: 100vh;
   min-height: 600px;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(10, 50, 0, 0.85) 10%,
-      rgba(10, 50, 0, 0.75) 80%,
-      rgba(10, 50, 0, 0.85) 30%
-    ),
-    url('/images/migration.jpeg');
+  background: url('/images/migration.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

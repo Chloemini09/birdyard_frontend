@@ -279,7 +279,6 @@
           </div>
         </div>
       </div>
-      <router-link to="/learninghub" class="btn btn-large">To see more resources!</router-link>
     </section>
   </div>
 </template>
@@ -1257,28 +1256,5 @@ export default {
 .try-again-button:hover {
   background-color: #f3f3f3;
   transform: translateY(-2px);
-}
-.btn {
-  display: block;
-  margin: 0 auto;
-  width: fit-content;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-.btn-large {
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: rgba(194, 229, 156, 0.9);
-  color: #0a3200;
-  border: 2px solid #c2e59c;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 </style>

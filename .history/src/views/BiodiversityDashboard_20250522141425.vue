@@ -315,8 +315,8 @@ html {
     linear-gradient(
       135deg,
       rgba(10, 50, 0, 0.85) 10%,
-      rgba(10, 50, 0, 0.75) 80%,
-      rgba(10, 50, 0, 0.85) 30%
+      rgba(10, 50, 0, 0.75) 50%,
+      rgba(10, 50, 0, 0.85) 50%
     ),
     url('/images/migration.jpeg');
   background-size: cover;

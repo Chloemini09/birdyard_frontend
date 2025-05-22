@@ -1259,9 +1259,7 @@ export default {
   transform: translateY(-2px);
 }
 .btn {
-  display: block;
-  margin: 0 auto;
-  width: fit-content;
+  display: inline-block;
   padding: 12px 24px;
   border-radius: 30px;
   text-decoration: none;
