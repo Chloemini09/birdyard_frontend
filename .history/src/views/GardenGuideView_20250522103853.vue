@@ -61,10 +61,10 @@
           </p>
           <router-link
             to="/nesting"
-            class="nesting-btn nesting-btn-large"
+            class="nesting-btn"
             title="Click to view the Bird Nesting & Shelter Guide"
           >
-            🪺 Go to Bird Nesting & Shelter Guide
+            🪺 Go to Bird Nesting & Shelter Guide →
           </router-link>
         </div>
       </div>

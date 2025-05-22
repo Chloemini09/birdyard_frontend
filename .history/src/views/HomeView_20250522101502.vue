@@ -9,16 +9,13 @@
           Together, we'll transform your garden into a vibrant sanctuary<br />
           where birds thrive and nature flourishes.
         </p>
-        <div class="next-steps">
-          <h3 class="next-steps-title">Ready to begin your journey?</h3>
-          <div class="next-steps-content">
-            <router-link to="/plantadvice" class="btn btn-large"
-              >Let's Find Plants For Your Garden
-            </router-link>
-          </div>
-          <h3 class="hero-subtitle">
-            Or you could go through this page to know more about what BackYard could help!
-          </h3>
+      </div>
+      <div class="next-steps">
+        <h3 class="next-steps-title">Ready to begin your journey?</h3>
+        <div class="next-steps-content">
+          <router-link to="/plantadvice" class="btn btn-large"
+            >Let's Find Plants For Your Garden
+          </router-link>
         </div>
       </div>
     </section>
@@ -341,7 +338,7 @@ export default defineComponent({
 
 /* Hero Section */
 .hero {
-  height: 800px;
+  height: 500px;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@/assets/images/homepage.jpeg');
   background-size: cover;
@@ -441,7 +438,7 @@ export default defineComponent({
 /* About Section */
 .about-section {
   padding: 80px 0;
-  background-color: #0a3200;
+  background-color: #ffffff;
 }
 
 .about-content {
@@ -455,7 +452,7 @@ export default defineComponent({
 
 .about-text h2 {
   font-size: 2.2rem;
-  color: #f5f5dc;
+  color: #0a3200;
   line-height: 1.3;
   margin-bottom: 30px;
 }
@@ -467,13 +464,13 @@ export default defineComponent({
 .about-description p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #f9f9f9;
+  color: #333;
 }
 
 .about-link {
   display: inline-flex;
   align-items: center;
-  color: #f9f9f9;
+  color: #0a3200;
   font-weight: 600;
   text-decoration: none;
   font-size: 1.1rem;
@@ -608,6 +605,24 @@ export default defineComponent({
 }
 
 /* Info Section Styles - VERTICAL LAYOUT */
+.info-section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.info-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0a3200;
+}
+
+.info-subtitle {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0a3200;
+}
 
 .vertical-card-container {
   display: flex;
@@ -786,8 +801,8 @@ export default defineComponent({
 }
 
 .process-section {
-  background-color: #f9f9f9;
-  color: #0a3200;
+  background-color: #184215;
+  color: #f5f5dc;
   padding: 5rem 2rem;
   max-height: 820px;
 }
@@ -801,7 +816,7 @@ export default defineComponent({
 
 .process-title {
   font-size: 3rem;
-  color: #0a3200;
+  color: #f5f5dc;
   font-weight: 600;
 }
 
@@ -860,7 +875,7 @@ export default defineComponent({
 .step-number {
   font-size: 2rem;
   font-weight: 700;
-  color: #0a3200;
+  color: #f5f5dc;
   margin-bottom: 0.5rem;
 }
 
@@ -868,7 +883,7 @@ export default defineComponent({
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #0a3200;
+  color: #f5f5dc;
   text-decoration: underline;
 }
 

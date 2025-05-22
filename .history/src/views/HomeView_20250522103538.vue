@@ -455,7 +455,7 @@ export default defineComponent({
 
 .about-text h2 {
   font-size: 2.2rem;
-  color: #f5f5dc;
+  color: #f9f9f9;
   line-height: 1.3;
   margin-bottom: 30px;
 }
@@ -536,7 +536,7 @@ export default defineComponent({
   font-size: 2.2rem;
   text-align: center;
   margin-bottom: 20px;
-  color: #0a3200;
+  color: ##f5f5dc;
 }
 .info-subtitle {
   font-size: 1.2rem;

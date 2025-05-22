@@ -455,7 +455,7 @@ export default defineComponent({
 
 .about-text h2 {
   font-size: 2.2rem;
-  color: #f5f5dc;
+  color: #f9f9f9;
   line-height: 1.3;
   margin-bottom: 30px;
 }

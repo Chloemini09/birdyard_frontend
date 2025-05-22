@@ -31,6 +31,26 @@
           <img src="/images/Nesting/seasonaltips.png" alt="Bird Seasonal Tip Image" />
         </div>
       </div>
+
+      <!-- US3.1 – Nesting Guide -->
+      <div class="guide-card layout-left">
+        <img src="/images/Nesting/diy.jpg" alt="Nesting Guide" />
+        <div class="card-content">
+          <h3>Bird Nesting & Shelter Guide</h3>
+          <p>
+            Learn how to provide safe nesting areas, build DIY shelters, and support native species
+            throughout the year.
+          </p>
+          <router-link
+            to="/nesting"
+            class="troubleshoot-btn nesting-btn"
+            title="Click to view the Bird Nesting & Shelter Guide"
+          >
+            🪺 Go to Bird Nesting & Shelter Guide →
+          </router-link>
+        </div>
+      </div>
+
       <!-- US3.3 – Garden Health Troubleshooter (merged into one card) -->
       <div class="guide-card layout-left clickable">
         <img src="/images/Nesting/woodland.jpg" alt="Garden Troubleshooting" />
@@ -48,24 +68,6 @@
               🔧 {{ issue }}
             </button>
           </div>
-        </div>
-      </div>
-      <!-- US3.1 – Nesting Guide -->
-      <div class="guide-card layout-left">
-        <img src="/images/Nesting/diy.jpg" alt="Nesting Guide" />
-        <div class="card-content">
-          <h3>Bird Nesting & Shelter Guide</h3>
-          <p>
-            Learn how to provide safe nesting areas, build DIY shelters, and support native species
-            throughout the year.
-          </p>
-          <router-link
-            to="/nesting"
-            class="nesting-btn nesting-btn-large"
-            title="Click to view the Bird Nesting & Shelter Guide"
-          >
-            🪺 Go to Bird Nesting & Shelter Guide
-          </router-link>
         </div>
       </div>
     </div>
@@ -302,24 +304,6 @@ watch(
   font-size: 0.95rem;
 }
 
-.nesting-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 800;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.nesting-btn-large {
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: rgba(194, 229, 156, 0.9);
-  color: #0a3200;
-  border: 2px solid #c2e59c;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
 /* === Guide Card Shared Style === */
 .guide-card {
   display: flex;

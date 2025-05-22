@@ -64,7 +64,7 @@
             class="nesting-btn nesting-btn-large"
             title="Click to view the Bird Nesting & Shelter Guide"
           >
-            🪺 Go to Bird Nesting & Shelter Guide
+            🪺 Go to Bird Nesting & Shelter Guide →
           </router-link>
         </div>
       </div>

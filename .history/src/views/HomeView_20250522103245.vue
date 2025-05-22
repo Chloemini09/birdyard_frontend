@@ -455,7 +455,7 @@ export default defineComponent({
 
 .about-text h2 {
   font-size: 2.2rem;
-  color: #f5f5dc;
+  color: #f9f9f9;
   line-height: 1.3;
   margin-bottom: 30px;
 }
@@ -529,20 +529,20 @@ export default defineComponent({
 /* Info Section Styles - MODIFIED VERSION */
 .info-section {
   padding: 50px 0;
-  background-color: #f9f9f9;
+  background-color: rgba(10, 50, 0, 0.5);
 }
 
 .info-title {
   font-size: 2.2rem;
   text-align: center;
   margin-bottom: 20px;
-  color: #0a3200;
+  color: #ffffff;
 }
 .info-subtitle {
   font-size: 1.2rem;
   text-align: center;
   margin-bottom: 20px;
-  color: #0a3200;
+  color: #ffffff;
 }
 
 .info-card-container {
@@ -618,8 +618,8 @@ export default defineComponent({
 }
 
 .step-number-indicator {
-  background-color: #0a3200;
-  color: #fff;
+  background-color: rgba(249, 249, 249, 0.8);
+  color: #0a3200;
   font-size: 1.2rem;
   font-weight: 700;
   padding: 8px 20px;

@@ -61,10 +61,10 @@
           </p>
           <router-link
             to="/nesting"
-            class="nesting-btn nesting-btn-large"
+            class="troubleshoot-btn nesting-btn"
             title="Click to view the Bird Nesting & Shelter Guide"
           >
-            🪺 Go to Bird Nesting & Shelter Guide
+            🪺 Go to Bird Nesting & Shelter Guide →
           </router-link>
         </div>
       </div>
@@ -302,24 +302,6 @@ watch(
   font-size: 0.95rem;
 }
 
-.nesting-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 800;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.nesting-btn-large {
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: rgba(194, 229, 156, 0.9);
-  color: #0a3200;
-  border: 2px solid #c2e59c;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
 /* === Guide Card Shared Style === */
 .guide-card {
   display: flex;
