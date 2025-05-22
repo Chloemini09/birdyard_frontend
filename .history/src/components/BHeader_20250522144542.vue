@@ -411,7 +411,7 @@ export default {
   .mobile-dropdown-open .dropdown-menu {
     opacity: 1 !important;
     visibility: visible !important;
-    max-height: 500px;
+    max-height: 300px;
     padding: 15px 0;
   }
 

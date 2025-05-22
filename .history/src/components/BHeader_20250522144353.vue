@@ -408,13 +408,6 @@ export default {
     visibility: hidden;
   }
 
-  .mobile-dropdown-open .dropdown-menu {
-    opacity: 1 !important;
-    visibility: visible !important;
-    max-height: 500px;
-    padding: 15px 0;
-  }
-
   .back-button {
     position: static;
     order: -1;
