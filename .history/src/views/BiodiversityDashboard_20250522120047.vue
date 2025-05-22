@@ -314,9 +314,9 @@ html {
   background:
     linear-gradient(
       135deg,
-      rgba(26, 58, 13, 0.85) 0%,
-      rgba(46, 125, 27, 0.75) 50%,
-      rgba(34, 85, 19, 0.85) 100%
+      rgba(10, 50, 0, 0.85) 0%,
+      rgba(10, 50, 0, 0.75) 50%,
+      rgba(10, 50, 0, 0.85) 100%
     ),
     url('/images/migration.jpeg');
   background-size: cover;
@@ -752,8 +752,8 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  background: linear-gradient(135deg, #48962d, #66bb3a);
-  color: #ffffff;
+  background-color: #f3f9c0;
+  color: #0a3200;
   text-decoration: none;
   padding: 1.2rem 2.5rem;
   border-radius: 1rem;
