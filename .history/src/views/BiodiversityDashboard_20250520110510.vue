@@ -14,6 +14,9 @@
         Explore native bird habitats across Australia. Click on regions to see detailed information
         about local species and plant preferences. We will show you bird's route with Australia!
       </p>
+      <p class="section-instructions">
+        You could Click the bird 🦜 map to see more bird information!
+      </p>
     </div>
 
     <div class="map-container">
@@ -294,7 +297,7 @@ export default {
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 800px;
-  margin: 0 auto 0px;
+  margin: 0 auto 10px;
 }
 
 /* Chart Header Styles */

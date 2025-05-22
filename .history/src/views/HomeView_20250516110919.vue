@@ -12,6 +12,31 @@
       </div>
     </section>
 
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Welcome to Bird-Yard,<br />Where Birds Feel at Home, Right in Your Backyard.</h2>
+            <router-link to="/about" class="about-link">
+              Know More About Us
+              <span class="arrow">→</span>
+            </router-link>
+          </div>
+          <div class="about-description">
+            <p>
+              Established with a love for nature and a mission to protect what sings in our skies,
+              Bird-Yard helps people transform everyday backyards into thriving bird habitats. We're
+              dedicated to guiding you in cultivating gardens that are not only beautiful, but safe,
+              sustainable sanctuaries for local wildlife. From native plant recommendations to
+              habitat-friendly landscaping tips, Bird-Yard is your partner in preserving
+              biodiversity—one backyard at a time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="process-section">
       <div class="process-header">
         <h2 class="process-title">Simple and Effective Journey</h2>
@@ -85,31 +110,6 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section">
-      <div class="container">
-        <div class="about-content">
-          <div class="about-text">
-            <h2>Welcome to Bird-Yard,<br />Where Birds Feel at Home, Right in Your Backyard.</h2>
-            <router-link to="/about" class="about-link">
-              Know More About Us
-              <span class="arrow">→</span>
-            </router-link>
-          </div>
-          <div class="about-description">
-            <p>
-              Established with a love for nature and a mission to protect what sings in our skies,
-              Bird-Yard helps people transform everyday backyards into thriving bird habitats. We're
-              dedicated to guiding you in cultivating gardens that are not only beautiful, but safe,
-              sustainable sanctuaries for local wildlife. From native plant recommendations to
-              habitat-friendly landscaping tips, Bird-Yard is your partner in preserving
-              biodiversity—one backyard at a time.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Information Section (Vertical layout) -->
     <section class="info-section">
       <div class="container">
@@ -139,7 +139,13 @@
           <!-- Arrow indicator -->
           <div class="step-arrow">
             <div class="step-arrow">
-              <img src="/arrow.png" alt="Arrow" width="40" height="40" class="green-arrow" />
+              <img
+                src="/arrow.png"
+                alt="Arrow"
+                width="40"
+                height="40"
+                class="green-arrow"
+              />
             </div>
           </div>
           <!-- Step 2: Birds Information Card -->
@@ -165,7 +171,7 @@
     </section>
     <!-- stats -->
     <section class="stats-section">
-      <p class="stats-section-intro" style="font-weight: bold; color: #2c5530">Our Website Scope</p>
+      <p class="stats-section-intro" style="font-weight: bold; color: #2c5530;">Our Website Scope</p>
       <div class="stats-container">
         <div class="stat-item">
           <div class="stat-number">27</div>
@@ -969,8 +975,7 @@ export default defineComponent({
     height: 350px;
   }
   .green-arrow {
-    filter: brightness(0) saturate(100%) invert(21%) sepia(82%) saturate(436%) hue-rotate(74deg)
-      brightness(93%) contrast(108%);
+  filter: brightness(0) saturate(100%) invert(21%) sepia(82%) saturate(436%) hue-rotate(74deg) brightness(93%) contrast(108%);
   }
 }
 
