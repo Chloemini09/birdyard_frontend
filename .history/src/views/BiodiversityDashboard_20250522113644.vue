@@ -294,19 +294,19 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Base Styles with Green Theme */
+/* Base Styles with Dark Green Theme */
 .biodiversity-dashboard {
   width: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
-  background: linear-gradient(135deg, #f0f9e8 0%, #e8f5e0 100%);
-  color: #1a3a0d;
+  background: linear-gradient(135deg, #0a3200 0%, #0d4403 100%);
+  color: #ffffff;
   overflow-x: hidden;
   line-height: 1.6;
 }
 
-/* Hero Banner with Green Theme */
+/* Hero Banner with Dark Green Theme */
 .hero-banner {
   position: relative;
   height: 100vh;
@@ -314,9 +314,9 @@ html {
   background:
     linear-gradient(
       135deg,
-      rgba(10, 50, 0, 0.85) 0%,
-      rgba(10, 50, 0, 0.75) 50%,
-      rgba(10, 50, 0, 0.85) 100%
+      rgba(10, 50, 0, 0.95) 0%,
+      rgba(13, 68, 3, 0.85) 50%,
+      rgba(10, 50, 0, 0.95) 100%
     ),
     url('/images/migration.jpeg');
   background-size: cover;
@@ -394,10 +394,10 @@ html {
   gap: 2rem;
   margin-top: 2rem;
   padding: 1.5rem 2rem;
-  background: rgba(72, 150, 45, 0.15);
+  background: rgba(10, 50, 0, 0.3);
   border-radius: 1rem;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(168, 217, 130, 0.3);
+  border: 1px solid rgba(194, 229, 156, 0.3);
 }
 
 .stat-item {
@@ -492,14 +492,14 @@ html {
 .section-title {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
-  color: #1a3a0d;
+  color: #ffffff;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
 .section-description {
   font-size: 1.2rem;
-  color: #4a7c34;
+  color: #c2e59c;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.7;
@@ -512,13 +512,13 @@ html {
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #48962d, #66bb3a);
+  background: linear-gradient(90deg, #c2e59c, #a9cf7a);
   border-radius: 2px;
 }
 
-/* Map Section with Green Theme */
+/* Map Section with Dark Green Theme */
 .map-section {
-  background: linear-gradient(135deg, #ffffff 0%, #f6fdf3 100%);
+  background: linear-gradient(135deg, #0a3200 0%, #0d4403 100%);
   padding: 2rem 0 4rem;
   position: relative;
 }
@@ -539,14 +539,14 @@ html {
   position: relative;
 }
 
-/* State Containers with Green Theme */
+/* State Containers with Dark Green Theme */
 .state-container {
   min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f6fdf3 100%);
+  background: linear-gradient(135deg, #0a3200 0%, #0d4403 100%);
 }
 
 .loading-content,
@@ -568,14 +568,14 @@ html {
   width: 64px;
   height: 64px;
   border: 8px solid transparent;
-  border-top-color: #48962d;
+  border-top-color: #c2e59c;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }
 
 .spinner-ring:nth-child(2) {
   animation-delay: -0.4s;
-  border-top-color: #66bb3a;
+  border-top-color: #a9cf7a;
 }
 
 .spinner-ring:nth-child(3) {
@@ -598,13 +598,13 @@ html {
 .state-title {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #1a3a0d;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 
 .state-message {
   font-size: 1.1rem;
-  color: #4a7c34;
+  color: #c2e59c;
   margin-bottom: 2rem;
 }
 
@@ -612,8 +612,8 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #48962d, #66bb3a);
-  color: #ffffff;
+  background: linear-gradient(135deg, #c2e59c, #a9cf7a);
+  color: #0a3200;
   border: none;
   padding: 1rem 2rem;
   border-radius: 0.75rem;
@@ -621,22 +621,22 @@ html {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(72, 150, 45, 0.3);
+  box-shadow: 0 4px 15px rgba(194, 229, 156, 0.3);
 }
 
 .retry-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(72, 150, 45, 0.4);
-  background: linear-gradient(135deg, #529935, #73c641);
+  box-shadow: 0 8px 25px rgba(194, 229, 156, 0.4);
+  background: linear-gradient(135deg, #d4f0c5, #c2e59c);
 }
 
 .button-icon {
   font-size: 1.2rem;
 }
 
-/* Analysis Section with Green Theme */
+/* Analysis Section with Dark Green Theme */
 .analysis-section {
-  background: linear-gradient(135deg, #f0f9e8 0%, #e8f5e0 100%);
+  background: linear-gradient(135deg, #0a3200 0%, #0d4403 100%);
   padding: 4rem 0;
 }
 
@@ -677,13 +677,13 @@ html {
 .card-title {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #1a3a0d;
+  color: #0a3200;
   margin-bottom: 0.5rem;
 }
 
 .card-subtitle {
   font-size: 1rem;
-  color: #4a7c34;
+  color: #2e551b;
   line-height: 1.5;
 }
 
@@ -708,7 +708,7 @@ html {
 
 /* CTA Section with Dark Green Theme */
 .cta-section {
-  background: linear-gradient(135deg, #1a3a0d 0%, #2e551b 100%);
+  background: linear-gradient(135deg, #0a3200 0%, #0d4403 100%);
   padding: 6rem 0;
   position: relative;
   overflow: hidden;
@@ -752,7 +752,7 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  background-color: #f3f9c0;
+  background: linear-gradient(135deg, #c2e59c, #a9cf7a);
   color: #0a3200;
   text-decoration: none;
   padding: 1.2rem 2.5rem;
@@ -760,13 +760,13 @@ html {
   font-size: 1.1rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 30px rgba(72, 150, 45, 0.3);
+  box-shadow: 0 8px 30px rgba(194, 229, 156, 0.3);
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(72, 150, 45, 0.4);
-  background: linear-gradient(135deg, #529935, #73c641);
+  box-shadow: 0 12px 40px rgba(194, 229, 156, 0.4);
+  background: linear-gradient(135deg, #d4f0c5, #c2e59c);
 }
 
 .button-text {

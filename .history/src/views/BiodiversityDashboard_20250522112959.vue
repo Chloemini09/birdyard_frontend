@@ -24,14 +24,12 @@
         </div>
       </div>
       <div class="hero-scroll-indicator">
-        <a href="#interactive-migration-map" class="scroll-link">
-          <div class="scroll-arrow"></div>
-        </a>
+        <div class="scroll-arrow"></div>
       </div>
     </section>
 
     <!-- Interactive Map Section -->
-    <section id="interactive-migration-map" class="map-section">
+    <section class="map-section">
       <div class="section-container">
         <div class="section-header">
           <div class="header-content">
@@ -289,11 +287,6 @@ export default {
 </script>
 
 <style scoped>
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Base Styles with Green Theme */
 .biodiversity-dashboard {
   width: 100%;
@@ -314,9 +307,9 @@ html {
   background:
     linear-gradient(
       135deg,
-      rgba(10, 50, 0, 0.85) 0%,
-      rgba(10, 50, 0, 0.75) 50%,
-      rgba(10, 50, 0, 0.85) 100%
+      rgba(26, 58, 13, 0.85) 0%,
+      rgba(46, 125, 27, 0.75) 50%,
+      rgba(34, 85, 19, 0.85) 100%
     ),
     url('/images/migration.jpeg');
   background-size: cover;
@@ -433,19 +426,6 @@ html {
   animation: bounce 2s infinite;
 }
 
-.scroll-link {
-  display: block;
-  text-decoration: none;
-  padding: 1rem;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.scroll-link:hover {
-  background: rgba(168, 217, 130, 0.2);
-  transform: scale(1.1);
-}
-
 @keyframes bounce {
   0%,
   20%,
@@ -534,7 +514,7 @@ html {
 }
 
 .map-container {
-  height: 1000px;
+  height: 900px;
   width: 100%;
   position: relative;
 }
@@ -642,7 +622,7 @@ html {
 
 .tables-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -689,8 +669,7 @@ html {
 
 .table-wrapper,
 .chart-wrapper {
-  padding: 2rem;
-  min-height: 500px;
+  padding: 1.5rem 2rem 2rem;
 }
 
 .charts-section {
@@ -703,7 +682,7 @@ html {
 
 .activity-chart {
   width: 100%;
-  min-height: 600px;
+  min-height: 400px;
 }
 
 /* CTA Section with Dark Green Theme */
@@ -752,8 +731,8 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  background-color: #f3f9c0;
-  color: #0a3200;
+  background: linear-gradient(135deg, #48962d, #66bb3a);
+  color: #ffffff;
   text-decoration: none;
   padding: 1.2rem 2.5rem;
   border-radius: 1rem;
@@ -876,13 +855,7 @@ html {
   }
 
   .map-container {
-    height: 600px;
-  }
-
-  .table-wrapper,
-  .chart-wrapper {
-    padding: 1.5rem;
-    min-height: 400px;
+    height: 500px;
   }
 
   .tables-grid {
@@ -922,13 +895,7 @@ html {
   }
 
   .map-container {
-    height: 450px;
-  }
-
-  .table-wrapper,
-  .chart-wrapper {
-    padding: 1rem;
-    min-height: 350px;
+    height: 400px;
   }
 }
 </style>

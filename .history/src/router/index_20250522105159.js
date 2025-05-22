@@ -89,7 +89,7 @@ const router = createRouter({
       meta: { requiresAuth: true },
     },
     {
-      path: '/learninghub',
+      path: '/ v',
       name: 'learninghub',
       component: LearningHub,
       meta: { requiresAuth: true },

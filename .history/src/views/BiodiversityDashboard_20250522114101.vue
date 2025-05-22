@@ -753,7 +753,7 @@ html {
   align-items: center;
   gap: 1rem;
   background-color: #f3f9c0;
-  color: #0a3200;
+  color: #ffffff;
   text-decoration: none;
   padding: 1.2rem 2.5rem;
   border-radius: 1rem;

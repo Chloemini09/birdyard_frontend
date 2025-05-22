@@ -56,7 +56,10 @@
           </li>
 
           <li class="dropdown" :class="{ 'mobile-dropdown-open': openDropdown === 'bird' }">
-            <a href="#" @click.prevent="toggleDropdown('bird')"> BIRD </a>
+            <a href="#" @click.prevent="toggleDropdown('bird')">
+              BIRD
+              <span class="dropdown-arrow" :class="{ rotated: openDropdown === 'bird' }">▼</span>
+            </a>
             <ul class="dropdown-menu">
               <li>
                 <router-link to="/gardenguide" @click="closeMobileMenu">Garden Guide</router-link>

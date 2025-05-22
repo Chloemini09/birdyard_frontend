@@ -1216,14 +1216,13 @@ watch(selectedSpecies, () => {
   margin: 100px auto 0 auto;
   padding: 16px;
   display: flex;
-  height: 900px;
+  height: 850px;
   max-width: 90%;
-  border-radius: 20px; /* Increased from 16px for more rounded corners */
+  border-radius: 16px;
   box-sizing: border-box;
   overflow: hidden;
   background-color: #f9f9f9;
-  border: 3px solid #c2e59c; /* Add visible border */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  border-color: #f3f6ef;
 }
 
 /* Styles for the top image bar */

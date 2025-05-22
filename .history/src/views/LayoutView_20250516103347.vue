@@ -9,7 +9,7 @@
     </section>
 
     <!-- State Info Section -->
-    <section class="state-info" v-if="stateData[selectedState]">
+    <section class="state-info">
       <h2>{{ selectedState }}</h2>
       <p><strong>Climate:</strong> {{ stateData[selectedState].climate }}</p>
       <p><strong>Soil Type:</strong> {{ stateData[selectedState].soil }}</p>
@@ -211,7 +211,7 @@ function setStateFilter(state) {
 .cta-button {
   margin-top: 1rem;
   display: inline-block;
-  background-color: #c7eaa3;
+  background-color: #c7eaa3;   
   color: #0a3200;
   padding: 0.8rem 1.6rem;
   border-radius: 999px;

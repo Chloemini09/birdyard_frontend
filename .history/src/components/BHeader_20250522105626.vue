@@ -25,7 +25,10 @@
 
           <!-- Garden Menu -->
           <li class="dropdown" :class="{ 'mobile-dropdown-open': openDropdown === 'garden' }">
-            <a href="#" @click.prevent="toggleDropdown('garden')"> GARDEN </a>
+            <a href="#" @click.prevent="toggleDropdown('garden')">
+              GARDEN
+              <span class="dropdown-arrow" :class="{ rotated: openDropdown === 'garden' }">▼</span>
+            </a>
             <ul class="dropdown-menu">
               <li>
                 <router-link to="/plantadvice" @click="closeMobileMenu">Plants Advice</router-link>
@@ -56,7 +59,10 @@
           </li>
 
           <li class="dropdown" :class="{ 'mobile-dropdown-open': openDropdown === 'bird' }">
-            <a href="#" @click.prevent="toggleDropdown('bird')"> BIRD </a>
+            <a href="#" @click.prevent="toggleDropdown('bird')">
+              BIRD
+              <span class="dropdown-arrow" :class="{ rotated: openDropdown === 'bird' }">▼</span>
+            </a>
             <ul class="dropdown-menu">
               <li>
                 <router-link to="/gardenguide" @click="closeMobileMenu">Garden Guide</router-link>

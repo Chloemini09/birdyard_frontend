@@ -24,14 +24,12 @@
         </div>
       </div>
       <div class="hero-scroll-indicator">
-        <a href="#interactive-migration-map" class="scroll-link">
-          <div class="scroll-arrow"></div>
-        </a>
+        <div class="scroll-arrow"></div>
       </div>
     </section>
 
     <!-- Interactive Map Section -->
-    <section id="interactive-migration-map" class="map-section">
+    <section class="map-section">
       <div class="section-container">
         <div class="section-header">
           <div class="header-content">
@@ -289,24 +287,19 @@ export default {
 </script>
 
 <style scoped>
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Base Styles with Green Theme */
+/* Base Styles */
 .biodiversity-dashboard {
   width: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
-  background: linear-gradient(135deg, #f0f9e8 0%, #e8f5e0 100%);
-  color: #1a3a0d;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  color: #1e293b;
   overflow-x: hidden;
   line-height: 1.6;
 }
 
-/* Hero Banner with Green Theme */
+/* Hero Banner */
 .hero-banner {
   position: relative;
   height: 100vh;
@@ -314,9 +307,9 @@ html {
   background:
     linear-gradient(
       135deg,
-      rgba(10, 50, 0, 0.85) 0%,
-      rgba(10, 50, 0, 0.75) 50%,
-      rgba(10, 50, 0, 0.85) 100%
+      rgba(15, 23, 42, 0.8) 0%,
+      rgba(30, 41, 59, 0.7) 50%,
+      rgba(15, 23, 42, 0.8) 100%
     ),
     url('/images/migration.jpeg');
   background-size: cover;
@@ -373,18 +366,18 @@ html {
 
 .hero-subtitle.primary {
   font-size: 1.5rem;
-  color: #a8d982;
+  color: #c2e59c;
   font-weight: 500;
 }
 
 .hero-subtitle.secondary {
   font-size: 1.2rem;
-  color: #c7e8b5;
+  color: #e2e8f0;
 }
 
 .hero-subtitle.accent {
   font-size: 1.1rem;
-  color: #d4f0c5;
+  color: #cbd5e1;
 }
 
 .hero-stats {
@@ -394,10 +387,10 @@ html {
   gap: 2rem;
   margin-top: 2rem;
   padding: 1.5rem 2rem;
-  background: rgba(72, 150, 45, 0.15);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(168, 217, 130, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .stat-item {
@@ -408,13 +401,13 @@ html {
   display: block;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #a8d982;
+  color: #c2e59c;
 }
 
 .stat-label {
   display: block;
   font-size: 0.9rem;
-  color: #c7e8b5;
+  color: #e2e8f0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -422,7 +415,7 @@ html {
 .stat-divider {
   width: 1px;
   height: 2rem;
-  background: rgba(168, 217, 130, 0.4);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .hero-scroll-indicator {
@@ -431,19 +424,6 @@ html {
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
-}
-
-.scroll-link {
-  display: block;
-  text-decoration: none;
-  padding: 1rem;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.scroll-link:hover {
-  background: rgba(168, 217, 130, 0.2);
-  transform: scale(1.1);
 }
 
 @keyframes bounce {
@@ -465,12 +445,12 @@ html {
 .scroll-arrow {
   width: 24px;
   height: 24px;
-  border-right: 2px solid #a8d982;
-  border-bottom: 2px solid #a8d982;
+  border-right: 2px solid #c2e59c;
+  border-bottom: 2px solid #c2e59c;
   transform: rotate(45deg);
 }
 
-/* Section Containers with Green Theme */
+/* Section Containers */
 .section-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -492,14 +472,14 @@ html {
 .section-title {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
-  color: #1a3a0d;
+  color: #1e293b;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
 .section-description {
   font-size: 1.2rem;
-  color: #4a7c34;
+  color: #64748b;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.7;
@@ -512,13 +492,13 @@ html {
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, #48962d, #66bb3a);
+  background: linear-gradient(90deg, #c2e59c, #a9cf7a);
   border-radius: 2px;
 }
 
-/* Map Section with Green Theme */
+/* Map Section */
 .map-section {
-  background: linear-gradient(135deg, #ffffff 0%, #f6fdf3 100%);
+  background: #ffffff;
   padding: 2rem 0 4rem;
   position: relative;
 }
@@ -528,25 +508,25 @@ html {
   border-radius: 2rem;
   overflow: hidden;
   box-shadow:
-    0 20px 60px rgba(72, 150, 45, 0.15),
-    0 8px 25px rgba(72, 150, 45, 0.08);
-  border: 2px solid #a8d982;
+    0 20px 60px rgba(0, 0, 0, 0.1),
+    0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
 }
 
 .map-container {
-  height: 1000px;
+  height: 800px;
   width: 100%;
   position: relative;
 }
 
-/* State Containers with Green Theme */
+/* State Containers */
 .state-container {
   min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f6fdf3 100%);
+  background: #ffffff;
 }
 
 .loading-content,
@@ -568,19 +548,19 @@ html {
   width: 64px;
   height: 64px;
   border: 8px solid transparent;
-  border-top-color: #48962d;
+  border-top-color: #c2e59c;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }
 
 .spinner-ring:nth-child(2) {
   animation-delay: -0.4s;
-  border-top-color: #66bb3a;
+  border-top-color: #a9cf7a;
 }
 
 .spinner-ring:nth-child(3) {
   animation-delay: -0.8s;
-  border-top-color: #7acc4a;
+  border-top-color: #8bc34a;
 }
 
 @keyframes spin {
@@ -598,13 +578,13 @@ html {
 .state-title {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #1a3a0d;
+  color: #1e293b;
   margin-bottom: 1rem;
 }
 
 .state-message {
   font-size: 1.1rem;
-  color: #4a7c34;
+  color: #64748b;
   margin-bottom: 2rem;
 }
 
@@ -612,8 +592,8 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #48962d, #66bb3a);
-  color: #ffffff;
+  background: linear-gradient(135deg, #c2e59c, #a9cf7a);
+  color: #1a2d00;
   border: none;
   padding: 1rem 2rem;
   border-radius: 0.75rem;
@@ -621,41 +601,40 @@ html {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(72, 150, 45, 0.3);
+  box-shadow: 0 4px 15px rgba(194, 229, 156, 0.3);
 }
 
 .retry-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(72, 150, 45, 0.4);
-  background: linear-gradient(135deg, #529935, #73c641);
+  box-shadow: 0 8px 25px rgba(194, 229, 156, 0.4);
 }
 
 .button-icon {
   font-size: 1.2rem;
 }
 
-/* Analysis Section with Green Theme */
+/* Analysis Section */
 .analysis-section {
-  background: linear-gradient(135deg, #f0f9e8 0%, #e8f5e0 100%);
+  background: #f8fafc;
   padding: 4rem 0;
 }
 
 .tables-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
 }
 
 .table-card,
 .chart-card {
-  background: linear-gradient(135deg, #ffffff 0%, #fafffe 100%);
+  background: #ffffff;
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow:
-    0 10px 40px rgba(72, 150, 45, 0.08),
-    0 4px 15px rgba(72, 150, 45, 0.05);
-  border: 1px solid #c7e8b5;
+    0 10px 40px rgba(0, 0, 0, 0.06),
+    0 4px 15px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
   transition: all 0.3s ease;
 }
 
@@ -663,34 +642,32 @@ html {
 .chart-card:hover {
   transform: translateY(-4px);
   box-shadow:
-    0 20px 60px rgba(72, 150, 45, 0.12),
-    0 8px 25px rgba(72, 150, 45, 0.08);
-  border-color: #a8d982;
+    0 20px 60px rgba(0, 0, 0, 0.1),
+    0 8px 25px rgba(0, 0, 0, 0.06);
 }
 
 .card-header {
   padding: 2rem 2rem 1rem;
-  background: linear-gradient(135deg, #f6fdf3 0%, #ecf7e5 100%);
-  border-bottom: 1px solid #d4f0c5;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .card-title {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #1a3a0d;
+  color: #1e293b;
   margin-bottom: 0.5rem;
 }
 
 .card-subtitle {
   font-size: 1rem;
-  color: #4a7c34;
+  color: #64748b;
   line-height: 1.5;
 }
 
 .table-wrapper,
 .chart-wrapper {
-  padding: 2rem;
-  min-height: 500px;
+  padding: 1.5rem 2rem 2rem;
 }
 
 .charts-section {
@@ -703,12 +680,12 @@ html {
 
 .activity-chart {
   width: 100%;
-  min-height: 600px;
+  min-height: 400px;
 }
 
-/* CTA Section with Dark Green Theme */
+/* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #1a3a0d 0%, #2e551b 100%);
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
   padding: 6rem 0;
   position: relative;
   overflow: hidden;
@@ -743,7 +720,7 @@ html {
 
 .cta-description {
   font-size: 1.2rem;
-  color: #c7e8b5;
+  color: #cbd5e1;
   margin-bottom: 2.5rem;
   line-height: 1.6;
 }
@@ -752,21 +729,20 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  background-color: #f3f9c0;
-  color: #0a3200;
+  background: linear-gradient(135deg, #c2e59c, #a9cf7a);
+  color: #1a2d00;
   text-decoration: none;
   padding: 1.2rem 2.5rem;
   border-radius: 1rem;
   font-size: 1.1rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 30px rgba(72, 150, 45, 0.3);
+  box-shadow: 0 8px 30px rgba(194, 229, 156, 0.3);
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(72, 150, 45, 0.4);
-  background: linear-gradient(135deg, #529935, #73c641);
+  box-shadow: 0 12px 40px rgba(194, 229, 156, 0.4);
 }
 
 .button-text {
@@ -794,8 +770,8 @@ html {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(72, 150, 45, 0.3), rgba(102, 187, 58, 0.2));
-  border: 2px solid rgba(168, 217, 130, 0.4);
+  background: linear-gradient(135deg, rgba(194, 229, 156, 0.2), rgba(169, 207, 122, 0.2));
+  border: 2px solid rgba(194, 229, 156, 0.3);
   animation: pulse 3s ease-in-out infinite;
 }
 
@@ -816,9 +792,9 @@ html {
   width: 100%;
   height: 100%;
   background-image:
-    radial-gradient(circle at 20% 30%, rgba(168, 217, 130, 0.5) 2px, transparent 2px),
-    radial-gradient(circle at 70% 60%, rgba(102, 187, 58, 0.4) 2px, transparent 2px),
-    radial-gradient(circle at 50% 80%, rgba(122, 204, 74, 0.3) 2px, transparent 2px);
+    radial-gradient(circle at 20% 30%, rgba(194, 229, 156, 0.4) 2px, transparent 2px),
+    radial-gradient(circle at 70% 60%, rgba(169, 207, 122, 0.4) 2px, transparent 2px),
+    radial-gradient(circle at 50% 80%, rgba(194, 229, 156, 0.3) 2px, transparent 2px);
   background-size:
     50px 50px,
     80px 80px,
@@ -876,13 +852,7 @@ html {
   }
 
   .map-container {
-    height: 600px;
-  }
-
-  .table-wrapper,
-  .chart-wrapper {
-    padding: 1.5rem;
-    min-height: 400px;
+    height: 500px;
   }
 
   .tables-grid {
@@ -922,13 +892,7 @@ html {
   }
 
   .map-container {
-    height: 450px;
-  }
-
-  .table-wrapper,
-  .chart-wrapper {
-    padding: 1rem;
-    min-height: 350px;
+    height: 400px;
   }
 }
 </style>
