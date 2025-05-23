@@ -877,7 +877,7 @@ export default {
 }
 
 .bird-card-image-container {
-  position: relative;
+  position: center;
   height: 200px;
   overflow: hidden;
 }
@@ -886,7 +886,6 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
   transition: transform 0.5s ease;
 }
 
