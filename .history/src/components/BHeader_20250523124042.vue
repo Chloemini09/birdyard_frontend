@@ -287,7 +287,7 @@ export default {
 
 .back-button {
   position: absolute;
-  left: 0px;
+  left: 10px;
   color: #ffffff;
   cursor: pointer;
   display: flex;

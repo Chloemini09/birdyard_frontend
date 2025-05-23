@@ -3,10 +3,7 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h1 class="hero-title">
-          GROW PLANTS<br />
-          BRING BIRDS HOME
-        </h1>
+        <h1 class="hero-title">WHERE PLANTS TAKE ROOTS,<br />BIRDS FIND HOME.</h1>
         <p class="hero-subtitle">
           We help you fight habitat loss due to climate change.<br />
           Together, we'll transform your garden into a vibrant sanctuary<br />
@@ -16,7 +13,7 @@
           <h3 class="next-steps-title">Ready to begin your journey?</h3>
           <div class="next-steps-content">
             <router-link to="/plantadvice" class="btn btn-large"
-              >Let's find plants for your garden
+              >Let's Find Plants For Your Garden
             </router-link>
           </div>
           <h3 class="hero-subtitle">
@@ -39,7 +36,7 @@
             <img src="@/assets/images/find-plants-icon.webp" alt="Find plants illustration" />
           </div>
           <div class="step-number">01</div>
-          <h3 class="step-title">Find native plants</h3>
+          <h3 class="step-title">Find Native Plants</h3>
           <p class="step-description">
             Discover plants native to your region that support local bird species and thrive in your
             climate.
@@ -52,7 +49,7 @@
             <img src="@/assets/images/design-garden-icon.png" alt="Design garden illustration" />
           </div>
           <div class="step-number">02</div>
-          <h3 class="step-title">Design your garden</h3>
+          <h3 class="step-title">Design Your Garden</h3>
           <p class="step-description">
             Create a beautiful, functional garden plan that incorporates bird-friendly elements and
             native plants.
@@ -65,7 +62,7 @@
             <img src="@/assets/images/attract-birds-icon.webp" alt="Birds in garden illustration" />
           </div>
           <div class="step-number">03</div>
-          <h3 class="step-title">Attract local birds</h3>
+          <h3 class="step-title">Attract Local Birds</h3>
           <p class="step-description">
             Watch as your garden becomes a haven for local birds, providing food, shelter, and
             nesting sites.
@@ -81,7 +78,7 @@
             />
           </div>
           <div class="step-number">04</div>
-          <h3 class="step-title">Identify & protect birds</h3>
+          <h3 class="step-title">Identify & Protect Birds</h3>
           <p class="step-description">
             Learn to identify visiting birds and contribute to conservation efforts, especially for
             endangered species.
@@ -95,7 +92,7 @@
       <div class="container">
         <div class="about-content">
           <div class="about-text">
-            <h2>Welcome to BirdYard,<br />where birds feel at home, right in your Birdyard.</h2>
+            <h2>Welcome to Bird-Yard,<br />Where Birds Feel at Home, Right in Your Backyard.</h2>
             <router-link to="/about" class="about-link">
               Know More About Us
               <span class="arrow">→</span>
@@ -128,13 +125,13 @@
             <router-link to="/plantadvice" class="card-image">
               <img src="@/assets/images/plant-importance.jpg" alt="Plant importance" />
               <div class="card-overlay">
-                <h3>Plants: the garden foundation</h3>
+                <h3>Plants: The Garden Foundation</h3>
                 <p class="overlay-description">
                   Native plants form the backbone of your bird garden, providing food, shelter, and
                   nesting materials.
                 </p>
                 <div class="btn-container">
-                  <span class="find-plants-btn">Pick your perfect plants</span>
+                  <span class="find-plants-btn">Pick Your Perfect Plants</span>
                 </div>
               </div>
               <div class="hover-overlay"></div>
@@ -153,13 +150,13 @@
             <router-link to="/gardenguide" class="card-image">
               <img src="@/assets/images/attracting-birds.jpg" alt="Attracting birds" />
               <div class="card-overlay">
-                <h3>Attracting birds with plants</h3>
+                <h3>Attracting Birds with Plants</h3>
                 <p class="overlay-description">
                   The right plant choices create a welcoming habitat for local birds while
                   supporting biodiversity.
                 </p>
                 <div class="btn-container">
-                  <span class="find-plants-btn">Invite birds to your garden</span>
+                  <span class="find-plants-btn">Invite Birds To Your Garden</span>
                 </div>
               </div>
               <div class="hover-overlay"></div>
@@ -170,16 +167,16 @@
     </section>
     <!-- stats -->
     <section class="stats-section">
-      <p class="stats-section-intro" style="font-weight: bold; color: #2c5530">Our website scope</p>
+      <p class="stats-section-intro" style="font-weight: bold; color: #2c5530">Our Website Scope</p>
       <div class="stats-container">
         <div class="stat-item">
           <div class="stat-number">27</div>
-          <div class="stat-label">Endangered bird species</div>
+          <div class="stat-label">Endangered Bird Species</div>
         </div>
 
         <div class="stat-item">
           <div class="stat-number">312</div>
-          <div class="stat-label">Native plants</div>
+          <div class="stat-label">Native Plants</div>
         </div>
 
         <div class="stat-item">
@@ -189,13 +186,13 @@
 
         <div class="stat-item">
           <div class="stat-number">89%</div>
-          <div class="stat-label">Habitat growth</div>
+          <div class="stat-label">Habitat Growth</div>
         </div>
       </div>
       <div class="next-steps">
         <div class="next-steps-content">
           <router-link to="/learninghub" class="btn btn-large"
-            >Click for more resources
+            >Click For More Resources
           </router-link>
         </div>
       </div>
@@ -204,11 +201,11 @@
     <!-- Grow in 4 Steps Section -->
     <section class="steps-section">
       <div class="container">
-        <h2 class="steps-title">Grow in 4 steps</h2>
+        <h2 class="steps-title">Grow in 4 Steps</h2>
         <div class="steps-container">
           <!-- Step 1 -->
           <div class="step">
-            <h3>01. Plan with purpose:</h3>
+            <h3>01. Plan with Purpose:</h3>
             <ul>
               <li>Observe sunlight, shade, and wind direction.</li>
               <li>Choose native plants suited to your climate and soil.</li>
@@ -218,7 +215,7 @@
 
           <!-- Step 2 -->
           <div class="step">
-            <h3>02. Prepare the ground:</h3>
+            <h3>02. Prepare the Ground:</h3>
             <ul>
               <li>Clear weeds and debris (ditch those invasives).</li>
               <li>Improve soil with compost or organic matter.</li>
@@ -228,7 +225,7 @@
 
           <!-- Step 3 -->
           <div class="step">
-            <h3>03. Plant & position:</h3>
+            <h3>03. Plant & Position:</h3>
             <ul>
               <li>Group plants with similar water/light needs.</li>
               <li>Space properly—plants grow more than you think!</li>
@@ -238,7 +235,7 @@
 
           <!-- Step 4 -->
           <div class="step">
-            <h3>04. Maintain with care:</h3>
+            <h3>04. Maintain with Care:</h3>
             <ul>
               <li>Water consistently, especially in the early weeks.</li>
               <li>Prune gently and seasonally.</li>

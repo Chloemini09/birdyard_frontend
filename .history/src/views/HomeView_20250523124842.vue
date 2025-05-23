@@ -179,7 +179,7 @@
 
         <div class="stat-item">
           <div class="stat-number">312</div>
-          <div class="stat-label">Native plants</div>
+          <div class="stat-label">Native Plants</div>
         </div>
 
         <div class="stat-item">
@@ -189,13 +189,13 @@
 
         <div class="stat-item">
           <div class="stat-number">89%</div>
-          <div class="stat-label">Habitat growth</div>
+          <div class="stat-label">Habitat Growth</div>
         </div>
       </div>
       <div class="next-steps">
         <div class="next-steps-content">
           <router-link to="/learninghub" class="btn btn-large"
-            >Click for more resources
+            >Click For More Resources
           </router-link>
         </div>
       </div>
@@ -204,11 +204,11 @@
     <!-- Grow in 4 Steps Section -->
     <section class="steps-section">
       <div class="container">
-        <h2 class="steps-title">Grow in 4 steps</h2>
+        <h2 class="steps-title">Grow in 4 Steps</h2>
         <div class="steps-container">
           <!-- Step 1 -->
           <div class="step">
-            <h3>01. Plan with purpose:</h3>
+            <h3>01. Plan with Purpose:</h3>
             <ul>
               <li>Observe sunlight, shade, and wind direction.</li>
               <li>Choose native plants suited to your climate and soil.</li>
@@ -218,7 +218,7 @@
 
           <!-- Step 2 -->
           <div class="step">
-            <h3>02. Prepare the ground:</h3>
+            <h3>02. Prepare the Ground:</h3>
             <ul>
               <li>Clear weeds and debris (ditch those invasives).</li>
               <li>Improve soil with compost or organic matter.</li>
@@ -228,7 +228,7 @@
 
           <!-- Step 3 -->
           <div class="step">
-            <h3>03. Plant & position:</h3>
+            <h3>03. Plant & Position:</h3>
             <ul>
               <li>Group plants with similar water/light needs.</li>
               <li>Space properly—plants grow more than you think!</li>
@@ -238,7 +238,7 @@
 
           <!-- Step 4 -->
           <div class="step">
-            <h3>04. Maintain with care:</h3>
+            <h3>04. Maintain with Care:</h3>
             <ul>
               <li>Water consistently, especially in the early weeks.</li>
               <li>Prune gently and seasonally.</li>
