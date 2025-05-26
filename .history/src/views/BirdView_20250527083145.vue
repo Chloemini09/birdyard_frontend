@@ -1261,7 +1261,7 @@ export default {
 }
 .btn {
   display: block;
-  margin: 0 auto;
+  margin: 10 auto;
   width: fit-content;
   padding: 12px 24px;
   border-radius: 30px;
@@ -1269,7 +1269,6 @@ export default {
   font-weight: 600;
   transition: all 0.3s ease;
   text-align: center;
-  margin-top: 10px;
 }
 .btn-large {
   padding: 15px 30px;
