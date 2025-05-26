@@ -2,7 +2,7 @@
   <div class="page-wrapper">
     <section class="hero">
       <div class="container">
-        <h1>Build A Garden That Birds Call Home</h1>
+        <h1>Build a Bird-Friendly Garden</h1>
         <p class="subtitle">Step-by-step guide, seasonal tips, and bird-safe gardening ideas</p>
       </div>
     </section>
