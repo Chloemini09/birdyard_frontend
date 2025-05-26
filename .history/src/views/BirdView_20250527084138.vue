@@ -555,7 +555,6 @@ export default {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 2rem;
-  text-align: center;
 }
 
 .features-list {

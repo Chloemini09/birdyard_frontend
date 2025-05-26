@@ -279,9 +279,7 @@
           </div>
         </div>
       </div>
-      <p class="hero-subtitle">
-        Please click the button to get more resourses about bids and garden!
-      </p>
+      <p>Please click the button to get more resourses about bids and garden!</p>
       <router-link to="/learninghub" class="btn btn-large">Click to learn!</router-link>
     </section>
   </div>
@@ -555,7 +553,6 @@ export default {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 2rem;
-  text-align: center;
 }
 
 .features-list {
